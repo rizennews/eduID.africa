@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
+import { CircleCheckIcon } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
 
 interface LeadershipRoleData {
@@ -158,11 +158,11 @@ export function GovernanceLeadershipSection({
                     {roleData.scope.map((item, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed"
+                        className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed group/item"
                       >
-                        <CheckCircle2
-                          size={14}
-                          className="text-[#1A73C3] shrink-0 mt-0.5"
+                        <CircleCheckIcon
+                          size={15}
+                          className="p-0 hover:bg-transparent text-[#1A73C3] shrink-0 mt-0.5"
                         />
                         <span>{item}</span>
                       </li>
