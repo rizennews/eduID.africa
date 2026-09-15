@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { GovernanceHero } from "@/components/GovernanceHero";
 import { GovernanceIntroSection } from "@/components/GovernanceIntroSection";
 import { GovernanceLeadershipSection } from "@/components/GovernanceLeadershipSection";
+import { GovernancePoliciesSection } from "@/components/GovernancePoliciesSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -57,6 +58,9 @@ export default async function GovernancePage({
 
         {/* Programme Leadership Section */}
         <GovernanceLeadershipSection locale={locale} dict={dict} />
+
+        {/* Policies and Terms Section */}
+        <GovernancePoliciesSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Wordmark Footer */}

@@ -414,6 +414,54 @@
           ]
         }
       }
+    },
+    "policiesSection": {
+      "kicker": "Documentos da federação",
+      "title": "Políticas e termos",
+      "subtitle": "Estruturas oficiais, termos de participação e modelos jurídicos que regem o ecossistema eduID.africa.",
+      "downloadCta": "Descarregar PDF",
+      "documents": [
+        {
+          "id": "policy-framework",
+          "title": "Quadro de Políticas da Federação",
+          "audience": "eduID.africa",
+          "version": "Versão 2.3",
+          "date": "Março 2026",
+          "href": "#"
+        },
+        {
+          "id": "bonafid-terms",
+          "title": "Termos de Participação BonafID",
+          "audience": "Instituições",
+          "version": "Versão 1.1",
+          "date": "Abril 2026",
+          "href": "#"
+        },
+        {
+          "id": "nren-peering",
+          "title": "Modelo de Acordo de Peering para NREN",
+          "audience": "Federações nacionais",
+          "version": "Versão 1.0",
+          "date": "Janeiro 2026",
+          "href": "#"
+        },
+        {
+          "id": "privacy-notice",
+          "title": "Aviso de Privacidade — Serviços da Federação eduID.africa",
+          "audience": "Todos os utilizadores",
+          "version": "Alinhado com RGPD",
+          "date": "Junho 2026",
+          "href": "#"
+        },
+        {
+          "id": "geteduroam-terms",
+          "title": "Termos de Serviço geteduroam",
+          "audience": "Utilizadores finais e NROs",
+          "version": "Versão 1.2",
+          "date": "Maio 2026",
+          "href": "#"
+        }
+      ]
     }
   }
 }
