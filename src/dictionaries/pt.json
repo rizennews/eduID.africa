@@ -517,41 +517,9 @@
     }
   },
   "notFoundPage": {
-    "badge": "Erro 404 · Rota não encontrada",
     "title": "Identidade não encontrada neste caminho",
     "description": "A página, recurso da federação ou documento solicitado não foi encontrado. Pode ter sido movido ou não existir na rede continental.",
     "homeButton": "Voltar ao início",
-    "mapButton": "Explorar o mapa",
-    "destinationsLabel": "DESTINOS POPULARES DA FEDERAÇÃO",
-    "destinations": [
-      {
-        "id": "map",
-        "title": "Mapa da Federação",
-        "description": "Cobertura interativa em 54 países africanos e NRENs soberanas.",
-        "href": "/federation-map",
-        "cta": "Ver mapa"
-      },
-      {
-        "id": "how-it-works",
-        "title": "Três Camadas",
-        "description": "IAM de campus BonafID, federação continental e geteduroam.",
-        "href": "/how-it-works",
-        "cta": "Saber mais"
-      },
-      {
-        "id": "governance",
-        "title": "Governação & Políticas",
-        "description": "Liderança operacional, programa AfricaConnect4 e documentos oficiais.",
-        "href": "/governance",
-        "cta": "Ler políticas"
-      },
-      {
-        "id": "about",
-        "title": "Sobre o eduID",
-        "description": "Confiança continental gerida pela UbuntuNet, WACREN e ASREN.",
-        "href": "/about",
-        "cta": "Sobre nós"
-      }
-    ]
+    "mapButton": "Explorar o mapa"
   }
 }

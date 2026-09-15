@@ -517,41 +517,9 @@
     }
   },
   "notFoundPage": {
-    "badge": "Erreur 404 · Route introuvable",
     "title": "Identité introuvable sur ce chemin",
     "description": "La page, la ressource de la fédération ou le document demandé est introuvable. Il a peut-être été déplacé ou n'existe pas sur le réseau continental.",
     "homeButton": "Retour à l'accueil",
-    "mapButton": "Explorer la carte",
-    "destinationsLabel": "DESTINATIONS POPULAIRES DE LA FÉDÉRATION",
-    "destinations": [
-      {
-        "id": "map",
-        "title": "Carte de la fédération",
-        "description": "Couverture interactive dans 54 pays africains et NREN souverains.",
-        "href": "/federation-map",
-        "cta": "Voir la carte"
-      },
-      {
-        "id": "how-it-works",
-        "title": "Trois couches",
-        "description": "IAM de campus BonafID, fédération continentale et geteduroam.",
-        "href": "/how-it-works",
-        "cta": "En savoir plus"
-      },
-      {
-        "id": "governance",
-        "title": "Gouvernance & Politiques",
-        "description": "Direction opérationnelle, programme AfricaConnect4 et documents officiels.",
-        "href": "/governance",
-        "cta": "Lire les politiques"
-      },
-      {
-        "id": "about",
-        "title": "À propos d'eduID",
-        "description": "Confiance continentale gouvernée par UbuntuNet, WACREN et ASREN.",
-        "href": "/about",
-        "cta": "En savoir plus"
-      }
-    ]
+    "mapButton": "Explorer la carte"
   }
 }

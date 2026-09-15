@@ -517,41 +517,9 @@
     }
   },
   "notFoundPage": {
-    "badge": "404 Error · Route Not Found",
     "title": "Identity not found on this path",
     "description": "The page, federation resource, or document you requested could not be located. It may have moved or does not exist across the continental network.",
     "homeButton": "Back to Home",
-    "mapButton": "Explore Federation Map",
-    "destinationsLabel": "POPULAR FEDERATION DESTINATIONS",
-    "destinations": [
-      {
-        "id": "map",
-        "title": "Federation Map",
-        "description": "Interactive coverage across 54 African nations and sovereign NRENs.",
-        "href": "/federation-map",
-        "cta": "View Map"
-      },
-      {
-        "id": "how-it-works",
-        "title": "Three Layers",
-        "description": "BonafID campus IAM, continental federation, and geteduroam.",
-        "href": "/how-it-works",
-        "cta": "Learn More"
-      },
-      {
-        "id": "governance",
-        "title": "Governance & Policies",
-        "description": "Operational leadership, AfricaConnect4 programme, and policy documents.",
-        "href": "/governance",
-        "cta": "Read Policies"
-      },
-      {
-        "id": "about",
-        "title": "About eduID",
-        "description": "Continental Trust & Identity governed by UbuntuNet, WACREN, and ASREN.",
-        "href": "/about",
-        "cta": "About Us"
-      }
-    ]
+    "mapButton": "Explore Federation Map"
   }
 }
