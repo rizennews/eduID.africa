@@ -126,18 +126,18 @@ export function GovernanceLeadershipSection({
                   {/* Top Bar: Role Badge & Partner Logo */}
                   <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-100">
                     <span
-                      className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider border ${config.badgeClass}`}
+                      className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider whitespace-nowrap shrink-0 border ${config.badgeClass}`}
                     >
                       {roleData.role}
                     </span>
 
-                    <div className="h-10 sm:h-11 flex items-center justify-end">
+                    <div className="h-10 sm:h-11 flex items-center justify-end shrink-0 min-w-0">
                       <Image
                         src={config.logoSrc}
                         alt={config.logoAlt}
                         width={config.logoWidth}
                         height={config.logoHeight}
-                        className="max-h-9 sm:max-h-10 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                        className="max-h-9 sm:max-h-10 w-auto max-w-[130px] object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                       />
                     </div>
                   </div>
