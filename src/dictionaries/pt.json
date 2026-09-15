@@ -355,6 +355,65 @@
       "headline1": "Alinhado a padrões.",
       "headline2": "Governança transparente. Construído para durar.",
       "description": "O quadro de governança do eduID.africa garante que a federação continental opere segundo padrões internacionais, com responsabilidade clara entre as três RRENs regionais e no âmbito do programa AfricaConnect4."
+    },
+    "leadershipSection": {
+      "kicker": "GOVERNANÇA OPERACIONAL",
+      "title": "Liderança do programa",
+      "subtitle": "Responsabilidade e gestão claras entre as agências líderes, parceiros regionais e entidades técnicas internacionais.",
+      "roles": {
+        "programmeLead": {
+          "role": "Líder do programa",
+          "entity": "WACREN CSO",
+          "scope": [
+            "Direção estratégica",
+            "Alinhamento AC4",
+            "Aprovação de conteúdo"
+          ]
+        },
+        "technicalLead": {
+          "role": "Líder técnico",
+          "entity": "Gestor de Programa WACREN",
+          "scope": [
+            "Precisão técnica",
+            "Produto BonafID",
+            "Supervisão de implantação"
+          ]
+        },
+        "communications": {
+          "role": "Comunicações",
+          "entity": "Equipa de Comms WACREN",
+          "scope": [
+            "Website",
+            "Conteúdo multilíngue",
+            "Briefing de design & gestão de agências"
+          ]
+        },
+        "regionalPartnerEastSouth": {
+          "role": "Parceiro regional",
+          "entity": "UbuntuNet Alliance",
+          "scope": [
+            "Revisão de governança",
+            "Dados do mapa para África Oriental e Austral"
+          ]
+        },
+        "regionalPartnerNorth": {
+          "role": "Parceiro regional",
+          "entity": "ASREN",
+          "scope": [
+            "Revisão de governança",
+            "Dados do mapa para o Norte de África"
+          ]
+        },
+        "technicalPartner": {
+          "role": "Parceiro técnico",
+          "entity": "GÉANT",
+          "scope": [
+            "Integração eduGAIN",
+            "Integração geteduroam",
+            "Alinhamento de padrões"
+          ]
+        }
+      }
     }
   }
 }

@@ -4,6 +4,7 @@ import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { GovernanceHero } from "@/components/GovernanceHero";
 import { GovernanceIntroSection } from "@/components/GovernanceIntroSection";
+import { GovernanceLeadershipSection } from "@/components/GovernanceLeadershipSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -53,6 +54,9 @@ export default async function GovernancePage({
 
         {/* Standards & Accountability Overview Section */}
         <GovernanceIntroSection locale={locale} dict={dict} />
+
+        {/* Programme Leadership Section */}
+        <GovernanceLeadershipSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Wordmark Footer */}

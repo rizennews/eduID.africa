@@ -355,6 +355,65 @@
       "headline1": "Aligné sur les normes.",
       "headline2": "Gouvernance transparente. Conçu pour durer.",
       "description": "Le cadre de gouvernance d'eduID.africa garantit que la fédération continentale fonctionne selon les normes internationales, avec une responsabilité claire entre les trois RREN régionaux et dans le cadre du programme AfricaConnect4."
+    },
+    "leadershipSection": {
+      "kicker": "GOUVERNANCE OPÉRATIONNELLE",
+      "title": "Direction du programme",
+      "subtitle": "Responsabilité claire et pilotage entre les agences responsables, les partenaires régionaux et les instances techniques internationales.",
+      "roles": {
+        "programmeLead": {
+          "role": "Responsable du programme",
+          "entity": "WACREN CSO",
+          "scope": [
+            "Orientation stratégique",
+            "Alignement AC4",
+            "Validation des contenus"
+          ]
+        },
+        "technicalLead": {
+          "role": "Responsable technique",
+          "entity": "Responsable de programme WACREN",
+          "scope": [
+            "Précision technique",
+            "Produit BonafID",
+            "Supervision du déploiement"
+          ]
+        },
+        "communications": {
+          "role": "Communications",
+          "entity": "Équipe Comms WACREN",
+          "scope": [
+            "Site web",
+            "Contenus multilingues",
+            "Cahier des charges design & gestion d'agence"
+          ]
+        },
+        "regionalPartnerEastSouth": {
+          "role": "Partenaire régional",
+          "entity": "UbuntuNet Alliance",
+          "scope": [
+            "Revue de la gouvernance",
+            "Données de la carte pour l'Afrique de l'Est et Australe"
+          ]
+        },
+        "regionalPartnerNorth": {
+          "role": "Partenaire régional",
+          "entity": "ASREN",
+          "scope": [
+            "Revue de la gouvernance",
+            "Données de la carte pour l'Afrique du Nord"
+          ]
+        },
+        "technicalPartner": {
+          "role": "Partenaire technique",
+          "entity": "GÉANT",
+          "scope": [
+            "Intégration eduGAIN",
+            "Intégration geteduroam",
+            "Alignement sur les normes"
+          ]
+        }
+      }
     }
   }
 }

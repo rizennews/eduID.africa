@@ -355,6 +355,65 @@
       "headline1": "Standards-aligned. Transparently",
       "headline2": "governed. Built to last.",
       "description": "eduID.africa's governance framework ensures the continental federation operates to international standards, with clear accountability across three regional RRENs and within the framework of the AfricaConnect4 programme"
+    },
+    "leadershipSection": {
+      "kicker": "OPERATIONAL GOVERNANCE",
+      "title": "Programme leadership",
+      "subtitle": "Clear accountability and stewardship across lead agencies, regional partners, and international technical bodies.",
+      "roles": {
+        "programmeLead": {
+          "role": "Programme lead",
+          "entity": "WACREN CSO",
+          "scope": [
+            "Strategic direction",
+            "AC4 alignment",
+            "Content sign-off"
+          ]
+        },
+        "technicalLead": {
+          "role": "Technical lead",
+          "entity": "WACREN Programme Manager",
+          "scope": [
+            "Technical accuracy",
+            "BonafID product",
+            "Deployment oversight"
+          ]
+        },
+        "communications": {
+          "role": "Communications",
+          "entity": "WACREN Comms team",
+          "scope": [
+            "Website",
+            "Multilingual content",
+            "Design brief & agency management"
+          ]
+        },
+        "regionalPartnerEastSouth": {
+          "role": "Regional partner",
+          "entity": "UbuntuNet Alliance",
+          "scope": [
+            "Governance review",
+            "Federation map data for East/Southern Africa"
+          ]
+        },
+        "regionalPartnerNorth": {
+          "role": "Regional partner",
+          "entity": "ASREN",
+          "scope": [
+            "Governance review",
+            "Federation map data for North Africa"
+          ]
+        },
+        "technicalPartner": {
+          "role": "Technical partner",
+          "entity": "GÉANT",
+          "scope": [
+            "eduGAIN integration",
+            "geteduroam integration",
+            "Standards alignment"
+          ]
+        }
+      }
     }
   }
 }
