@@ -52,16 +52,16 @@ function PolicyDocumentRow({
     <div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="p-5 sm:p-6 lg:p-7 hover:bg-slate-50/60 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-4 group"
+      className="p-5 sm:p-6 lg:p-7 hover:bg-slate-50/70 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-4 group"
     >
-      {/* Left: Animated Document Icon & Metadata */}
+      {/* Left: Minimal Document Icon & Metadata */}
       <div className="flex items-start sm:items-center gap-4 min-w-0">
-        <div className="w-11 h-11 rounded-2xl bg-blue-50 text-[#1A73C3] border border-blue-200/70 flex items-center justify-center shrink-0 group-hover:bg-[#0B357B] group-hover:text-white group-hover:border-[#0B357B] transition-all duration-200 shadow-2xs">
+        <div className="w-11 h-11 rounded-xl bg-slate-50 text-slate-600 border border-slate-200/80 flex items-center justify-center shrink-0 group-hover:bg-slate-100 group-hover:border-slate-300 group-hover:text-slate-900 transition-all duration-200 shadow-2xs">
           <FileTextIcon ref={fileRef} size={20} className="p-0 hover:bg-transparent" />
         </div>
 
         <div className="min-w-0">
-          <h4 className="text-base sm:text-lg font-bold font-heading text-[#0A162B] group-hover:text-[#1A73C3] transition-colors leading-snug">
+          <h4 className="text-base sm:text-lg font-bold font-heading text-[#0A162B] group-hover:text-slate-900 transition-colors leading-snug">
             {doc.title}
           </h4>
 
@@ -79,7 +79,7 @@ function PolicyDocumentRow({
         </div>
       </div>
 
-      {/* Right: Download PDF Button with Animated Download Icon */}
+      {/* Right: Minimal Download PDF Button with Animated Download Icon */}
       <div className="shrink-0 pt-2 md:pt-0">
         <a
           href={doc.href}
@@ -88,12 +88,12 @@ function PolicyDocumentRow({
               e.preventDefault();
             }
           }}
-          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#0B357B] text-slate-700 hover:text-white border border-slate-200 hover:border-[#0B357B] text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-150 shadow-2xs group/btn cursor-pointer select-none w-full md:w-auto"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-300 text-xs font-semibold font-sans transition-all duration-150 shadow-2xs group/btn cursor-pointer select-none w-full md:w-auto"
         >
           <DownloadIcon
             ref={downloadRef}
             size={16}
-            className="p-0 hover:bg-transparent text-slate-500 group-hover/btn:text-white transition-colors shrink-0"
+            className="p-0 hover:bg-transparent text-slate-400 group-hover/btn:text-slate-700 transition-colors shrink-0"
           />
           <span>{downloadCta}</span>
         </a>

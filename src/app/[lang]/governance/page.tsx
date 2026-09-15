@@ -6,6 +6,7 @@ import { GovernanceHero } from "@/components/GovernanceHero";
 import { GovernanceIntroSection } from "@/components/GovernanceIntroSection";
 import { GovernanceLeadershipSection } from "@/components/GovernanceLeadershipSection";
 import { GovernancePoliciesSection } from "@/components/GovernancePoliciesSection";
+import { GovernanceProgrammeSection } from "@/components/GovernanceProgrammeSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -61,6 +62,9 @@ export default async function GovernancePage({
 
         {/* Policies and Terms Section */}
         <GovernancePoliciesSection locale={locale} dict={dict} />
+
+        {/* AfricaConnect4 Programme Section */}
+        <GovernanceProgrammeSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Wordmark Footer */}

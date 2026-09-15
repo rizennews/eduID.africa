@@ -462,6 +462,58 @@
           "href": "#"
         }
       ]
+    },
+    "programmeSection": {
+      "kicker": "Programme",
+      "title": "AfricaConnect4",
+      "description": "AfricaConnect4 (AC4) is a 48-month EU-funded programme running 2026–2029, operated by WACREN, UbuntuNet Alliance, and ASREN. eduID.africa's BonafID and geteduroam expansions are direct AC4 deliverables.",
+      "facts": {
+        "duration": {
+          "label": "Duration",
+          "value": "48 months · 2026–2029"
+        },
+        "funder": {
+          "label": "Funder",
+          "value": "European Commission DG INTPA"
+        },
+        "partners": {
+          "label": "Partners",
+          "value": "WACREN, UbuntuNet Alliance, ASREN, GÉANT"
+        },
+        "deliverables": {
+          "label": "Deliverables",
+          "value": "BonafID production; regional geteduroam; T&I Roadshows; national federation support"
+        }
+      },
+      "roadmap": {
+        "title": "eduID.africa within AC4",
+        "items": [
+          {
+            "id": "bonafid-production",
+            "title": "BonafID 1.0 production release",
+            "timeline": "Year 1 ✓",
+            "status": "completed"
+          },
+          {
+            "id": "geteduroam-catchall",
+            "title": "Regional geteduroam catchall live",
+            "timeline": "Year 1 ✓",
+            "status": "completed"
+          },
+          {
+            "id": "institutional-onboardings",
+            "title": "20 new institutional onboardings",
+            "timeline": "Year 2",
+            "status": "upcoming"
+          },
+          {
+            "id": "multilingual-content",
+            "title": "French/Arabic site content",
+            "timeline": "Year 3",
+            "status": "scheduled"
+          }
+        ]
+      }
     }
   }
 }
