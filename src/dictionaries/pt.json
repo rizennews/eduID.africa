@@ -517,9 +517,7 @@
     }
   },
   "notFoundPage": {
-    "title": "Identidade não encontrada neste caminho",
-    "description": "A página, recurso da federação ou documento solicitado não foi encontrado. Pode ter sido movido ou não existir na rede continental.",
-    "homeButton": "Voltar ao início",
-    "mapButton": "Explorar o mapa"
+    "title": "Perdido em voo?",
+    "homeButton": "Encontre o caminho de volta"
   }
 }

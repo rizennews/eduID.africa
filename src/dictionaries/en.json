@@ -517,9 +517,7 @@
     }
   },
   "notFoundPage": {
-    "title": "Identity not found on this path",
-    "description": "The page, federation resource, or document you requested could not be located. It may have moved or does not exist across the continental network.",
-    "homeButton": "Back to Home",
-    "mapButton": "Explore Federation Map"
+    "title": "Lost in flight?",
+    "homeButton": "Find your way home"
   }
 }
