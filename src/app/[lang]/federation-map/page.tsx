@@ -54,7 +54,7 @@ export default async function FederationMapPage({
         <FederationMapHero locale={locale} dict={dict} />
 
         {/* Interactive Explorer: Map, Category Filters, Search & Directory */}
-        <FederationMapExplorer dict={dict.federationMapPage} />
+        <FederationMapExplorer locale={locale} dict={dict.federationMapPage} />
 
         {/* Call to Action: Is your country not listed? */}
         <FederationContactCtaSection locale={locale} dict={dict} />

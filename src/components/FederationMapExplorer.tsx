@@ -1,15 +1,28 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import {
   type AfricanCountry,
   type FederationCategory,
   AFRICAN_COUNTRIES,
 } from "@/data/african-countries";
 import { InteractiveAfricaMap } from "@/components/InteractiveAfricaMap";
-import { Search, X, Building2, Globe2, ShieldCheck, CheckCircle2 } from "lucide-react";
+import {
+  Search,
+  X,
+  Building2,
+  Globe2,
+  ShieldCheck,
+  CheckCircle2,
+  ChevronDown,
+  ArrowUp,
+  ArrowRight,
+} from "lucide-react";
+import type { Locale } from "@/lib/i18n";
 
 interface FederationMapExplorerProps {
+  locale?: Locale;
   dict: {
     categories: {
       all: string;
@@ -25,10 +38,19 @@ interface FederationMapExplorerProps {
   };
 }
 
-export function FederationMapExplorer({ dict }: FederationMapExplorerProps) {
+export function FederationMapExplorer({
+  locale = "en",
+  dict,
+}: FederationMapExplorerProps) {
   const [selectedCategory, setSelectedCategory] = React.useState<FederationCategory | "all">("all");
   const [searchQuery, setSearchQuery] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState<AfricanCountry | null>(null);
+  const mapContainerRef = React.useRef<HTMLDivElement>(null);
+
+  const handleScrollToMap = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    mapContainerRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   // Compute category counts
   const counts = React.useMemo(() => {
@@ -181,7 +203,7 @@ export function FederationMapExplorer({ dict }: FederationMapExplorerProps) {
         </div>
 
         {/* Dual Interactive Grid: Map on Left + Country Inspector on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div ref={mapContainerRef} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start scroll-mt-24">
           {/* Left Column: Interactive Map */}
           <div className="lg:col-span-7 xl:col-span-8">
             <InteractiveAfricaMap
@@ -360,52 +382,183 @@ export function FederationMapExplorer({ dict }: FederationMapExplorerProps) {
                 return (
                   <div
                     key={country.iso2}
-                    onClick={() => setSelectedCountry(country)}
-                    className={`py-5 sm:py-6 border-b border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-center cursor-pointer transition-colors px-2 sm:px-3 rounded-lg ${
-                      isSelected ? "bg-blue-50/60" : "hover:bg-slate-50/60"
+                    className={`border-b border-dashed border-slate-300 transition-colors ${
+                      isSelected ? "bg-blue-50/40" : "hover:bg-slate-50/50"
                     }`}
                   >
-                    {/* Column 1: Monospaced Index & ISO Code */}
-                    <div className="md:col-span-2 flex items-center gap-3">
-                      <span className="font-mono text-xs text-slate-400 font-semibold w-6">
-                        {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
-                      </span>
-                      <span className="font-mono text-xs font-extrabold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/70">
-                        {country.iso2}
-                      </span>
-                      <span className="text-xs font-mono text-slate-400 hidden sm:inline">
-                        {country.regionalRen}
-                      </span>
-                    </div>
-
-                    {/* Column 2: Country Name & NREN */}
-                    <div className="md:col-span-5">
-                      <h4 className="text-base sm:text-lg font-bold font-heading text-slate-900 leading-snug">
-                        {country.name}
-                      </h4>
-                      <p className="text-xs sm:text-sm text-slate-500 font-sans mt-0.5">
-                        NREN: <span className="font-semibold text-slate-700">{country.nren}</span>
-                      </p>
-                    </div>
-
-                    {/* Column 3: Federation Status & Architecture */}
-                    <div className="md:col-span-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                      <div>
-                        <span
-                          className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider border ${badge.bg}`}
-                        >
-                          <span className={`w-1.5 h-1.5 rounded-full ${badge.dot}`} />
-                          {badge.label}
+                    {/* Main Row Header */}
+                    <div
+                      onClick={() => setSelectedCountry(isSelected ? null : country)}
+                      className="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-center cursor-pointer px-2 sm:px-3"
+                    >
+                      {/* Column 1: Monospaced Index & ISO Code */}
+                      <div className="md:col-span-2 flex items-center gap-3">
+                        <span className="font-mono text-xs text-slate-400 font-semibold w-6">
+                          {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                         </span>
-                        <p className="text-xs text-slate-500 font-sans mt-1">
-                          {country.federationName}
+                        <span className="font-mono text-xs font-extrabold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/70">
+                          {country.iso2}
+                        </span>
+                        <span className="text-xs font-mono text-slate-400 hidden sm:inline">
+                          {country.regionalRen}
+                        </span>
+                      </div>
+
+                      {/* Column 2: Country Name & NREN */}
+                      <div className="md:col-span-5">
+                        <h4 className="text-base sm:text-lg font-bold font-heading text-slate-900 leading-snug">
+                          {country.name}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-slate-500 font-sans mt-0.5">
+                          NREN: <span className="font-semibold text-slate-700">{country.nren}</span>
                         </p>
                       </div>
 
-                      <span className="text-xs font-bold text-[#1A73C3] hidden md:inline">
-                        Select →
-                      </span>
+                      {/* Column 3: Federation Status & Action Button */}
+                      <div className="md:col-span-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div>
+                          <span
+                            className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider border ${badge.bg}`}
+                          >
+                            <span className={`w-1.5 h-1.5 rounded-full ${badge.dot}`} />
+                            {badge.label}
+                          </span>
+                          <p className="text-xs text-slate-500 font-sans mt-1">
+                            {country.federationName}
+                          </p>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedCountry(isSelected ? null : country);
+                          }}
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold font-outfit transition-all cursor-pointer select-none self-start sm:self-auto ${
+                            isSelected
+                              ? "bg-[#0B357B] text-white shadow-xs"
+                              : "text-[#1A73C3] hover:text-[#0B357B] hover:bg-blue-100/60"
+                          }`}
+                        >
+                          <span>{isSelected ? "Hide Details" : "Details"}</span>
+                          <ChevronDown
+                            size={14}
+                            className={`transition-transform duration-200 ${
+                              isSelected ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                      </div>
                     </div>
+
+                    {/* Inline Expandable Country Details Card */}
+                    {isSelected && (
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="mb-5 mx-2 sm:mx-3 p-5 sm:p-6 rounded-2xl bg-white border border-blue-200/90 shadow-sm animate-in fade-in slide-in-from-top-2 duration-200"
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+                          <div className="flex items-center gap-3">
+                            <span className="font-mono text-sm font-black px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/70">
+                              {country.iso2}
+                            </span>
+                            <div>
+                              <h5 className="text-base sm:text-lg font-bold font-heading text-slate-900">
+                                {country.name} — Trust & Identity Profile
+                              </h5>
+                              <p className="text-xs text-slate-500 font-sans">
+                                Sovereign NREN: <span className="font-semibold text-slate-700">{country.nren}</span>
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Primary "View on Map" Button */}
+                          <button
+                            type="button"
+                            onClick={handleScrollToMap}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0B357B] text-white text-xs font-bold font-outfit hover:bg-[#072454] transition-all shadow-xs active:scale-[0.98] cursor-pointer"
+                          >
+                            <span>View on Map</span>
+                            <ArrowUp size={14} />
+                          </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                          {/* Col 1: Architecture Model */}
+                          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/60 space-y-1">
+                            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
+                              Architecture Model
+                            </span>
+                            <p className="text-xs font-bold text-slate-900 font-heading">
+                              {country.category === "national_federation"
+                                ? "Path A — Sovereign National Federation"
+                                : country.category === "catchall_bonafid"
+                                ? "Path B — Catchall via BonafID"
+                                : country.category === "in_development"
+                                ? "National Roadmap in Active Development"
+                                : "Unconnected — Initial Consultation"}
+                            </p>
+                            <p className="text-[11px] text-slate-500 font-sans leading-relaxed">
+                              {country.category === "national_federation"
+                                ? "NREN operates national federation and peers directly with eduID.africa upward to eduGAIN."
+                                : country.category === "catchall_bonafid"
+                                ? "Institutions participate directly in continental federation via BonafID without needing national infrastructure."
+                                : country.category === "in_development"
+                                ? "Technical policy and identity federation deployment currently underway."
+                                : "NREN or institutions can connect to eduID.africa via BonafID on-ramp."}
+                            </p>
+                          </div>
+
+                          {/* Col 2: Peering & Regional REN */}
+                          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/60 space-y-1">
+                            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
+                              Regional Peering & Scope
+                            </span>
+                            <p className="text-xs font-bold text-slate-900 font-heading">
+                              {country.regionalRen}
+                            </p>
+                            <p className="text-[11px] text-slate-500 font-sans leading-relaxed">
+                              {country.institutionsCount
+                                ? `${country.institutionsCount} higher education & research institutions connected.`
+                                : "Direct institutional onboarding open via eduID.africa BonafID catchall."}
+                            </p>
+                            <p className="text-[11px] font-mono text-[#0B357B] font-semibold pt-1">
+                              Global Trust: eduGAIN Connected
+                            </p>
+                          </div>
+
+                          {/* Col 3: Actions */}
+                          <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/60 flex flex-col justify-between gap-3">
+                            <div>
+                              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
+                                Quick Action
+                              </span>
+                              <p className="text-xs font-bold text-slate-800 font-sans mt-0.5">
+                                Explore Architecture or Connect
+                              </p>
+                            </div>
+
+                            <div className="flex flex-wrap items-center gap-2 pt-1">
+                              <Link
+                                href={`/${locale}/how-it-works`}
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-[#0B357B] hover:border-[#0B357B] text-xs font-semibold font-outfit transition-colors shadow-2xs"
+                              >
+                                <span>How it Works</span>
+                                <ArrowRight size={12} />
+                              </Link>
+
+                              <Link
+                                href={`/${locale}/get-started`}
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1A73C3] text-white hover:bg-[#0B357B] text-xs font-bold font-outfit transition-colors shadow-2xs"
+                              >
+                                <span>Get Started</span>
+                                <ArrowRight size={12} />
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })

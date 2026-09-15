@@ -37,11 +37,6 @@ export function FederationContactCtaSection({
           />
 
           <div className="relative z-10 max-w-2xl space-y-4 text-left">
-            {/* Kicker Tag */}
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80">
-              Continental Onboarding
-            </span>
-
             {/* Headline */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
               {cta.headline}
@@ -55,9 +50,7 @@ export function FederationContactCtaSection({
             {/* CTA Button */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
-                href={`mailto:info@eduid.africa?subject=${encodeURIComponent(
-                  "Connecting our Country / NREN to eduID.africa"
-                )}`}
+                href={`/${locale}/get-started`}
                 onMouseEnter={() => arrowRef.current?.startAnimation()}
                 onMouseLeave={() => arrowRef.current?.stopAnimation()}
                 className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0B357B] text-white text-sm font-bold font-outfit hover:bg-[#072454] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none"
