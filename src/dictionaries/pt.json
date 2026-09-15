@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "eduID.africa — Federação Soberana de Identidade Digital para a Academia Africana",
+    "description": "Federação pan-africana de confiança fornecendo Single Sign-On soberano e federado, credenciais acadêmicas digitais verificáveis e acesso transfronteiriço à pesquisa.",
+    "keywords": "eduID, África, identidade soberana, federação acadêmica, NREN, cartão de estudante, diploma digital, SSO, pesquisa"
+  },
+  "brand": {
+    "name": "eduID.africa",
+    "tagline": "Uma Identidade Soberana para a Educação e Investigação em África"
+  },
+  "nav": {
+    "eduid": {
+      "label": "eduID.africa",
+      "about": {
+        "title": "Sobre",
+        "desc": "Missão, visão continental e parceiros regionais"
+      },
+      "howItWorks": {
+        "title": "Como funciona",
+        "desc": "Autenticação federada e protocolo de confiança continental"
+      },
+      "federationMap": {
+        "title": "Mapa da federação",
+        "desc": "Mapa interativo de instituições e nós continentais"
+      },
+      "governance": {
+        "title": "Governança",
+        "desc": "Comitê gestor e soberania de dados africana"
+      }
+    },
+    "communities": {
+      "label": "Comunidades",
+      "nrens": {
+        "title": "NRENs",
+        "desc": "Integração de redes nacionais de pesquisa e educação"
+      },
+      "institutions": {
+        "title": "Instituições",
+        "desc": "Universidades, institutos politécnicos e centros de pesquisa"
+      }
+    },
+    "bonafId": {
+      "label": "BonafID",
+      "desc": "Credenciais digitais verificáveis para estudantes e pesquisadores"
+    },
+    "resources": {
+      "label": "Recursos",
+      "news": {
+        "title": "Notícias",
+        "desc": "Atualizações e anúncios da federação continental"
+      },
+      "upcomingEvents": {
+        "title": "Próximos eventos",
+        "desc": "Conferências, webinars e workshops técnicos"
+      },
+      "training": {
+        "title": "Formação",
+        "desc": "Capacitação técnica e tutoriais de administração"
+      },
+      "modules": {
+        "title": "Módulos",
+        "desc": "Bibliotecas de software, SDKs e ferramentas de integração"
+      }
+    },
+    "actions": {
+      "getStarted": "Começar"
+    }
+  },
+  "about": {
+    "badge": "Sobre o eduID.africa",
+    "headline1": "O quadro continental africano",
+    "headline2": "de Confiança e Identidade.",
+    "description": "O eduID.africa é a federação pan-africana de identidade que conecta a comunidade de pesquisa e educação do continente entre si e ao mundo. Governada conjuntamente pelas três redes regionais de pesquisa e educação de África.",
+    "networksLabel": "Governado conjuntamente pelas redes regionais",
+    "network1": "UbuntuNet Alliance",
+    "network1Region": "África Oriental e Austral",
+    "network2": "WACREN",
+    "network2Region": "África Ocidental e Central",
+    "network3": "ASREN",
+    "network3Region": "Estados Árabes e Norte de África",
+    "ctaGovernance": "Explorar governação",
+    "ctaHowItWorks": "Como funciona",
+    "networksSection": {
+      "headline": "Três redes. Um quadro estrutural.",
+      "description": "O eduID.africa é governado conjuntamente pelas três redes regionais de pesquisa e educação de África, cobrindo cada uma uma região distinta do continente.",
+      "network1": {
+        "shortName": "UbuntuNet",
+        "fullName": "UbuntuNet Alliance for Research and Education Networking",
+        "region": "África Austral e Oriental"
+      },
+      "network2": {
+        "shortName": "WACREN",
+        "fullName": "West and Central African Research and Education Network",
+        "region": "África Ocidental e Central"
+      },
+      "network3": {
+        "shortName": "ASREN",
+        "fullName": "Arab States Research and Education Network",
+        "region": "Norte de África e Estados Árabes"
+      }
+    },
+    "mission": {
+      "kicker": "Missão",
+      "headline": "Dois níveis. Um quadro estrutural.",
+      "description": "O eduID.africa opera em dois níveis interconectados que definem o que o torna estruturalmente diferente de uma federação nacional isolada.",
+      "level1": {
+        "tag": "NÍVEL 1 — TETO CONTINENTAL",
+        "title": "Nível 1 — Quadro continental",
+        "description": "O eduID.africa é o teto continental: uma federação pan-africana de identidade que se conecta à eduGAIN e concede aos investigadores, estudantes e funcionários africanos acesso a serviços digitais globais. Define normas, governa o quadro de confiança e representa o ecossistema africano internacionalmente."
+      },
+      "level2": {
+        "tag": "NÍVEL 2 — VIA PREFERENCIAL",
+        "title": "Nível 2 — Apoio a federações nacionais",
+        "description": "O principal modelo de entrega é apoiar cada NREN a estabelecer e operar a sua própria federação nacional de identidade — soberania nacional sobre a infraestrutura de identidade, com o eduID.africa como agregador continental. Esta é a via de preferência."
+      },
+      "level2b": {
+        "tag": "NÍVEL 2B — CATCHALL (REDE DE APOIO)",
+        "title": "Nível 2b — Catchall para quem ainda não pode",
+        "description": "Para NRENs que ainda não têm capacidade institucional, financiamento ou massa crítica para gerir uma federação nacional, o eduID.africa opera um catchall. A plataforma BonafID viabiliza isto: IAM federado open-source hospedado na nuvem para qualquer instituição."
+      }
+    },
+    "timeline": {
+      "kicker": "Linha do Tempo",
+      "headline": "Como chegamos aqui",
+      "step1": {
+        "year": "2014",
+        "title": "Criação do eduID.africa",
+        "description": "Lançamento da federação catch-all continental sob o programa AfricaConnect, fornecendo o primeiro caminho para a eduGAIN para instituições africanas."
+      },
+      "step2": {
+        "year": "2018",
+        "title": "AfricaConnect3 — Piloto BonafID",
+        "description": "Primeiros pilotos BonafID iniciados na região do WACREN. Modelo de governança de identidade no campus comprovado. Sete instituições piloto em cinco países."
+      },
+      "step3": {
+        "year": "2022",
+        "title": "Lançamento do programa T&I Roadshow",
+        "description": "Workshops regionais estruturados impulsionam a adoção pelas IES na África Ocidental, Oriental e Austral. Início da formação de federações no Quênia, África do Sul e Gana."
+      },
+      "step4": {
+        "year": "2026",
+        "title": "AfricaConnect4 — Fase de produção",
+        "description": "Lançamento em produção do BonafID 1.0. geteduroam regional implantado. 12 federações nacionais operacionais. 380+ instituições conectadas em 35 países.",
+        "badge": "Produção ativa"
+      },
+      "step5": {
+        "year": "2027–2029",
+        "indicator": "→",
+        "title": "Escala",
+        "description": "Metas da fase: 25 federações nacionais, integração self-service, conteúdo em francês e árabe, integração de ciência aberta LIBSENSE.",
+        "badge": "Metas futuras"
+      }
+    }
+  },
+  "howItWorks": {
+    "heroTitle": "Como funciona",
+    "headline1": "Três camadas. Uma identidade.",
+    "headline2": "Acesso em escala continental.",
+    "description": "O eduID.africa opera em três camadas interconectadas — governança de identidade no campus, federação nacional e agregação continental — conectando pesquisadores e estudantes africanos a recursos globais.",
+    "layers": {
+      "card1": {
+        "title": "BonafID — Governança de identidade no campus",
+        "description": "A maioria das IES africanas não possui um provedor de identidade gerenciado. O BonafID é um sistema IAM de código aberto, co-criado pelo WACREN, que fornece a cada instituição um provedor de identidade pronto para produção. Uma identidade unificada e vitalícia para cada estudante e funcionário — que funciona entre instituições e países.",
+        "solves": "credenciais fragmentadas, falta de IdP gerenciado, exclusão de recursos globais"
+      },
+      "card2": {
+        "title": "eduID.africa — Federação continental",
+        "description": "A federação regional de identidade que conecta as IES africanas entre si e, via eduGAIN, à rede global de pesquisa e educação. As NRENs podem construir federações nacionais soberanas conectadas para cima — ou as instituições podem participar diretamente via federação catchall.",
+        "solves": "sem caminho para pesquisa global, infraestrutura nacional fragmentada"
+      },
+      "card3": {
+        "title": "geteduroam — Wi-Fi baseado em certificados",
+        "description": "Um serviço regional que utiliza a identidade federada do usuário para gerar automaticamente um certificado de login Wi-Fi via um aplicativo simples. Sem configuração manual. Acesso seguro e autenticado via RADIUS-over-TLS em cada campus conectado da região.",
+        "solves": "complexidade de configuração do eduroam, protocolos de autenticação legados"
+      }
+    },
+    "userJourney": {
+      "kicker": "Jornada do utilizador",
+      "headline": "Da chegada ao acesso",
+      "description": "Como um investigador de uma instituição conectada vivencia o sistema — do primeiro login ao acesso Wi-Fi em qualquer campus parceiro.",
+      "step1": {
+        "num": "1",
+        "title": "Instituição implementa BonafID"
+      },
+      "step2": {
+        "num": "2",
+        "title": "IdP regista-se no eduID.africa"
+      },
+      "step3": {
+        "num": "3",
+        "title": "eduID.africa conecta-se à eduGAIN"
+      },
+      "step4": {
+        "num": "4",
+        "title": "Utilizador instala a app geteduroam"
+      },
+      "step5": {
+        "num": "5",
+        "title": "Certificado gerado automaticamente"
+      },
+      "step6": {
+        "num": "✓",
+        "title": "Acesso integrado em todo o lado"
+      }
+    }
+  },
+  "hero": {
+    "badge": "A camada de identidade para pesquisa e educação em África",
+    "headline1": "Apoiando cada NREN a federar-se nacionalmente.",
+    "headline2": "Conectando cada instituição que não pode esperar.",
+    "description": "O eduID.africa eleva a infraestrutura de Confiança e Identidade em toda a África — ajudando as NRENs a construir federações nacionais soberanas e fornecendo uma alternativa continental para aquelas que ainda não estão prontas.",
+    "ctaNren": "Para as NRENs →",
+    "ctaInstitution": "Verifique a sua instituição"
+  },
+  "pathways": {
+    "card1": {
+      "tag": "PARA NRENS — VIA NACIONAL",
+      "title": "Construir uma federação nacional",
+      "description": "O seu país é proprietário da sua infraestrutura de identidade. O eduID.africa fornece ferramentas, modelos de governação, formação e apoio do T&I Roadshow para ajudar a sua NREN a implementar uma federação nacional soberana — que depois se conecta ao nível continental.",
+      "cta": "Começar a construir →",
+      "href": "/for-nren",
+      "number": "01"
+    },
+    "card2": {
+      "tag": "PARA NRENS — VIA CATCHALL",
+      "title": "Aderir à federação catchall",
+      "description": "Se a sua NREN ainda não estiver pronta para gerir uma federação nacional, as suas instituições podem participar diretamente a nível continental. O BonafID disponibiliza uma plataforma de identidade em nuvem de código aberto — sem necessidade de infraestrutura local.",
+      "cta": "Aderir via BonafID →",
+      "href": "/bonafid",
+      "number": "02"
+    },
+    "card3": {
+      "tag": "PARA INVESTIGADORES E FUNCIONÁRIOS",
+      "title": "Verifique a sua instituição",
+      "description": "Pesquise para verificar se a sua universidade ou centro de investigação está ligado à federação — e a que serviços isso lhe dá acesso, incluindo eduroam, recursos eduGAIN e plataformas NREN.",
+      "cta": "Pesquisar instituições →",
+      "href": "/for-institutions",
+      "number": "03"
+    }
+  },
+  "metrics": {
+    "kicker": "Alcance Continental e Confiança Global",
+    "stat1": {
+      "value": "12 países",
+      "label": "com federações nacionais"
+    },
+    "stat2": {
+      "value": "35 países",
+      "label": "via catchall ou em progresso"
+    },
+    "stat3": {
+      "value": "380+",
+      "label": "instituições conectadas"
+    },
+    "stat4": {
+      "value": "eduGAIN",
+      "label": "interoperabilidade global"
+    }
+  },
+  "mapSection": {
+    "title": "Onde cada país se posiciona",
+    "description": "O mapa da federação mostra o estado atual da infraestrutura de T&I em toda a África — desde federações nacionais totalmente operacionais até países apoiados e aqueles onde o catchall oferece acesso direto.",
+    "statusOperational": "Federação nacional operacional",
+    "statusDevelopment": "Federação nacional em desenvolvimento",
+    "statusCatchall": "Participação via catchall (BonafID)",
+    "statusNotConnected": "Ainda não conectado",
+    "cta": "Abrir mapa completo →"
+  },
+  "governanceSection": {
+    "title": "Governado pelas três redes regionais de pesquisa e educação da África — com o apoio de",
+    "partner1": "UbuntuNet Alliance",
+    "partner2": "WACREN",
+    "partner3": "ASREN",
+    "partner4": "Membro eduGAIN",
+    "partner5": "AfricaConnect4 (UE)",
+    "partner6": "Parceiro GÉANT"
+  },
+  "foundation": {
+    "status": "Fundação Pronta",
+    "description": "Arquitetura empresarial Next.js ativa com roteamento multilíngue, OpenSEO, cabeçalhos de segurança e primitivos modernos de animação.",
+    "activeLocale": "Português (pt)",
+    "changeLanguage": "Mudar de Idioma"
+  },
+  "footer": {
+    "tagline": "Infraestrutura pública de identidade para a investigação e educação em África. Uma iniciativa conjunta da UbuntuNet Alliance, WACREN e ASREN.",
+    "colNrenTitle": "Para as NRENs",
+    "colNrenLink1": "Construir uma federação nacional",
+    "colNrenLink2": "Aderir ao catchall",
+    "colNrenLink3": "Plataforma BonafID",
+    "colNrenLink4": "T&I Roadshows",
+    "colResourcesTitle": "Recursos",
+    "colResourcesLink1": "Documentação",
+    "colResourcesLink2": "Materiais de formação",
+    "colResourcesLink3": "Mapa de cobertura",
+    "colResourcesLink4": "Notícias e atualizações",
+    "colOrgTitle": "Organização",
+    "colOrgLink1": "Sobre o eduID.africa",
+    "colOrgLink2": "Governança",
+    "colOrgLink3": "Políticas e termos",
+    "colOrgLink4": "Contacto",
+    "copyright": "© 2026 eduID.africa. Iniciativa conjunta da UbuntuNet Alliance, WACREN e ASREN.",
+    "privacy": "Política de Privacidade",
+    "terms": "Políticas e Termos"
+  }
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Official eduID.africa Brand Colors */
+  --brand-navy: #0B357B;
+  --brand-blue: #1A73C3;
+  --brand-blue-light: #2D8CE0;
+  --brand-orange: #DE4A1B;
+  --brand-orange-light: #F45B26;
+
+  /* Sophisticated Off-White Theme (Soft, not harsh pure white) */
+  --background: #F8FAFC; /* Slate 50 off-white */
+  --foreground: #0A162B; /* Deep Navy Slate */
+  
+  --card: #FFFFFF;
+  --card-foreground: #0A162B;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #0A162B;
+  
+  --primary: #1A73C3;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #0B357B;
+  --secondary-foreground: #FFFFFF;
+  
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  
+  --accent: #DE4A1B;
+  --accent-foreground: #FFFFFF;
+  
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #1A73C3;
+  
+  --radius: 0.75rem;
+
+  --font-heading: 'Outfit', var(--font-outfit), sans-serif;
+  --font-body: 'Inter', var(--font-inter), sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-light: var(--brand-blue-light);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-light: var(--brand-orange-light);
+
+  --font-outfit: 'Outfit', var(--font-outfit), sans-serif;
+  --font-inter: 'Inter', var(--font-inter), sans-serif;
+  --font-sans: 'Inter', var(--font-inter), sans-serif;
+  --font-mono: 'JetBrains Mono', var(--font-mono), monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading, .font-outfit {
+  font-family: 'Outfit', var(--font-outfit), sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+/* Modern Corporate Card Utilities */
+.corporate-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(11, 53, 123, 0.04), 0 2px 6px -1px rgba(11, 53, 123, 0.02);
+}
+
+.corporate-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.corporate-card-hover:hover {
+  border-color: rgba(26, 115, 195, 0.35);
+  box-shadow: 0 12px 30px -4px rgba(26, 115, 195, 0.1), 0 4px 12px -2px rgba(11, 53, 123, 0.04);
+  transform: translateY(-2px);
+}
