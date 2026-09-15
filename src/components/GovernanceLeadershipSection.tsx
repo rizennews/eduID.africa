@@ -131,14 +131,14 @@ export function GovernanceLeadershipSection({
                       {roleData.role}
                     </span>
 
-                    <div className="h-10 sm:h-11 flex items-center justify-end shrink-0 min-w-0">
+                    <div className="h-10 sm:h-12 flex items-center justify-end shrink-0 min-w-0">
                       <Image
                         src={config.logoSrc}
                         alt={config.logoAlt}
                         width={config.logoWidth}
                         height={config.logoHeight}
                         unoptimized
-                        className="max-h-9 sm:max-h-10 w-auto max-w-[130px] object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+                        className="max-h-10 sm:max-h-11 w-auto max-w-[150px] object-contain"
                       />
                     </div>
                   </div>

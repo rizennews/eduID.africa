@@ -30,9 +30,9 @@ const PARTNER_LOGOS = [
   {
     name: "UbuntuNet Alliance",
     logoSrc: "/networks-logo/ubuntunet-alliance.png",
-    width: 140,
-    height: 42,
-    className: "max-h-8 sm:max-h-9 w-auto object-contain",
+    width: 150,
+    height: 44,
+    className: "max-h-8 sm:max-h-9 w-auto max-w-[90%] object-contain",
   },
   {
     name: "WACREN",
