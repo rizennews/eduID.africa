@@ -3,8 +3,6 @@
 import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import type { Locale } from "@/lib/i18n";
 
 interface NotFoundViewProps {
@@ -48,79 +46,70 @@ export function NotFoundView({ locale = "en", dict }: NotFoundViewProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-[#0A162B] selection:bg-slate-200">
-      {/* Site Header */}
-      <Header locale={locale} dict={dict} />
+    <main className="min-h-screen w-full relative flex items-center justify-center bg-[#FAFAFA] text-[#0A162B] selection:bg-slate-200 overflow-hidden">
+      {/* Floating Airplanes with Soft Drop Shadows */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
+        {PLANES.map((plane) => (
+          <motion.div
+            key={plane.id}
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: [0, -5, 0],
+              rotate: [plane.rotate, plane.rotate + 1.2, plane.rotate],
+            }}
+            transition={{
+              y: {
+                duration: 4 + (plane.id % 3),
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+              rotate: {
+                duration: 5 + (plane.id % 2),
+                repeat: Infinity,
+                ease: "easeInOut",
+              },
+              opacity: { duration: 0.9, delay: plane.delay },
+              scale: { duration: 0.9, delay: plane.delay },
+            }}
+            style={{
+              position: "absolute",
+              top: plane.top,
+              left: plane.left,
+              filter: "drop-shadow(5px 12px 6px rgba(0, 0, 0, 0.14))",
+            }}
+            className="text-[#D4D8DF]"
+          >
+            <AirplaneIcon size={plane.size} />
+          </motion.div>
+        ))}
+      </div>
 
-      {/* Main Expansive Canvas */}
-      <main className="flex-1 relative flex items-center min-h-[calc(100vh-130px)] overflow-hidden">
-        {/* Floating Airplanes with Soft Drop Shadows */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-          {PLANES.map((plane) => (
-            <motion.div
-              key={plane.id}
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-                y: [0, -5, 0],
-                rotate: [plane.rotate, plane.rotate + 1.2, plane.rotate],
-              }}
-              transition={{
-                y: {
-                  duration: 4 + (plane.id % 3),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-                rotate: {
-                  duration: 5 + (plane.id % 2),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                },
-                opacity: { duration: 0.9, delay: plane.delay },
-                scale: { duration: 0.9, delay: plane.delay },
-              }}
-              style={{
-                position: "absolute",
-                top: plane.top,
-                left: plane.left,
-                filter: "drop-shadow(5px 12px 6px rgba(0, 0, 0, 0.14))",
-              }}
-              className="text-[#D4D8DF]"
+      {/* Text Content - Left Aligned */}
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-8 sm:px-14 lg:px-24 py-16">
+        <div className="max-w-md">
+          {/* 404 */}
+          <h1 className="text-4xl sm:text-5xl lg:text-[44px] font-bold font-heading text-[#111827] tracking-tight leading-tight">
+            404
+          </h1>
+
+          {/* Lost in flight? */}
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-normal font-sans text-slate-400 tracking-tight leading-tight mt-1">
+            {pageDict.title}
+          </h2>
+
+          {/* Find your way home */}
+          <div className="mt-8 sm:mt-10">
+            <Link
+              href={`/${locale}`}
+              className="text-xs sm:text-sm font-normal text-slate-400 hover:text-slate-900 transition-colors inline-block"
             >
-              <AirplaneIcon size={plane.size} />
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Text Content - Left Aligned */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-8 sm:px-14 lg:px-24 py-16">
-          <div className="max-w-md">
-            {/* 404 */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[44px] font-bold font-heading text-[#111827] tracking-tight leading-tight">
-              404
-            </h1>
-
-            {/* Lost in flight? */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-normal font-sans text-slate-400 tracking-tight leading-tight mt-1">
-              {pageDict.title}
-            </h2>
-
-            {/* Find your way home */}
-            <div className="mt-8 sm:mt-10">
-              <Link
-                href={`/${locale}`}
-                className="text-xs sm:text-sm font-normal text-slate-400 hover:text-slate-900 transition-colors inline-block"
-              >
-                {pageDict.homeButton}
-              </Link>
-            </div>
+              {pageDict.homeButton}
+            </Link>
           </div>
         </div>
-      </main>
-
-      {/* Signature Wordmark Footer */}
-      <Footer locale={locale} dict={dict} />
-    </div>
+      </div>
+    </main>
   );
 }
