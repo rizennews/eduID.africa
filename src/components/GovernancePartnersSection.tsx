@@ -34,12 +34,36 @@ export function GovernancePartnersSection({
   const displayTitle = title || dict.governanceSection.title;
 
   const defaultPartners: PartnerItem[] = [
-    { name: dict.governanceSection.partner1, role: "Regional REN" },
-    { name: dict.governanceSection.partner2, role: "Regional REN" },
-    { name: dict.governanceSection.partner3, role: "Regional REN" },
-    { name: dict.governanceSection.partner4, role: "Global Trust" },
-    { name: dict.governanceSection.partner5, role: "EU Program" },
-    { name: dict.governanceSection.partner6, role: "Partner REN" },
+    {
+      name: dict.governanceSection.partner1,
+      role: "Regional REN",
+      logoUrl: "/networks-logo/ubuntunet-alliance-logo-2.png",
+    },
+    {
+      name: dict.governanceSection.partner2,
+      role: "Regional REN",
+      logoUrl: "/networks-logo/wacren.png",
+    },
+    {
+      name: dict.governanceSection.partner3,
+      role: "Regional REN",
+      logoUrl: "/networks-logo/asren.png",
+    },
+    {
+      name: dict.governanceSection.partner4,
+      role: "Global Trust",
+      logoUrl: "/networks-logo/eduGAIN.png",
+    },
+    {
+      name: dict.governanceSection.partner5,
+      role: "EU Program",
+      logoUrl: "/networks-logo/africaconnect4.webp",
+    },
+    {
+      name: dict.governanceSection.partner6,
+      role: "Partner REN",
+      logoUrl: "/networks-logo/geant.jpg",
+    },
   ];
 
   const displayPartners = customPartners || defaultPartners;

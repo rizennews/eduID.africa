@@ -76,8 +76,8 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoAlt: "UbuntuNet Alliance Logo",
     badgeClass: "bg-emerald-50 text-emerald-900 border-emerald-200/80",
     accentDot: "bg-emerald-600",
-    logoWidth: 110,
-    logoHeight: 32,
+    logoWidth: 150,
+    logoHeight: 45,
   },
   {
     key: "regionalPartnerNorth",
@@ -85,8 +85,8 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoAlt: "ASREN Logo",
     badgeClass: "bg-teal-50 text-teal-900 border-teal-200/80",
     accentDot: "bg-teal-600",
-    logoWidth: 85,
-    logoHeight: 32,
+    logoWidth: 110,
+    logoHeight: 40,
   },
   {
     key: "technicalPartner",
@@ -94,8 +94,8 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoAlt: "GÉANT Logo",
     badgeClass: "bg-indigo-50 text-indigo-900 border-indigo-200/80",
     accentDot: "bg-indigo-600",
-    logoWidth: 80,
-    logoHeight: 32,
+    logoWidth: 110,
+    logoHeight: 38,
   },
 ];
 
@@ -142,13 +142,13 @@ export function GovernanceLeadershipSection({
                       {roleData.role}
                     </span>
 
-                    <div className="h-8 flex items-center justify-end">
+                    <div className="h-10 sm:h-11 flex items-center justify-end">
                       <Image
                         src={config.logoSrc}
                         alt={config.logoAlt}
                         width={config.logoWidth}
                         height={config.logoHeight}
-                        className="max-h-7 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                        className="max-h-9 sm:max-h-10 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                       />
                     </div>
                   </div>
