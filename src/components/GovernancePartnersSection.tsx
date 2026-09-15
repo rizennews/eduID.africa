@@ -37,7 +37,7 @@ export function GovernancePartnersSection({
     {
       name: dict.governanceSection.partner1,
       role: "Regional REN",
-      logoUrl: "/networks-logo/ubuntunet-alliance-logo-2.png",
+      logoUrl: "/networks-logo/ubuntunet-alliance.png",
     },
     {
       name: dict.governanceSection.partner2,

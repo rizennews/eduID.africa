@@ -29,7 +29,7 @@ interface GovernanceIntroSectionProps {
 const PARTNER_LOGOS = [
   {
     name: "UbuntuNet Alliance",
-    logoSrc: "/networks-logo/ubuntunet-alliance-logo-2.png",
+    logoSrc: "/networks-logo/ubuntunet-alliance.png",
     width: 140,
     height: 42,
     className: "max-h-8 sm:max-h-9 w-auto object-contain",

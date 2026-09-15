@@ -37,7 +37,6 @@ interface RoleCardConfig {
   logoSrc: string;
   logoAlt: string;
   badgeClass: string;
-  accentDot: string;
   logoWidth: number;
   logoHeight: number;
 }
@@ -48,7 +47,6 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoSrc: "/networks-logo/wacren.png",
     logoAlt: "WACREN Logo",
     badgeClass: "bg-blue-50 text-[#0B357B] border-blue-200/80",
-    accentDot: "bg-[#0B357B]",
     logoWidth: 100,
     logoHeight: 32,
   },
@@ -57,7 +55,6 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoSrc: "/networks-logo/wacren.png",
     logoAlt: "WACREN Logo",
     badgeClass: "bg-sky-50 text-[#1A73C3] border-sky-200/80",
-    accentDot: "bg-[#1A73C3]",
     logoWidth: 100,
     logoHeight: 32,
   },
@@ -66,16 +63,14 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoSrc: "/networks-logo/wacren.png",
     logoAlt: "WACREN Logo",
     badgeClass: "bg-amber-50 text-amber-900 border-amber-200/80",
-    accentDot: "bg-amber-600",
     logoWidth: 100,
     logoHeight: 32,
   },
   {
     key: "regionalPartnerEastSouth",
-    logoSrc: "/networks-logo/ubuntunet-alliance-logo-2.png",
+    logoSrc: "/networks-logo/ubuntunet-alliance.png",
     logoAlt: "UbuntuNet Alliance Logo",
     badgeClass: "bg-emerald-50 text-emerald-900 border-emerald-200/80",
-    accentDot: "bg-emerald-600",
     logoWidth: 150,
     logoHeight: 45,
   },
@@ -84,7 +79,6 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoSrc: "/networks-logo/asren.png",
     logoAlt: "ASREN Logo",
     badgeClass: "bg-teal-50 text-teal-900 border-teal-200/80",
-    accentDot: "bg-teal-600",
     logoWidth: 110,
     logoHeight: 40,
   },
@@ -93,7 +87,6 @@ const ROLE_CONFIGS: RoleCardConfig[] = [
     logoSrc: "/networks-logo/geant.jpg",
     logoAlt: "GÉANT Logo",
     badgeClass: "bg-indigo-50 text-indigo-900 border-indigo-200/80",
-    accentDot: "bg-indigo-600",
     logoWidth: 110,
     logoHeight: 38,
   },
@@ -110,9 +103,6 @@ export function GovernanceLeadershipSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-8 sm:mb-10">
-          <span className="text-xs font-bold font-outfit uppercase tracking-widest text-[#1A73C3] block mb-2">
-            {section.kicker}
-          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
             {section.title}
           </h2>
@@ -136,9 +126,8 @@ export function GovernanceLeadershipSection({
                   {/* Top Bar: Role Badge & Partner Logo */}
                   <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-100">
                     <span
-                      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider border ${config.badgeClass}`}
+                      className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider border ${config.badgeClass}`}
                     >
-                      <span className={`w-1.5 h-1.5 rounded-full ${config.accentDot}`} />
                       {roleData.role}
                     </span>
 
