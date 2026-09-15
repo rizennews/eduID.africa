@@ -27,57 +27,69 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
 
   const steps = [
     {
+      num: journey.step1.num, // "1"
       title: journey.step1.title,
       color: "#DE4A1B",
       borderColor: "hover:border-[#DE4A1B]/50",
       lineColor: "bg-[#DE4A1B]",
       dotColor: "bg-[#DE4A1B]",
+      numBadge: "bg-[#DE4A1B] text-white",
       textColor: "text-[#DE4A1B]",
       isFinal: false,
     },
     {
+      num: journey.step2.num, // "2"
       title: journey.step2.title,
       color: "#0B357B",
       borderColor: "hover:border-[#0B357B]/50",
       lineColor: "bg-[#0B357B]",
       dotColor: "bg-[#0B357B]",
+      numBadge: "bg-[#0B357B] text-white",
       textColor: "text-[#0B357B]",
       isFinal: false,
     },
     {
+      num: journey.step3.num, // "3"
       title: journey.step3.title,
       color: "#4F46E5",
       borderColor: "hover:border-indigo-400",
       lineColor: "bg-[#4F46E5]",
       dotColor: "bg-[#4F46E5]",
-      textColor: "text-[#4F46E5]",
+      numBadge: "bg-indigo-600 text-white",
+      textColor: "text-indigo-600",
       isFinal: false,
     },
     {
+      num: journey.step4.num, // "4"
       title: journey.step4.title,
       color: "#1A73C3",
       borderColor: "hover:border-[#1A73C3]/50",
       lineColor: "bg-[#1A73C3]",
       dotColor: "bg-[#1A73C3]",
+      numBadge: "bg-[#1A73C3] text-white",
       textColor: "text-[#1A73C3]",
       isFinal: false,
     },
     {
+      num: journey.step5.num, // "5"
       title: journey.step5.title,
       color: "#0D9488",
       borderColor: "hover:border-teal-400",
       lineColor: "bg-[#0D9488]",
       dotColor: "bg-[#0D9488]",
-      textColor: "text-[#0D9488]",
+      numBadge: "bg-teal-600 text-white",
+      textColor: "text-teal-600",
       isFinal: false,
     },
     {
+      num: "✓",
       title: journey.step6.title,
       color: "#059669",
       borderColor: "hover:border-emerald-400",
       lineColor: "bg-[#059669]",
       dotColor: "bg-[#059669]",
-      textColor: "text-[#059669]",
+      numBadge: "bg-emerald-600 text-white font-black",
+      textColor: "text-emerald-600",
       isFinal: true,
     },
   ];
@@ -108,7 +120,7 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
           ))}
         </div>
 
-        {/* 6 Minimalist Cards: Clean, Numberless Color-Driven Flow */}
+        {/* 6 Minimalist Numbered Cards (1, 2, 3, 4, 5, ✓) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {steps.map((step, idx) => (
             <div
@@ -116,19 +128,24 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
               className={`group rounded-2xl bg-white border border-slate-200/80 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 shadow-2xs hover:shadow-sm ${step.borderColor}`}
             >
               <div>
-                {/* Top Colored Identity Dot */}
-                <div className="flex items-center justify-between mb-5">
-                  <span className={`w-2.5 h-2.5 rounded-full ${step.dotColor}`} aria-hidden="true" />
-                  <span className={`w-1.5 h-1.5 rounded-full ${step.dotColor} opacity-40`} aria-hidden="true" />
+                {/* Top Number Badge: 1, 2, 3, 4, 5, ✓ */}
+                <div className="flex items-center justify-between gap-2 mb-5">
+                  <div
+                    className={`w-8 h-8 rounded-xl flex items-center justify-center font-mono font-bold text-sm shadow-xs transition-transform duration-200 group-hover:scale-105 ${step.numBadge}`}
+                  >
+                    {step.num}
+                  </div>
+
+                  <span className={`w-2 h-2 rounded-full ${step.dotColor}`} aria-hidden="true" />
                 </div>
 
-                {/* Clean Title */}
+                {/* Clean Step Title */}
                 <h3 className="text-sm sm:text-base font-semibold font-heading text-slate-900 tracking-tight leading-snug">
                   {step.title}
                 </h3>
               </div>
 
-              {/* Bottom Minimal Directional Indicator (No Numbering) */}
+              {/* Bottom Directional Indicator */}
               <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-end">
                 <span
                   className={`text-sm font-bold transition-transform duration-200 group-hover:translate-x-1 ${step.textColor}`}
