@@ -28,157 +28,150 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
   const steps = [
     {
       num: journey.step1.num,
+      watermark: "01",
+      phase: "Phase 01",
       title: journey.step1.title,
       isFinal: false,
-      tag: "01",
-      accent: "#DE4A1B",
-      cardBg: "bg-orange-50/60 hover:bg-orange-50",
-      borderColor: "border-orange-200/90 hover:border-[#DE4A1B]",
-      topBar: "bg-[#DE4A1B]",
-      numBadge: "bg-[#DE4A1B] text-white shadow-sm",
-      tagBadge: "bg-orange-100/90 text-[#DE4A1B] border border-orange-200/80",
-      titleColor: "text-slate-900 group-hover:text-[#DE4A1B]",
-      lineColor: "bg-orange-300",
+      tag: "IAM DEPLOYMENT",
+      gradient: "from-[#DE4A1B] via-[#C53B11] to-[#992B08]",
+      shadow: "hover:shadow-[#DE4A1B]/40",
+      railColor: "bg-[#DE4A1B]",
     },
     {
       num: journey.step2.num,
+      watermark: "02",
+      phase: "Phase 02",
       title: journey.step2.title,
       isFinal: false,
-      tag: "02",
-      accent: "#0B357B",
-      cardBg: "bg-blue-50/60 hover:bg-blue-50",
-      borderColor: "border-blue-200/90 hover:border-[#0B357B]",
-      topBar: "bg-[#0B357B]",
-      numBadge: "bg-[#0B357B] text-white shadow-sm",
-      tagBadge: "bg-blue-100/90 text-[#0B357B] border border-blue-200/80",
-      titleColor: "text-slate-900 group-hover:text-[#0B357B]",
-      lineColor: "bg-blue-300",
+      tag: "FEDERATION",
+      gradient: "from-[#0B357B] via-[#08285E] to-[#051A40]",
+      shadow: "hover:shadow-[#0B357B]/50",
+      railColor: "bg-[#0B357B]",
     },
     {
       num: journey.step3.num,
+      watermark: "03",
+      phase: "Phase 03",
       title: journey.step3.title,
       isFinal: false,
-      tag: "03",
-      accent: "#4F46E5",
-      cardBg: "bg-indigo-50/60 hover:bg-indigo-50",
-      borderColor: "border-indigo-200/90 hover:border-indigo-500",
-      topBar: "bg-indigo-600",
-      numBadge: "bg-indigo-600 text-white shadow-sm",
-      tagBadge: "bg-indigo-100/90 text-indigo-700 border border-indigo-200/80",
-      titleColor: "text-slate-900 group-hover:text-indigo-700",
-      lineColor: "bg-indigo-300",
+      tag: "GLOBAL MESH",
+      gradient: "from-[#4F46E5] via-[#4338CA] to-[#312E81]",
+      shadow: "hover:shadow-[#4F46E5]/40",
+      railColor: "bg-[#4F46E5]",
     },
     {
       num: journey.step4.num,
+      watermark: "04",
+      phase: "Phase 04",
       title: journey.step4.title,
       isFinal: false,
-      tag: "04",
-      accent: "#1A73C3",
-      cardBg: "bg-sky-50/60 hover:bg-sky-50",
-      borderColor: "border-sky-200/90 hover:border-[#1A73C3]",
-      topBar: "bg-[#1A73C3]",
-      numBadge: "bg-[#1A73C3] text-white shadow-sm",
-      tagBadge: "bg-sky-100/90 text-[#1A73C3] border border-sky-200/80",
-      titleColor: "text-slate-900 group-hover:text-[#1A73C3]",
-      lineColor: "bg-sky-300",
+      tag: "CLIENT APP",
+      gradient: "from-[#1A73C3] via-[#125CA0] to-[#0C4376]",
+      shadow: "hover:shadow-[#1A73C3]/40",
+      railColor: "bg-[#1A73C3]",
     },
     {
       num: journey.step5.num,
+      watermark: "05",
+      phase: "Phase 05",
       title: journey.step5.title,
       isFinal: false,
-      tag: "05",
-      accent: "#0D9488",
-      cardBg: "bg-teal-50/60 hover:bg-teal-50",
-      borderColor: "border-teal-200/90 hover:border-teal-500",
-      topBar: "bg-teal-600",
-      numBadge: "bg-teal-600 text-white shadow-sm",
-      tagBadge: "bg-teal-100/90 text-teal-700 border border-teal-200/80",
-      titleColor: "text-slate-900 group-hover:text-teal-700",
-      lineColor: "bg-teal-300",
+      tag: "SECURITY CERT",
+      gradient: "from-[#0D9488] via-[#0F766E] to-[#115E59]",
+      shadow: "hover:shadow-[#0D9488]/40",
+      railColor: "bg-[#0D9488]",
     },
     {
       num: "✓",
+      watermark: "✓",
+      phase: "Outcome",
       title: journey.step6.title,
       isFinal: true,
-      tag: "Outcome",
-      accent: "#059669",
-      cardBg: "bg-emerald-50/80 hover:bg-emerald-50",
-      borderColor: "border-emerald-300 hover:border-emerald-500",
-      topBar: "bg-emerald-600",
-      numBadge: "bg-emerald-600 text-white shadow-sm font-black text-base",
-      tagBadge: "bg-emerald-100 text-emerald-800 border border-emerald-300",
-      titleColor: "text-emerald-950",
-      lineColor: "bg-emerald-300",
+      tag: "SEAMLESS ACCESS",
+      gradient: "from-[#059669] via-[#047857] to-[#064E3B]",
+      shadow: "hover:shadow-[#059669]/50",
+      railColor: "bg-[#059669]",
     },
   ];
 
   return (
-    <section className="pt-6 sm:pt-8 pb-12 sm:pb-16 bg-[#F8FAFC]">
+    <section className="pt-8 sm:pt-10 pb-14 sm:pb-20 bg-[#F8FAFC] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80">
             {journey.kicker}
           </span>
-          <h2 className="mt-2.5 text-3xl sm:text-4xl lg:text-[42px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-[44px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
             {journey.headline}
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
             {journey.description}
           </p>
         </div>
 
-        {/* 6-Step Flow Progression: Pure Color-Driven Architecture */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 relative">
+        {/* Chromatic Flow Progression Bar (Desktop) */}
+        <div className="hidden lg:grid grid-cols-6 gap-3 mb-4 px-1" aria-hidden="true">
+          {steps.map((step, idx) => (
+            <div key={idx} className="flex items-center gap-2">
+              <div className={`h-1.5 flex-1 rounded-full ${step.railColor} opacity-80`} />
+              <div className={`w-2 h-2 rounded-full ${step.railColor}`} />
+            </div>
+          ))}
+        </div>
+
+        {/* Solid Color Monoliths: Bold, High-Impact Color Architecture */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 lg:gap-3.5">
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 flex flex-col justify-between h-full shadow-2xs hover:shadow-md ${step.cardBg} ${step.borderColor}`}
+              className={`group relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between min-h-[310px] sm:min-h-[330px] lg:min-h-[350px] overflow-hidden bg-gradient-to-b ${step.gradient} text-white shadow-lg ${step.shadow} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 select-none`}
             >
-              {/* Vibrant Top Color Accent Bar */}
-              <div className={`h-1.5 w-full ${step.topBar}`} />
+              {/* Giant Background Watermark Number */}
+              <span
+                className="absolute -right-2 -top-3 text-8xl lg:text-9xl font-black font-mono tracking-tighter text-white/[0.12] group-hover:text-white/[0.22] group-hover:scale-105 transition-all duration-300 pointer-events-none select-none leading-none"
+                aria-hidden="true"
+              >
+                {step.watermark}
+              </span>
 
-              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  {/* Step Top Header: Solid Color Number Badge & Color Tag */}
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <div
-                      className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm tracking-tight transition-transform duration-200 group-hover:scale-105 ${step.numBadge}`}
-                    >
-                      {step.num}
-                    </div>
+              {/* Ambient Inner Lighting Glow */}
+              <div
+                className="absolute inset-0 bg-radial from-white/[0.15] via-transparent to-black/20 pointer-events-none"
+                aria-hidden="true"
+              />
 
-                    <span
-                      className={`text-[10px] font-extrabold uppercase tracking-wider font-mono px-2 py-0.5 rounded-md ${step.tagBadge}`}
-                    >
-                      {step.tag}
-                    </span>
-                  </div>
-
-                  {/* Step Title */}
-                  <h3
-                    className={`text-sm sm:text-base font-bold font-heading tracking-tight leading-snug transition-colors duration-200 ${step.titleColor}`}
-                  >
-                    {step.title}
-                  </h3>
-                </div>
-
-                {/* Subtle Bottom Accent Indicator */}
-                <div className="mt-5 pt-3 border-t border-slate-200/60 flex items-center gap-1.5">
-                  <span className={`w-2 h-2 rounded-full ${step.topBar}`} aria-hidden="true" />
-                  <span className="text-[11px] font-medium text-slate-500 font-sans">
-                    {step.isFinal ? "Connected" : `Step 0${idx + 1}`}
+              {/* Top Row: Pill Tag & Step Number Indicator */}
+              <div className="relative z-10">
+                <div className="flex items-center justify-between gap-2 mb-6">
+                  <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-black/20 backdrop-blur-md border border-white/20 text-[9px] sm:text-[10px] font-bold font-mono tracking-widest text-white/95 uppercase shadow-xs">
+                    {step.tag}
                   </span>
+
+                  <div className="w-8 h-8 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-xs font-black font-mono text-white shadow-xs group-hover:bg-white group-hover:text-slate-950 transition-colors duration-200">
+                    {step.num}
+                  </div>
                 </div>
+
+                {/* Main Step Headline */}
+                <h3 className="text-base sm:text-lg lg:text-base xl:text-lg font-bold font-heading text-white tracking-tight leading-snug drop-shadow-xs">
+                  {step.title}
+                </h3>
               </div>
 
-              {/* Connecting Step Indicator Line on Desktop */}
-              {!step.isFinal && (
-                <div
-                  className={`hidden lg:block absolute -right-2.5 top-1/2 -translate-y-1/2 w-4 h-0.5 ${step.lineColor} z-20 rounded-full`}
+              {/* Bottom Metadata & Directional Flow */}
+              <div className="relative z-10 pt-4 border-t border-white/20 flex items-center justify-between text-xs font-medium text-white/90">
+                <span className="font-mono text-[11px] tracking-wider uppercase font-semibold text-white/80">
+                  {step.phase}
+                </span>
+
+                <span
+                  className="font-bold text-sm tracking-tight text-white group-hover:translate-x-1 transition-transform duration-200"
                   aria-hidden="true"
-                />
-              )}
+                >
+                  {step.isFinal ? "✓" : "→"}
+                </span>
+              </div>
             </div>
           ))}
         </div>
