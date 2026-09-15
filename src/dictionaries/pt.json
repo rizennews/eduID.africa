@@ -227,6 +227,28 @@
       }
     }
   },
+  "federationMapPage": {
+    "hero": {
+      "title": "Mapa da Federação",
+      "subtitle": "Descubra quais países africanos operam federações nacionais soberanas, conectam-se através da federação abrangente, ou preparam ativamente a sua infraestrutura."
+    },
+    "categories": {
+      "all": "Todos os países",
+      "national_federation": "Federação nacional",
+      "catchall_bonafid": "Federação abrangente / BonafID",
+      "in_development": "Em desenvolvimento",
+      "not_connected": "Não conectado"
+    },
+    "search": {
+      "placeholder": "Pesquisar país, NREN ou federação...",
+      "noResults": "Nenhum país corresponde aos seus critérios de pesquisa."
+    },
+    "cta": {
+      "headline": "O seu país não está listado?",
+      "description": "Entre em contacto com a equipa eduID.africa para discutir como a sua NREN ou instituição se pode conectar.",
+      "button": "Começar"
+    }
+  },
   "hero": {
     "badge": "A camada de identidade para pesquisa e educação em África",
     "headline1": "Apoiando cada NREN a federar-se nacionalmente.",

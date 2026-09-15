@@ -227,6 +227,28 @@
       }
     }
   },
+  "federationMapPage": {
+    "hero": {
+      "title": "Carte de la Fédération",
+      "subtitle": "Découvrez quels pays africains exploitent des fédérations nationales souveraines, se connectent via la fédération de repli, ou préparent activement leur infrastructure."
+    },
+    "categories": {
+      "all": "Tous les pays",
+      "national_federation": "Fédération nationale",
+      "catchall_bonafid": "Fédération de repli / BonafID",
+      "in_development": "En développement",
+      "not_connected": "Non connecté"
+    },
+    "search": {
+      "placeholder": "Rechercher un pays, un RNRE ou une fédération...",
+      "noResults": "Aucun pays ne correspond à vos critères de recherche."
+    },
+    "cta": {
+      "headline": "Votre pays n'est pas répertorié ?",
+      "description": "Contactez l'équipe eduID.africa pour discuter de la façon dont votre RNRE ou établissement peut se connecter.",
+      "button": "Commencer"
+    }
+  },
   "hero": {
     "badge": "La couche d'identité pour la recherche et l'éducation en Afrique",
     "headline1": "Accompagner chaque NREN pour fédérer au niveau national.",

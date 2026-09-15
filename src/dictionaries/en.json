@@ -227,6 +227,28 @@
       }
     }
   },
+  "federationMapPage": {
+    "hero": {
+      "title": "Federation Map",
+      "subtitle": "Discover which African countries operate sovereign national federations, connect via the continental catchall, or are actively preparing their infrastructure."
+    },
+    "categories": {
+      "all": "All Countries",
+      "national_federation": "National federation",
+      "catchall_bonafid": "Catchall / BonafID",
+      "in_development": "In development",
+      "not_connected": "Not connected"
+    },
+    "search": {
+      "placeholder": "Search country, NREN, or federation...",
+      "noResults": "No countries match your search criteria."
+    },
+    "cta": {
+      "headline": "Is your country not listed?",
+      "description": "Contact the eduID.africa team to discuss how your NREN or institution can connect.",
+      "button": "Get Started"
+    }
+  },
   "hero": {
     "badge": "Africa's research and education identity layer",
     "headline1": "Supporting every NREN to federate nationally.",

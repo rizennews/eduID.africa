@@ -29,7 +29,6 @@ interface ArchitecturePathsSectionProps {
 }
 
 export function ArchitecturePathsSection({
-  locale: _locale,
   dict,
 }: ArchitecturePathsSectionProps) {
   const data = dict.howItWorks.architecturePaths;
