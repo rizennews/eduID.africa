@@ -27,61 +27,55 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
 
   const steps = [
     {
-      num: "01",
       title: journey.step1.title,
       color: "#DE4A1B",
-      bgHover: "hover:border-[#DE4A1B]/40",
-      topLine: "bg-[#DE4A1B]",
+      borderColor: "hover:border-[#DE4A1B]/50",
+      lineColor: "bg-[#DE4A1B]",
       dotColor: "bg-[#DE4A1B]",
       textColor: "text-[#DE4A1B]",
       isFinal: false,
     },
     {
-      num: "02",
       title: journey.step2.title,
       color: "#0B357B",
-      bgHover: "hover:border-[#0B357B]/40",
-      topLine: "bg-[#0B357B]",
+      borderColor: "hover:border-[#0B357B]/50",
+      lineColor: "bg-[#0B357B]",
       dotColor: "bg-[#0B357B]",
       textColor: "text-[#0B357B]",
       isFinal: false,
     },
     {
-      num: "03",
       title: journey.step3.title,
       color: "#4F46E5",
-      bgHover: "hover:border-indigo-400",
-      topLine: "bg-[#4F46E5]",
+      borderColor: "hover:border-indigo-400",
+      lineColor: "bg-[#4F46E5]",
       dotColor: "bg-[#4F46E5]",
       textColor: "text-[#4F46E5]",
       isFinal: false,
     },
     {
-      num: "04",
       title: journey.step4.title,
       color: "#1A73C3",
-      bgHover: "hover:border-[#1A73C3]/40",
-      topLine: "bg-[#1A73C3]",
+      borderColor: "hover:border-[#1A73C3]/50",
+      lineColor: "bg-[#1A73C3]",
       dotColor: "bg-[#1A73C3]",
       textColor: "text-[#1A73C3]",
       isFinal: false,
     },
     {
-      num: "05",
       title: journey.step5.title,
       color: "#0D9488",
-      bgHover: "hover:border-teal-400",
-      topLine: "bg-[#0D9488]",
+      borderColor: "hover:border-teal-400",
+      lineColor: "bg-[#0D9488]",
       dotColor: "bg-[#0D9488]",
       textColor: "text-[#0D9488]",
       isFinal: false,
     },
     {
-      num: "✓",
       title: journey.step6.title,
       color: "#059669",
-      bgHover: "hover:border-emerald-400",
-      topLine: "bg-[#059669]",
+      borderColor: "hover:border-emerald-400",
+      lineColor: "bg-[#059669]",
       dotColor: "bg-[#059669]",
       textColor: "text-[#059669]",
       isFinal: true,
@@ -104,49 +98,40 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
           </p>
         </div>
 
-        {/* Minimalist Colored Timeline Rail (Desktop) */}
+        {/* Minimalist Color Pipeline (Desktop) */}
         <div className="hidden lg:grid grid-cols-6 gap-4 mb-4 px-1" aria-hidden="true">
           {steps.map((step, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <div className={`h-1 flex-1 rounded-full ${step.topLine}`} />
+              <div className={`h-1 flex-1 rounded-full ${step.lineColor}`} />
               <div className={`w-2 h-2 rounded-full ${step.dotColor}`} />
             </div>
           ))}
         </div>
 
-        {/* 6 Minimalist Color-Accented Cards */}
+        {/* 6 Minimalist Cards: Clean, Numberless Color-Driven Flow */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className={`group rounded-2xl bg-white border border-slate-200/80 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 shadow-2xs hover:shadow-sm ${step.bgHover}`}
+              className={`group rounded-2xl bg-white border border-slate-200/80 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 shadow-2xs hover:shadow-sm ${step.borderColor}`}
             >
               <div>
-                {/* Top Minimal Number & Dot */}
-                <div className="flex items-center justify-between gap-2 mb-5">
-                  <span
-                    className={`font-mono text-xs sm:text-sm font-black tracking-wider ${step.textColor}`}
-                  >
-                    {step.num}
-                  </span>
-
-                  <span className={`w-2 h-2 rounded-full ${step.dotColor}`} aria-hidden="true" />
+                {/* Top Colored Identity Dot */}
+                <div className="flex items-center justify-between mb-5">
+                  <span className={`w-2.5 h-2.5 rounded-full ${step.dotColor}`} aria-hidden="true" />
+                  <span className={`w-1.5 h-1.5 rounded-full ${step.dotColor} opacity-40`} aria-hidden="true" />
                 </div>
 
-                {/* Minimal Clean Step Title */}
+                {/* Clean Title */}
                 <h3 className="text-sm sm:text-base font-semibold font-heading text-slate-900 tracking-tight leading-snug">
                   {step.title}
                 </h3>
               </div>
 
-              {/* Minimal Bottom Step Label */}
-              <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-[11px] font-medium font-mono text-slate-400 uppercase tracking-wider">
-                  {step.isFinal ? "Outcome" : `Step 0${idx + 1}`}
-                </span>
-
+              {/* Bottom Minimal Directional Indicator (No Numbering) */}
+              <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-end">
                 <span
-                  className={`text-xs font-bold transition-transform duration-200 group-hover:translate-x-0.5 ${step.textColor}`}
+                  className={`text-sm font-bold transition-transform duration-200 group-hover:translate-x-1 ${step.textColor}`}
                   aria-hidden="true"
                 >
                   {step.isFinal ? "✓" : "→"}
