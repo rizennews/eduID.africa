@@ -202,6 +202,23 @@
         "num": "✓",
         "title": "Seamless access everywhere"
       }
+    },
+    "architecturePaths": {
+      "kicker": "Architecture",
+      "headline": "Where your country fits",
+      "description": "Two paths to the continental federation — both valid, both connected upward to eduGAIN and the global R&E network.",
+      "pathA": {
+        "tag": "PATH A",
+        "title": "Path A — National federation",
+        "description": "NREN operates a sovereign national federation. Institutions in that country register with the NREN. The national federation peers with eduID.africa at the continental level.",
+        "bestFor": "Best for NRENs with institutional capacity and critical mass"
+      },
+      "pathB": {
+        "tag": "PATH B",
+        "title": "Path B — Catchall federation",
+        "description": "Institutions participate directly in the continental federation via BonafID. No NREN-level federation required. This is the on-ramp — not a permanent endpoint.",
+        "bestFor": "Best for NRENs not yet ready to operate national infrastructure"
+      }
     }
   },
   "hero": {

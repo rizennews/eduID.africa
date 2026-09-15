@@ -202,6 +202,23 @@
         "num": "✓",
         "title": "Accès fluide et sécurisé partout"
       }
+    },
+    "architecturePaths": {
+      "kicker": "Architecture",
+      "headline": "Où se situe votre pays",
+      "description": "Deux voies vers la fédération continentale — toutes deux valides, toutes deux connectées vers le haut à eduGAIN et au réseau mondial d'enseignement et de recherche.",
+      "pathA": {
+        "tag": "VOIE A",
+        "title": "Voie A — Fédération nationale",
+        "description": "Le RNRE exploite une fédération nationale souveraine. Les établissements de ce pays s'enregistrent auprès du RNRE. La fédération nationale s'interconnecte avec eduID.africa au niveau continental.",
+        "bestFor": "Idéal pour les RNRE disposant d'une capacité institutionnelle et d'une masse critique"
+      },
+      "pathB": {
+        "tag": "VOIE B",
+        "title": "Voie B — Fédération de repli (Catchall)",
+        "description": "Les établissements participent directement à la fédération continentale via BonafID. Aucune fédération au niveau du RNRE n'est requise. Il s'agit d'une passerelle d'accès — pas d'un point d'arrivée permanent.",
+        "bestFor": "Idéal pour les RNRE qui ne sont pas encore prêts à exploiter une infrastructure nationale"
+      }
     }
   },
   "hero": {

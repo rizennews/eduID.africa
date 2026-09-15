@@ -202,6 +202,23 @@
         "num": "✓",
         "title": "Acesso integrado em todo o lado"
       }
+    },
+    "architecturePaths": {
+      "kicker": "Arquitetura",
+      "headline": "Onde o seu país se enquadra",
+      "description": "Dois caminhos para a federação continental — ambos válidos, ambos conectados ascendentemente à eduGAIN e à rede global de P&E.",
+      "pathA": {
+        "tag": "CAMINHO A",
+        "title": "Caminho A — Federação nacional",
+        "description": "A NREN opera uma federação nacional soberana. As instituições desse país registam-se na NREN. A federação nacional conecta-se com a eduID.africa a nível continental.",
+        "bestFor": "Ideal para NRENs com capacidade institucional e massa crítica"
+      },
+      "pathB": {
+        "tag": "CAMINHO B",
+        "title": "Caminho B — Federação abrangente (Catchall)",
+        "description": "As instituições participam diretamente na federação continental via BonafID. Nenhuma federação a nível de NREN é necessária. Esta é a rampa de acesso — não um ponto final permanente.",
+        "bestFor": "Ideal para NRENs que ainda não estão prontas para operar infraestrutura nacional"
+      }
     }
   },
   "hero": {

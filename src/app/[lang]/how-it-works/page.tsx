@@ -6,6 +6,7 @@ import { HowItWorksHero } from "@/components/HowItWorksHero";
 import { HowItWorksIntroSection } from "@/components/HowItWorksIntroSection";
 import { HowItWorksLayersSection } from "@/components/HowItWorksLayersSection";
 import { UserJourneySection } from "@/components/UserJourneySection";
+import { ArchitecturePathsSection } from "@/components/ArchitecturePathsSection";
 import { GovernancePartnersSection } from "@/components/GovernancePartnersSection";
 import { Footer } from "@/components/Footer";
 
@@ -62,6 +63,9 @@ export default async function HowItWorksPage({
 
         {/* User Journey Section: From arrival to access */}
         <UserJourneySection locale={locale} dict={dict} />
+
+        {/* Architecture Section: Where your country fits (Path A & Path B) */}
+        <ArchitecturePathsSection locale={locale} dict={dict} />
 
         {/* Continental Governance & Global REN Partners */}
         <GovernancePartnersSection locale={locale} dict={dict} />
