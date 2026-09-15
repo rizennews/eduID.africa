@@ -34,91 +34,77 @@ export function ArchitecturePathsSection({
 }: ArchitecturePathsSectionProps) {
   const data = dict.howItWorks.architecturePaths;
 
+  const paths = [
+    {
+      num: "01",
+      tag: data.pathA.tag,
+      title: data.pathA.title,
+      description: data.pathA.description,
+      bestFor: data.pathA.bestFor,
+      badgeColor: "bg-blue-50 text-[#0B357B] border-blue-200/80",
+    },
+    {
+      num: "02",
+      tag: data.pathB.tag,
+      title: data.pathB.title,
+      description: data.pathB.description,
+      bestFor: data.pathB.bestFor,
+      badgeColor: "bg-orange-50 text-[#DE4A1B] border-orange-200/80",
+    },
+  ];
+
   return (
-    <section className="pt-8 sm:pt-10 pb-12 sm:pb-16 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-10 sm:pt-14 pb-14 sm:pb-20 bg-[#F8FAFC]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80">
+        <div className="max-w-3xl mb-10 sm:mb-12">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80 mb-3">
             {data.kicker}
           </span>
-          <h2 className="mt-2.5 text-3xl sm:text-4xl lg:text-[40px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
             {data.headline}
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
             {data.description}
           </p>
         </div>
 
-        {/* Dual Architectural Paths Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {/* Path A Card: Sovereign National Federation */}
-          <div className="group rounded-3xl bg-white border border-slate-200/90 hover:border-[#0B357B]/40 p-7 sm:p-9 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              {/* Path Header Tag */}
-              <div className="flex items-center justify-between gap-3 mb-5">
-                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold font-mono tracking-wider uppercase bg-blue-50 text-[#0B357B] border border-blue-200/80">
-                  {data.pathA.tag}
+        {/* Minimalist 3-Column List with Dashed Dividers */}
+        <div className="border-t border-dashed border-slate-300">
+          {paths.map((path, idx) => (
+            <div
+              key={idx}
+              className="py-7 sm:py-8 border-b border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-8 items-baseline transition-colors hover:bg-slate-50/50 px-2 sm:px-3 rounded-lg"
+            >
+              {/* Column 1: Monospaced Number */}
+              <div className="md:col-span-1">
+                <span className="font-mono text-sm sm:text-base font-medium text-slate-400">
+                  {path.num}
                 </span>
-
-                <span className="w-2.5 h-2.5 rounded-full bg-[#0B357B]" aria-hidden="true" />
               </div>
 
-              {/* Path Title */}
-              <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 tracking-tight leading-snug mb-4">
-                {data.pathA.title}
-              </h3>
+              {/* Column 2: Title and Best For Badge */}
+              <div className="md:col-span-5 space-y-2.5">
+                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 tracking-tight leading-snug">
+                  {path.title}
+                </h3>
+                <div>
+                  <span
+                    className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold font-sans border ${path.badgeColor}`}
+                  >
+                    {path.bestFor}
+                  </span>
+                </div>
+              </div>
 
-              {/* Path Narrative Description */}
-              <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed font-normal">
-                {data.pathA.description}
-              </p>
-            </div>
-
-            {/* "Best For" Callout Panel */}
-            <div className="mt-8 pt-5 border-t border-slate-100">
-              <div className="rounded-2xl bg-blue-50/70 border border-blue-200/70 p-4 sm:p-4.5 flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#0B357B] mt-1.5 shrink-0" aria-hidden="true" />
-                <p className="text-xs sm:text-sm font-semibold text-slate-800 font-sans leading-relaxed">
-                  {data.pathA.bestFor}
+              {/* Column 3: Description */}
+              <div className="md:col-span-6">
+                <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed font-normal">
+                  {path.description}
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Path B Card: Direct Catchall On-Ramp */}
-          <div className="group rounded-3xl bg-white border border-slate-200/90 hover:border-[#DE4A1B]/40 p-7 sm:p-9 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
-            <div>
-              {/* Path Header Tag */}
-              <div className="flex items-center justify-between gap-3 mb-5">
-                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold font-mono tracking-wider uppercase bg-orange-50 text-[#DE4A1B] border border-orange-200/80">
-                  {data.pathB.tag}
-                </span>
-
-                <span className="w-2.5 h-2.5 rounded-full bg-[#DE4A1B]" aria-hidden="true" />
-              </div>
-
-              {/* Path Title */}
-              <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 tracking-tight leading-snug mb-4">
-                {data.pathB.title}
-              </h3>
-
-              {/* Path Narrative Description */}
-              <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed font-normal">
-                {data.pathB.description}
-              </p>
-            </div>
-
-            {/* "Best For" Callout Panel */}
-            <div className="mt-8 pt-5 border-t border-slate-100">
-              <div className="rounded-2xl bg-orange-50/70 border border-orange-200/70 p-4 sm:p-4.5 flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#DE4A1B] mt-1.5 shrink-0" aria-hidden="true" />
-                <p className="text-xs sm:text-sm font-semibold text-slate-800 font-sans leading-relaxed">
-                  {data.pathB.bestFor}
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

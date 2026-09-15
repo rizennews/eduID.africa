@@ -179,28 +179,34 @@
       "headline": "De l'arrivée à l'accès",
       "description": "Comment un chercheur d'un établissement connecté expérimente le système — de la première connexion à l'accès Wi-Fi sur n'importe quel campus partenaire.",
       "step1": {
-        "num": "1",
-        "title": "L'institution déploie BonafID"
+        "num": "01",
+        "title": "L'institution déploie BonafID",
+        "description": "La gouvernance de l'identité sur le campus est établie avec un IdP open-source prêt pour la production."
       },
       "step2": {
-        "num": "2",
-        "title": "L'IdP s'enregistre auprès d'eduID.africa"
+        "num": "02",
+        "title": "L'IdP s'enregistre auprès d'eduID.africa",
+        "description": "L'établissement rejoint le maillage de la fédération continentale, établissant une confiance vérifiée."
       },
       "step3": {
-        "num": "3",
-        "title": "eduID.africa se connecte à eduGAIN"
+        "num": "03",
+        "title": "eduID.africa se connecte à eduGAIN",
+        "description": "L'interconnexion continentale s'arrime aux réseaux mondiaux de recherche et aux ressources internationales."
       },
       "step4": {
-        "num": "4",
-        "title": "L'utilisateur installe l'application geteduroam"
+        "num": "04",
+        "title": "L'utilisateur installe l'application geteduroam",
+        "description": "Les étudiants et les chercheurs installent le client léger de configuration sur mobile ou ordinateur."
       },
       "step5": {
-        "num": "5",
-        "title": "Certificat généré automatiquement"
+        "num": "05",
+        "title": "Certificat généré automatiquement",
+        "description": "Certificats clients cryptographiques provisionnés via une connexion fédérée sans configuration manuelle."
       },
       "step6": {
-        "num": "✓",
-        "title": "Accès fluide et sécurisé partout"
+        "num": "06",
+        "title": "Accès fluide et sécurisé partout",
+        "description": "Authentification Wi-Fi eduroam instantanée et sécurisée sur les campus connectés à l'échelle mondiale."
       }
     },
     "architecturePaths": {

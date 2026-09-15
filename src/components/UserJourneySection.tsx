@@ -11,12 +11,12 @@ interface UserJourneySectionProps {
         kicker: string;
         headline: string;
         description: string;
-        step1: { num: string; title: string };
-        step2: { num: string; title: string };
-        step3: { num: string; title: string };
-        step4: { num: string; title: string };
-        step5: { num: string; title: string };
-        step6: { num: string; title: string };
+        step1: { num: string; title: string; description: string };
+        step2: { num: string; title: string; description: string };
+        step3: { num: string; title: string; description: string };
+        step4: { num: string; title: string; description: string };
+        step5: { num: string; title: string; description: string };
+        step6: { num: string; title: string; description: string };
       };
     };
   };
@@ -27,132 +27,79 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
 
   const steps = [
     {
-      num: journey.step1.num, // "1"
+      num: journey.step1.num,
       title: journey.step1.title,
-      color: "#DE4A1B",
-      borderColor: "hover:border-[#DE4A1B]/50",
-      lineColor: "bg-[#DE4A1B]",
-      dotColor: "bg-[#DE4A1B]",
-      numBadge: "bg-[#DE4A1B] text-white",
-      textColor: "text-[#DE4A1B]",
-      isFinal: false,
+      description: journey.step1.description,
     },
     {
-      num: journey.step2.num, // "2"
+      num: journey.step2.num,
       title: journey.step2.title,
-      color: "#0B357B",
-      borderColor: "hover:border-[#0B357B]/50",
-      lineColor: "bg-[#0B357B]",
-      dotColor: "bg-[#0B357B]",
-      numBadge: "bg-[#0B357B] text-white",
-      textColor: "text-[#0B357B]",
-      isFinal: false,
+      description: journey.step2.description,
     },
     {
-      num: journey.step3.num, // "3"
+      num: journey.step3.num,
       title: journey.step3.title,
-      color: "#4F46E5",
-      borderColor: "hover:border-indigo-400",
-      lineColor: "bg-[#4F46E5]",
-      dotColor: "bg-[#4F46E5]",
-      numBadge: "bg-indigo-600 text-white",
-      textColor: "text-indigo-600",
-      isFinal: false,
+      description: journey.step3.description,
     },
     {
-      num: journey.step4.num, // "4"
+      num: journey.step4.num,
       title: journey.step4.title,
-      color: "#1A73C3",
-      borderColor: "hover:border-[#1A73C3]/50",
-      lineColor: "bg-[#1A73C3]",
-      dotColor: "bg-[#1A73C3]",
-      numBadge: "bg-[#1A73C3] text-white",
-      textColor: "text-[#1A73C3]",
-      isFinal: false,
+      description: journey.step4.description,
     },
     {
-      num: journey.step5.num, // "5"
+      num: journey.step5.num,
       title: journey.step5.title,
-      color: "#0D9488",
-      borderColor: "hover:border-teal-400",
-      lineColor: "bg-[#0D9488]",
-      dotColor: "bg-[#0D9488]",
-      numBadge: "bg-teal-600 text-white",
-      textColor: "text-teal-600",
-      isFinal: false,
+      description: journey.step5.description,
     },
     {
-      num: "✓",
+      num: journey.step6.num,
       title: journey.step6.title,
-      color: "#059669",
-      borderColor: "hover:border-emerald-400",
-      lineColor: "bg-[#059669]",
-      dotColor: "bg-[#059669]",
-      numBadge: "bg-emerald-600 text-white font-black",
-      textColor: "text-emerald-600",
-      isFinal: true,
+      description: journey.step6.description,
     },
   ];
 
   return (
-    <section className="pt-6 sm:pt-8 pb-12 sm:pb-16 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-10 sm:pt-14 pb-12 sm:pb-16 bg-[#F8FAFC]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80">
+        <div className="max-w-3xl mb-10 sm:mb-12">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80 mb-3">
             {journey.kicker}
           </span>
-          <h2 className="mt-2.5 text-3xl sm:text-4xl lg:text-[40px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
             {journey.headline}
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
             {journey.description}
           </p>
         </div>
 
-        {/* Minimalist Color Pipeline (Desktop) */}
-        <div className="hidden lg:grid grid-cols-6 gap-4 mb-4 px-1" aria-hidden="true">
-          {steps.map((step, idx) => (
-            <div key={idx} className="flex items-center gap-2">
-              <div className={`h-1 flex-1 rounded-full ${step.lineColor}`} />
-              <div className={`w-2 h-2 rounded-full ${step.dotColor}`} />
-            </div>
-          ))}
-        </div>
-
-        {/* 6 Minimalist Numbered Cards (1, 2, 3, 4, 5, ✓) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {/* Minimalist 3-Column List with Dashed Dividers (Matching Reference) */}
+        <div className="border-t border-dashed border-slate-300">
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className={`group rounded-2xl bg-white border border-slate-200/80 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 shadow-2xs hover:shadow-sm ${step.borderColor}`}
+              className="py-7 sm:py-8 border-b border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-8 items-baseline transition-colors hover:bg-slate-50/50 px-2 sm:px-3 rounded-lg"
             >
-              <div>
-                {/* Top Number Badge: 1, 2, 3, 4, 5, ✓ */}
-                <div className="flex items-center justify-between gap-2 mb-5">
-                  <div
-                    className={`w-8 h-8 rounded-xl flex items-center justify-center font-mono font-bold text-sm shadow-xs transition-transform duration-200 group-hover:scale-105 ${step.numBadge}`}
-                  >
-                    {step.num}
-                  </div>
+              {/* Column 1: Monospaced Step Number */}
+              <div className="md:col-span-1">
+                <span className="font-mono text-sm sm:text-base font-medium text-slate-400">
+                  {step.num}
+                </span>
+              </div>
 
-                  <span className={`w-2 h-2 rounded-full ${step.dotColor}`} aria-hidden="true" />
-                </div>
-
-                {/* Clean Step Title */}
-                <h3 className="text-sm sm:text-base font-semibold font-heading text-slate-900 tracking-tight leading-snug">
+              {/* Column 2: Bold Step Title */}
+              <div className="md:col-span-5">
+                <h3 className="text-lg sm:text-xl font-bold font-heading text-slate-900 tracking-tight leading-snug">
                   {step.title}
                 </h3>
               </div>
 
-              {/* Bottom Directional Indicator */}
-              <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-end">
-                <span
-                  className={`text-sm font-bold transition-transform duration-200 group-hover:translate-x-1 ${step.textColor}`}
-                  aria-hidden="true"
-                >
-                  {step.isFinal ? "✓" : "→"}
-                </span>
+              {/* Column 3: Descriptive Narrative */}
+              <div className="md:col-span-6">
+                <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed font-normal">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}

@@ -179,28 +179,34 @@
       "headline": "From arrival to access",
       "description": "How a researcher at a connected institution experiences the system — from first login to Wi-Fi access at any partner campus.",
       "step1": {
-        "num": "1",
-        "title": "Institution deploys BonafID"
+        "num": "01",
+        "title": "Institution deploys BonafID",
+        "description": "Campus identity governance is established with an open-source, production-ready IdP."
       },
       "step2": {
-        "num": "2",
-        "title": "IdP registers with eduID.africa"
+        "num": "02",
+        "title": "IdP registers with eduID.africa",
+        "description": "The institution joins the continental federation mesh, establishing verified identity trust."
       },
       "step3": {
-        "num": "3",
-        "title": "eduID.africa connects to eduGAIN"
+        "num": "03",
+        "title": "eduID.africa connects to eduGAIN",
+        "description": "Continental peering links upward into global research networks and international resources."
       },
       "step4": {
-        "num": "4",
-        "title": "User installs geteduroam app"
+        "num": "04",
+        "title": "User installs geteduroam app",
+        "description": "Students and researchers install the lightweight configuration client on mobile or laptop."
       },
       "step5": {
-        "num": "5",
-        "title": "Certificate generated automatically"
+        "num": "05",
+        "title": "Certificate generated automatically",
+        "description": "Cryptographic client credentials provisioned via federated login without manual setup."
       },
       "step6": {
-        "num": "✓",
-        "title": "Seamless access everywhere"
+        "num": "06",
+        "title": "Seamless access everywhere",
+        "description": "Instant, secure eduroam Wi-Fi authentication across connected campuses globally."
       }
     },
     "architecturePaths": {

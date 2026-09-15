@@ -179,28 +179,34 @@
       "headline": "Da chegada ao acesso",
       "description": "Como um investigador de uma instituição conectada vivencia o sistema — do primeiro login ao acesso Wi-Fi em qualquer campus parceiro.",
       "step1": {
-        "num": "1",
-        "title": "Instituição implementa BonafID"
+        "num": "01",
+        "title": "Instituição implementa BonafID",
+        "description": "A governança da identidade no campus é estabelecida com um IdP de código aberto pronto para produção."
       },
       "step2": {
-        "num": "2",
-        "title": "IdP regista-se no eduID.africa"
+        "num": "02",
+        "title": "IdP regista-se no eduID.africa",
+        "description": "A instituição integra-se na malha da federação continental, estabelecendo confiança verificada."
       },
       "step3": {
-        "num": "3",
-        "title": "eduID.africa conecta-se à eduGAIN"
+        "num": "03",
+        "title": "eduID.africa conecta-se à eduGAIN",
+        "description": "A agregação continental liga-se ascendentemente às redes globais de investigação e recursos internacionais."
       },
       "step4": {
-        "num": "4",
-        "title": "Utilizador instala a app geteduroam"
+        "num": "04",
+        "title": "Utilizador instala a app geteduroam",
+        "description": "Estudantes e investigadores instalam o cliente leve de configuração no telemóvel ou computador portátil."
       },
       "step5": {
-        "num": "5",
-        "title": "Certificado gerado automaticamente"
+        "num": "05",
+        "title": "Certificado gerado automaticamente",
+        "description": "Credenciais criptográficas de cliente provisionadas via login federado sem configuração manual."
       },
       "step6": {
-        "num": "✓",
-        "title": "Acesso integrado em todo o lado"
+        "num": "06",
+        "title": "Acesso integrado em todo o lado",
+        "description": "Autenticação Wi-Fi eduroam instantânea e segura em todos os campus conectados globalmente."
       }
     },
     "architecturePaths": {
