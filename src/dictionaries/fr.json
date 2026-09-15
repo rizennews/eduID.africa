@@ -346,5 +346,15 @@
     "copyright": "© 2026 eduID.africa. Initiative conjointe d'UbuntuNet Alliance, WACREN et ASREN.",
     "privacy": "Politique de confidentialité",
     "terms": "Politiques & Conditions"
+  },
+  "governancePage": {
+    "hero": {
+      "title": "Gouvernance"
+    },
+    "intro": {
+      "headline1": "Aligné sur les normes.",
+      "headline2": "Gouvernance transparente. Conçu pour durer.",
+      "description": "Le cadre de gouvernance d'eduID.africa garantit que la fédération continentale fonctionne selon les normes internationales, avec une responsabilité claire entre les trois RREN régionaux et dans le cadre du programme AfricaConnect4."
+    }
   }
 }

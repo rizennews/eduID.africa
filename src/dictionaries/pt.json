@@ -346,5 +346,15 @@
     "copyright": "© 2026 eduID.africa. Iniciativa conjunta da UbuntuNet Alliance, WACREN e ASREN.",
     "privacy": "Política de Privacidade",
     "terms": "Políticas e Termos"
+  },
+  "governancePage": {
+    "hero": {
+      "title": "Governação"
+    },
+    "intro": {
+      "headline1": "Alinhado a padrões.",
+      "headline2": "Governança transparente. Construído para durar.",
+      "description": "O quadro de governança do eduID.africa garante que a federação continental opere segundo padrões internacionais, com responsabilidade clara entre as três RRENs regionais e no âmbito do programa AfricaConnect4."
+    }
   }
 }

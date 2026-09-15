@@ -8,6 +8,7 @@ import {
   AFRICAN_COUNTRIES,
 } from "@/data/african-countries";
 import { InteractiveAfricaMap } from "@/components/InteractiveAfricaMap";
+import { CountryFlag } from "@/components/ui/CountryFlag";
 import {
   Search,
   X,
@@ -192,6 +193,7 @@ export function FederationMapExplorer({
                               className="p-3 hover:bg-blue-50/70 transition-colors flex items-center justify-between gap-3 cursor-pointer"
                             >
                               <div className="flex items-center gap-2.5 min-w-0">
+                                <CountryFlag iso2={c.iso2} name={c.name} className="w-5 h-3.5" />
                                 <span className="font-mono text-xs font-black px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/80">
                                   {c.iso2}
                                 </span>
@@ -326,17 +328,20 @@ export function FederationMapExplorer({
           <div className="lg:col-span-5 xl:col-span-4">
             {selectedCountry ? (
               <div className="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-7 shadow-sm space-y-5 animate-in fade-in duration-200">
-                <div className="flex items-center justify-between gap-2 pb-4 border-b border-slate-100">
-                  <div>
-                    <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-slate-400 block mb-0.5">
-                      Selected Country
-                    </span>
-                    <h3 className="text-2xl font-bold font-heading text-slate-900 tracking-tight">
-                      {selectedCountry.name}
-                    </h3>
+                <div className="flex items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-3">
+                    <CountryFlag iso2={selectedCountry.iso2} name={selectedCountry.name} className="w-9 h-6 rounded-xs shadow-xs" />
+                    <div>
+                      <span className="text-[10px] font-mono font-extrabold uppercase tracking-widest text-slate-400 block mb-0.5">
+                        Selected Country
+                      </span>
+                      <h3 className="text-2xl font-bold font-heading text-slate-900 tracking-tight">
+                        {selectedCountry.name}
+                      </h3>
+                    </div>
                   </div>
 
-                  <span className="text-lg font-black font-mono px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/70">
+                  <span className="text-base font-black font-mono px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/70">
                     {selectedCountry.iso2}
                   </span>
                 </div>
@@ -499,12 +504,13 @@ export function FederationMapExplorer({
                       onClick={() => setSelectedCountry(isSelected ? null : country)}
                       className="py-5 sm:py-6 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 items-center cursor-pointer px-2 sm:px-3"
                     >
-                      {/* Column 1: Monospaced Index & ISO Code */}
-                      <div className="md:col-span-2 flex items-center gap-3">
-                        <span className="font-mono text-xs text-slate-400 font-semibold w-6">
+                      {/* Column 1: Monospaced Index, Flag & ISO Code */}
+                      <div className="md:col-span-2 flex items-center gap-2.5">
+                        <span className="font-mono text-xs text-slate-400 font-semibold w-5">
                           {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                         </span>
-                        <span className="font-mono text-xs font-extrabold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/70">
+                        <CountryFlag iso2={country.iso2} name={country.name} className="w-6 h-4 rounded-xs shadow-2xs" />
+                        <span className="font-mono text-xs font-extrabold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/70">
                           {country.iso2}
                         </span>
                         <span className="text-xs font-mono text-slate-400 hidden sm:inline">
@@ -567,6 +573,7 @@ export function FederationMapExplorer({
                       >
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
                           <div className="flex items-center gap-3">
+                            <CountryFlag iso2={country.iso2} name={country.name} className="w-9 h-6 rounded-xs shadow-xs" />
                             <span className="font-mono text-sm font-black px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/70">
                               {country.iso2}
                             </span>

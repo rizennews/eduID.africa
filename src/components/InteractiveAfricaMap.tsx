@@ -7,6 +7,7 @@ import {
   AFRICAN_COUNTRIES,
 } from "../data/african-countries";
 import { AFRICA_MAP_PATHS, type CountryPath } from "../data/africa-map-paths";
+import { CountryFlag } from "@/components/ui/CountryFlag";
 
 interface InteractiveAfricaMapProps {
   selectedCategory: FederationCategory | "all";
@@ -203,9 +204,16 @@ export function InteractiveAfricaMap({
               <span className="font-heading font-bold text-sm text-white">
                 {hoveredCountry.name}
               </span>
-              <span className="text-[10px] font-mono font-extrabold uppercase px-1.5 py-0.5 rounded bg-white/15 text-slate-200">
-                {hoveredCountry.iso2}
-              </span>
+              <div className="flex items-center gap-1.5 shrink-0">
+                <CountryFlag
+                  iso2={hoveredCountry.iso2}
+                  name={hoveredCountry.name}
+                  className="w-5 h-3.5"
+                />
+                <span className="text-[10px] font-mono font-extrabold uppercase px-1.5 py-0.5 rounded bg-white/15 text-slate-200">
+                  {hoveredCountry.iso2}
+                </span>
+              </div>
             </div>
 
             <div className="text-[11px] font-medium text-slate-300 space-y-0.5 font-sans">
