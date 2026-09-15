@@ -55,9 +55,9 @@ export function InteractiveAfricaMap({
     }
   };
 
-  const handleMouseMove = (e: React.MouseEvent<SVGPathElement>, country: AfricanCountry) => {
+  const handleMouseMove = (e: React.MouseEvent<SVGElement>, country: AfricanCountry) => {
     setHoveredCountry(country);
-    const rect = e.currentTarget.ownerSVGElement?.getBoundingClientRect();
+    const rect = e.currentTarget.ownerSVGElement?.getBoundingClientRect() || e.currentTarget.closest("svg")?.getBoundingClientRect();
     if (rect) {
       setTooltipPos({
         x: e.clientX - rect.left,
@@ -87,39 +87,85 @@ export function InteractiveAfricaMap({
       </div>
 
       {/* SVG Map of Africa */}
-      <div className="relative w-full max-w-2xl mx-auto aspect-[800/850]">
+      <div className="relative w-full max-w-3xl mx-auto aspect-[850/900]">
         <svg
-          viewBox="0 0 800 850"
+          viewBox="0 0 850 900"
           className="w-full h-full drop-shadow-xs"
           role="img"
           aria-label="Map of Africa showing Trust and Identity Federation status"
         >
-          {AFRICA_MAP_PATHS.map((item: CountryPath) => {
-            const country = countryMap.get(item.iso2);
-            if (!country) return null;
+          {/* Base Country Polygons */}
+          <g>
+            {AFRICA_MAP_PATHS.map((item: CountryPath) => {
+              const country = countryMap.get(item.iso2);
+              if (!country) return null;
 
-            const isDimmed =
-              selectedCategory !== "all" && country.category !== selectedCategory;
-            const isSelected = selectedCountry?.iso2 === country.iso2;
-            const isHovered = hoveredCountry?.iso2 === country.iso2;
-            const fillColor = getCategoryColor(country.category, isHovered, isSelected);
+              const isDimmed =
+                selectedCategory !== "all" && country.category !== selectedCategory;
+              const isSelected = selectedCountry?.iso2 === country.iso2;
+              const isHovered = hoveredCountry?.iso2 === country.iso2;
+              const fillColor = getCategoryColor(country.category, isHovered, isSelected);
 
-            return (
-              <path
-                key={item.iso2}
-                d={item.d}
-                fill={fillColor}
-                stroke="#FFFFFF"
-                strokeWidth={isSelected ? "2.5" : "1.2"}
-                strokeLinejoin="round"
-                opacity={isDimmed ? 0.3 : 1}
-                className="cursor-pointer transition-all duration-200 hover:opacity-100"
-                onMouseMove={(e) => handleMouseMove(e, country)}
-                onMouseLeave={handleMouseLeave}
-                onClick={() => onSelectCountry(country)}
-              />
-            );
-          })}
+              return (
+                <path
+                  key={item.iso2}
+                  d={item.d}
+                  fill={fillColor}
+                  stroke="#FFFFFF"
+                  strokeWidth={isSelected ? "2.2" : "0.9"}
+                  strokeLinejoin="round"
+                  opacity={isDimmed ? 0.3 : 1}
+                  className="cursor-pointer transition-all duration-200 hover:opacity-100"
+                  onMouseMove={(e) => handleMouseMove(e, country)}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={() => onSelectCountry(country)}
+                />
+              );
+            })}
+          </g>
+
+          {/* Country Name Labels Directly on the Map */}
+          <g className="select-none">
+            {AFRICA_MAP_PATHS.map((item: CountryPath) => {
+              const country = countryMap.get(item.iso2);
+              if (!country) return null;
+
+              const isDimmed =
+                selectedCategory !== "all" && country.category !== selectedCategory;
+              const isSelected = selectedCountry?.iso2 === country.iso2;
+              const isHovered = hoveredCountry?.iso2 === country.iso2;
+
+              const isLightBg =
+                country.category === "not_connected" && !isSelected && !isHovered;
+              const textColor = isLightBg ? "#334155" : "#FFFFFF";
+              const strokeColor = isLightBg
+                ? "rgba(255, 255, 255, 0.85)"
+                : "rgba(15, 23, 42, 0.65)";
+
+              return (
+                <text
+                  key={`label-${item.iso2}`}
+                  x={item.labelX}
+                  y={item.labelY}
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fontSize={item.fontSize}
+                  fill={textColor}
+                  stroke={strokeColor}
+                  strokeWidth={isLightBg ? 0.4 : 0.6}
+                  paintOrder="stroke fill"
+                  fontWeight={isSelected || isHovered ? "800" : "600"}
+                  opacity={isDimmed ? 0.35 : 1}
+                  className="cursor-pointer font-sans tracking-tight transition-all duration-150"
+                  onMouseMove={(e) => handleMouseMove(e, country)}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={() => onSelectCountry(country)}
+                >
+                  {item.shortName}
+                </text>
+              );
+            })}
+          </g>
         </svg>
 
         {/* Floating Tooltip */}
