@@ -35,7 +35,20 @@ export function middleware(request: NextRequest) {
   );
 
   if (pathnameHasLocale) {
-    return NextResponse.next();
+    const localeFromPath = locales.find(
+      (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    );
+    const requestHeaders = new Headers(request.headers);
+    if (localeFromPath) {
+      requestHeaders.set("x-locale", localeFromPath);
+    }
+    requestHeaders.set("x-pathname", pathname);
+
+    return NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
   }
 
   // Determine locale and redirect
