@@ -12,6 +12,7 @@ interface InteractiveAfricaMapProps {
   selectedCategory: FederationCategory | "all";
   selectedCountry: AfricanCountry | null;
   onSelectCountry: (country: AfricanCountry) => void;
+  searchQuery?: string;
   dict: {
     categories: {
       all: string;
@@ -27,6 +28,7 @@ export function InteractiveAfricaMap({
   selectedCategory,
   selectedCountry,
   onSelectCountry,
+  searchQuery = "",
   dict,
 }: InteractiveAfricaMapProps) {
   const [hoveredCountry, setHoveredCountry] = React.useState<AfricanCountry | null>(null);
@@ -100,8 +102,18 @@ export function InteractiveAfricaMap({
               const country = countryMap.get(item.iso2);
               if (!country) return null;
 
-              const isDimmed =
-                selectedCategory !== "all" && country.category !== selectedCategory;
+              const normalizedQuery = searchQuery.trim().toLowerCase();
+              const matchesSearch =
+                !normalizedQuery ||
+                country.name.toLowerCase().includes(normalizedQuery) ||
+                country.iso2.toLowerCase().includes(normalizedQuery) ||
+                country.nren.toLowerCase().includes(normalizedQuery) ||
+                country.federationName.toLowerCase().includes(normalizedQuery);
+
+              const matchesCategory =
+                selectedCategory === "all" || country.category === selectedCategory;
+
+              const isDimmed = !matchesCategory || !matchesSearch;
               const isSelected = selectedCountry?.iso2 === country.iso2;
               const isHovered = hoveredCountry?.iso2 === country.iso2;
               const fillColor = getCategoryColor(country.category, isHovered, isSelected);
@@ -112,9 +124,9 @@ export function InteractiveAfricaMap({
                   d={item.d}
                   fill={fillColor}
                   stroke="#FFFFFF"
-                  strokeWidth={isSelected ? "2.2" : "0.9"}
+                  strokeWidth={isSelected ? "2.2" : !isDimmed && normalizedQuery ? "1.8" : "0.9"}
                   strokeLinejoin="round"
-                  opacity={isDimmed ? 0.3 : 1}
+                  opacity={isDimmed ? 0.15 : 1}
                   className="cursor-pointer transition-all duration-200 hover:opacity-100"
                   onMouseMove={(e) => handleMouseMove(e, country)}
                   onMouseLeave={handleMouseLeave}
@@ -130,8 +142,18 @@ export function InteractiveAfricaMap({
               const country = countryMap.get(item.iso2);
               if (!country) return null;
 
-              const isDimmed =
-                selectedCategory !== "all" && country.category !== selectedCategory;
+              const normalizedQuery = searchQuery.trim().toLowerCase();
+              const matchesSearch =
+                !normalizedQuery ||
+                country.name.toLowerCase().includes(normalizedQuery) ||
+                country.iso2.toLowerCase().includes(normalizedQuery) ||
+                country.nren.toLowerCase().includes(normalizedQuery) ||
+                country.federationName.toLowerCase().includes(normalizedQuery);
+
+              const matchesCategory =
+                selectedCategory === "all" || country.category === selectedCategory;
+
+              const isDimmed = !matchesCategory || !matchesSearch;
               const isSelected = selectedCountry?.iso2 === country.iso2;
               const isHovered = hoveredCountry?.iso2 === country.iso2;
 
@@ -154,8 +176,8 @@ export function InteractiveAfricaMap({
                   stroke={strokeColor}
                   strokeWidth={isLightBg ? 0.4 : 0.6}
                   paintOrder="stroke fill"
-                  fontWeight={isSelected || isHovered ? "800" : "600"}
-                  opacity={isDimmed ? 0.35 : 1}
+                  fontWeight={isSelected || isHovered || (!isDimmed && normalizedQuery) ? "800" : "600"}
+                  opacity={isDimmed ? 0.15 : 1}
                   className="cursor-pointer font-sans tracking-tight transition-all duration-150"
                   onMouseMove={(e) => handleMouseMove(e, country)}
                   onMouseLeave={handleMouseLeave}

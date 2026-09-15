@@ -18,6 +18,7 @@ import {
   ChevronDown,
   ArrowUp,
   ArrowRight,
+  ArrowDown,
 } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 
@@ -45,11 +46,18 @@ export function FederationMapExplorer({
   const [selectedCategory, setSelectedCategory] = React.useState<FederationCategory | "all">("all");
   const [searchQuery, setSearchQuery] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState<AfricanCountry | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const mapContainerRef = React.useRef<HTMLDivElement>(null);
+  const directoryRef = React.useRef<HTMLDivElement>(null);
 
   const handleScrollToMap = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     mapContainerRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  const handleScrollToDirectory = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    directoryRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   // Compute category counts
@@ -81,6 +89,13 @@ export function FederationMapExplorer({
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
+
+  // Automatically select country if search results in an exact single match
+  React.useEffect(() => {
+    if (searchQuery.trim().length >= 2 && filteredCountries.length === 1) {
+      setSelectedCountry(filteredCountries[0]);
+    }
+  }, [searchQuery, filteredCountries]);
 
   const getCategoryBadge = (category: FederationCategory) => {
     switch (category) {
@@ -118,7 +133,7 @@ export function FederationMapExplorer({
         {/* Top Controls: Search Bar & Category Filter Pills */}
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-            {/* Search Input */}
+            {/* Search Input with Instant Results Dropdown */}
             <div className="relative w-full sm:max-w-md">
               <Search
                 size={18}
@@ -127,24 +142,116 @@ export function FederationMapExplorer({
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setIsSearchOpen(true)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setIsSearchOpen(true);
+                }}
                 placeholder={dict.search.placeholder}
                 className="w-full h-11 pl-10 pr-10 rounded-xl bg-white border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 shadow-2xs focus:outline-hidden focus:border-[#1A73C3] focus:ring-2 focus:ring-[#1A73C3]/15 transition-all"
               />
               {searchQuery && (
                 <button
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1 rounded-md"
+                  onClick={() => {
+                    setSearchQuery("");
+                    setIsSearchOpen(false);
+                  }}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1 rounded-md cursor-pointer"
                   aria-label="Clear search"
                 >
                   <X size={15} />
                 </button>
               )}
+
+              {/* Instant Search Results Dropdown Popover */}
+              {isSearchOpen && searchQuery.trim() !== "" && (
+                <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl border border-slate-200 shadow-xl z-40 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
+                  <div className="px-3.5 py-2 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">
+                    <span>Search Results ({filteredCountries.length})</span>
+                    <button
+                      type="button"
+                      onClick={() => setIsSearchOpen(false)}
+                      className="text-slate-400 hover:text-slate-600 text-xs cursor-pointer"
+                    >
+                      Close ✕
+                    </button>
+                  </div>
+
+                  {filteredCountries.length > 0 ? (
+                    <>
+                      <div className="max-h-64 overflow-y-auto divide-y divide-slate-100">
+                        {filteredCountries.slice(0, 6).map((c) => {
+                          const badge = getCategoryBadge(c.category);
+                          return (
+                            <div
+                              key={`search-drop-${c.iso2}`}
+                              onClick={() => {
+                                setSelectedCountry(c);
+                                setIsSearchOpen(false);
+                              }}
+                              className="p-3 hover:bg-blue-50/70 transition-colors flex items-center justify-between gap-3 cursor-pointer"
+                            >
+                              <div className="flex items-center gap-2.5 min-w-0">
+                                <span className="font-mono text-xs font-black px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/80">
+                                  {c.iso2}
+                                </span>
+                                <div className="min-w-0">
+                                  <p className="text-xs font-bold font-heading text-slate-900 truncate">
+                                    {c.name}
+                                  </p>
+                                  <p className="text-[11px] text-slate-500 font-sans truncate">
+                                    {c.nren} • {c.regionalRen}
+                                  </p>
+                                </div>
+                              </div>
+
+                              <span
+                                className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold font-outfit uppercase shrink-0 border ${badge.bg}`}
+                              >
+                                <span className={`w-1 h-1 rounded-full ${badge.dot}`} />
+                                {badge.label}
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setIsSearchOpen(false);
+                          handleScrollToDirectory();
+                        }}
+                        className="w-full py-2.5 px-4 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-[#1A73C3] flex items-center justify-center gap-1.5 transition-colors border-t border-slate-100 cursor-pointer"
+                      >
+                        <span>View all {filteredCountries.length} in directory</span>
+                        <ArrowDown size={13} />
+                      </button>
+                    </>
+                  ) : (
+                    <div className="p-4 text-center text-xs text-slate-500 font-sans">
+                      {dict.search.noResults}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
-            {/* Total Filtered Count */}
-            <div className="text-xs font-mono text-slate-500 text-right">
-              Showing <span className="font-bold text-slate-900">{filteredCountries.length}</span> of 54 countries
+            {/* Total Filtered Count & Jump Button */}
+            <div className="flex items-center gap-3 justify-between sm:justify-end">
+              {searchQuery.trim() !== "" && (
+                <button
+                  type="button"
+                  onClick={handleScrollToDirectory}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 text-[#1A73C3] border border-blue-200/80 text-xs font-bold font-outfit hover:bg-blue-100 transition-all cursor-pointer shadow-2xs"
+                >
+                  <span>View {filteredCountries.length} in directory</span>
+                  <ArrowDown size={13} />
+                </button>
+              )}
+              <div className="text-xs font-mono text-slate-500 text-right">
+                Showing <span className="font-bold text-slate-900">{filteredCountries.length}</span> of 54 countries
+              </div>
             </div>
           </div>
 
@@ -210,6 +317,7 @@ export function FederationMapExplorer({
               selectedCategory={selectedCategory}
               selectedCountry={selectedCountry}
               onSelectCountry={setSelectedCountry}
+              searchQuery={searchQuery}
               dict={dict}
             />
           </div>
@@ -361,7 +469,7 @@ export function FederationMapExplorer({
         </div>
 
         {/* Country Directory: Minimalist 3-Column Dashed Row Layout */}
-        <div className="pt-8">
+        <div ref={directoryRef} id="country-directory" className="pt-8 scroll-mt-20">
           <div className="mb-6 flex items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold font-heading text-slate-900 tracking-tight">
