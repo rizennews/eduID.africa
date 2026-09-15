@@ -73,9 +73,9 @@ export function InteractiveAfricaMap({
   };
 
   return (
-    <div className="relative w-full rounded-3xl bg-white border border-slate-200/90 p-4 sm:p-6 lg:p-8 shadow-xs overflow-hidden select-none">
+    <div className="relative w-full rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 p-3 sm:p-6 lg:p-8 shadow-xs overflow-hidden select-none">
       {/* Map Header Status Indicator */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-100">
+      <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-slate-100">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-[#0B357B] animate-pulse" />
           <span className="text-xs font-bold font-outfit uppercase tracking-wider text-slate-500">
@@ -190,10 +190,10 @@ export function InteractiveAfricaMap({
           </g>
         </svg>
 
-        {/* Floating Tooltip */}
+        {/* Floating Tooltip (Desktop Only) */}
         {hoveredCountry && (
           <div
-            className="absolute pointer-events-none z-30 transform -translate-x-1/2 -translate-y-full -mt-3 bg-slate-900/95 backdrop-blur-md text-white px-3.5 py-2.5 rounded-xl shadow-xl border border-slate-700/80 text-left min-w-[180px] max-w-xs transition-opacity duration-150"
+            className="absolute pointer-events-none z-30 transform -translate-x-1/2 -translate-y-full -mt-3 bg-slate-900/95 backdrop-blur-md text-white px-3.5 py-2.5 rounded-xl shadow-xl border border-slate-700/80 text-left min-w-[180px] max-w-xs transition-opacity duration-150 hidden sm:block"
             style={{
               left: `${tooltipPos.x}px`,
               top: `${tooltipPos.y}px`,
@@ -242,22 +242,22 @@ export function InteractiveAfricaMap({
       </div>
 
       {/* Map Legend */}
-      <div className="mt-6 pt-4 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-sans font-medium">
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-md bg-[#0B357B] shrink-0" />
-          <span className="text-slate-700">{dict.categories.national_federation}</span>
+      <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 text-[11px] sm:text-xs font-sans font-medium">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-md bg-[#0B357B] shrink-0" />
+          <span className="text-slate-700 truncate">{dict.categories.national_federation}</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-md bg-[#DE4A1B] shrink-0" />
-          <span className="text-slate-700">{dict.categories.catchall_bonafid}</span>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-md bg-[#DE4A1B] shrink-0" />
+          <span className="text-slate-700 truncate">{dict.categories.catchall_bonafid}</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-md bg-[#F59E0B] shrink-0" />
-          <span className="text-slate-700">{dict.categories.in_development}</span>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-md bg-[#F59E0B] shrink-0" />
+          <span className="text-slate-700 truncate">{dict.categories.in_development}</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-md bg-[#CBD5E1] shrink-0" />
-          <span className="text-slate-600">{dict.categories.not_connected}</span>
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-md bg-[#CBD5E1] shrink-0" />
+          <span className="text-slate-600 truncate">{dict.categories.not_connected}</span>
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ export function FederationContactCtaSection({
     <section className="py-12 sm:py-16 bg-[#F8FAFC]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Executive White Card Container */}
-        <div className="rounded-3xl bg-white border border-slate-200/90 shadow-sm p-8 sm:p-10 lg:p-12 relative overflow-hidden">
+        <div className="rounded-3xl bg-white border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12 relative overflow-hidden">
           {/* Subtle Background Radial Accent */}
           <div
             className="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"
@@ -48,12 +48,12 @@ export function FederationContactCtaSection({
             </p>
 
             {/* CTA Button */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href={`/${locale}/get-started`}
                 onMouseEnter={() => arrowRef.current?.startAnimation()}
                 onMouseLeave={() => arrowRef.current?.stopAnimation()}
-                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0B357B] text-white text-sm font-bold font-outfit hover:bg-[#072454] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none"
+                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0B357B] text-white text-sm font-bold font-outfit hover:bg-[#072454] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none w-full sm:w-auto text-center"
               >
                 <span>{cta.button}</span>
                 <ArrowRightIcon ref={arrowRef} size={16} className="text-white" />
@@ -61,7 +61,7 @@ export function FederationContactCtaSection({
 
               <Link
                 href={`/${locale}/how-it-works`}
-                className="text-sm font-semibold text-[#1A73C3] hover:text-[#0B357B] hover:underline underline-offset-4 transition-colors"
+                className="text-sm font-semibold text-[#1A73C3] hover:text-[#0B357B] hover:underline underline-offset-4 transition-colors text-center sm:text-left py-2 sm:py-0"
               >
                 Learn how it works →
               </Link>

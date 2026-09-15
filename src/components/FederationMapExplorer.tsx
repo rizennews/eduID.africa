@@ -255,8 +255,8 @@ export function FederationMapExplorer({
             </div>
           </div>
 
-          {/* Category Tabs */}
-          <div className="flex flex-wrap items-center gap-2">
+          {/* Category Tabs (Horizontally scrollable on mobile, wrapping on desktop) */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap no-scrollbar">
             {[
               { id: "all" as const, label: dict.categories.all, count: counts.all },
               {
@@ -289,7 +289,7 @@ export function FederationMapExplorer({
                 <button
                   key={tab.id}
                   onClick={() => setSelectedCategory(tab.id)}
-                  className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-200 border cursor-pointer select-none ${
+                  className={`shrink-0 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold font-outfit uppercase tracking-wider transition-all duration-200 border cursor-pointer select-none ${
                     isActive
                       ? "bg-[#0B357B] text-white border-[#0B357B] shadow-xs"
                       : "bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:text-slate-900"
@@ -523,7 +523,7 @@ export function FederationMapExplorer({
                       </div>
 
                       {/* Column 3: Federation Status & Action Button */}
-                      <div className="md:col-span-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div className="md:col-span-5 flex items-center justify-between gap-3 mt-1.5 md:mt-0">
                         <div>
                           <span
                             className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider border ${badge.bg}`}
@@ -542,13 +542,13 @@ export function FederationMapExplorer({
                             e.stopPropagation();
                             setSelectedCountry(isSelected ? null : country);
                           }}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold font-outfit transition-all cursor-pointer select-none self-start sm:self-auto ${
+                          className={`shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold font-outfit transition-all cursor-pointer select-none ${
                             isSelected
                               ? "bg-[#0B357B] text-white shadow-xs"
                               : "text-[#1A73C3] hover:text-[#0B357B] hover:bg-blue-100/60"
                           }`}
                         >
-                          <span>{isSelected ? "Hide Details" : "Details"}</span>
+                          <span>{isSelected ? "Hide" : "Details"}</span>
                           <ChevronDown
                             size={14}
                             className={`transition-transform duration-200 ${
@@ -563,9 +563,9 @@ export function FederationMapExplorer({
                     {isSelected && (
                       <div
                         onClick={(e) => e.stopPropagation()}
-                        className="mb-5 mx-2 sm:mx-3 p-5 sm:p-6 rounded-2xl bg-white border border-blue-200/90 shadow-sm animate-in fade-in slide-in-from-top-2 duration-200"
+                        className="mb-5 mx-1 sm:mx-3 p-4 sm:p-6 rounded-2xl bg-white border border-blue-200/90 shadow-sm animate-in fade-in slide-in-from-top-2 duration-200"
                       >
-                        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-100">
                           <div className="flex items-center gap-3">
                             <span className="font-mono text-sm font-black px-2.5 py-1 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/70">
                               {country.iso2}
@@ -584,7 +584,7 @@ export function FederationMapExplorer({
                           <button
                             type="button"
                             onClick={handleScrollToMap}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0B357B] text-white text-xs font-bold font-outfit hover:bg-[#072454] transition-all shadow-xs active:scale-[0.98] cursor-pointer"
+                            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#0B357B] text-white text-xs font-bold font-outfit hover:bg-[#072454] transition-all shadow-xs active:scale-[0.98] cursor-pointer w-full sm:w-auto"
                           >
                             <span>View on Map</span>
                             <ArrowUp size={14} />
@@ -646,10 +646,10 @@ export function FederationMapExplorer({
                               </p>
                             </div>
 
-                            <div className="flex flex-wrap items-center gap-2 pt-1">
+                            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 pt-1">
                               <Link
                                 href={`/${locale}/how-it-works`}
-                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-[#0B357B] hover:border-[#0B357B] text-xs font-semibold font-outfit transition-colors shadow-2xs"
+                                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-[#0B357B] hover:border-[#0B357B] text-xs font-semibold font-outfit transition-colors shadow-2xs text-center"
                               >
                                 <span>How it Works</span>
                                 <ArrowRight size={12} />
@@ -657,7 +657,7 @@ export function FederationMapExplorer({
 
                               <Link
                                 href={`/${locale}/get-started`}
-                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1A73C3] text-white hover:bg-[#0B357B] text-xs font-bold font-outfit transition-colors shadow-2xs"
+                                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-full bg-[#1A73C3] text-white hover:bg-[#0B357B] text-xs font-bold font-outfit transition-colors shadow-2xs text-center"
                               >
                                 <span>Get Started</span>
                                 <ArrowRight size={12} />
