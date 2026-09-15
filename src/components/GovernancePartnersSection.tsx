@@ -93,6 +93,7 @@ export function GovernancePartnersSection({
                   alt={partner.name}
                   width={140}
                   height={48}
+                  unoptimized
                   className="max-h-10 w-auto object-contain"
                 />
               ) : (

@@ -137,6 +137,7 @@ export function GovernanceLeadershipSection({
                         alt={config.logoAlt}
                         width={config.logoWidth}
                         height={config.logoHeight}
+                        unoptimized
                         className="max-h-9 sm:max-h-10 w-auto max-w-[130px] object-contain opacity-90 group-hover:opacity-100 transition-opacity"
                       />
                     </div>

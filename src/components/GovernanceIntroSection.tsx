@@ -115,6 +115,7 @@ export function GovernanceIntroSection({
                         alt={partner.name}
                         width={partner.width}
                         height={partner.height}
+                        unoptimized
                         className={partner.className}
                       />
                     </div>
