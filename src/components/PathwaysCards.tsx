@@ -45,23 +45,23 @@ function PathwayColumn({ title, description, cta, href, locale }: PathwayColumnP
       href={`/${locale}${href}`}
       onMouseEnter={() => arrowRef.current?.startAnimation()}
       onMouseLeave={() => arrowRef.current?.stopAnimation()}
-      className="group relative flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1A73C3] select-none"
+      className="group relative flex flex-col justify-between p-6 sm:p-7 lg:p-8 transition-colors duration-200 hover:bg-slate-100/50 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1A73C3] select-none"
     >
       {/* Upper Content: Serif Headline & Relaxed Body */}
       <div>
-        <h2 className="font-serif text-2xl sm:text-[28px] lg:text-[30px] font-normal text-[#0B357B] tracking-tight leading-snug group-hover:text-[#1A73C3] transition-colors">
+        <h2 className="font-serif text-2xl sm:text-[26px] lg:text-[28px] font-normal text-[#0B357B] tracking-tight leading-snug group-hover:text-[#1A73C3] transition-colors">
           {title}
         </h2>
-        <p className="font-sans text-slate-600 text-sm sm:text-[15px] leading-relaxed mt-4 sm:mt-5 font-normal">
+        <p className="font-sans text-slate-600 text-sm sm:text-[15px] leading-relaxed mt-3.5 sm:mt-4 font-normal">
           {description}
         </p>
       </div>
 
-      {/* Spacious Negative Space Spacer */}
-      <div className="min-h-[90px] sm:min-h-[130px] lg:min-h-[160px] flex-1" />
+      {/* Compact Negative Space Spacer */}
+      <div className="min-h-[24px] sm:min-h-[32px] flex-1" />
 
       {/* Footer Area: Dashed Divider + Left Label / Right Arrow */}
-      <div className="pt-5 sm:pt-6 border-t border-dashed border-slate-300/90 mt-auto">
+      <div className="pt-4 sm:pt-5 border-t border-dashed border-slate-300/90 mt-auto">
         <div className="flex items-center justify-between gap-4 text-xs sm:text-[13px] font-medium tracking-wide text-slate-700 group-hover:text-[#0B357B] transition-colors">
           <span className="font-sans font-medium">{cleanCta}</span>
           <div className="shrink-0 group-hover:translate-x-1.5 transition-transform duration-200">
@@ -112,14 +112,14 @@ export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
   ];
 
   return (
-    <section className="relative py-14 sm:py-20 lg:py-24 bg-[#F8FAFC]">
+    <section className="relative py-10 sm:py-14 lg:py-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching the reference: Pill Eyebrow + Elegant Serif Heading */}
-        <div className="mb-10 sm:mb-14">
+        <div className="mb-8 sm:mb-10">
           <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
             {eyebrow}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B357B] tracking-tight leading-[1.16] mt-4 max-w-3xl">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#0B357B] tracking-tight leading-[1.16] mt-4 max-w-3xl">
             {heading}
           </h2>
         </div>
