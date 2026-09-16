@@ -39,67 +39,80 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
       fullName: data.network1.fullName,
       region: data.network1.region,
       accent: "#0B357B",
-      badgeClass: "bg-blue-50 text-[#0B357B] border-blue-200/80",
     },
     {
       shortName: data.network2.shortName,
       fullName: data.network2.fullName,
       region: data.network2.region,
       accent: "#1A73C3",
-      badgeClass: "bg-sky-50 text-[#1A73C3] border-sky-200/80",
     },
     {
       shortName: data.network3.shortName,
       fullName: data.network3.fullName,
       region: data.network3.region,
       accent: "#DE4A1B",
-      badgeClass: "bg-amber-50 text-[#DE4A1B] border-amber-200/80",
     },
   ];
 
   return (
-    <section className="pt-8 sm:pt-10 pb-8 sm:pb-10 bg-[#F8FAFC]">
+    <section className="py-12 sm:py-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-xs font-mono uppercase tracking-wider text-slate-600 mb-4 shadow-2xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
+            <span>Regional Leadership</span>
+          </div>
+          <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
           </h2>
-          <p className="mt-2.5 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
             {data.description}
           </p>
         </div>
 
-        {/* Three Joined Side-by-Side Container */}
-        <div className="rounded-3xl bg-white border border-slate-200/90 shadow-sm overflow-hidden divide-y md:divide-y-0 md:divide-x divide-slate-200/90 grid grid-cols-1 md:grid-cols-3">
+        {/* Monolithic 3-Column Architectural Grid */}
+        <div className="border-y border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-300/80">
           {networks.map((net) => (
             <div
               key={net.shortName}
-              className="p-6 sm:p-8 flex flex-col justify-between hover:bg-slate-50/50 transition-colors"
+              className="group relative flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/50"
             >
+              {/* Upper Content: Serif Headline & Relaxed Body */}
               <div>
-                <div className="flex items-center gap-2.5 mb-3">
+                <div className="flex items-center gap-2 mb-4">
                   <span
-                    className="w-3 h-3 rounded-full shrink-0"
+                    className="w-2 h-2 rounded-full shrink-0"
                     style={{ backgroundColor: net.accent }}
                     aria-hidden="true"
                   />
-                  <h3 className="text-2xl font-bold font-heading text-slate-900 tracking-tight">
-                    {net.shortName}
-                  </h3>
+                  <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
+                    Regional REN
+                  </span>
                 </div>
 
-                <p className="text-sm sm:text-base text-slate-600 font-sans leading-relaxed font-normal">
+                <h3 className="font-serif text-2xl sm:text-[28px] lg:text-[30px] font-normal text-[#0B357B] tracking-tight leading-snug">
+                  {net.shortName}
+                </h3>
+
+                <p className="font-sans text-slate-600 text-sm sm:text-[15px] leading-relaxed mt-4 font-normal">
                   {net.fullName}
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-100/90">
-                <span
-                  className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold font-outfit border ${net.badgeClass}`}
-                >
+              {/* Spacious Negative Space Spacer */}
+              <div className="min-h-[80px] sm:min-h-[100px] flex-1" />
+
+              {/* Footer Area: Dashed Divider + Region Tag on Left, Dot Beacon on Right */}
+              <div className="pt-4 border-t border-dashed border-slate-300/80 flex items-center justify-between">
+                <span className="font-mono text-xs text-slate-600 tracking-wider">
                   {net.region}
                 </span>
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: net.accent }}
+                  aria-hidden="true"
+                />
               </div>
             </div>
           ))}

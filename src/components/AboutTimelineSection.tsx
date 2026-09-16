@@ -96,54 +96,54 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
   ];
 
   return (
-    <section className="pt-8 sm:pt-10 pb-12 sm:pb-16 bg-[#F8FAFC]">
+    <section className="py-12 sm:py-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider font-outfit text-[#1A73C3] bg-blue-50 border border-blue-200/80">
-            {data.kicker}
-          </span>
-          <h2 className="mt-2.5 text-3xl sm:text-4xl lg:text-[42px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-xs font-mono uppercase tracking-wider text-slate-600 mb-4 shadow-2xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
+            <span>{data.kicker}</span>
+          </div>
+          <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
           </h2>
         </div>
 
         {/* Desktop Chronological Track (lg+) */}
         <div className="hidden lg:block relative">
-          {/* Horizontal Connecting Timeline Spine */}
-          <div className="absolute top-[26px] left-[10%] right-[10%] h-0.5 bg-slate-200" aria-hidden="true">
-            <div className="h-full bg-gradient-to-r from-[#0B357B] via-[#1A73C3] to-[#DE4A1B] w-full" />
-          </div>
+          {/* Horizontal Connecting Dashed Spine */}
+          <div
+            className="absolute top-[20px] left-[5%] right-[5%] border-t border-dashed border-slate-300"
+            aria-hidden="true"
+          />
 
-          <div className="grid grid-cols-5 gap-5 relative z-10">
+          <div className="grid grid-cols-5 gap-4 relative z-10">
             {milestones.map((m) => (
               <div key={m.year} className="flex flex-col items-center">
                 {/* Milestone Node */}
                 <div className="mb-5 flex flex-col items-center">
                   <div
-                    className={`w-13 h-13 rounded-full flex items-center justify-center font-bold font-heading text-xs shadow-md transition-transform hover:scale-105 ${
+                    className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs border transition-all bg-white ${
                       m.isCurrent
-                        ? "bg-[#1A73C3] text-white ring-4 ring-blue-100"
+                        ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                         : m.isFuture
-                        ? "bg-white text-[#DE4A1B] border-2 border-[#DE4A1B] ring-4 ring-orange-50"
-                        : "bg-white text-[#0B357B] border-2 border-slate-300 hover:border-[#0B357B]"
+                        ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
+                        : "border-slate-300 text-slate-600 hover:border-[#0B357B]"
                     }`}
                   >
                     {m.isFuture ? (
-                      <span className="flex items-center gap-0.5 text-sm font-extrabold">
-                        {m.indicator}
-                      </span>
+                      <span className="text-sm">{m.indicator}</span>
                     ) : (
-                      <span>{m.year}</span>
+                      <span>•</span>
                     )}
                   </div>
 
                   <span
-                    className={`mt-2 text-xs font-extrabold font-mono tracking-tight ${
+                    className={`mt-2 font-mono text-xs tracking-tight ${
                       m.isCurrent
-                        ? "text-[#1A73C3]"
+                        ? "text-[#1A73C3] font-medium"
                         : m.isFuture
-                        ? "text-[#DE4A1B]"
+                        ? "text-[#DE4A1B] font-medium"
                         : "text-slate-500"
                     }`}
                   >
@@ -151,34 +151,23 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                   </span>
                 </div>
 
-                {/* Milestone Card */}
-                <div
-                  className={`w-full rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 h-full ${
-                    m.isCurrent
-                      ? "bg-white border-2 border-[#1A73C3] shadow-md shadow-blue-500/5 ring-1 ring-[#1A73C3]/20"
-                      : m.isFuture
-                      ? "bg-amber-50/30 border-2 border-dashed border-orange-200/90 shadow-2xs hover:bg-white hover:border-orange-300"
-                      : "bg-white border border-slate-200/90 shadow-2xs hover:shadow-xs hover:border-slate-300"
-                  }`}
-                >
+                {/* Minimal Dashed Milestone Card */}
+                <div className="w-full border border-dashed border-slate-300 bg-white p-5 sm:p-6 flex flex-col justify-between transition-colors duration-200 hover:bg-slate-50/60 h-full">
                   <div>
-                    {/* Status / Phase Tag */}
+                    {/* Status Tag + Dot Beacon */}
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span
-                        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold font-outfit uppercase tracking-wider ${
-                          m.isCurrent
-                            ? "bg-blue-100 text-[#0B357B]"
-                            : m.isFuture
-                            ? "bg-orange-100 text-[#DE4A1B]"
-                            : "bg-slate-100 text-slate-600"
-                        }`}
-                      >
+                      <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
                         {m.tag}
                       </span>
+                      <span
+                        className="w-1.5 h-1.5 rounded-full shrink-0"
+                        style={{ backgroundColor: m.accent }}
+                        aria-hidden="true"
+                      />
                     </div>
 
                     {/* Milestone Title */}
-                    <h3 className="text-base font-bold font-heading text-slate-900 tracking-tight leading-snug mb-2.5">
+                    <h3 className="font-serif font-normal text-[15px] sm:text-base text-[#0B357B] tracking-tight leading-snug mb-2">
                       {m.title}
                     </h3>
 
@@ -194,52 +183,41 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
         </div>
 
         {/* Mobile & Tablet Vertical Roadmap (< lg) */}
-        <div className="lg:hidden relative pl-6 sm:pl-8 border-l-2 border-slate-200 ml-4 sm:ml-6 space-y-8">
+        <div className="lg:hidden relative pl-6 sm:pl-8 border-l border-dashed border-slate-300 ml-4 sm:ml-6 space-y-6">
           {milestones.map((m) => (
             <div key={m.year} className="relative">
               {/* Node Marker on Spine */}
               <div
-                className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-bold text-[10px] sm:text-xs shadow-xs ${
+                className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-[10px] bg-white border ${
                   m.isCurrent
-                    ? "bg-[#1A73C3] text-white ring-4 ring-blue-100"
+                    ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                     : m.isFuture
-                    ? "bg-white text-[#DE4A1B] border-2 border-[#DE4A1B] ring-4 ring-orange-50"
-                    : "bg-white text-[#0B357B] border-2 border-slate-300"
+                    ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
+                    : "border-slate-300 text-[#0B357B]"
                 }`}
               >
                 {m.isFuture ? m.indicator : "•"}
               </div>
 
               {/* Milestone Card */}
-              <div
-                className={`rounded-2xl p-5 sm:p-6 transition-all ${
-                  m.isCurrent
-                    ? "bg-white border-2 border-[#1A73C3] shadow-md shadow-blue-500/5 ring-1 ring-[#1A73C3]/20"
-                    : m.isFuture
-                    ? "bg-amber-50/30 border-2 border-dashed border-orange-200/90"
-                    : "bg-white border border-slate-200/90 shadow-2xs"
-                }`}
-              >
+              <div className="border border-dashed border-slate-300 bg-white p-5 sm:p-6 transition-colors duration-200 hover:bg-slate-50/60">
                 <div className="flex items-center justify-between gap-3 mb-2.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-extrabold font-mono text-slate-900">
+                    <span className="font-mono text-xs text-[#0B357B] font-medium">
                       {m.year}
                     </span>
-                    <span
-                      className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold font-outfit uppercase tracking-wider ${
-                        m.isCurrent
-                          ? "bg-blue-100 text-[#0B357B]"
-                          : m.isFuture
-                          ? "bg-orange-100 text-[#DE4A1B]"
-                          : "bg-slate-100 text-slate-600"
-                      }`}
-                    >
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
                       {m.tag}
                     </span>
                   </div>
+                  <span
+                    className="w-1.5 h-1.5 rounded-full shrink-0"
+                    style={{ backgroundColor: m.accent }}
+                    aria-hidden="true"
+                  />
                 </div>
 
-                <h3 className="text-base font-bold font-heading text-slate-900 tracking-tight leading-snug mb-2">
+                <h3 className="font-serif font-normal text-base text-[#0B357B] tracking-tight leading-snug mb-2">
                   {m.title}
                 </h3>
 
