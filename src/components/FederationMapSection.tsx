@@ -2,14 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import {
-  CircleCheckIcon,
-  ClockIcon,
-  CloudSyncIcon,
-  ArrowRightIcon,
-  type ArrowRightIconHandle,
-} from "@/components/icons";
-import { CircleDashed } from "lucide-react";
+import { ArrowRightIcon, type ArrowRightIconHandle } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
 
 interface FederationMapSectionProps {
@@ -31,46 +24,104 @@ export function FederationMapSection({
   locale,
   dict,
 }: FederationMapSectionProps) {
-  const arrowRef = React.useRef<ArrowRightIconHandle>(null);
+  const leftArrowRef = React.useRef<ArrowRightIconHandle>(null);
+  const cardArrowRef = React.useRef<ArrowRightIconHandle>(null);
 
   const statusItems = [
     {
       label: dict.mapSection.statusOperational,
-      icon: CircleCheckIcon,
-      iconColor: "text-[#0B357B]",
-      badgeBg: "bg-blue-50/90 border border-blue-200/80",
+      count:
+        locale === "fr"
+          ? "12 pays"
+          : locale === "pt"
+          ? "12 países"
+          : "12 countries",
+      beacon: (
+        <span className="relative flex h-2.5 w-2.5 items-center justify-center">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-600" />
+        </span>
+      ),
+      queryParam: "national_federation",
     },
     {
       label: dict.mapSection.statusDevelopment,
-      icon: ClockIcon,
-      iconColor: "text-[#1A73C3]",
-      badgeBg: "bg-sky-50/90 border border-sky-200/80",
+      count:
+        locale === "fr"
+          ? "8 pays"
+          : locale === "pt"
+          ? "8 países"
+          : "8 countries",
+      beacon: (
+        <span className="inline-flex h-2 w-2 rounded-full bg-[#1A73C3] ring-2 ring-sky-100" />
+      ),
+      queryParam: "in_development",
     },
     {
       label: dict.mapSection.statusCatchall,
-      icon: CloudSyncIcon,
-      iconColor: "text-[#DE4A1B]",
-      badgeBg: "bg-orange-50/90 border border-orange-200/80",
+      count:
+        locale === "fr"
+          ? "27 pays"
+          : locale === "pt"
+          ? "27 países"
+          : "27 countries",
+      beacon: (
+        <span className="inline-flex h-2 w-2 rounded-full bg-[#DE4A1B] ring-2 ring-orange-100" />
+      ),
+      queryParam: "catchall_bonafid",
     },
     {
       label: dict.mapSection.statusNotConnected,
-      icon: CircleDashed,
-      iconColor: "text-slate-400",
-      badgeBg: "bg-slate-100 border border-slate-200/80",
+      count:
+        locale === "fr"
+          ? "7 pays"
+          : locale === "pt"
+          ? "7 países"
+          : "7 countries",
+      beacon: (
+        <span className="inline-flex h-2 w-2 rounded-full border border-slate-400 bg-transparent" />
+      ),
+      queryParam: "not_connected",
     },
   ];
 
   const ctaText = dict.mapSection.cta.replace(/→\s*$/, "").trim();
 
+  const eyebrow =
+    locale === "fr"
+      ? "Carte continentale"
+      : locale === "pt"
+      ? "Mapa continental"
+      : "Continental Map";
+
+  const taxonomyLabel =
+    locale === "fr"
+      ? "Catégories de statut"
+      : locale === "pt"
+      ? "Categorias de estado"
+      : "Status Taxonomy";
+
+  const nationsLabel =
+    locale === "fr"
+      ? "54 Nations africaines"
+      : locale === "pt"
+      ? "54 Nações africanas"
+      : "54 African Nations";
+
   return (
-    <section className="relative py-8 sm:py-10 lg:py-12 bg-[#F8FAFC]">
+    <section className="relative py-14 sm:py-20 lg:py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Title, Narrative & CTA */}
-          <div className="lg:col-span-6 xl:col-span-7 space-y-4 text-left">
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-[40px] text-[#0A162B] tracking-tight leading-[1.15]">
-              {dict.mapSection.title}
-            </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Title, Narrative & Primary Action */}
+          <div className="lg:col-span-6 xl:col-span-7 space-y-5 text-left">
+            <div>
+              <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
+                {eyebrow}
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#0A162B] tracking-tight leading-[1.16] mt-4 max-w-xl">
+                {dict.mapSection.title}
+              </h2>
+            </div>
 
             <p className="font-sans text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
               {dict.mapSection.description}
@@ -79,42 +130,73 @@ export function FederationMapSection({
             <div className="pt-2">
               <Link
                 href={`/${locale}/federation-map`}
-                onMouseEnter={() => arrowRef.current?.startAnimation()}
-                onMouseLeave={() => arrowRef.current?.stopAnimation()}
-                className="group inline-flex items-center justify-center gap-2.5 h-11 px-6 rounded-full bg-[#0B357B] text-white text-sm font-bold font-outfit hover:bg-[#072454] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none"
+                onMouseEnter={() => leftArrowRef.current?.startAnimation()}
+                onMouseLeave={() => leftArrowRef.current?.stopAnimation()}
+                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0A162B] text-white text-sm font-bold font-outfit hover:bg-[#0B357B] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none"
               >
                 <span>{ctaText}</span>
-                <ArrowRightIcon ref={arrowRef} size={16} className="text-white" />
+                <ArrowRightIcon ref={leftArrowRef} size={16} className="text-white" />
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Clean Status Categorization Panel */}
+          {/* Right Column: Architectural Status Ledger (Frankli Style) */}
           <div className="lg:col-span-6 xl:col-span-5">
-            <div className="bg-white rounded-2xl border border-slate-300 shadow-md shadow-slate-900/[0.04] p-6 sm:p-8 space-y-3.5">
-              <div className="text-xs font-bold font-outfit uppercase tracking-wider text-slate-400 pb-1 border-b border-slate-100">
-                Infrastructure Status Categories
+            <div className="border border-dashed border-slate-300 bg-white/70 backdrop-blur-xs p-7 sm:p-9 transition-colors">
+              {/* Card Header: Taxonomy Eyebrow + Continental Count */}
+              <div className="flex items-center justify-between pb-4 border-b border-dashed border-slate-300">
+                <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-slate-500">
+                  {taxonomyLabel}
+                </span>
+                <span className="text-[11px] font-mono text-slate-400">
+                  {nationsLabel}
+                </span>
               </div>
 
-              <div className="divide-y divide-slate-100">
-                {statusItems.map((item, idx) => {
-                  const Icon = item.icon;
-                  return (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-3.5 py-3.5 first:pt-2 last:pb-0"
-                    >
-                      <div
-                        className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${item.badgeBg}`}
-                      >
-                        <Icon size={16} className={item.iconColor} />
-                      </div>
-                      <span className="font-heading font-bold text-sm sm:text-base text-[#0A162B] leading-snug">
+              {/* Status Rows with Dashed Dividers and Clean Beacons */}
+              <div className="divide-y divide-dashed divide-slate-200/90">
+                {statusItems.map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={`/${locale}/federation-map?category=${item.queryParam}`}
+                    className="group/item flex items-center justify-between py-4 transition-colors hover:bg-slate-100/50 -mx-2 px-2 rounded-lg"
+                  >
+                    <div className="flex items-center gap-3.5 min-w-0">
+                      <div className="shrink-0">{item.beacon}</div>
+                      <span className="font-serif text-base sm:text-[17px] text-[#0A162B] font-normal leading-snug group-hover/item:text-[#0B357B] transition-colors truncate">
                         {item.label}
                       </span>
                     </div>
-                  );
-                })}
+
+                    <div className="flex items-center gap-2.5 pl-3 shrink-0">
+                      <span className="font-mono text-xs text-slate-400 font-medium">
+                        {item.count}
+                      </span>
+                      <span className="text-slate-300 group-hover/item:text-slate-700 group-hover/item:translate-x-0.5 transition-all text-xs">
+                        →
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Card Footer: Split text on left, arrow on right */}
+              <div className="pt-5 border-t border-dashed border-slate-300 mt-2">
+                <Link
+                  href={`/${locale}/federation-map`}
+                  onMouseEnter={() => cardArrowRef.current?.startAnimation()}
+                  onMouseLeave={() => cardArrowRef.current?.stopAnimation()}
+                  className="group/footer flex items-center justify-between text-xs sm:text-[13px] font-medium tracking-wide text-slate-700 hover:text-[#0A162B] transition-colors"
+                >
+                  <span className="font-sans font-medium">{ctaText}</span>
+                  <div className="group-hover/footer:translate-x-1.5 transition-transform duration-200">
+                    <ArrowRightIcon
+                      ref={cardArrowRef}
+                      size={15}
+                      className="text-slate-600 group-hover/footer:text-[#0A162B] p-0 hover:bg-transparent"
+                    />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
