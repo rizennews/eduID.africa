@@ -32,7 +32,7 @@ export function Hero({ locale, dict }: HeroProps) {
       : "Trust & Identity";
 
   return (
-    <section className="relative overflow-hidden pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-[#F8FAFC]">
+    <section className="relative overflow-hidden pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-[#EEF4FB] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left Column: Consistent Editorial Typography & Minimal CTAs */}
