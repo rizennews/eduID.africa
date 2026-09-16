@@ -934,6 +934,17 @@
       "actionSecondary": "Explorer le code sur GitHub"
     }
   },
+  "eventsPage": {
+    "title": "Prochains roadshows et ateliers",
+    "subtitle": "Ateliers pratiques de fédération d'identité sur le continent. Inscrivez-vous via Indico pour participer, déployer BonafID et connecter votre établissement.",
+    "registerIndico": "S'inscrire sur Indico",
+    "detailsLabel": "Détails de l'événement",
+    "hostCta": {
+      "title": "Vous souhaitez accueillir un roadshow T&I dans votre pays ?",
+      "description": "eduID.africa s'associe aux RNRE et aux universités pour apporter des ateliers pratiques de déploiement BonafID et geteduroam directement dans votre région.",
+      "action": "Demander un roadshow régional"
+    }
+  },
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"

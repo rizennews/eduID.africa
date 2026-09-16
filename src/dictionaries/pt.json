@@ -934,6 +934,17 @@
       "actionSecondary": "Explorar Código no GitHub"
     }
   },
+  "eventsPage": {
+    "title": "Próximos Roadshows e Workshops",
+    "subtitle": "Roadshows práticos de federação de identidade em todo o continente. Registe-se via Indico para participar, implementar o BonafID e ligar a sua instituição.",
+    "registerIndico": "Inscrever-se no Indico",
+    "detailsLabel": "Detalhes do Evento",
+    "hostCta": {
+      "title": "Pretende acolher um Roadshow de T&I no seu país?",
+      "description": "O eduID.africa faz parcerias com RNERs nacionais e universidades para levar workshops práticos de implementação do BonafID e geteduroam diretamente à sua região.",
+      "action": "Solicitar Roadshow Regional"
+    }
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"

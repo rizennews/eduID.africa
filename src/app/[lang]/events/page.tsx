@@ -3,6 +3,7 @@ import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } fro
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
+import { EventsScheduleSection } from "@/components/EventsScheduleSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -50,10 +51,18 @@ export default async function EventsPage({
               Events &amp; <span className="text-[#1A73C3]">Roadshows</span>
             </>
           }
-          subtitle="Conferences, webinars, technical workshops, and continental identity summits."
+          subtitle={
+            locale === "fr"
+              ? "Conférences, webinaires, ateliers techniques et sommets de l'identité continentale."
+              : locale === "pt"
+              ? "Conferências, webinars, workshops técnicos e cúpulas de identidade continental."
+              : "Conferences, webinars, technical workshops, and continental identity summits."
+          }
         />
+        <EventsScheduleSection locale={locale} dict={dict as any} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>
   );
 }
+
