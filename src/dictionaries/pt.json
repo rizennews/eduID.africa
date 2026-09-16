@@ -352,7 +352,8 @@
   },
   "governancePage": {
     "hero": {
-      "title": "Governação"
+      "title": "Governação",
+      "subtitle": "Supervisão continental alinhada a padrões e estrutura operacional transparente."
     },
     "intro": {
       "headline1": "Alinhado a padrões.",

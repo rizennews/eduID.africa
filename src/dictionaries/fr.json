@@ -352,7 +352,8 @@
   },
   "governancePage": {
     "hero": {
-      "title": "Gouvernance"
+      "title": "Gouvernance",
+      "subtitle": "Supervision continentale conforme aux normes et cadre opérationnel transparent."
     },
     "intro": {
       "headline1": "Aligné sur les normes.",

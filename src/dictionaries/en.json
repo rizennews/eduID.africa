@@ -352,7 +352,8 @@
   },
   "governancePage": {
     "hero": {
-      "title": "Governance"
+      "title": "Governance",
+      "subtitle": "Standards-aligned continental oversight and operational framework."
     },
     "intro": {
       "headline1": "Standards-aligned. Transparently",
