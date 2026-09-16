@@ -258,6 +258,9 @@
     "ctaInstitution": "Vérifier votre institution"
   },
   "pathways": {
+    "eyebrow": "Voies d'accès",
+    "heading": "Trois voies d'accès à la fédération continentale.",
+    "subheading": "Que vous conceviez un réseau national souverain, déployiez une identité cloud sans serveurs, ou vérifiiez le roaming de votre campus.",
     "card1": {
       "tag": "POUR LES NREN — VOIE NATIONALE",
       "title": "Bâtir une fédération nationale",

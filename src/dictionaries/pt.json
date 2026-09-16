@@ -258,6 +258,9 @@
     "ctaInstitution": "Verifique a sua instituição"
   },
   "pathways": {
+    "eyebrow": "Vias de acesso",
+    "heading": "Três vias de acesso à federação continental.",
+    "subheading": "Quer esteja a projetar uma rede nacional soberana, a implementar identidade em nuvem sem servidores, ou a verificar o roaming do seu campus.",
     "card1": {
       "tag": "PARA NRENS — VIA NACIONAL",
       "title": "Construir uma federação nacional",

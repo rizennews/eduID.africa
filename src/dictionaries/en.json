@@ -258,6 +258,9 @@
     "ctaInstitution": "Check your institution"
   },
   "pathways": {
+    "eyebrow": "Pathways",
+    "heading": "Three distinct pathways into the continental federation.",
+    "subheading": "Whether you are architecting a national sovereign network, deploying cloud identity without servers, or testing campus roaming.",
     "card1": {
       "tag": "FOR NRENS — NATIONAL PATH",
       "title": "Build a national federation",
