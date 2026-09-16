@@ -73,9 +73,9 @@ export function GovernancePartnersSection({
       className={`relative py-8 sm:py-10 bg-white border-t border-slate-200/80 ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading — Strictly on ONE LINE */}
+        {/* Section Heading — Strictly on ONE LINE (Un-bolded minimal aesthetic) */}
         <div className="text-center w-full max-w-none mx-auto mb-6 sm:mb-8">
-          <h2 className="font-heading font-bold text-sm sm:text-base md:text-[17px] lg:text-lg text-slate-700 leading-snug tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-sans font-normal text-sm sm:text-base text-slate-500 leading-snug tracking-normal sm:whitespace-nowrap">
             {displayTitle}
           </h2>
         </div>

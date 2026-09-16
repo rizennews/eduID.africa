@@ -112,7 +112,7 @@ export function FederationMapSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Title, Narrative & Primary Action */}
-          <div className="lg:col-span-6 xl:col-span-7 space-y-5 text-left">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-5 text-left">
             <div>
               <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
                 {eyebrow}
@@ -140,8 +140,8 @@ export function FederationMapSection({
           </div>
 
           {/* Right Column: Architectural Status Ledger (Frankli Style) */}
-          <div className="lg:col-span-6 xl:col-span-5">
-            <div className="border border-dashed border-slate-300 bg-white/70 backdrop-blur-xs p-7 sm:p-9 transition-colors">
+          <div className="lg:col-span-6 xl:col-span-6">
+            <div className="border border-dashed border-slate-300 bg-white/70 backdrop-blur-xs p-6 sm:p-8 lg:p-9 transition-colors">
               {/* Card Header: Taxonomy Eyebrow + Continental Count */}
               <div className="flex items-center justify-between pb-4 border-b border-dashed border-slate-300">
                 <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-slate-500">
@@ -152,22 +152,22 @@ export function FederationMapSection({
                 </span>
               </div>
 
-              {/* Status Rows with Dashed Dividers and Clean Beacons */}
+              {/* Status Rows with Dashed Dividers and Clean Beacons (No truncation) */}
               <div className="divide-y divide-dashed divide-slate-200/90">
                 {statusItems.map((item, idx) => (
                   <Link
                     key={idx}
                     href={`/${locale}/federation-map?category=${item.queryParam}`}
-                    className="group/item flex items-center justify-between py-4 transition-colors hover:bg-slate-100/50 -mx-2 px-2 rounded-lg"
+                    className="group/item flex items-center justify-between py-3.5 sm:py-4 transition-colors hover:bg-slate-100/50 -mx-2 px-2 rounded-lg gap-4"
                   >
-                    <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
                       <div className="shrink-0">{item.beacon}</div>
-                      <span className="font-serif text-base sm:text-[17px] text-[#0B357B] font-normal leading-snug group-hover/item:text-[#1A73C3] transition-colors truncate">
+                      <span className="font-serif text-sm sm:text-[15px] lg:text-base text-[#0B357B] font-normal leading-snug group-hover/item:text-[#1A73C3] transition-colors">
                         {item.label}
                       </span>
                     </div>
 
-                    <div className="flex items-center gap-2.5 pl-3 shrink-0">
+                    <div className="flex items-center gap-2.5 shrink-0">
                       <span className="font-mono text-xs text-slate-400 font-medium">
                         {item.count}
                       </span>

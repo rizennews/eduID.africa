@@ -1,3 +1,4 @@
+import * as React from "react";
 import type { Metadata } from "next";
 import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
 import { createLocalizedMetadata } from "@/lib/seo";
@@ -54,7 +55,9 @@ export default async function FederationMapPage({
         <FederationMapHero locale={locale} dict={dict} />
 
         {/* Interactive Explorer: Map, Category Filters, Search & Directory */}
-        <FederationMapExplorer locale={locale} dict={dict.federationMapPage} />
+        <React.Suspense fallback={<div className="min-h-[400px]" />}>
+          <FederationMapExplorer locale={locale} dict={dict.federationMapPage} />
+        </React.Suspense>
 
         {/* Call to Action: Is your country not listed? */}
         <FederationContactCtaSection locale={locale} dict={dict} />

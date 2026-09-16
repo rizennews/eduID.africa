@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   type AfricanCountry,
   type FederationCategory,
@@ -44,12 +45,29 @@ export function FederationMapExplorer({
   locale = "en",
   dict,
 }: FederationMapExplorerProps) {
+  const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = React.useState<FederationCategory | "all">("all");
   const [searchQuery, setSearchQuery] = React.useState("");
   const [selectedCountry, setSelectedCountry] = React.useState<AfricanCountry | null>(null);
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const mapContainerRef = React.useRef<HTMLDivElement>(null);
   const directoryRef = React.useRef<HTMLDivElement>(null);
+
+  // Sync category filter from URL search params (e.g. /federation-map?category=national_federation)
+  React.useEffect(() => {
+    const cat = searchParams.get("category");
+    if (
+      cat === "national_federation" ||
+      cat === "catchall_bonafid" ||
+      cat === "in_development" ||
+      cat === "not_connected"
+    ) {
+      setSelectedCategory(cat);
+      setTimeout(() => {
+        mapContainerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 150);
+    }
+  }, [searchParams]);
 
   const handleScrollToMap = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
