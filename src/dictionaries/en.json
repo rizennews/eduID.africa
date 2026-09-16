@@ -857,6 +857,17 @@
       ]
     }
   },
+  "newsPage": {
+    "title": "Latest Announcements",
+    "subtitle": "Official communications, deployment milestones, and federation peering reports from across Africa.",
+    "featuredBadge": "Featured Announcement",
+    "readMore": "Read announcement",
+    "backToNews": "Back to all announcements",
+    "keyTakeaways": "Key Highlights",
+    "relatedTitle": "More Announcements",
+    "metaProgramme": "Programme",
+    "metaRegion": "Region"
+  },
   "notFoundPage": {
     "title": "Lost in flight?",
     "homeButton": "Find your way home"

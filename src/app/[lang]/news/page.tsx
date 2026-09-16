@@ -3,6 +3,7 @@ import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } fro
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
+import { NewsListingSection } from "@/components/NewsListingSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -52,6 +53,9 @@ export default async function NewsPage({
           }
           subtitle="Continental federation announcements, deployment milestones, and community updates."
         />
+
+        {/* Latest Announcements Listing Section */}
+        <NewsListingSection locale={locale} dict={dict} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>

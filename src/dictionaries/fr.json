@@ -857,6 +857,17 @@
       ]
     }
   },
+  "newsPage": {
+    "title": "Dernières annonces",
+    "subtitle": "Communications officielles, jalons de déploiement et rapports d'interconnexion de fédération en Afrique.",
+    "featuredBadge": "Annonce à la une",
+    "readMore": "Lire l'annonce",
+    "backToNews": "Retour à toutes les annonces",
+    "keyTakeaways": "Points clés",
+    "relatedTitle": "Autres annonces",
+    "metaProgramme": "Programme",
+    "metaRegion": "Région"
+  },
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"

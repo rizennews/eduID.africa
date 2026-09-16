@@ -857,6 +857,17 @@
       ]
     }
   },
+  "newsPage": {
+    "title": "Últimos Anúncios",
+    "subtitle": "Comunicações oficiais, marcos de implementação e relatórios de interligação de federação em África.",
+    "featuredBadge": "Anúncio em Destaque",
+    "readMore": "Ler anúncio",
+    "backToNews": "Voltar a todos os anúncios",
+    "keyTakeaways": "Destaques Principais",
+    "relatedTitle": "Outros Anúncios",
+    "metaProgramme": "Programa",
+    "metaRegion": "Região"
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"
