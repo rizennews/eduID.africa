@@ -53,9 +53,9 @@ export function TrustMetrics({ dict }: TrustMetricsProps) {
   ];
 
   return (
-    <section className="relative py-4 sm:py-5 lg:py-6 bg-white border-y border-slate-200/90">
+    <section className="relative py-4 sm:py-5 lg:py-6 bg-white border-y border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-0 lg:divide-x divide-slate-200/80">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-0 lg:divide-x divide-slate-300/80">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
@@ -78,10 +78,10 @@ export function TrustMetrics({ dict }: TrustMetricsProps) {
 
                 {/* Stat Text */}
                 <div>
-                  <div className="font-heading font-bold text-xl sm:text-2xl lg:text-[22px] tracking-tight text-[#0A162B] leading-snug">
+                  <div className="font-heading font-medium text-xl sm:text-2xl lg:text-[22px] tracking-tight text-[#0B357B] leading-snug">
                     {stat.value}
                   </div>
-                  <div className="font-sans text-xs sm:text-[13px] text-slate-500 font-medium leading-snug mt-0.5">
+                  <div className="font-sans text-xs sm:text-[13px] text-slate-500 font-normal leading-snug mt-0.5">
                     {stat.label}
                   </div>
                 </div>

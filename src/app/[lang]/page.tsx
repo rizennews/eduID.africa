@@ -20,7 +20,7 @@ export default async function Page({
   const dict = await getDictionary(locale);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0A162B]">
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
       {/* Searchable-Style Navbar */}
       <Header locale={locale} dict={dict} />
 
