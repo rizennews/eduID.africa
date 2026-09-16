@@ -983,6 +983,39 @@
         "catchall": "Fédération d'accueil",
         "notConnected": "Non connecté"
       }
+    },
+    "stepsSection": {
+      "title": "Trois étapes pour geteduroam",
+      "step1": {
+        "num": "1",
+        "title": "Téléchargez l'application geteduroam",
+        "description": "Disponible sur Android et iOS. L'application gère automatiquement la génération de certificats à l'aide de votre identité institutionnelle — aucune compétence technique requise.",
+        "platforms": ["Android", "iOS", "Windows", "macOS"],
+        "playStore": "Disponible sur Play Store",
+        "appStore": "Disponible sur l'App Store"
+      },
+      "step2": {
+        "num": "2",
+        "title": "Connectez-vous avec votre compte institutionnel",
+        "description": "Ouvrez l'application et recherchez votre établissement. Connectez-vous avec vos identifiants universitaires (les mêmes que pour votre messagerie ou portail étudiant). L'application contactera le fournisseur d'identité de votre établissement.",
+        "mockupLabel": "Exemple : écran de connexion geteduroam",
+        "mockupTitle": "Connexion à geteduroam",
+        "mockupUsername": "votre.nom@universite.ac.gh",
+        "mockupAction": "Se connecter →"
+      },
+      "step3": {
+        "num": "✓",
+        "title": "Vous êtes connecté — partout",
+        "description": "L'application installe un certificat Wi-Fi sur votre appareil. Dès lors, chaque fois que vous vous trouvez sur un campus connecté à eduroam, votre appareil se connecte automatiquement. Aucun mot de passe. Aucune configuration. Fonctionne dans tous les établissements connectés de la région.",
+        "accessLabel": "Ce à quoi vous pouvez accéder avec une identité fédérée",
+        "accessItems": [
+          "Itinérance Wi-Fi eduroam",
+          "Ressources de recherche mondiales via eduGAIN",
+          "Services numériques du RNRE",
+          "Bases de données de bibliothèques",
+          "Plateformes de collaboration"
+        ]
+      }
     }
   },
   "notFoundPage": {

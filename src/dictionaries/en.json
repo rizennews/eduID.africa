@@ -983,6 +983,39 @@
         "catchall": "Catchall",
         "notConnected": "Not connected"
       }
+    },
+    "stepsSection": {
+      "title": "Three steps to geteduroam",
+      "step1": {
+        "num": "1",
+        "title": "Download the geteduroam app",
+        "description": "Available on Android and iOS. The app handles certificate generation automatically using your institutional identity — no technical knowledge required.",
+        "platforms": ["Android", "iOS", "Windows", "macOS"],
+        "playStore": "Get on Play Store",
+        "appStore": "Get on App Store"
+      },
+      "step2": {
+        "num": "2",
+        "title": "Sign in with your institutional account",
+        "description": "Open the app and search for your institution. Log in with your campus credentials (the same username and password you use for your email or student portal). The app will contact your institution's identity provider.",
+        "mockupLabel": "Example: geteduroam login screen",
+        "mockupTitle": "Sign in to geteduroam",
+        "mockupUsername": "your.name@university.ac.gh",
+        "mockupAction": "Sign in →"
+      },
+      "step3": {
+        "num": "✓",
+        "title": "You're connected — everywhere",
+        "description": "The app installs a Wi-Fi certificate on your device. From now on, whenever you're on a campus connected to eduroam, your device connects automatically. No passwords. No configuration. Works across every connected institution in the region.",
+        "accessLabel": "What you can access with a federated identity",
+        "accessItems": [
+          "eduroam Wi-Fi roaming",
+          "Global research resources via eduGAIN",
+          "NREN digital services",
+          "Library databases",
+          "Collaboration platforms"
+        ]
+      }
     }
   },
   "notFoundPage": {

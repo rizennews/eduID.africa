@@ -983,6 +983,39 @@
         "catchall": "Federação genérica",
         "notConnected": "Não ligada"
       }
+    },
+    "stepsSection": {
+      "title": "Três passos para o geteduroam",
+      "step1": {
+        "num": "1",
+        "title": "Descarregue a aplicação geteduroam",
+        "description": "Disponível para Android e iOS. A aplicação gere automaticamente a geração de certificados com a sua identidade institucional — sem necessidade de conhecimentos técnicos.",
+        "platforms": ["Android", "iOS", "Windows", "macOS"],
+        "playStore": "Obter no Play Store",
+        "appStore": "Obter na App Store"
+      },
+      "step2": {
+        "num": "2",
+        "title": "Inicie sessão com a sua conta institucional",
+        "description": "Abra a aplicação e pesquise a sua instituição. Inicie sessão com as suas credenciais universitárias (o mesmo utilizador e palavra-passe do seu e-mail ou portal do estudante). A aplicação contactará o fornecedor de identidade da sua instituição.",
+        "mockupLabel": "Exemplo: ecrã de início de sessão do geteduroam",
+        "mockupTitle": "Iniciar sessão no geteduroam",
+        "mockupUsername": "seu.nome@universidade.ac.gh",
+        "mockupAction": "Iniciar sessão →"
+      },
+      "step3": {
+        "num": "✓",
+        "title": "Está ligado — em todo o lado",
+        "description": "A aplicação instala um certificado Wi-Fi no seu dispositivo. A partir de agora, sempre que estiver num campus ligado ao eduroam, o seu dispositivo liga-se automaticamente. Sem palavras-passe. Sem configuração. Funciona em todas as instituições ligadas na região.",
+        "accessLabel": "O que pode aceder com uma identidade federada",
+        "accessItems": [
+          "Roaming Wi-Fi eduroam",
+          "Recursos globais de investigação via eduGAIN",
+          "Serviços digitais da RNER",
+          "Bases de dados de bibliotecas",
+          "Plataformas de colaboração"
+        ]
+      }
     }
   },
   "notFoundPage": {
