@@ -25,7 +25,6 @@ export function FederationMapSection({
   dict,
 }: FederationMapSectionProps) {
   const leftArrowRef = React.useRef<ArrowRightIconHandle>(null);
-  const cardArrowRef = React.useRef<ArrowRightIconHandle>(null);
 
   const statusItems = [
     {
@@ -178,25 +177,6 @@ export function FederationMapSection({
                     </div>
                   </Link>
                 ))}
-              </div>
-
-              {/* Card Footer: Split text on left, arrow on right */}
-              <div className="pt-5 border-t border-dashed border-slate-300 mt-2">
-                <Link
-                  href={`/${locale}/federation-map`}
-                  onMouseEnter={() => cardArrowRef.current?.startAnimation()}
-                  onMouseLeave={() => cardArrowRef.current?.stopAnimation()}
-                  className="group/footer flex items-center justify-between text-xs sm:text-[13px] font-medium tracking-wide text-slate-700 hover:text-[#0A162B] transition-colors"
-                >
-                  <span className="font-sans font-medium">{ctaText}</span>
-                  <div className="group-hover/footer:translate-x-1.5 transition-transform duration-200">
-                    <ArrowRightIcon
-                      ref={cardArrowRef}
-                      size={15}
-                      className="text-slate-600 group-hover/footer:text-[#0A162B] p-0 hover:bg-transparent"
-                    />
-                  </div>
-                </Link>
               </div>
             </div>
           </div>
