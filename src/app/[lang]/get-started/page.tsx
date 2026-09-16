@@ -4,6 +4,7 @@ import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
 import { GetStartedOverviewSection } from "@/components/GetStartedOverviewSection";
+import { InstitutionSearchSection } from "@/components/InstitutionSearchSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -59,6 +60,9 @@ export default async function GetStartedPage({
 
         {/* Page Overview Section: Set up geteduroam in under three minutes */}
         <GetStartedOverviewSection locale={locale} dict={dict as any} />
+
+        {/* Institution Search Section: Is your university connected? */}
+        <InstitutionSearchSection locale={locale} dict={dict as any} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>

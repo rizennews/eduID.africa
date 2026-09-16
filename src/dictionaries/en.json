@@ -965,6 +965,24 @@
       ],
       "actionPrimary": "Download geteduroam",
       "actionSecondary": "Check your institution"
+    },
+    "institutionSearch": {
+      "title": "Is your university connected?",
+      "subtitle": "Search for your institution to see its federation status and which services you can access.",
+      "searchPlaceholder": "Search by institution name or country…",
+      "searchButton": "Search",
+      "filterAll": "All",
+      "filterNational": "National federation",
+      "filterCatchall": "Catchall",
+      "filterNotConnected": "Not connected",
+      "servicesLabel": "services",
+      "noResults": "No institutions found matching your search.",
+      "requestOnboarding": "Request institution onboarding",
+      "statusLabels": {
+        "national": "National federation",
+        "catchall": "Catchall",
+        "notConnected": "Not connected"
+      }
     }
   },
   "notFoundPage": {

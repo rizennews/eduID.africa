@@ -965,6 +965,24 @@
       ],
       "actionPrimary": "Télécharger geteduroam",
       "actionSecondary": "Vérifier votre établissement"
+    },
+    "institutionSearch": {
+      "title": "Votre université est-elle connectée ?",
+      "subtitle": "Recherchez votre établissement pour connaître son statut de fédération et les services accessibles.",
+      "searchPlaceholder": "Rechercher par nom d'établissement ou par pays…",
+      "searchButton": "Rechercher",
+      "filterAll": "Tous",
+      "filterNational": "Fédération nationale",
+      "filterCatchall": "Fédération d'accueil",
+      "filterNotConnected": "Non connecté",
+      "servicesLabel": "services",
+      "noResults": "Aucun établissement trouvé correspondant à votre recherche.",
+      "requestOnboarding": "Demander l'intégration de votre établissement",
+      "statusLabels": {
+        "national": "Fédération nationale",
+        "catchall": "Fédération d'accueil",
+        "notConnected": "Non connecté"
+      }
     }
   },
   "notFoundPage": {

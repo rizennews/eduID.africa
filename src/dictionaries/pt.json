@@ -965,6 +965,24 @@
       ],
       "actionPrimary": "Descarregar geteduroam",
       "actionSecondary": "Verificar a sua instituição"
+    },
+    "institutionSearch": {
+      "title": "A sua universidade está ligada?",
+      "subtitle": "Pesquise a sua instituição para verificar o estado da federação e os serviços a que tem acesso.",
+      "searchPlaceholder": "Pesquisar por nome da instituição ou país…",
+      "searchButton": "Pesquisar",
+      "filterAll": "Todas",
+      "filterNational": "Federação nacional",
+      "filterCatchall": "Federação genérica",
+      "filterNotConnected": "Não ligada",
+      "servicesLabel": "serviços",
+      "noResults": "Nenhuma instituição encontrada para a sua pesquisa.",
+      "requestOnboarding": "Solicitar integração da sua instituição",
+      "statusLabels": {
+        "national": "Federação nacional",
+        "catchall": "Federação genérica",
+        "notConnected": "Não ligada"
+      }
     }
   },
   "notFoundPage": {
