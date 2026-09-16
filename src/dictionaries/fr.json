@@ -715,6 +715,106 @@
       "btnAssessment": "Demander une évaluation"
     }
   },
+  "bonafidPage": {
+    "hero": {
+      "title": "BonafID",
+      "subtitle": "Identité souveraine dans le cloud et identifiants académiques vérifiables pour les étudiants, chercheurs et facultés d'Afrique."
+    },
+    "overview": {
+      "headline1": "Gouvernance d'identité open-source,",
+      "headline2": "conçue en Afrique, pour l'Afrique.",
+      "description": "BonafID est une plateforme de gestion des identités et des accès fédérée, open-source et hébergée dans le cloud, co-créée par le WACREN et ses partenaires. Elle dote chaque établissement d'un fournisseur d'identité de niveau production — sans serveurs sur site, sans personnel spécialisé et sans attendre la création d'infrastructures nationales.",
+      "badges": [
+        "Open source",
+        "Hébergé dans le cloud",
+        "Compatible eduGAIN",
+        "Prêt pour la production (AC4 Année 2)",
+        "SAML 2.0 / OIDC"
+      ]
+    },
+    "problemSection": {
+      "title": "Le problème que BonafID vise à résoudre",
+      "description": "La plupart des établissements d'enseignement supérieur africains ne peuvent pas participer à la fédération car ils ne disposent pas de fournisseur d'identité géré. En créer et en exploiter un de toutes pièces — serveurs, certificats, personnel — dépasse les capacités informatiques de la plupart d'entre eux. BonafID supprime entièrement cet obstacle.",
+      "items": [
+        {
+          "icon": "cloud",
+          "title": "Aucune infrastructure requise",
+          "desc": "Hébergé dans le cloud. Le WACREN gère la plateforme. Votre équipe informatique gère uniquement les identités."
+        },
+        {
+          "icon": "network",
+          "title": "S'intègre aux systèmes existants",
+          "desc": "Des outils d'extraction de données connectent BonafID à votre système d'information étudiant, système RH ou LDAP sans migration manuelle."
+        },
+        {
+          "icon": "globe",
+          "title": "Prêt pour la fédération dès le premier jour",
+          "desc": "Enregistré dans la fédération eduID.africa dès le déploiement. Immédiatement éligible à eduGAIN et geteduroam."
+        },
+        {
+          "icon": "shield",
+          "title": "Identité pérenne et continue",
+          "desc": "Chaque utilisateur bénéficie d'une identité persistante qui l'accompagne — à travers les établissements, programmes et étapes de carrière."
+        }
+      ]
+    },
+    "stackSection": {
+      "title": "Comment BonafID s'intègre dans l'architecture",
+      "layers": [
+        {
+          "level": "Mondial",
+          "title": "eduGAIN / Réseau mondial d'éducation et de recherche",
+          "subtitle": "Fédération internationale — GÉANT",
+          "badge": "Appairage mondial",
+          "connector": "↕ pair"
+        },
+        {
+          "level": "Continental",
+          "title": "eduID.africa",
+          "subtitle": "Fédération d'agrégation continentale",
+          "badge": "Le toit de l'Afrique",
+          "connector": "↕"
+        },
+        {
+          "level": "National",
+          "title": "Fédérations nationales (exploitées par les RNRE)",
+          "subtitle": "Optionnel — lorsque le RNRE dispose des capacités",
+          "badge": "Voie A",
+          "connector": "↕"
+        },
+        {
+          "level": "Campus",
+          "title": "BonafID (IdP de l'établissement)",
+          "subtitle": "Fournisseur d'identité de campus — hébergé dans le cloud par le WACREN",
+          "badge": "Votre campus",
+          "isHighlighted": true,
+          "connector": "↕"
+        },
+        {
+          "level": "Systèmes locaux",
+          "title": "Systèmes d'information étudiants et personnels",
+          "subtitle": "SIS · RH · LDAP · Active Directory",
+          "badge": "Source de vérité"
+        }
+      ]
+    },
+    "requestSection": {
+      "title": "Demander BonafID pour votre établissement",
+      "description": "BonafID est actuellement déployé dans le cadre du programme AfricaConnect4. Les établissements des pays membres du WACREN, d'UbuntuNet Alliance et de l'ASREN sont éligibles pour demander un accès.",
+      "card1": {
+        "title": "Pour les institutions",
+        "description": "Si votre établissement se trouve dans un pays disposant d'un RNRE participant, contactez l'équipe T&I de votre RNRE. Si vous êtes dans un pays sans fédération nationale, vous pouvez demander un accès direct via le programme de rattrapage.",
+        "action": "Demander un accès",
+        "href": "/contact"
+      },
+      "card2": {
+        "title": "Pour les RNRE et les développeurs",
+        "description": "BonafID est open source. L'ensemble de la base de code, la documentation de déploiement et la référence de l'API sont disponibles sur GitHub. Les RNRE peuvent l'auto-héberger ou contribuer au projet.",
+        "action": "Voir sur GitHub",
+        "href": "https://github.com/WACREN"
+      }
+    }
+  },
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"

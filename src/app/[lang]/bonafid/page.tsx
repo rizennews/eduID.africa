@@ -3,6 +3,10 @@ import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } fro
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
+import { BonafIdOverviewSection } from "@/components/BonafIdOverviewSection";
+import { BonafIdProblemSection } from "@/components/BonafIdProblemSection";
+import { BonafIdStackSection } from "@/components/BonafIdStackSection";
+import { BonafIdRequestSection } from "@/components/BonafIdRequestSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -52,6 +56,18 @@ export default async function BonafIdPage({
           }
           subtitle="Sovereign cloud identity and verifiable academic credentials for African students, researchers, and faculties."
         />
+
+        {/* BonafID Overview Section */}
+        <BonafIdOverviewSection locale={locale} dict={dict} />
+
+        {/* The problem BonafID exists to fix: 4-Card Architectural Ledger */}
+        <BonafIdProblemSection locale={locale} dict={dict} />
+
+        {/* How BonafID fits in the stack: 5-Layer Architectural Diagram */}
+        <BonafIdStackSection locale={locale} dict={dict} />
+
+        {/* Request BonafID for your institution: 2-Column Ledger */}
+        <BonafIdRequestSection locale={locale} dict={dict} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>
