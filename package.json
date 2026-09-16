@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "compile-institutions": "node scripts/compile-institutions.mjs"
   },
   "dependencies": {
     "@heroui/react": "^3.2.5",

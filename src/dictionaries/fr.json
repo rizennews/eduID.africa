@@ -969,15 +969,25 @@
     "institutionSearch": {
       "title": "Votre université est-elle connectée ?",
       "subtitle": "Recherchez votre établissement pour connaître son statut de fédération et les services accessibles.",
-      "searchPlaceholder": "Rechercher par nom d'établissement ou par pays…",
+      "searchPlaceholder": "Rechercher par université, pays ou e-mail universitaire (@domaine)…",
       "searchButton": "Rechercher",
+      "allCountries": "Tous les pays",
+      "filterCountryLabel": "Pays",
       "filterAll": "Tous",
       "filterNational": "Fédération nationale",
       "filterCatchall": "Fédération d'accueil",
       "filterNotConnected": "Non connecté",
       "servicesLabel": "services",
+      "representativeLabel": "Modèles de connexion représentatifs",
+      "representativeNote": "Affichage de 3 types de connexion représentatifs. Effectuez une recherche ci-dessus pour vérifier votre université en Afrique.",
+      "searchResultsLabel": "Résultats de recherche",
+      "foundCount": "{count} établissements trouvés",
       "noResults": "Aucun établissement trouvé correspondant à votre recherche.",
       "requestOnboarding": "Demander l'intégration de votre établissement",
+      "domainRecognized": "Domaine institutionnel reconnu",
+      "domainUnrecognized": "Domaine introuvable dans l'annuaire",
+      "domainReady": "Profil geteduroam actif disponible pour ce domaine",
+      "domainNotConnected": "Ce domaine n'est pas encore enregistré auprès d'un fournisseur d'identité eduroam.",
       "statusLabels": {
         "national": "Fédération nationale",
         "catchall": "Fédération d'accueil",
@@ -1016,6 +1026,12 @@
           "Plateformes de collaboration"
         ]
       }
+    },
+    "notConnectedSection": {
+      "title": "Votre établissement n'est pas encore connecté ?",
+      "description": "Si votre université n'apparaît pas dans l'annuaire, la marche à suivre dépend du RNRE de votre pays. Nous pouvons vous orienter vers le bon interlocuteur — ou aider directement votre équipe informatique à lancer le processus d'intégration.",
+      "actionAdmins": "Informations pour les administrateurs informatiques",
+      "actionContact": "Contacter l'équipe eduID.africa"
     }
   },
   "notFoundPage": {

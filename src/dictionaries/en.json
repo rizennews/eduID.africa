@@ -969,15 +969,25 @@
     "institutionSearch": {
       "title": "Is your university connected?",
       "subtitle": "Search for your institution to see its federation status and which services you can access.",
-      "searchPlaceholder": "Search by institution name or country…",
+      "searchPlaceholder": "Search by university name, country, or campus email (@domain)…",
       "searchButton": "Search",
+      "allCountries": "All Countries",
+      "filterCountryLabel": "Country",
       "filterAll": "All",
       "filterNational": "National federation",
       "filterCatchall": "Catchall",
       "filterNotConnected": "Not connected",
       "servicesLabel": "services",
+      "representativeLabel": "Representative connection models",
+      "representativeNote": "Showing 3 example connection types. Search above to check your university across Africa.",
+      "searchResultsLabel": "Search results",
+      "foundCount": "Found {count} institutions",
       "noResults": "No institutions found matching your search.",
       "requestOnboarding": "Request institution onboarding",
+      "domainRecognized": "Institutional domain recognized",
+      "domainUnrecognized": "Domain not found in registry",
+      "domainReady": "Active geteduroam profile available for this domain",
+      "domainNotConnected": "This domain is not registered with an eduroam identity provider yet.",
       "statusLabels": {
         "national": "National federation",
         "catchall": "Catchall",
@@ -1016,6 +1026,12 @@
           "Collaboration platforms"
         ]
       }
+    },
+    "notConnectedSection": {
+      "title": "Is your institution not connected yet?",
+      "description": "If your university doesn't appear in the directory, the path forward depends on your country's NREN. We can point you to the right contact — or help your IT team start the onboarding process directly.",
+      "actionAdmins": "Information for IT admins",
+      "actionContact": "Contact the eduID.africa team"
     }
   },
   "notFoundPage": {

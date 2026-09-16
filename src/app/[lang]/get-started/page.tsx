@@ -6,6 +6,7 @@ import { AboutHero } from "@/components/AboutHero";
 import { GetStartedOverviewSection } from "@/components/GetStartedOverviewSection";
 import { InstitutionSearchSection } from "@/components/InstitutionSearchSection";
 import { GetStartedStepsSection } from "@/components/GetStartedStepsSection";
+import { GetStartedNotConnectedSection } from "@/components/GetStartedNotConnectedSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -67,6 +68,9 @@ export default async function GetStartedPage({
 
         {/* Three Steps to geteduroam: Download, Sign in, and Connect */}
         <GetStartedStepsSection locale={locale} dict={dict as any} />
+
+        {/* Not Connected Yet Section: Information for IT admins & Contact */}
+        <GetStartedNotConnectedSection locale={locale} dict={dict as any} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>

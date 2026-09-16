@@ -969,15 +969,25 @@
     "institutionSearch": {
       "title": "A sua universidade está ligada?",
       "subtitle": "Pesquise a sua instituição para verificar o estado da federação e os serviços a que tem acesso.",
-      "searchPlaceholder": "Pesquisar por nome da instituição ou país…",
+      "searchPlaceholder": "Pesquisar por universidade, país ou e-mail universitário (@domínio)…",
       "searchButton": "Pesquisar",
+      "allCountries": "Todos os Países",
+      "filterCountryLabel": "País",
       "filterAll": "Todas",
       "filterNational": "Federação nacional",
       "filterCatchall": "Federação genérica",
       "filterNotConnected": "Não ligada",
       "servicesLabel": "serviços",
+      "representativeLabel": "Modelos representativos de ligação",
+      "representativeNote": "Apresentando 3 tipos de ligação representativos. Pesquise acima para verificar a sua universidade em África.",
+      "searchResultsLabel": "Resultados da pesquisa",
+      "foundCount": "{count} instituições encontradas",
       "noResults": "Nenhuma instituição encontrada para a sua pesquisa.",
       "requestOnboarding": "Solicitar integração da sua instituição",
+      "domainRecognized": "Domínio institucional reconhecido",
+      "domainUnrecognized": "Domínio não encontrado no registo",
+      "domainReady": "Perfil geteduroam ativo disponível para este domínio",
+      "domainNotConnected": "Este domínio ainda não está registado num fornecedor de identidade eduroam.",
       "statusLabels": {
         "national": "Federação nacional",
         "catchall": "Federação genérica",
@@ -1016,6 +1026,12 @@
           "Plataformas de colaboração"
         ]
       }
+    },
+    "notConnectedSection": {
+      "title": "A sua instituição ainda não está ligada?",
+      "description": "Se a sua universidade não constar do diretório, os próximos passos dependem da RNER do seu país. Podemos indicar-lhe o contacto certo — ou ajudar diretamente a sua equipa de TI a iniciar o processo de integração.",
+      "actionAdmins": "Informações para administradores de TI",
+      "actionContact": "Contactar a equipa eduID.africa"
     }
   },
   "notFoundPage": {

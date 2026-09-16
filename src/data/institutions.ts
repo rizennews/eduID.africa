@@ -1,218 +1,172 @@
-import type { Locale } from "@/lib/i18n";
+/**
+ * Data layer for the African University Directory.
+ *
+ * Uses a pre-compiled JSON dataset built from two open sources:
+ *   Source A: geteduroam Discovery CDN (https://discovery.eduroam.app)
+ *   Source B: Hipo University Domains Registry (GitHub CDN)
+ *
+ * Re-compile the dataset with: node scripts/compile-institutions.mjs
+ */
 
-export type InstitutionStatus = "national" | "catchall" | "not-connected";
+import compiledData from "@/data/african_universities.json";
 
-export interface Institution {
+export type InstitutionStatus = "connected" | "not-connected";
+
+export interface CompiledInstitution {
   id: string;
-  name: {
-    en: string;
-    fr: string;
-    pt: string;
-  };
-  country: {
-    en: string;
-    fr: string;
-    pt: string;
-  };
-  federation: {
-    en: string;
-    fr: string;
-    pt: string;
-  };
-  servicesCount: number;
-  statusType: InstitutionStatus;
+  name: string;
+  country: string;
+  countryCode: string;
+  domains: string[];
+  webPages: string[];
+  stateProvince: string | null;
+  status: InstitutionStatus;
+  eduroam: {
+    catIdp: number;
+    eduroamId: string;
+    profiles: number;
+  } | null;
 }
 
-export const institutionsData: Institution[] = [
-  {
-    id: "ug-legon",
-    name: {
-      en: "University of Ghana, Legon",
-      fr: "Université du Ghana, Legon",
-      pt: "Universidade de Gana, Legon",
-    },
-    country: {
-      en: "Ghana",
-      fr: "Ghana",
-      pt: "Gana",
-    },
-    federation: {
-      en: "eduID.africa catchall",
-      fr: "fédération d'accueil eduID.africa",
-      pt: "federação genérica eduID.africa",
-    },
-    servicesCount: 3,
-    statusType: "catchall",
-  },
-  {
-    id: "uon-nairobi",
-    name: {
-      en: "University of Nairobi",
-      fr: "Université de Nairobi",
-      pt: "Universidade de Nairóbi",
-    },
-    country: {
-      en: "Kenya",
-      fr: "Kenya",
-      pt: "Quénia",
-    },
-    federation: {
-      en: "KENET national federation",
-      fr: "fédération nationale KENET",
-      pt: "federação nacional KENET",
-    },
-    servicesCount: 7,
-    statusType: "national",
-  },
-  {
-    id: "uy1-yaounde",
-    name: {
-      en: "Université de Yaoundé I",
-      fr: "Université de Yaoundé I",
-      pt: "Universidade de Yaoundé I",
-    },
-    country: {
-      en: "Cameroon",
-      fr: "Cameroun",
-      pt: "Camarões",
-    },
-    federation: {
-      en: "Not yet connected",
-      fr: "Pas encore connecté",
-      pt: "Ainda não ligada",
-    },
-    servicesCount: 0,
-    statusType: "not-connected",
-  },
-  {
-    id: "mak-uganda",
-    name: {
-      en: "Makerere University",
-      fr: "Université Makerere",
-      pt: "Universidade Makerere",
-    },
-    country: {
-      en: "Uganda",
-      fr: "Ouganda",
-      pt: "Uganda",
-    },
-    federation: {
-      en: "RENU national federation",
-      fr: "fédération nationale RENU",
-      pt: "federação nacional RENU",
-    },
-    servicesCount: 6,
-    statusType: "national",
-  },
-  {
-    id: "ucad-dakar",
-    name: {
-      en: "Université Cheikh Anta Diop (UCAD)",
-      fr: "Université Cheikh Anta Diop (UCAD)",
-      pt: "Universidade Cheikh Anta Diop (UCAD)",
-    },
-    country: {
-      en: "Senegal",
-      fr: "Sénégal",
-      pt: "Senegal",
-    },
-    federation: {
-      en: "snRER national federation",
-      fr: "fédération nationale snRER",
-      pt: "federação nacional snRER",
-    },
-    servicesCount: 5,
-    statusType: "national",
-  },
-  {
-    id: "uct-capetown",
-    name: {
-      en: "University of Cape Town",
-      fr: "Université du Cap",
-      pt: "Universidade da Cidade do Cabo",
-    },
-    country: {
-      en: "South Africa",
-      fr: "Afrique du Sud",
-      pt: "África do Sul",
-    },
-    federation: {
-      en: "TENET national federation",
-      fr: "fédération nationale TENET",
-      pt: "federação nacional TENET",
-    },
-    servicesCount: 8,
-    statusType: "national",
-  },
-  {
-    id: "aau-addis",
-    name: {
-      en: "Addis Ababa University",
-      fr: "Université d'Addis-Abeba",
-      pt: "Universidade de Adis Abeba",
-    },
-    country: {
-      en: "Ethiopia",
-      fr: "Éthiopie",
-      pt: "Etiópia",
-    },
-    federation: {
-      en: "CERENET national federation",
-      fr: "fédération nationale CERENET",
-      pt: "federação nacional CERENET",
-    },
-    servicesCount: 4,
-    statusType: "national",
-  },
-  {
-    id: "ufhb-abidjan",
-    name: {
-      en: "Université Félix Houphouët-Boigny",
-      fr: "Université Félix Houphouët-Boigny",
-      pt: "Universidade Félix Houphouët-Boigny",
-    },
-    country: {
-      en: "Côte d'Ivoire",
-      fr: "Côte d'Ivoire",
-      pt: "Costa do Marfim",
-    },
-    federation: {
-      en: "eduID.africa catchall",
-      fr: "fédération d'accueil eduID.africa",
-      pt: "federação genérica eduID.africa",
-    },
-    servicesCount: 3,
-    statusType: "catchall",
-  },
-  {
-    id: "unza-lusaka",
-    name: {
-      en: "University of Zambia",
-      fr: "Université de Zambie",
-      pt: "Universidade da Zâmbia",
-    },
-    country: {
-      en: "Zambia",
-      fr: "Zambie",
-      pt: "Zâmbia",
-    },
-    federation: {
-      en: "ZAMREN national federation",
-      fr: "fédération nationale ZAMREN",
-      pt: "federação nacional ZAMREN",
-    },
-    servicesCount: 5,
-    statusType: "national",
-  },
-];
+export interface DirectoryMeta {
+  generatedAt: string;
+  sources: {
+    eduroam: string;
+    hipo: string;
+  };
+  stats: {
+    total: number;
+    connected: number;
+    notConnected: number;
+    countries: number;
+  };
+}
 
-export function getInstitutions(locale: Locale) {
-  return institutionsData.map((inst) => ({
-    id: inst.id,
-    name: inst.name[locale] || inst.name.en,
-    country: inst.country[locale] || inst.country.en,
-    federation: inst.federation[locale] || inst.federation.en,
-    servicesCount: inst.servicesCount,
-    statusType: inst.statusType,
-  }));
+// Cast imported JSON
+const directory = compiledData as {
+  _meta: DirectoryMeta;
+  institutions: CompiledInstitution[];
+};
+
+/** Metadata about the compiled directory */
+export const directoryMeta: DirectoryMeta = directory._meta;
+
+/** All 840+ African universities */
+export const allInstitutions: CompiledInstitution[] = directory.institutions;
+
+/** The 3 representative examples always shown by default */
+export const REPRESENTATIVE_IDS = [
+  "university-of-ghana",         // Ghana - connected (eduroam catchall)
+  "university-of-nairobi",       // Kenya - connected (national federation)
+  "universit-de-yaound-i",       // Cameroon - not yet connected
+] as const;
+
+/**
+ * Find an institution by campus email domain.
+ * Supports both exact domain match and subdomain matching.
+ * e.g., "student@st.ug.edu.gh" → matches "ug.edu.gh"
+ */
+export function findByDomain(
+  emailOrDomain: string
+): CompiledInstitution | null {
+  let domain = emailOrDomain.toLowerCase().trim();
+
+  // Extract domain from email address
+  if (domain.includes("@")) {
+    domain = domain.split("@")[1] || "";
+  }
+  // Strip protocol/path fragments
+  domain = domain.replace(/^https?:\/\//, "").replace(/\/.*$/, "").trim();
+
+  if (!domain) return null;
+
+  return (
+    allInstitutions.find((inst) =>
+      inst.domains.some(
+        (d) =>
+          d.toLowerCase() === domain ||
+          domain.endsWith("." + d.toLowerCase())
+      )
+    ) || null
+  );
+}
+
+/**
+ * Get a sorted list of unique countries with institution counts.
+ */
+export function getCountries(): Array<{
+  key: string;
+  label: string;
+  code: string;
+  total: number;
+  connected: number;
+}> {
+  const map = new Map<
+    string,
+    { label: string; code: string; total: number; connected: number }
+  >();
+
+  for (const inst of allInstitutions) {
+    const existing = map.get(inst.country);
+    if (existing) {
+      existing.total++;
+      if (inst.status === "connected") existing.connected++;
+    } else {
+      map.set(inst.country, {
+        label: inst.country,
+        code: inst.countryCode,
+        total: 1,
+        connected: inst.status === "connected" ? 1 : 0,
+      });
+    }
+  }
+
+  return Array.from(map.entries())
+    .map(([key, val]) => ({ key, ...val }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+}
+
+/**
+ * Search institutions by query string.
+ * Searches across name, country, and domains.
+ */
+export function searchInstitutions(
+  query: string,
+  options?: {
+    country?: string;
+    status?: InstitutionStatus | "all";
+    limit?: number;
+  }
+): CompiledInstitution[] {
+  const q = query.toLowerCase().trim();
+  const { country, status = "all", limit } = options || {};
+
+  let results = allInstitutions;
+
+  // Country filter
+  if (country && country !== "all") {
+    results = results.filter((inst) => inst.country === country);
+  }
+
+  // Status filter
+  if (status !== "all") {
+    results = results.filter((inst) => inst.status === status);
+  }
+
+  // Text query
+  if (q) {
+    results = results.filter(
+      (inst) =>
+        inst.name.toLowerCase().includes(q) ||
+        inst.country.toLowerCase().includes(q) ||
+        inst.domains.some((d) => d.toLowerCase().includes(q))
+    );
+  }
+
+  // Limit
+  if (limit && limit > 0) {
+    results = results.slice(0, limit);
+  }
+
+  return results;
 }
