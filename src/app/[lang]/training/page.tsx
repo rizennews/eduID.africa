@@ -3,6 +3,7 @@ import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } fro
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
+import { TrainingOverviewSection } from "@/components/TrainingOverviewSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -52,6 +53,9 @@ export default async function TrainingPage({
           }
           subtitle="Technical tutorials, administrator workshops, and deployment roadshows for African campus engineers."
         />
+
+        {/* Training Overview: Hands-on deployment support */}
+        <TrainingOverviewSection locale={locale} dict={dict} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>

@@ -815,6 +815,15 @@
       }
     }
   },
+  "trainingPage": {
+    "overview": {
+      "headline1": "Apoio prático à implementação",
+      "headline2": "em todo o continente.",
+      "description": "Os Roadshows de Trust & Identity da WACREN levam workshops de implementação do BonafID aos administradores de IES em toda a África. Participe, experimente a plataforma na prática e saia com um plano de implementação para a sua instituição.",
+      "audience": "Administradores de TI de IES & engenheiros de campus",
+      "format": "Workshops presenciais / Laboratórios práticos"
+    }
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"

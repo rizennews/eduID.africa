@@ -815,6 +815,15 @@
       }
     }
   },
+  "trainingPage": {
+    "overview": {
+      "headline1": "Soutien pratique au déploiement",
+      "headline2": "à travers le continent.",
+      "description": "Les roadshows Trust & Identity de WACREN apportent des ateliers de déploiement BonafID aux administrateurs d'ESR à travers l'Afrique. Participez, découvrez la plateforme en pratique et repartez avec un plan de déploiement pour votre établissement.",
+      "audience": "Administrateurs informatiques d'ESR & ingénieurs de campus",
+      "format": "Ateliers en présentiel / Travaux pratiques"
+    }
+  },
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"

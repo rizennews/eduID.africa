@@ -815,6 +815,15 @@
       }
     }
   },
+  "trainingPage": {
+    "overview": {
+      "headline1": "Hands-on deployment support",
+      "headline2": "across the continent.",
+      "description": "WACREN's Trust & Identity Roadshows bring BonafID deployment workshops to HEI administrators across Africa. Attend, get hands-on with the platform, and leave with a deployment plan for your institution.",
+      "audience": "HEI IT administrators & campus engineers",
+      "format": "In-person workshops / Hands-on labs"
+    }
+  },
   "notFoundPage": {
     "title": "Lost in flight?",
     "homeButton": "Find your way home"
