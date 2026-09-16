@@ -950,8 +950,26 @@
     "statement": "The European Union — under the EU Global Gateway Strategy and the Africa-Europe Investment Package, through DG INTPA.",
     "disclaimer": "Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible."
   },
+  "getStartedPage": {
+    "heroTitle": "Get Started",
+    "heroSubtitle": "Seamless geteduroam setup and federated access across African research and education campuses.",
+    "overview": {
+      "headline1": "Set up geteduroam",
+      "headline2": "in under three minutes.",
+      "description": "Check whether your institution is connected, download the geteduroam app, and get seamless Wi-Fi access across every connected campus in the region. No manual configuration. No per-campus setup.",
+      "specs": [
+        "Under 3 minutes setup",
+        "iOS, Android, Windows & macOS",
+        "802.1X Passpoint security",
+        "Zero per-campus config"
+      ],
+      "actionPrimary": "Download geteduroam",
+      "actionSecondary": "Check your institution"
+    }
+  },
   "notFoundPage": {
     "title": "Lost in flight?",
     "homeButton": "Find your way home"
   }
 }
+

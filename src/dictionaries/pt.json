@@ -950,8 +950,26 @@
     "statement": "A União Europeia — no âmbito da Estratégia Global Gateway da UE e do Pacote de Investimento África-Europa, através da DG INTPA.",
     "disclaimer": "Os pontos de vista e opiniões expressos são da exclusiva responsabilidade do(s) autor(es) e não refletem necessariamente os da União Europeia. Nem a União Europeia nem a autoridade que concede a subvenção podem ser responsabilizadas."
   },
+  "getStartedPage": {
+    "heroTitle": "Começar",
+    "heroSubtitle": "Configuração rápida do geteduroam e acesso federado em campi de ensino e investigação em África.",
+    "overview": {
+      "headline1": "Configure o geteduroam",
+      "headline2": "em menos de três minutos.",
+      "description": "Verifique se a sua instituição está ligada, descarregue a aplicação geteduroam e obtenha acesso Wi-Fi contínuo em todos os campi ligados na região. Sem configuração manual. Sem configuração por campus.",
+      "specs": [
+        "Configuração em menos de 3 minutos",
+        "iOS, Android, Windows & macOS",
+        "Segurança 802.1X Passpoint",
+        "Zero configuração por campus"
+      ],
+      "actionPrimary": "Descarregar geteduroam",
+      "actionSecondary": "Verificar a sua instituição"
+    }
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"
   }
 }
+

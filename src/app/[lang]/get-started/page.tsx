@@ -1,0 +1,66 @@
+import type { Metadata } from "next";
+import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
+import { createLocalizedMetadata } from "@/lib/seo";
+import { Header } from "@/components/Header";
+import { AboutHero } from "@/components/AboutHero";
+import { GetStartedOverviewSection } from "@/components/GetStartedOverviewSection";
+import { Footer } from "@/components/Footer";
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const locale: Locale = isValidLocale(resolvedParams.lang)
+    ? resolvedParams.lang
+    : defaultLocale;
+
+  return createLocalizedMetadata({
+    locale,
+    path: "/get-started",
+    title: "Get Started — eduID.africa",
+    description:
+      "Set up geteduroam in under three minutes. Seamless Wi-Fi access across every connected campus in the region.",
+  });
+}
+
+export default async function GetStartedPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const resolvedParams = await params;
+  const locale: Locale = isValidLocale(resolvedParams.lang)
+    ? resolvedParams.lang
+    : defaultLocale;
+
+  const dict = await getDictionary(locale);
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
+      <Header locale={locale} dict={dict} />
+      <main className="flex-1">
+        <AboutHero
+          title={
+            <>
+              Get <span className="text-[#1A73C3]">Started</span>
+            </>
+          }
+          subtitle={
+            (dict as any).getStartedPage?.heroSubtitle ||
+            "Fast, seamless access to eduroam Wi-Fi and continental academic resources across Africa."
+          }
+        />
+
+        {/* Page Overview Section: Set up geteduroam in under three minutes */}
+        <GetStartedOverviewSection locale={locale} dict={dict as any} />
+      </main>
+      <Footer locale={locale} dict={dict} />
+    </div>
+  );
+}
