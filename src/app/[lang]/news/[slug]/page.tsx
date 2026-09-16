@@ -67,6 +67,7 @@ export default async function NewsDetailPage({
     .slice(0, 2)
     .map((a) => ({
       slug: a.slug,
+      image: a.image,
       title: a.title[locale] || a.title.en,
       category: a.category[locale] || a.category.en,
       date: a.date,
@@ -109,6 +110,24 @@ export default async function NewsDetailPage({
           <p className="text-lg sm:text-xl text-slate-700 font-sans leading-relaxed font-normal mb-10 pb-8 border-b border-dashed border-slate-300/80">
             {article.excerpt}
           </p>
+
+          {/* Featured Editorial Image */}
+          {article.image && (
+            <div className="mb-12">
+              <div className="overflow-hidden border border-dashed border-slate-300 bg-slate-100">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-auto aspect-16/9 object-cover"
+                />
+              </div>
+              {article.imageCaption && (
+                <p className="mt-3 text-xs sm:text-sm text-slate-500 font-sans italic">
+                  {article.imageCaption}
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Key Takeaways Box */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
@@ -171,6 +190,15 @@ export default async function NewsDetailPage({
                   className="border border-dashed border-slate-300 bg-white/40 p-6 flex flex-col justify-between hover:bg-slate-100/40 transition-colors group"
                 >
                   <div>
+                    {rel.image && (
+                      <Link href={`/${locale}/news/${rel.slug}`} className="block overflow-hidden border border-dashed border-slate-300 bg-slate-100 mb-4">
+                        <img
+                          src={rel.image}
+                          alt={rel.title}
+                          className="w-full h-auto aspect-16/9 object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                        />
+                      </Link>
+                    )}
                     <div className="text-xs font-mono text-slate-500 mb-2">
                       <span className="text-[#0B357B] uppercase tracking-wider">{rel.category}</span>
                       <span className="mx-2">/</span>

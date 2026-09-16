@@ -2,6 +2,12 @@ import type { Locale } from "@/lib/i18n";
 
 export interface NewsArticle {
   slug: string;
+  image: string;
+  imageCaption: {
+    en: string;
+    fr: string;
+    pt: string;
+  };
   category: {
     en: string;
     fr: string;
@@ -42,6 +48,12 @@ export interface NewsArticle {
 export const newsArticles: NewsArticle[] = [
   {
     slug: "bonafid-1-0-released",
+    image: "/news/bonafid-release.jpg",
+    imageCaption: {
+      en: "Engineering teams in West Africa deploying BonafID 1.0 production identity provider infrastructure.",
+      fr: "Équipes d'ingénierie en Afrique de l'Ouest déployant l'infrastructure de fournisseur d'identité BonafID 1.0.",
+      pt: "Equipas de engenharia na África Ocidental a implementar a infraestrutura do provedor de identidade BonafID 1.0.",
+    },
     category: {
       en: "Platform Announcement",
       fr: "Annonce de la plateforme",
@@ -110,6 +122,12 @@ export const newsArticles: NewsArticle[] = [
   },
   {
     slug: "abidjan-ti-roadshow-12-institutions",
+    image: "/news/abidjan-roadshow.jpg",
+    imageCaption: {
+      en: "HEI IT administrators and campus engineers collaborating during hands-on BonafID assessment in Abidjan.",
+      fr: "Administrateurs informatiques et ingénieurs d'ESR collaborant lors de l'évaluation pratique BonafID à Abidjan.",
+      pt: "Administradores de TI e engenheiros de IES a colaborar durante a avaliação prática do BonafID em Abidjan.",
+    },
     category: {
       en: "Capacity Building",
       fr: "Renforcement des capacités",
@@ -175,6 +193,12 @@ export const newsArticles: NewsArticle[] = [
   },
   {
     slug: "ethiopia-joins-continental-federation",
+    image: "/news/ethiopia-peering.jpg",
+    imageCaption: {
+      en: "Addis Ababa research and education network interconnected with eduID.africa continental federation.",
+      fr: "Réseau d'enseignement et de recherche d'Addis-Abeba interconnecté avec la fédération continentale eduID.africa.",
+      pt: "Rede de investigação e educação de Adis Abeba interligada com a federação continental eduID.africa.",
+    },
     category: {
       en: "Federation Expansion",
       fr: "Extension de la fédération",
@@ -240,6 +264,12 @@ export const newsArticles: NewsArticle[] = [
   },
   {
     slug: "geteduroam-regional-service-reaches-4200-certificates",
+    image: "/news/geteduroam-service.jpg",
+    imageCaption: {
+      en: "African university students and researchers securely connecting to global eduroam Wi-Fi across campus.",
+      fr: "Étudiants et chercheurs africains se connectant en toute sécurité au réseau Wi-Fi mondial eduroam sur les campus.",
+      pt: "Estudantes e investigadores universitários africanos a ligarem-se com segurança ao Wi-Fi mundial eduroam nos campi.",
+    },
     category: {
       en: "Service Milestones",
       fr: "Jalons du service",
@@ -307,6 +337,8 @@ export const newsArticles: NewsArticle[] = [
 
 export function getNewsArticles(locale: Locale): {
   slug: string;
+  image: string;
+  imageCaption: string;
   category: string;
   date: string;
   readTime: string;
@@ -316,6 +348,8 @@ export function getNewsArticles(locale: Locale): {
 }[] {
   return newsArticles.map((article) => ({
     slug: article.slug,
+    image: article.image,
+    imageCaption: article.imageCaption[locale] || article.imageCaption.en,
     category: article.category[locale] || article.category.en,
     date: article.date,
     readTime: article.readTime[locale] || article.readTime.en,
@@ -327,6 +361,8 @@ export function getNewsArticles(locale: Locale): {
 
 export function getNewsArticleBySlug(slug: string, locale: Locale): {
   slug: string;
+  image: string;
+  imageCaption: string;
   category: string;
   date: string;
   readTime: string;
@@ -340,6 +376,8 @@ export function getNewsArticleBySlug(slug: string, locale: Locale): {
   if (!article) return null;
   return {
     slug: article.slug,
+    image: article.image,
+    imageCaption: article.imageCaption[locale] || article.imageCaption.en,
     category: article.category[locale] || article.category.en,
     date: article.date,
     readTime: article.readTime[locale] || article.readTime.en,
