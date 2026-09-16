@@ -868,6 +868,72 @@
     "metaProgramme": "Programa",
     "metaRegion": "Região"
   },
+  "modulesPage": {
+    "hero": {
+      "title": "Módulos de Federação",
+      "subtitle": "Bibliotecas de federação, SDKs e ferramentas de integração para engenheiros de campus e federações nacionais africanas."
+    },
+    "overview": {
+      "headline1": "Ferramentas modulares de federação",
+      "headline2": "criadas para escala e soberania.",
+      "description": "Um conjunto com curadoria de bibliotecas de código aberto, adaptadores de protocolo, conectores automáticos e receitas de implementação para ajudar IES e RNERs africanas a integrarem-se facilmente com o eduID.africa.",
+      "specs": [
+        "Código Aberto",
+        "SAML 2.0 / OIDC",
+        "RadSec & RADIUS",
+        "APIs REST",
+        "Python / Go / TypeScript"
+      ]
+    },
+    "catalogSection": {
+      "title": "Software e Ferramentas de Integração da Federação",
+      "description": "Componentes testados em produção mantidos pela WACREN e pela equipa de engenharia do eduID.africa.",
+      "items": [
+        {
+          "icon": "cloud",
+          "category": "Provedor de Identidade",
+          "title": "Motor IdP BonafID",
+          "description": "Provedor de identidade académica hospedado na nuvem com pontes conectoras automáticas para SIS e LDAP.",
+          "status": "Produção v1.0",
+          "action": "Explorar módulo",
+          "href": "/bonafid"
+        },
+        {
+          "icon": "network",
+          "category": "eduroam & RADIUS",
+          "title": "Proxy de Roaming RadSec",
+          "description": "Daemon de proxy RADIUS encriptado por TLS para encaminhamento catchall de eduroam nacional e de campus.",
+          "status": "Estável",
+          "action": "Ver documentação",
+          "href": "/how-it-works"
+        },
+        {
+          "icon": "globe",
+          "category": "Confiança & Metadados",
+          "title": "Agregador de Metadados da Federação",
+          "description": "Validação automática de entidades SAML 2.0, agregação XML assinada e pipeline de exportação para eduGAIN.",
+          "status": "Operacional",
+          "action": "Ver especificação",
+          "href": "/governance"
+        },
+        {
+          "icon": "wrench",
+          "category": "APIs & Integração",
+          "title": "SDK de Identidade de Campus",
+          "description": "Bibliotecas cliente leves e middleware de autenticação JWT/OIDC para portais institucionais.",
+          "status": "Pré-visualização para Desenvolvedores",
+          "action": "Repositório GitHub",
+          "href": "https://github.com/WACREN"
+        }
+      ]
+    },
+    "ctaSection": {
+      "title": "Precisa de apoio personalizado para os módulos no seu campus?",
+      "description": "A WACREN e as nossas redes regionais parceiras fornecem assistência técnica direta, contribuições de código e revisões de arquitetura para instituições africanas.",
+      "actionPrimary": "Solicitar Apoio Técnico",
+      "actionSecondary": "Explorar Código no GitHub"
+    }
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"

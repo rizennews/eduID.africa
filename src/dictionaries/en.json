@@ -868,6 +868,72 @@
     "metaProgramme": "Programme",
     "metaRegion": "Region"
   },
+  "modulesPage": {
+    "hero": {
+      "title": "Federation Modules",
+      "subtitle": "Federation libraries, SDKs & integration tools for African campus engineers and national federations."
+    },
+    "overview": {
+      "headline1": "Modular federation tooling",
+      "headline2": "built for scale and sovereignty.",
+      "description": "A curated suite of open-source libraries, protocol adapters, automated connectors, and deployment recipes designed to help African HEIs and NRENs integrate with eduID.africa effortlessly.",
+      "specs": [
+        "Open Source",
+        "SAML 2.0 / OIDC",
+        "RadSec & RADIUS",
+        "REST APIs",
+        "Python / Go / TypeScript"
+      ]
+    },
+    "catalogSection": {
+      "title": "Federation Software & Integration Tools",
+      "description": "Production-tested components maintained by WACREN and the eduID.africa engineering team.",
+      "items": [
+        {
+          "icon": "cloud",
+          "category": "Identity Provider",
+          "title": "BonafID IdP Engine",
+          "description": "Cloud-hosted academic identity provider with automated SIS and LDAP connector bridges.",
+          "status": "Production v1.0",
+          "action": "Explore module",
+          "href": "/bonafid"
+        },
+        {
+          "icon": "network",
+          "category": "eduroam & RADIUS",
+          "title": "RadSec Roaming Proxy",
+          "description": "TLS-encrypted RADIUS roaming proxy daemon for national and campus eduroam catchall routing.",
+          "status": "Stable",
+          "action": "View documentation",
+          "href": "/how-it-works"
+        },
+        {
+          "icon": "globe",
+          "category": "Trust & Metadata",
+          "title": "Federation Metadata Aggregator",
+          "description": "Automated SAML 2.0 entity validation, signed XML aggregation, and eduGAIN export pipeline.",
+          "status": "Operational",
+          "action": "View specification",
+          "href": "/governance"
+        },
+        {
+          "icon": "wrench",
+          "category": "APIs & Integration",
+          "title": "Campus Identity SDK",
+          "description": "Lightweight client libraries and JWT/OIDC authentication middleware for institutional portals.",
+          "status": "Developer Preview",
+          "action": "GitHub repository",
+          "href": "https://github.com/WACREN"
+        }
+      ]
+    },
+    "ctaSection": {
+      "title": "Need customized module support for your campus?",
+      "description": "WACREN and our regional REN partners provide direct technical assistance, code contributions, and architecture reviews for African institutions.",
+      "actionPrimary": "Request Technical Support",
+      "actionSecondary": "Explore GitHub Codebase"
+    }
+  },
   "notFoundPage": {
     "title": "Lost in flight?",
     "homeButton": "Find your way home"
