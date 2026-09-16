@@ -81,14 +81,14 @@ export function Footer({ locale, dict }: FooterProps) {
 
           {/* Column 2: For NRENs */}
           <div className="col-span-1 lg:col-span-3 space-y-3">
-            <div className="font-outfit text-xs font-bold uppercase tracking-wider text-slate-400">
+            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
               {dict.footer.colNrenTitle}
             </div>
             <ul className="space-y-2.5">
               <li>
                 <Link
                   href={`/${locale}/for-nren`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colNrenLink1}
                 </Link>
@@ -96,7 +96,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/bonafid`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colNrenLink2}
                 </Link>
@@ -104,7 +104,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/bonafid`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colNrenLink3}
                 </Link>
@@ -112,7 +112,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/training`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colNrenLink4}
                 </Link>
@@ -122,14 +122,14 @@ export function Footer({ locale, dict }: FooterProps) {
 
           {/* Column 3: Resources */}
           <div className="col-span-1 lg:col-span-2 space-y-3">
-            <div className="font-outfit text-xs font-bold uppercase tracking-wider text-slate-400">
+            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
               {dict.footer.colResourcesTitle}
             </div>
             <ul className="space-y-2.5">
               <li>
                 <Link
                   href={`/${locale}/modules`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colResourcesLink1}
                 </Link>
@@ -137,7 +137,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/training`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colResourcesLink2}
                 </Link>
@@ -145,7 +145,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/federation-map`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colResourcesLink3}
                 </Link>
@@ -153,7 +153,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/news`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colResourcesLink4}
                 </Link>
@@ -163,14 +163,14 @@ export function Footer({ locale, dict }: FooterProps) {
 
           {/* Column 4: Organisation */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-3 space-y-3">
-            <div className="font-outfit text-xs font-bold uppercase tracking-wider text-slate-400">
+            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
               {dict.footer.colOrgTitle}
             </div>
             <ul className="space-y-2.5">
               <li>
                 <Link
                   href={`/${locale}/about`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colOrgLink1}
                 </Link>
@@ -178,7 +178,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/governance`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colOrgLink2}
                 </Link>
@@ -186,7 +186,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/policies`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colOrgLink3}
                 </Link>
@@ -194,7 +194,7 @@ export function Footer({ locale, dict }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/contact`}
-                  className="text-sm font-medium text-slate-700 hover:text-[#0B357B] transition-colors"
+                  className="text-sm font-normal text-slate-600 hover:text-[#0B357B] transition-colors"
                 >
                   {dict.footer.colOrgLink4}
                 </Link>

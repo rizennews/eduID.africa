@@ -143,7 +143,7 @@ export function Header({ locale, dict }: HeaderProps) {
         </div>
 
         {/* Center: Exact User-Specified Categorized Navigation */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 relative">
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 relative">
           {/* Dropdown 1: eduID.africa */}
           <div className="relative">
             <button
@@ -151,15 +151,15 @@ export function Header({ locale, dict }: HeaderProps) {
               onClick={() => setOpenDropdown(openDropdown === "eduid" ? null : "eduid")}
               onMouseEnter={() => setOpenDropdown("eduid")}
               className={cn(
-                "inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-[16px] font-semibold font-outfit text-slate-800 hover:text-[#0B357B] hover:bg-slate-200/60 focus-visible:outline-none transition-colors cursor-pointer select-none",
-                openDropdown === "eduid" && "bg-slate-200/70 text-[#0B357B]"
+                "inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium font-sans text-slate-700 hover:text-[#0B357B] hover:bg-slate-100/80 focus-visible:outline-none transition-colors cursor-pointer select-none",
+                openDropdown === "eduid" && "bg-slate-100/90 text-[#0B357B]"
               )}
             >
               <span>{dict.nav.eduid.label}</span>
               <ChevronDown
-                size={16}
+                size={14}
                 className={cn(
-                  "text-slate-500 transition-transform duration-200",
+                  "text-slate-400 transition-transform duration-200",
                   openDropdown === "eduid" && "rotate-180 text-[#0B357B]"
                 )}
               />
@@ -168,26 +168,26 @@ export function Header({ locale, dict }: HeaderProps) {
             <AnimatePresence>
               {openDropdown === "eduid" && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                  transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
                   onMouseLeave={() => setOpenDropdown(null)}
                   className="absolute left-0 top-full pt-2 z-50"
                 >
-                  <div className="w-84 bg-white rounded-2xl p-2.5 shadow-2xl border border-slate-100 ring-1 ring-black/5 overflow-hidden">
-                    <div className="grid gap-1">
+                  <div className="w-80 bg-white rounded-2xl p-2 shadow-xl border border-slate-200/80 overflow-hidden">
+                    <div className="grid gap-0.5">
                       {eduidItems.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
                           onClick={() => setOpenDropdown(null)}
-                          className="group block p-3 rounded-xl hover:bg-slate-50 transition-colors outline-none cursor-pointer"
+                          className="group block p-2.5 rounded-xl hover:bg-slate-50 transition-colors outline-none cursor-pointer"
                         >
-                          <p className="text-[15px] font-bold font-outfit text-[#0A162B] group-hover:text-[#1A73C3] transition-colors">
+                          <p className="text-sm font-medium font-sans text-[#0B357B] group-hover:text-[#1A73C3] transition-colors">
                             {item.title}
                           </p>
-                          <p className="text-xs text-slate-500 line-clamp-1 mt-1 leading-relaxed font-sans">
+                          <p className="text-xs text-slate-500 line-clamp-1 mt-0.5 leading-relaxed font-sans font-normal">
                             {item.desc}
                           </p>
                         </Link>
@@ -206,15 +206,15 @@ export function Header({ locale, dict }: HeaderProps) {
               onClick={() => setOpenDropdown(openDropdown === "communities" ? null : "communities")}
               onMouseEnter={() => setOpenDropdown("communities")}
               className={cn(
-                "inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-[16px] font-semibold font-outfit text-slate-800 hover:text-[#0B357B] hover:bg-slate-200/60 focus-visible:outline-none transition-colors cursor-pointer select-none",
-                openDropdown === "communities" && "bg-slate-200/70 text-[#0B357B]"
+                "inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium font-sans text-slate-700 hover:text-[#0B357B] hover:bg-slate-100/80 focus-visible:outline-none transition-colors cursor-pointer select-none",
+                openDropdown === "communities" && "bg-slate-100/90 text-[#0B357B]"
               )}
             >
               <span>{dict.nav.communities.label}</span>
               <ChevronDown
-                size={16}
+                size={14}
                 className={cn(
-                  "text-slate-500 transition-transform duration-200",
+                  "text-slate-400 transition-transform duration-200",
                   openDropdown === "communities" && "rotate-180 text-[#0B357B]"
                 )}
               />
@@ -223,33 +223,33 @@ export function Header({ locale, dict }: HeaderProps) {
             <AnimatePresence>
               {openDropdown === "communities" && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                  transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
                   onMouseLeave={() => setOpenDropdown(null)}
                   className="absolute left-0 top-full pt-2 z-50"
                 >
-                  <div className="w-80 bg-white rounded-2xl p-2.5 shadow-2xl border border-slate-100 ring-1 ring-black/5 overflow-hidden">
-                    <div className="grid gap-1">
+                  <div className="w-80 bg-white rounded-2xl p-2 shadow-xl border border-slate-200/80 overflow-hidden">
+                    <div className="grid gap-0.5">
                       {communitiesItems.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
                           onClick={() => setOpenDropdown(null)}
-                          className="group block p-3 rounded-xl hover:bg-slate-50 transition-colors outline-none cursor-pointer"
+                          className="group block p-2.5 rounded-xl hover:bg-slate-50 transition-colors outline-none cursor-pointer"
                         >
                           <div className="flex items-center justify-between gap-2">
-                            <p className="text-[15px] font-bold font-outfit text-[#0A162B] group-hover:text-[#1A73C3] transition-colors">
+                            <p className="text-sm font-medium font-sans text-[#0B357B] group-hover:text-[#1A73C3] transition-colors">
                               {item.title}
                             </p>
                             {item.tag && (
-                              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-blue-50 text-[#1A73C3] border border-blue-200/60">
+                              <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-blue-50 text-[#1A73C3] border border-blue-200/60">
                                 {item.tag}
                               </span>
                             )}
                           </div>
-                          <p className="text-xs text-slate-500 line-clamp-1 mt-1 leading-relaxed font-sans">
+                          <p className="text-xs text-slate-500 line-clamp-1 mt-0.5 leading-relaxed font-sans font-normal">
                             {item.desc}
                           </p>
                         </Link>
@@ -264,7 +264,7 @@ export function Header({ locale, dict }: HeaderProps) {
           {/* Standalone Link 3: bonafID */}
           <Link
             href={`/${locale}/bonafid`}
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-[16px] font-semibold font-outfit text-slate-800 hover:text-[#DE4A1B] hover:bg-slate-200/60 transition-colors select-none"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium font-sans text-slate-700 hover:text-[#DE4A1B] hover:bg-slate-100/80 transition-colors select-none"
           >
             <span>{dict.nav.bonafId.label}</span>
           </Link>
@@ -276,15 +276,15 @@ export function Header({ locale, dict }: HeaderProps) {
               onClick={() => setOpenDropdown(openDropdown === "resources" ? null : "resources")}
               onMouseEnter={() => setOpenDropdown("resources")}
               className={cn(
-                "inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-[16px] font-semibold font-outfit text-slate-800 hover:text-[#0B357B] hover:bg-slate-200/60 focus-visible:outline-none transition-colors cursor-pointer select-none",
-                openDropdown === "resources" && "bg-slate-200/70 text-[#0B357B]"
+                "inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium font-sans text-slate-700 hover:text-[#0B357B] hover:bg-slate-100/80 focus-visible:outline-none transition-colors cursor-pointer select-none",
+                openDropdown === "resources" && "bg-slate-100/90 text-[#0B357B]"
               )}
             >
               <span>{dict.nav.resources.label}</span>
               <ChevronDown
-                size={16}
+                size={14}
                 className={cn(
-                  "text-slate-500 transition-transform duration-200",
+                  "text-slate-400 transition-transform duration-200",
                   openDropdown === "resources" && "rotate-180 text-[#0B357B]"
                 )}
               />
@@ -293,33 +293,33 @@ export function Header({ locale, dict }: HeaderProps) {
             <AnimatePresence>
               {openDropdown === "resources" && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                  transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.16, ease: [0.16, 1, 0.3, 1] }}
                   onMouseLeave={() => setOpenDropdown(null)}
                   className="absolute left-0 top-full pt-2 z-50"
                 >
-                  <div className="w-84 bg-white rounded-2xl p-2.5 shadow-2xl border border-slate-100 ring-1 ring-black/5 overflow-hidden">
-                    <div className="grid gap-1">
+                  <div className="w-80 bg-white rounded-2xl p-2 shadow-xl border border-slate-200/80 overflow-hidden">
+                    <div className="grid gap-0.5">
                       {resourcesItems.map((item, idx) => (
                         <Link
                           key={idx}
                           href={item.href}
                           onClick={() => setOpenDropdown(null)}
-                          className="group block p-3 rounded-xl hover:bg-slate-50 transition-colors outline-none cursor-pointer"
+                          className="group block p-2.5 rounded-xl hover:bg-slate-50 transition-colors outline-none cursor-pointer"
                         >
                           <div className="flex items-center justify-between gap-2">
-                            <p className="text-[15px] font-bold font-outfit text-[#0A162B] group-hover:text-[#1A73C3] transition-colors">
+                            <p className="text-sm font-medium font-sans text-[#0B357B] group-hover:text-[#1A73C3] transition-colors">
                               {item.title}
                             </p>
                             {item.tag && (
-                              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-orange-50 text-[#DE4A1B] border border-orange-200/60">
+                              <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-orange-50 text-[#DE4A1B] border border-orange-200/60">
                                 {item.tag}
                               </span>
                             )}
                           </div>
-                          <p className="text-xs text-slate-500 line-clamp-1 mt-1 leading-relaxed font-sans">
+                          <p className="text-xs text-slate-500 line-clamp-1 mt-0.5 leading-relaxed font-sans font-normal">
                             {item.desc}
                           </p>
                         </Link>
@@ -338,10 +338,10 @@ export function Header({ locale, dict }: HeaderProps) {
 
           <Link
             href={`/${locale}/get-started`}
-            className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full text-sm font-bold font-outfit text-[#DE4A1B] bg-white border-2 border-[#DE4A1B] hover:bg-[#DE4A1B] hover:text-white shadow-xs hover:shadow-md transition-all active:scale-[0.98] select-none"
+            className="inline-flex items-center justify-center gap-1.5 h-10 px-5 rounded-full text-xs sm:text-[13px] font-medium font-sans text-[#DE4A1B] bg-white border border-[#DE4A1B] hover:bg-[#DE4A1B] hover:text-white shadow-2xs transition-all active:scale-[0.98] select-none"
           >
             <span>{dict.nav.actions.getStarted}</span>
-            <ArrowUpRight size={16} className="stroke-[2.5]" />
+            <ArrowUpRight size={14} className="stroke-[2]" />
           </Link>
         </div>
 
@@ -381,12 +381,12 @@ export function Header({ locale, dict }: HeaderProps) {
                       key={idx}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                      className="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
-                      <p className="text-sm font-bold font-outfit text-[#0A162B]">
+                      <p className="text-sm font-medium font-sans text-[#0B357B]">
                         {item.title}
                       </p>
-                      <p className="text-xs text-slate-500 font-sans mt-0.5">
+                      <p className="text-xs text-slate-500 font-sans font-normal mt-0.5">
                         {item.desc}
                       </p>
                     </Link>
@@ -395,22 +395,22 @@ export function Header({ locale, dict }: HeaderProps) {
               </div>
 
               {/* Mobile Communities */}
-              <div className="space-y-2">
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider font-heading px-2">
+              <div className="space-y-1.5">
+                <h3 className="text-xs font-medium text-slate-400 uppercase tracking-wider font-mono px-2">
                   {dict.nav.communities.label}
                 </h3>
-                <div className="grid gap-1">
+                <div className="grid gap-0.5">
                   {communitiesItems.map((item, idx) => (
                     <Link
                       key={idx}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                      className="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
-                      <p className="text-sm font-bold font-outfit text-[#0A162B]">
+                      <p className="text-sm font-medium font-sans text-[#0B357B]">
                         {item.title}
                       </p>
-                      <p className="text-xs text-slate-500 font-sans mt-0.5">
+                      <p className="text-xs text-slate-500 font-sans font-normal mt-0.5">
                         {item.desc}
                       </p>
                     </Link>
@@ -423,29 +423,29 @@ export function Header({ locale, dict }: HeaderProps) {
                 <Link
                   href={`/${locale}/bonafid`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-base font-bold font-outfit text-[#0A162B] hover:text-[#DE4A1B]"
+                  className="block py-2 text-sm font-medium font-sans text-[#0B357B] hover:text-[#DE4A1B]"
                 >
                   {dict.nav.bonafId.label}
                 </Link>
               </div>
 
               {/* Mobile Resources */}
-              <div className="space-y-2">
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider font-heading px-2">
+              <div className="space-y-1.5">
+                <h3 className="text-xs font-medium text-slate-400 uppercase tracking-wider font-mono px-2">
                   {dict.nav.resources.label}
                 </h3>
-                <div className="grid gap-1">
+                <div className="grid gap-0.5">
                   {resourcesItems.map((item, idx) => (
                     <Link
                       key={idx}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                      className="block p-2.5 rounded-xl hover:bg-slate-50 transition-colors"
                     >
-                      <p className="text-sm font-bold font-outfit text-[#0A162B]">
+                      <p className="text-sm font-medium font-sans text-[#0B357B]">
                         {item.title}
                       </p>
-                      <p className="text-xs text-slate-500 font-sans mt-0.5">
+                      <p className="text-xs text-slate-500 font-sans font-normal mt-0.5">
                         {item.desc}
                       </p>
                     </Link>

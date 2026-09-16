@@ -117,7 +117,7 @@ export function FederationMapSection({
               <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
                 {eyebrow}
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#0A162B] tracking-tight leading-[1.16] mt-4 max-w-xl">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#0B357B] tracking-tight leading-[1.16] mt-4 max-w-xl">
                 {dict.mapSection.title}
               </h2>
             </div>
@@ -131,7 +131,7 @@ export function FederationMapSection({
                 href={`/${locale}/federation-map`}
                 onMouseEnter={() => leftArrowRef.current?.startAnimation()}
                 onMouseLeave={() => leftArrowRef.current?.stopAnimation()}
-                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0A162B] text-white text-sm font-bold font-outfit hover:bg-[#0B357B] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none"
+                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0B357B] text-white text-sm font-bold font-outfit hover:bg-[#072454] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none"
               >
                 <span>{ctaText}</span>
                 <ArrowRightIcon ref={leftArrowRef} size={16} className="text-white" />
@@ -162,7 +162,7 @@ export function FederationMapSection({
                   >
                     <div className="flex items-center gap-3.5 min-w-0">
                       <div className="shrink-0">{item.beacon}</div>
-                      <span className="font-serif text-base sm:text-[17px] text-[#0A162B] font-normal leading-snug group-hover/item:text-[#0B357B] transition-colors truncate">
+                      <span className="font-serif text-base sm:text-[17px] text-[#0B357B] font-normal leading-snug group-hover/item:text-[#1A73C3] transition-colors truncate">
                         {item.label}
                       </span>
                     </div>

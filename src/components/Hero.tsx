@@ -24,61 +24,75 @@ export function Hero({ locale, dict }: HeroProps) {
   const arrowRef = React.useRef<ArrowRightIconHandle>(null);
   const searchRef = React.useRef<SearchIconHandle>(null);
 
+  const eyebrow =
+    locale === "fr"
+      ? "Infrastructure de confiance"
+      : locale === "pt"
+      ? "Infraestrutura de confiança"
+      : "Trust & Identity";
+
   return (
-    <section className="relative overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 lg:pb-10 bg-[#F8FAFC]">
+    <section className="relative overflow-hidden pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-          {/* Left Column: Clean Typography & Interactive CTAs */}
-          <div className="lg:col-span-7 xl:col-span-7 space-y-4 text-left">
-            {/* Main Dual Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[50px] xl:text-[54px] font-extrabold font-heading text-[#0A162B] tracking-tight leading-[1.12]">
-              <span className="block text-[#0A162B]">
-                {dict.hero.headline1}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          {/* Left Column: Consistent Editorial Typography & Minimal CTAs */}
+          <div className="lg:col-span-7 xl:col-span-7 space-y-5 text-left">
+            {/* Minimal Pill Eyebrow (Consistent with other sections) */}
+            <div>
+              <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
+                {eyebrow}
               </span>
-              <span className="block mt-2 text-[#1A73C3]">
-                {dict.hero.headline2}
-              </span>
-            </h1>
+
+              {/* Main Headline in official eduID Navy (#0B357B) and eduID Blue (#1A73C3) */}
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.16] mt-4 max-w-2xl">
+                <span className="text-[#0B357B]">{dict.hero.headline1}</span>{" "}
+                <span className="text-[#1A73C3]">{dict.hero.headline2}</span>
+              </h1>
+            </div>
 
             {/* Description Paragraph */}
-            <p className="text-base sm:text-lg text-slate-700 font-sans leading-relaxed max-w-2xl font-normal">
+            <p className="font-sans text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
               {dict.hero.description}
             </p>
 
-            {/* Action Buttons with Lucide-Animated Micro-Interactions */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-1">
-              {/* Primary Button: For NRENs with authentic animated arrow */}
+            {/* Action Buttons: Official eduID Brand Colors (Navy & Blue) */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              {/* Primary Button: For NRENs in official eduID Navy */}
               <Link
                 href={`/${locale}/for-nren`}
                 onMouseEnter={() => arrowRef.current?.startAnimation()}
                 onMouseLeave={() => arrowRef.current?.stopAnimation()}
-                className="group inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-[#1A73C3] text-white text-sm font-bold font-outfit shadow-sm hover:bg-[#155ea0] hover:shadow-md transition-all active:scale-[0.98] select-none"
+                className="group inline-flex items-center justify-center gap-2.5 h-11 px-6 rounded-full bg-[#0B357B] text-white text-xs sm:text-[13px] font-medium font-sans hover:bg-[#072454] shadow-2xs transition-all active:scale-[0.98] select-none"
               >
                 <span>{nrenLabel}</span>
-                <ArrowRightIcon ref={arrowRef} size={18} className="text-white" />
+                <ArrowRightIcon ref={arrowRef} size={15} className="text-white" />
               </Link>
 
-              {/* Secondary Button: Check your institution with authentic animated search icon */}
+              {/* Secondary Button: Check your institution in eduID Navy text */}
               <Link
                 href={`/${locale}/for-institutions`}
                 onMouseEnter={() => searchRef.current?.startAnimation()}
                 onMouseLeave={() => searchRef.current?.stopAnimation()}
-                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-white border-2 border-slate-300 text-slate-800 text-sm font-semibold font-outfit hover:bg-slate-50 hover:border-[#0B357B] hover:text-[#0B357B] shadow-xs transition-all active:scale-[0.98] select-none"
+                className="group inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-white border border-slate-200/90 text-[#0B357B] text-xs sm:text-[13px] font-medium font-sans hover:bg-blue-50/50 hover:text-[#1A73C3] hover:border-blue-200 shadow-2xs transition-all active:scale-[0.98] select-none"
               >
-                <SearchIcon ref={searchRef} size={18} className="text-slate-500 group-hover:text-[#0B357B] transition-colors" />
+                <SearchIcon
+                  ref={searchRef}
+                  size={15}
+                  className="text-[#1A73C3] group-hover:text-[#0B357B] transition-colors"
+                />
                 <span>{dict.hero.ctaInstitution}</span>
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Clean Visible Placeholder Container (Ready for incoming image asset) */}
+          {/* Right Column: Architectural Dashed Placeholder matching the new design language */}
           <div className="lg:col-span-5 xl:col-span-5 flex items-center justify-center">
-            <div className="w-full max-w-lg lg:max-w-none aspect-[4/3] max-h-[340px] lg:max-h-[360px] rounded-2xl bg-white border-2 border-dashed border-slate-300 shadow-xs flex flex-col items-center justify-center p-6 text-center select-none">
-              <span className="font-outfit font-bold text-xs uppercase tracking-wider text-slate-400">
-                Visual Design Placeholder
+            <div className="w-full max-w-lg lg:max-w-none aspect-[4/3] max-h-[320px] lg:max-h-[350px] border border-dashed border-slate-300 bg-white/60 p-8 text-center flex flex-col items-center justify-center select-none">
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-400">
+                Visual Graphic Asset
               </span>
-              <span className="text-xs text-slate-400 font-sans mt-1">
-                (Ready for final graphic asset)
+              <span className="text-xs text-slate-400 font-sans mt-1.5">
+                (Pan-African Trust Topology)
               </span>
             </div>
           </div>

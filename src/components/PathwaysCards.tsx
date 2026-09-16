@@ -49,7 +49,7 @@ function PathwayColumn({ title, description, cta, href, locale }: PathwayColumnP
     >
       {/* Upper Content: Serif Headline & Relaxed Body */}
       <div>
-        <h2 className="font-serif text-2xl sm:text-[28px] lg:text-[30px] font-normal text-[#0A162B] tracking-tight leading-snug group-hover:text-[#0B357B] transition-colors">
+        <h2 className="font-serif text-2xl sm:text-[28px] lg:text-[30px] font-normal text-[#0B357B] tracking-tight leading-snug group-hover:text-[#1A73C3] transition-colors">
           {title}
         </h2>
         <p className="font-sans text-slate-600 text-sm sm:text-[15px] leading-relaxed mt-4 sm:mt-5 font-normal">
@@ -62,13 +62,13 @@ function PathwayColumn({ title, description, cta, href, locale }: PathwayColumnP
 
       {/* Footer Area: Dashed Divider + Left Label / Right Arrow */}
       <div className="pt-5 sm:pt-6 border-t border-dashed border-slate-300/90 mt-auto">
-        <div className="flex items-center justify-between gap-4 text-xs sm:text-[13px] font-medium tracking-wide text-slate-700 group-hover:text-[#0A162B] transition-colors">
+        <div className="flex items-center justify-between gap-4 text-xs sm:text-[13px] font-medium tracking-wide text-slate-700 group-hover:text-[#0B357B] transition-colors">
           <span className="font-sans font-medium">{cleanCta}</span>
           <div className="shrink-0 group-hover:translate-x-1.5 transition-transform duration-200">
             <ArrowRightIcon
               ref={arrowRef}
               size={16}
-              className="text-slate-600 group-hover:text-[#0A162B] p-0 hover:bg-transparent"
+              className="text-slate-600 group-hover:text-[#0B357B] p-0 hover:bg-transparent"
             />
           </div>
         </div>
@@ -119,7 +119,7 @@ export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
           <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
             {eyebrow}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0A162B] tracking-tight leading-[1.16] mt-4 max-w-3xl">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B357B] tracking-tight leading-[1.16] mt-4 max-w-3xl">
             {heading}
           </h2>
         </div>
