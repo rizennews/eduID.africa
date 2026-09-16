@@ -74,17 +74,14 @@ export function InteractiveAfricaMap({
   };
 
   return (
-    <div className="relative w-full rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 p-3 sm:p-6 lg:p-8 shadow-xs overflow-hidden select-none">
-      {/* Map Header Status Indicator */}
-      <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-3 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-slate-100">
-        <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#0B357B] animate-pulse" />
-          <span className="text-xs font-bold font-outfit uppercase tracking-wider text-slate-500">
-            Interactive Continental Trust Map
-          </span>
-        </div>
+    <div className="relative w-full bg-white border border-dashed border-slate-300 p-3 sm:p-6 lg:p-8 overflow-hidden select-none">
+      {/* Map Header Status Indicator (No dots) */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-3 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-dashed border-slate-200">
+        <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#0B357B]">
+          Interactive Continental Trust Map
+        </span>
 
-        <span className="text-xs font-mono text-slate-400">
+        <span className="text-[10px] sm:text-xs font-mono text-slate-400">
           54 African Countries Mapped
         </span>
       </div>
@@ -228,19 +225,6 @@ export function InteractiveAfricaMap({
             </div>
 
             <div className="mt-2 pt-1.5 border-t border-slate-800 flex items-center gap-1.5">
-              <span
-                className="w-2 h-2 rounded-full"
-                style={{
-                  backgroundColor:
-                    hoveredCountry.category === "national_federation"
-                      ? "#0B357B"
-                      : hoveredCountry.category === "catchall_bonafid"
-                      ? "#DE4A1B"
-                      : hoveredCountry.category === "in_development"
-                      ? "#F59E0B"
-                      : "#94A3B8",
-                }}
-              />
               <span className="text-[10px] font-bold font-mono uppercase tracking-wider text-slate-200">
                 {dict.categories[hoveredCountry.category]}
               </span>
@@ -250,7 +234,7 @@ export function InteractiveAfricaMap({
       </div>
 
       {/* Map Legend */}
-      <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 text-[11px] sm:text-xs font-sans font-medium">
+      <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-dashed border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 text-[11px] sm:text-xs font-sans font-medium">
         <div className="flex items-center gap-1.5 sm:gap-2">
           <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-md bg-[#0B357B] shrink-0" />
           <span className="text-slate-700 truncate">{dict.categories.national_federation}</span>

@@ -28,17 +28,11 @@ export function FederationContactCtaSection({
   return (
     <section className="py-12 sm:py-16 bg-[#F8FAFC]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Executive White Card Container */}
-        <div className="rounded-3xl bg-white border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12 relative overflow-hidden">
-          {/* Subtle Background Radial Accent */}
-          <div
-            className="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"
-            aria-hidden="true"
-          />
-
+        {/* Frankli Minimal Architectural Card */}
+        <div className="border border-dashed border-slate-300 bg-white p-6 sm:p-10 lg:p-12 relative">
           <div className="relative z-10 max-w-2xl space-y-4 text-left">
-            {/* Headline */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-[#0A162B] tracking-tight leading-tight">
+            {/* Editorial Serif Headline */}
+            <h2 className="font-serif font-normal text-2xl sm:text-3xl lg:text-4xl text-[#0B357B] tracking-tight leading-tight">
               {cta.headline}
             </h2>
 
@@ -47,21 +41,21 @@ export function FederationContactCtaSection({
               {cta.description}
             </p>
 
-            {/* CTA Button */}
+            {/* CTA Buttons */}
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href={`/${locale}/get-started`}
                 onMouseEnter={() => arrowRef.current?.startAnimation()}
                 onMouseLeave={() => arrowRef.current?.stopAnimation()}
-                className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 rounded-full bg-[#0B357B] text-white text-sm font-bold font-outfit hover:bg-[#072454] shadow-sm hover:shadow-md transition-all active:scale-[0.98] select-none w-full sm:w-auto text-center"
+                className="group inline-flex items-center justify-center gap-2.5 h-11 px-7 rounded-lg bg-[#0B357B] text-white text-xs font-mono font-bold uppercase tracking-wider hover:bg-[#1A73C3] transition-all select-none w-full sm:w-auto text-center cursor-pointer"
               >
                 <span>{cta.button}</span>
-                <ArrowRightIcon ref={arrowRef} size={16} className="text-white" />
+                <ArrowRightIcon ref={arrowRef} size={15} className="text-white" />
               </Link>
 
               <Link
                 href={`/${locale}/how-it-works`}
-                className="text-sm font-semibold text-[#1A73C3] hover:text-[#0B357B] hover:underline underline-offset-4 transition-colors text-center sm:text-left py-2 sm:py-0"
+                className="text-xs font-mono font-bold uppercase tracking-wider text-[#1A73C3] hover:text-[#0B357B] transition-colors text-center sm:text-left py-2 sm:py-0"
               >
                 Learn how it works →
               </Link>
