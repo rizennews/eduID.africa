@@ -35,12 +35,6 @@ export function FederationMapSection({
           : locale === "pt"
           ? "12 países"
           : "12 countries",
-      beacon: (
-        <span className="relative flex h-2.5 w-2.5 items-center justify-center">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-600" />
-        </span>
-      ),
       queryParam: "national_federation",
     },
     {
@@ -51,9 +45,6 @@ export function FederationMapSection({
           : locale === "pt"
           ? "8 países"
           : "8 countries",
-      beacon: (
-        <span className="inline-flex h-2 w-2 rounded-full bg-[#1A73C3] ring-2 ring-sky-100" />
-      ),
       queryParam: "in_development",
     },
     {
@@ -64,9 +55,6 @@ export function FederationMapSection({
           : locale === "pt"
           ? "27 países"
           : "27 countries",
-      beacon: (
-        <span className="inline-flex h-2 w-2 rounded-full bg-[#DE4A1B] ring-2 ring-orange-100" />
-      ),
       queryParam: "catchall_bonafid",
     },
     {
@@ -77,9 +65,6 @@ export function FederationMapSection({
           : locale === "pt"
           ? "7 países"
           : "7 countries",
-      beacon: (
-        <span className="inline-flex h-2 w-2 rounded-full border border-slate-400 bg-transparent" />
-      ),
       queryParam: "not_connected",
     },
   ];
@@ -160,8 +145,7 @@ export function FederationMapSection({
                     href={`/${locale}/federation-map?category=${item.queryParam}`}
                     className="group/item flex items-center justify-between py-3.5 sm:py-4 transition-colors hover:bg-slate-100/50 -mx-2 px-2 rounded-lg gap-4"
                   >
-                    <div className="flex items-center gap-3 flex-1 min-w-0">
-                      <div className="shrink-0">{item.beacon}</div>
+                    <div className="flex items-center flex-1 min-w-0">
                       <span className="font-serif text-sm sm:text-[15px] lg:text-base text-[#0B357B] font-normal leading-snug group-hover/item:text-[#1A73C3] transition-colors">
                         {item.label}
                       </span>

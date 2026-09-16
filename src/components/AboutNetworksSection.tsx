@@ -59,9 +59,10 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-xs font-mono uppercase tracking-wider text-slate-600 mb-4 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
-            <span>Regional Leadership</span>
+          <div className="mb-4">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
+              Regional Leadership
+            </span>
           </div>
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
@@ -80,12 +81,7 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
             >
               {/* Upper Content: Serif Headline & Relaxed Body */}
               <div>
-                <div className="flex items-center gap-2 mb-4">
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: net.accent }}
-                    aria-hidden="true"
-                  />
+                <div className="mb-4">
                   <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
                     Regional REN
                   </span>
@@ -103,16 +99,11 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
               {/* Spacious Negative Space Spacer */}
               <div className="min-h-[80px] sm:min-h-[100px] flex-1" />
 
-              {/* Footer Area: Dashed Divider + Region Tag on Left, Dot Beacon on Right */}
+              {/* Footer Area: Dashed Divider + Region Tag */}
               <div className="pt-4 border-t border-dashed border-slate-300/80 flex items-center justify-between">
                 <span className="font-mono text-xs text-slate-600 tracking-wider">
                   {net.region}
                 </span>
-                <span
-                  className="w-2 h-2 rounded-full"
-                  style={{ backgroundColor: net.accent }}
-                  aria-hidden="true"
-                />
               </div>
             </div>
           ))}

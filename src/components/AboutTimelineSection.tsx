@@ -100,9 +100,10 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-xs font-mono uppercase tracking-wider text-slate-600 mb-4 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
-            <span>{data.kicker}</span>
+          <div className="mb-4">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
+              {data.kicker}
+            </span>
           </div>
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
@@ -118,7 +119,7 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
           />
 
           <div className="grid grid-cols-5 gap-4 relative z-10">
-            {milestones.map((m) => (
+            {milestones.map((m, idx) => (
               <div key={m.year} className="flex flex-col items-center">
                 {/* Milestone Node */}
                 <div className="mb-5 flex flex-col items-center">
@@ -134,7 +135,7 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                     {m.isFuture ? (
                       <span className="text-sm">{m.indicator}</span>
                     ) : (
-                      <span>•</span>
+                      <span>{idx + 1}</span>
                     )}
                   </div>
 
@@ -154,16 +155,11 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                 {/* Minimal Dashed Milestone Card */}
                 <div className="w-full border border-dashed border-slate-300 bg-white p-5 sm:p-6 flex flex-col justify-between transition-colors duration-200 hover:bg-slate-50/60 h-full">
                   <div>
-                    {/* Status Tag + Dot Beacon */}
+                    {/* Status Tag without dot */}
                     <div className="flex items-center justify-between gap-2 mb-3">
                       <span className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
                         {m.tag}
                       </span>
-                      <span
-                        className="w-1.5 h-1.5 rounded-full shrink-0"
-                        style={{ backgroundColor: m.accent }}
-                        aria-hidden="true"
-                      />
                     </div>
 
                     {/* Milestone Title */}
@@ -184,11 +180,11 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
 
         {/* Mobile & Tablet Vertical Roadmap (< lg) */}
         <div className="lg:hidden relative pl-6 sm:pl-8 border-l border-dashed border-slate-300 ml-4 sm:ml-6 space-y-6">
-          {milestones.map((m) => (
+          {milestones.map((m, idx) => (
             <div key={m.year} className="relative">
               {/* Node Marker on Spine */}
               <div
-                className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-[10px] bg-white border ${
+                className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono bg-white border ${
                   m.isCurrent
                     ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                     : m.isFuture
@@ -196,7 +192,7 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                     : "border-slate-300 text-[#0B357B]"
                 }`}
               >
-                {m.isFuture ? m.indicator : "•"}
+                {m.isFuture ? m.indicator : idx + 1}
               </div>
 
               {/* Milestone Card */}
@@ -210,11 +206,6 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                       {m.tag}
                     </span>
                   </div>
-                  <span
-                    className="w-1.5 h-1.5 rounded-full shrink-0"
-                    style={{ backgroundColor: m.accent }}
-                    aria-hidden="true"
-                  />
                 </div>
 
                 <h3 className="font-serif font-normal text-base text-[#0B357B] tracking-tight leading-snug mb-2">

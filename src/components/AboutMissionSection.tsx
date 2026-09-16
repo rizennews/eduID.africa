@@ -44,9 +44,10 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300/80 bg-white text-xs font-mono uppercase tracking-wider text-slate-600 mb-4 shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
-            <span>{mission.kicker}</span>
+          <div className="mb-4">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
+              {mission.kicker}
+            </span>
           </div>
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {mission.headline}
@@ -88,16 +89,13 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
                 </p>
 
                 <div className="flex flex-wrap items-center gap-2.5 pt-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
                     eduGAIN Global Node
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0B357B]" aria-hidden="true" />
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
                     Standardization &amp; Trust Governance
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#DE4A1B]" aria-hidden="true" />
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
                     International R&amp;E Representation
                   </span>
                 </div>
@@ -132,14 +130,12 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
                 </p>
               </div>
 
-              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 space-y-2.5">
-                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 font-sans">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0B357B]" aria-hidden="true" />
-                  <span>Sovereign country-owned identity infrastructure</span>
+              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 space-y-2">
+                <div className="text-xs font-medium text-slate-700 font-sans">
+                  Sovereign country-owned identity infrastructure
                 </div>
-                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 font-sans">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0B357B]" aria-hidden="true" />
-                  <span>NREN governance tooling, training &amp; roadshows</span>
+                <div className="text-xs font-medium text-slate-700 font-sans">
+                  NREN governance tooling, training &amp; roadshows
                 </div>
               </div>
             </div>
@@ -169,17 +165,13 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
                 </p>
               </div>
 
-              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 space-y-2.5">
-                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 font-sans">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#DE4A1B]" aria-hidden="true" />
-                  <span>Cloud-hosted, open-source federated IAM</span>
+              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 space-y-2">
+                <div className="text-xs font-medium text-slate-700 font-sans">
+                  Cloud-hosted, open-source federated IAM
                 </div>
-                <div className="flex items-center gap-2 text-xs font-medium text-slate-700 font-sans">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#DE4A1B]" aria-hidden="true" />
-                  <span>
-                    Instant participation via{" "}
-                    <span className="text-[#0B357B] font-medium">BonafID</span>
-                  </span>
+                <div className="text-xs font-medium text-slate-700 font-sans">
+                  Instant participation via{" "}
+                  <span className="text-[#0B357B] font-medium">BonafID</span>
                 </div>
               </div>
             </div>

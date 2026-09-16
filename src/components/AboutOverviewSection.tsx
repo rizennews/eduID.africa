@@ -50,19 +50,12 @@ export function AboutOverviewSection({ locale, dict }: AboutOverviewSectionProps
                 <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
                   {dict.about.networksLabel || "Jointly Governed By"}:
                 </span>
-                <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-slate-700 font-sans">
-                  <span className="inline-flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0B357B]" aria-hidden="true" />
-                    {dict.about.network1 || "UbuntuNet Alliance"}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#1A73C3]" aria-hidden="true" />
-                    {dict.about.network2 || "WACREN"}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#DE4A1B]" aria-hidden="true" />
-                    {dict.about.network3 || "ASREN"}
-                  </span>
+                <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-slate-700 font-sans">
+                  <span>{dict.about.network1 || "UbuntuNet Alliance"}</span>
+                  <span className="text-slate-300">/</span>
+                  <span>{dict.about.network2 || "WACREN"}</span>
+                  <span className="text-slate-300">/</span>
+                  <span>{dict.about.network3 || "ASREN"}</span>
                 </div>
               </div>
 
