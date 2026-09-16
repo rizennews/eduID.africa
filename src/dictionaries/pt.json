@@ -822,6 +822,39 @@
       "description": "Os Roadshows de Trust & Identity da WACREN levam workshops de implementação do BonafID aos administradores de IES em toda a África. Participe, experimente a plataforma na prática e saia com um plano de implementação para a sua instituição.",
       "audience": "Administradores de TI de IES & engenheiros de campus",
       "format": "Workshops presenciais / Laboratórios práticos"
+    },
+    "resourcesSection": {
+      "title": "Recursos em ritmo individual",
+      "items": [
+        {
+          "icon": "book",
+          "title": "Guia do Administrador BonafID",
+          "description": "Guia completo para administradores de TI de IES. Instalação, gestão de utilizadores e registo na federação.",
+          "action": "Descarregar PDF",
+          "href": "/docs/bonafid-admin-guide.pdf"
+        },
+        {
+          "icon": "play",
+          "title": "Série de vídeos de formação",
+          "description": "Série de 6 partes cobrindo a configuração do BonafID, configuração do geteduroam e integração na federação.",
+          "action": "Ver série",
+          "href": "https://www.youtube.com"
+        },
+        {
+          "icon": "clipboard",
+          "title": "Guia de Implementação NRO",
+          "description": "Para Operadores Nacionais de Roaming que implementam serviços catchall de geteduroam a nível nacional.",
+          "action": "Descarregar PDF",
+          "href": "/docs/nro-deployment-guide.pdf"
+        },
+        {
+          "icon": "wrench",
+          "title": "Referência técnica",
+          "description": "Documentação da API, configuração de SAML, configuração de RadSec e esquemas de metadados da federação.",
+          "action": "Ver documentação",
+          "href": "/docs"
+        }
+      ]
     }
   },
   "notFoundPage": {

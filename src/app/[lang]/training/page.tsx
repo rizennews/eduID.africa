@@ -4,6 +4,7 @@ import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
 import { TrainingOverviewSection } from "@/components/TrainingOverviewSection";
+import { TrainingResourcesSection } from "@/components/TrainingResourcesSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -56,6 +57,9 @@ export default async function TrainingPage({
 
         {/* Training Overview: Hands-on deployment support */}
         <TrainingOverviewSection locale={locale} dict={dict} />
+
+        {/* Self-paced resources: 4-Card Architectural Ledger with Lucide Animated Icons */}
+        <TrainingResourcesSection locale={locale} dict={dict} />
       </main>
       <Footer locale={locale} dict={dict} />
     </div>

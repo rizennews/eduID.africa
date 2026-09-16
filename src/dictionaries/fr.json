@@ -822,6 +822,39 @@
       "description": "Les roadshows Trust & Identity de WACREN apportent des ateliers de déploiement BonafID aux administrateurs d'ESR à travers l'Afrique. Participez, découvrez la plateforme en pratique et repartez avec un plan de déploiement pour votre établissement.",
       "audience": "Administrateurs informatiques d'ESR & ingénieurs de campus",
       "format": "Ateliers en présentiel / Travaux pratiques"
+    },
+    "resourcesSection": {
+      "title": "Ressources en auto-formation",
+      "items": [
+        {
+          "icon": "book",
+          "title": "Guide d'administration BonafID",
+          "description": "Guide complet pour les administrateurs informatiques d'ESR. Installation, gestion des utilisateurs et enregistrement dans la fédération.",
+          "action": "Télécharger le PDF",
+          "href": "/docs/bonafid-admin-guide.pdf"
+        },
+        {
+          "icon": "play",
+          "title": "Série de vidéos de formation",
+          "description": "Série de 6 modules guidés couvrant la configuration de BonafID, la configuration de geteduroam et l'intégration à la fédération.",
+          "action": "Regarder la série",
+          "href": "https://www.youtube.com"
+        },
+        {
+          "icon": "clipboard",
+          "title": "Guide de déploiement NRO",
+          "description": "Pour les opérateurs nationaux d'itinérance déployant les services de rattrapage geteduroam à l'échelle nationale.",
+          "action": "Télécharger le PDF",
+          "href": "/docs/nro-deployment-guide.pdf"
+        },
+        {
+          "icon": "wrench",
+          "title": "Référence technique",
+          "description": "Documentation API, configuration SAML, configuration RadSec et schémas de métadonnées de fédération.",
+          "action": "Consulter la documentation",
+          "href": "/docs"
+        }
+      ]
     }
   },
   "notFoundPage": {

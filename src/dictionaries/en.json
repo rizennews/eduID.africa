@@ -822,6 +822,39 @@
       "description": "WACREN's Trust & Identity Roadshows bring BonafID deployment workshops to HEI administrators across Africa. Attend, get hands-on with the platform, and leave with a deployment plan for your institution.",
       "audience": "HEI IT administrators & campus engineers",
       "format": "In-person workshops / Hands-on labs"
+    },
+    "resourcesSection": {
+      "title": "Self-paced resources",
+      "items": [
+        {
+          "icon": "book",
+          "title": "BonafID Admin Guide",
+          "description": "Complete guide for HEI IT administrators. Installation, user management, and federation registration.",
+          "action": "Download PDF",
+          "href": "/docs/bonafid-admin-guide.pdf"
+        },
+        {
+          "icon": "play",
+          "title": "Video training series",
+          "description": "6-part walkthrough series covering BonafID setup, geteduroam config, and federation onboarding.",
+          "action": "Watch series",
+          "href": "https://www.youtube.com"
+        },
+        {
+          "icon": "clipboard",
+          "title": "NRO Deployment Guide",
+          "description": "For National Roaming Operators deploying country-level geteduroam catchall services.",
+          "action": "Download PDF",
+          "href": "/docs/nro-deployment-guide.pdf"
+        },
+        {
+          "icon": "wrench",
+          "title": "Technical reference",
+          "description": "API documentation, SAML configuration, RadSec setup, and federation metadata schemas.",
+          "action": "View docs",
+          "href": "/docs"
+        }
+      ]
     }
   },
   "notFoundPage": {
