@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowRightIcon, type ArrowRightIconHandle } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 interface PathwayCardData {
   tag?: string;
@@ -34,9 +35,10 @@ interface PathwayColumnProps {
   cta: string;
   href: string;
   locale: Locale;
+  buttonBgClass: string;
 }
 
-function PathwayColumn({ title, description, cta, href, locale }: PathwayColumnProps) {
+function PathwayColumn({ title, description, cta, href, locale, buttonBgClass }: PathwayColumnProps) {
   const arrowRef = React.useRef<ArrowRightIconHandle>(null);
   const cleanCta = cta.replace(/→\s*$/, "").trim();
 
@@ -58,19 +60,26 @@ function PathwayColumn({ title, description, cta, href, locale }: PathwayColumnP
       </div>
 
       {/* Compact Negative Space Spacer */}
-      <div className="min-h-[24px] sm:min-h-[32px] flex-1" />
+      <div className="min-h-[28px] sm:min-h-[36px] flex-1" />
 
-      {/* Footer Area: Dashed Divider + Left Label / Right Arrow */}
+      {/* Footer Area: Dashed Divider + Styled Action Button */}
       <div className="pt-4 sm:pt-5 border-t border-dashed border-slate-300/90 mt-auto">
-        <div className="flex items-center justify-between gap-4 text-xs sm:text-[13px] font-medium tracking-wide text-slate-700 group-hover:text-[#0B357B] transition-colors">
-          <span className="font-sans font-medium">{cleanCta}</span>
-          <div className="shrink-0 group-hover:translate-x-1.5 transition-transform duration-200">
-            <ArrowRightIcon
-              ref={arrowRef}
-              size={16}
-              className="text-slate-600 group-hover:text-[#0B357B] p-0 hover:bg-transparent"
-            />
-          </div>
+        <div className="flex items-center justify-start">
+          <span
+            className={cn(
+              "inline-flex items-center gap-2 h-10 px-5 rounded-full text-xs sm:text-[13px] font-medium font-sans text-white shadow-2xs transition-all duration-200 group-hover:shadow-xs",
+              buttonBgClass
+            )}
+          >
+            <span>{cleanCta}</span>
+            <div className="shrink-0 group-hover:translate-x-1 transition-transform duration-200">
+              <ArrowRightIcon
+                ref={arrowRef}
+                size={14}
+                className="text-white p-0 hover:bg-transparent"
+              />
+            </div>
+          </span>
         </div>
       </div>
     </Link>
@@ -78,10 +87,6 @@ function PathwayColumn({ title, description, cta, href, locale }: PathwayColumnP
 }
 
 export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
-  const eyebrow =
-    dict.pathways.eyebrow ||
-    (locale === "fr" ? "Voies d'accès" : locale === "pt" ? "Vias de acesso" : "Pathways");
-
   const heading =
     dict.pathways.heading ||
     (locale === "fr"
@@ -96,30 +101,30 @@ export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
       description: dict.pathways.card1.description,
       cta: dict.pathways.card1.cta,
       href: dict.pathways.card1.href,
+      buttonBgClass: "bg-[#0B357B] hover:bg-[#072454]", // eduID Navy
     },
     {
       title: dict.pathways.card2.title,
       description: dict.pathways.card2.description,
       cta: dict.pathways.card2.cta,
       href: dict.pathways.card2.href,
+      buttonBgClass: "bg-[#1A73C3] hover:bg-[#155fa3]", // eduID Blue
     },
     {
       title: dict.pathways.card3.title,
       description: dict.pathways.card3.description,
       cta: dict.pathways.card3.cta,
       href: dict.pathways.card3.href,
+      buttonBgClass: "bg-[#DE4A1B] hover:bg-[#c23b12]", // eduID Orange
     },
   ];
 
   return (
     <section className="relative py-10 sm:py-14 lg:py-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header matching the reference: Pill Eyebrow + Elegant Serif Heading */}
+        {/* Section Header */}
         <div className="mb-8 sm:mb-10">
-          <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
-            {eyebrow}
-          </span>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#0B357B] tracking-tight leading-[1.16] mt-4 max-w-3xl">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#0B357B] tracking-tight leading-[1.16] max-w-3xl">
             {heading}
           </h2>
         </div>
@@ -135,6 +140,7 @@ export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
                 cta={col.cta}
                 href={col.href}
                 locale={locale}
+                buttonBgClass={col.buttonBgClass}
               />
             ))}
           </div>

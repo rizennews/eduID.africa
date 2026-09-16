@@ -1,38 +1,20 @@
 import * as React from "react";
 import Link from "next/link";
 import { AnimatedIcon } from "@/components/ui/animated-icon";
+import { EuFundingBanner } from "@/components/EuFundingBanner";
 import type { Locale } from "@/lib/i18n";
 
 interface FooterProps {
   locale: Locale;
-  dict: {
-    footer: {
-      tagline: string;
-      colNrenTitle: string;
-      colNrenLink1: string;
-      colNrenLink2: string;
-      colNrenLink3: string;
-      colNrenLink4: string;
-      colResourcesTitle: string;
-      colResourcesLink1: string;
-      colResourcesLink2: string;
-      colResourcesLink3: string;
-      colResourcesLink4: string;
-      colOrgTitle: string;
-      colOrgLink1: string;
-      colOrgLink2: string;
-      colOrgLink3: string;
-      colOrgLink4: string;
-      copyright: string;
-      privacy: string;
-      terms: string;
-    };
-  };
+  dict: any;
 }
 
 export function Footer({ locale, dict }: FooterProps) {
   return (
     <footer className="relative bg-[#F8FAFC] border-t border-slate-200/90 overflow-hidden">
+      {/* EU / Global Gateway Funding Statement Banner */}
+      <EuFundingBanner locale={locale} dict={dict} />
+
       {/* Subtle organic ambient glow inspired by modern brand footers */}
       <div
         aria-hidden="true"
@@ -204,11 +186,11 @@ export function Footer({ locale, dict }: FooterProps) {
         </div>
       </div>
 
-      {/* The Massive Wordmark: FULLSCREEN Edge-to-Edge across entire viewport */}
+      {/* The Massive Wordmark: FULLSCREEN Edge-to-Edge across entire viewport with subtle architectural opacity */}
       <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 select-none overflow-x-clip">
         <svg
           viewBox="0 0 880 145"
-          className="w-full h-auto block select-none overflow-visible max-h-[260px]"
+          className="w-full h-auto block select-none overflow-visible max-h-[260px] opacity-20 hover:opacity-30 transition-opacity duration-300"
           preserveAspectRatio="xMidYMid meet"
           aria-label="eduID.africa"
           role="img"

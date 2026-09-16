@@ -1,6 +1,88 @@
+"use client";
+
 import * as React from "react";
 import { EarthIcon, ActivityIcon, WorkflowIcon, ShieldCheckIcon } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
+
+function parseNumericValue(val: string) {
+  const match = val.match(/^(\D*)(\d+)(.*)$/);
+  if (!match) return null;
+  return {
+    prefix: match[1],
+    target: parseInt(match[2], 10),
+    suffix: match[3],
+  };
+}
+
+function easeOutExpo(x: number): number {
+  return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+}
+
+function AnimatedCounter({
+  value,
+  duration = 1600,
+}: {
+  value: string;
+  duration?: number;
+}) {
+  const parsed = React.useMemo(() => parseNumericValue(value), [value]);
+  const [count, setCount] = React.useState(0);
+  const elementRef = React.useRef<HTMLSpanElement>(null);
+  const hasAnimatedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    if (!parsed) return;
+
+    const el = elementRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
+          const startTime = performance.now();
+          const target = parsed.target;
+
+          const step = (now: number) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutExpo(progress);
+            const current = Math.round(easedProgress * target);
+            setCount(current);
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              setCount(target);
+            }
+          };
+
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [parsed, duration]);
+
+  if (!parsed) {
+    return <span>{value}</span>;
+  }
+
+  return (
+    <span ref={elementRef}>
+      {parsed.prefix}
+      {count}
+      {parsed.suffix}
+    </span>
+  );
+}
 
 interface StatItem {
   value: string;
@@ -79,7 +161,7 @@ export function TrustMetrics({ dict }: TrustMetricsProps) {
                 {/* Stat Text */}
                 <div>
                   <div className="font-heading font-medium text-xl sm:text-2xl lg:text-[22px] tracking-tight text-[#0B357B] leading-snug">
-                    {stat.value}
+                    <AnimatedCounter value={stat.value} />
                   </div>
                   <div className="font-sans text-xs sm:text-[13px] text-slate-500 font-normal leading-snug mt-0.5">
                     {stat.label}

@@ -945,6 +945,11 @@
       "action": "Solicitar Roadshow Regional"
     }
   },
+  "fundingBanner": {
+    "fundedBy": "FINANCIADO POR",
+    "statement": "A União Europeia — no âmbito da Estratégia Global Gateway da UE e do Pacote de Investimento África-Europa, através da DG INTPA.",
+    "disclaimer": "Os pontos de vista e opiniões expressos são da exclusiva responsabilidade do(s) autor(es) e não refletem necessariamente os da União Europeia. Nem a União Europeia nem a autoridade que concede a subvenção podem ser responsabilizadas."
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"
