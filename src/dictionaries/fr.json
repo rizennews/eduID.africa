@@ -607,6 +607,114 @@
       }
     }
   },
+  "institutionsPage": {
+    "hero": {
+      "title": "Pour les institutions",
+      "subtitle": "Connectez la gestion des identités de votre campus aux fédérations nationales et aux services continentaux à travers l'Afrique."
+    },
+    "overview": {
+      "headline1": "Offrez à vos étudiants et à votre personnel",
+      "headline2": "un identifiant qui fonctionne partout.",
+      "description": "Administrateurs informatiques des établissements d'enseignement supérieur : découvrez comment déployer BonafID, enregistrer votre établissement auprès de la fédération et débloquer eduroam, les ressources eduGAIN et les services numériques des RNRE pour l'ensemble de votre campus.",
+      "audience": "Administrateurs informatiques de l'ESR",
+      "timeline": "Généralement 3 à 6 mois pour l'intégration"
+    },
+    "benefitsSection": {
+      "title": "Ce que gagne votre établissement",
+      "description": "La fédération n'est pas seulement un projet d'infrastructure technique — elle débloque de véritables services pour vos étudiants, chercheurs et personnels dès le premier jour.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Itinérance Wi-Fi eduroam",
+          "desc": "Vos étudiants et personnels se connectent automatiquement au Wi-Fi dans plus de 10 000 établissements compatibles eduroam dans le monde, en utilisant leurs identifiants institutionnels."
+        },
+        {
+          "num": "02",
+          "title": "Ressources mondiales de recherche",
+          "desc": "L'adhésion à eduGAIN donne accès à des milliers de plateformes internationales de recherche, bases de données de bibliothèques et outils de collaboration via une identité institutionnelle vérifiée."
+        },
+        {
+          "num": "03",
+          "title": "Identité institutionnelle pérenne",
+          "desc": "BonafID offre à chaque utilisateur une identité unifiée qui persiste à travers les programmes d'études, départements et étapes de carrière — transférable entre établissements."
+        },
+        {
+          "num": "04",
+          "title": "Gestion informatique simplifiée",
+          "desc": "La gouvernance centralisée des identités remplace les identifiants fragmentés par service. Un seul fournisseur d'identité. Un seul journal d'audit. Des contrôles d'accès cohérents sur tous les services."
+        },
+        {
+          "num": "05",
+          "title": "Accès aux plateformes des RNRE",
+          "desc": "L'identité fédérée de votre établissement est la clé des services fournis par les RNRE : visioconférence, stockage cloud, plateformes d'apprentissage et bien plus encore."
+        },
+        {
+          "num": "06",
+          "title": "Aucune infrastructure sur site",
+          "desc": "BonafID est hébergé dans le cloud. Votre équipe informatique n'a pas besoin d'exploiter des serveurs ou de gérer des certificats. Le WACREN gère l'infrastructure ; vous gérez les identités."
+        }
+      ]
+    },
+    "connectSection": {
+      "title": "Comment connecter votre établissement",
+      "description": "Le processus est structuré et accompagné. L'équipe T&I du WACREN fournit des conseils à chaque étape.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Évaluation initiale",
+          "description": "Le WACREN procède à une évaluation de l'état de préparation de l'infrastructure d'identité et des systèmes de données actuels de votre établissement. Cela permet de cadrer le déploiement de BonafID."
+        },
+        {
+          "step": "2",
+          "title": "Intégration des données",
+          "description": "Les outils d'extraction de données de BonafID se connectent à votre système d'information étudiant existant, à votre système RH ou à votre LDAP. Aucune saisie manuelle de données."
+        },
+        {
+          "step": "3",
+          "title": "Déploiement et tests de l'IdP",
+          "description": "Le fournisseur d'identité BonafID de votre établissement est déployé et testé par rapport aux métadonnées de la fédération eduID.africa. L'équipe du WACREN vous accompagne à distance."
+        },
+        {
+          "step": "4",
+          "title": "Enregistrement dans la fédération",
+          "description": "L'IdP de votre établissement est enregistré dans la fédération. À partir de ce moment, vos utilisateurs peuvent accéder aux services fédérés et demander des certificats geteduroam."
+        },
+        {
+          "step": "✓",
+          "title": "En ligne — personnels et étudiants connectés",
+          "description": "Votre établissement apparaît dans l'annuaire de couverture. Les étudiants et le personnel peuvent télécharger geteduroam et accéder immédiatement aux ressources eduGAIN."
+        }
+      ]
+    },
+    "supportSection": {
+      "title": "Un accompagnement continu",
+      "description": "Le déploiement n'est pas un exercice solitaire. L'équipe du programme eduID.africa fournit un soutien structuré de l'évaluation à la mise en production.",
+      "items": [
+        {
+          "title": "Roadshows T&I",
+          "description": "Ateliers régionaux pratiques pour les administrateurs informatiques de l'ESR. Couvre le déploiement de BonafID, les concepts de fédération et le déploiement de geteduroam.",
+          "linkText": "Voir les prochaines dates",
+          "href": "/events"
+        },
+        {
+          "title": "Support au déploiement à distance",
+          "description": "L'équipe T&I du WACREN fournit une assistance à distance lors de l'installation de BonafID, de l'intégration des données et de l'enregistrement dans la fédération."
+        },
+        {
+          "title": "Documentation et guides",
+          "description": "Guides de déploiement pas à pas, documentation API et référence de configuration de BonafID — tous disponibles dans la section ressources.",
+          "linkText": "Explorer la documentation",
+          "href": "/training"
+        }
+      ]
+    },
+    "ctaSection": {
+      "title": "Prêt à démarrer le processus d'intégration ?",
+      "description": "Contactez l'équipe eduID.africa pour planifier votre évaluation initiale. Si un Roadshow T&I est prévu dans votre région, c'est la voie la plus rapide vers un déploiement accompagné.",
+      "btnRoadshows": "Voir les prochains roadshows",
+      "btnAssessment": "Demander une évaluation"
+    }
+  },
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"

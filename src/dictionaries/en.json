@@ -607,6 +607,114 @@
       }
     }
   },
+  "institutionsPage": {
+    "hero": {
+      "title": "For Institutions",
+      "subtitle": "Connect your campus identity management to national federations and continental services across Africa."
+    },
+    "overview": {
+      "headline1": "Give your students and staff",
+      "headline2": "a credential that works everywhere.",
+      "description": "HEI IT administrators: learn how to deploy BonafID, register your institution with the federation, and unlock eduroam, eduGAIN resources, and NREN digital services for your entire campus.",
+      "audience": "HEI IT administrators",
+      "timeline": "Typically 3–6 months to onboard"
+    },
+    "benefitsSection": {
+      "title": "What your institution gains",
+      "description": "Federation is not just a technical infrastructure project — it unlocks real services for your students, researchers, and staff from day one.",
+      "items": [
+        {
+          "num": "01",
+          "title": "eduroam Wi-Fi roaming",
+          "desc": "Your students and staff connect automatically to Wi-Fi at any of the 10,000+ eduroam-enabled institutions worldwide, using their institutional credentials."
+        },
+        {
+          "num": "02",
+          "title": "Global research resources",
+          "desc": "eduGAIN membership unlocks access to thousands of international research platforms, library databases, and collaboration tools via verified institutional identity."
+        },
+        {
+          "num": "03",
+          "title": "Lifelong institutional identity",
+          "desc": "BonafID provides each user a unified identity that persists across degree programmes, departments, and career stages — portable across institutions."
+        },
+        {
+          "num": "04",
+          "title": "Simplified IT management",
+          "desc": "Centralised identity governance replaces fragmented per-service credentials. One identity provider. One audit trail. Consistent access controls across all services."
+        },
+        {
+          "num": "05",
+          "title": "NREN platform access",
+          "desc": "Your institution's federated identity is the key to NREN-provided services: video conferencing, cloud storage, learning platforms, and more."
+        },
+        {
+          "num": "06",
+          "title": "No on-premise infrastructure",
+          "desc": "BonafID is cloud-hosted. Your IT team does not need to operate servers or manage certificates. WACREN handles the infrastructure; you manage identities."
+        }
+      ]
+    },
+    "connectSection": {
+      "title": "How to connect your institution",
+      "description": "The process is structured and supported. WACREN's T&I team provides guidance at each stage.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Initial assessment",
+          "description": "WACREN conducts a readiness assessment of your institution's current identity infrastructure and data systems. This scopes the BonafID deployment."
+        },
+        {
+          "step": "2",
+          "title": "Data integration",
+          "description": "BonafID's data extraction tools connect to your existing student information system, HR system, or LDAP. No manual data entry."
+        },
+        {
+          "step": "3",
+          "title": "IdP deployment and testing",
+          "description": "Your BonafID identity provider is deployed and tested against eduID.africa's federation metadata. WACREN's team supports remotely."
+        },
+        {
+          "step": "4",
+          "title": "Federation registration",
+          "description": "Your institution's IdP is registered in the federation. From this point, your users can access federated services and request geteduroam certificates."
+        },
+        {
+          "step": "✓",
+          "title": "Live — staff and students connected",
+          "description": "Your institution appears in the coverage directory. Students and staff can download geteduroam and access eduGAIN resources immediately."
+        }
+      ]
+    },
+    "supportSection": {
+      "title": "Support throughout",
+      "description": "Deployment is not a solo exercise. eduID.africa's programme team provides structured support from assessment to go-live.",
+      "items": [
+        {
+          "title": "T&I Roadshows",
+          "description": "Hands-on regional workshops for HEI IT administrators. Covers BonafID deployment, federation concepts, and geteduroam rollout.",
+          "linkText": "View upcoming dates",
+          "href": "/events"
+        },
+        {
+          "title": "Remote deployment support",
+          "description": "WACREN's T&I team provides remote assistance during BonafID installation, data integration, and federation registration."
+        },
+        {
+          "title": "Documentation and guides",
+          "description": "Step-by-step deployment guides, API documentation, and BonafID configuration reference — all available in the resources section.",
+          "linkText": "Explore documentation",
+          "href": "/training"
+        }
+      ]
+    },
+    "ctaSection": {
+      "title": "Ready to start the onboarding process?",
+      "description": "Contact the eduID.africa team to schedule your initial assessment. If there's a T&I Roadshow upcoming in your region, that's the fastest path to a supported deployment.",
+      "btnRoadshows": "View upcoming roadshows",
+      "btnAssessment": "Request an assessment"
+    }
+  },
   "notFoundPage": {
     "title": "Lost in flight?",
     "homeButton": "Find your way home"

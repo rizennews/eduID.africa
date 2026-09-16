@@ -607,6 +607,114 @@
       }
     }
   },
+  "institutionsPage": {
+    "hero": {
+      "title": "Para as instituições",
+      "subtitle": "Conecte a gestão de identidade do seu campus às federações nacionais e aos serviços continentais em toda a África."
+    },
+    "overview": {
+      "headline1": "Dê aos seus estudantes e funcionários",
+      "headline2": "uma credencial que funciona em todo o lado.",
+      "description": "Administradores de TI de instituições de ensino superior: saiba como implementar o BonafID, registar a sua instituição na federação e desbloquear eduroam, recursos eduGAIN e serviços digitais da RNER para todo o seu campus.",
+      "audience": "Administradores de TI de IES",
+      "timeline": "Normalmente 3 a 6 meses para integração"
+    },
+    "benefitsSection": {
+      "title": "O que a sua instituição ganha",
+      "description": "A federação não é apenas um projeto técnico de infraestrutura — desbloqueia serviços reais para os seus estudantes, investigadores e funcionários desde o primeiro dia.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Roaming Wi-Fi eduroam",
+          "desc": "Os seus estudantes e funcionários ligam-se automaticamente ao Wi-Fi em qualquer uma das mais de 10.000 instituições aderentes ao eduroam em todo o mundo, usando as suas credenciais institucionais."
+        },
+        {
+          "num": "02",
+          "title": "Recursos globais de investigação",
+          "desc": "A adesão ao eduGAIN desbloqueia o acesso a milhares de plataformas internacionais de pesquisa, bases de dados de bibliotecas e ferramentas de colaboração através de identidade institucional verificada."
+        },
+        {
+          "num": "03",
+          "title": "Identidade institucional vitalícia",
+          "desc": "O BonafID fornece a cada utilizador uma identidade unificada que persiste ao longo dos cursos, departamentos e fases da carreira — portátil entre instituições."
+        },
+        {
+          "num": "04",
+          "title": "Gestão de TI simplificada",
+          "desc": "A governação centralizada de identidades substitui as credenciais fragmentadas por serviço. Um fornecedor de identidade. Um registo de auditoria. Controlos de acesso consistentes em todos os serviços."
+        },
+        {
+          "num": "05",
+          "title": "Acesso a plataformas da RNER",
+          "desc": "A identidade federada da sua instituição é a chave para os serviços fornecidos pela RNER: videoconferência, armazenamento em nuvem, plataformas de aprendizagem e muito mais."
+        },
+        {
+          "num": "06",
+          "title": "Sem infraestrutura local",
+          "desc": "O BonafID é alojado na nuvem. A sua equipa de TI não precisa de operar servidores ou gerir certificados. O WACREN gere a infraestrutura; você gere as identidades."
+        }
+      ]
+    },
+    "connectSection": {
+      "title": "Como conectar a sua instituição",
+      "description": "O processo é estruturado e apoiado. A equipa de T&I do WACREN fornece orientação em cada etapa.",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Avaliação inicial",
+          "description": "O WACREN realiza uma avaliação de prontidão da infraestrutura de identidade atual e dos sistemas de dados da sua instituição. Isto define o âmbito da implementação do BonafID."
+        },
+        {
+          "step": "2",
+          "title": "Integração de dados",
+          "description": "As ferramentas de extração de dados do BonafID ligam-se ao seu sistema de informação de estudantes existente, sistema de RH ou LDAP. Sem introdução manual de dados."
+        },
+        {
+          "step": "3",
+          "title": "Implementação e teste do IdP",
+          "description": "O provedor de identidade BonafID da sua instituição é implementado e testado com os metadados da federação eduID.africa. A equipa do WACREN apoia remotamente."
+        },
+        {
+          "step": "4",
+          "title": "Registo na federação",
+          "description": "O IdP da sua instituição é registado na federação. A partir deste ponto, os seus utilizadores podem aceder a serviços federados e solicitar certificados geteduroam."
+        },
+        {
+          "step": "✓",
+          "title": "Ativo — funcionários e estudantes conectados",
+          "description": "A sua instituição aparece no diretório de cobertura. Estudantes e funcionários podem descarregar o geteduroam e aceder aos recursos eduGAIN imediatamente."
+        }
+      ]
+    },
+    "supportSection": {
+      "title": "Apoio permanente",
+      "description": "A implementação não é um exercício solitário. A equipa do programa eduID.africa fornece apoio estruturado desde a avaliação até à entrada em funcionamento.",
+      "items": [
+        {
+          "title": "Roadshows de T&I",
+          "description": "Workshops regionais práticos para administradores de TI de IES. Abrange a implementação do BonafID, conceitos de federação e lançamento do geteduroam.",
+          "linkText": "Ver próximas datas",
+          "href": "/events"
+        },
+        {
+          "title": "Apoio remoto à implementação",
+          "description": "A equipa de T&I do WACREN fornece assistência remota durante a instalação do BonafID, integração de dados e registo na federação."
+        },
+        {
+          "title": "Documentação e guias",
+          "description": "Guias de implementação passo a passo, documentação de API e referência de configuração do BonafID — tudo disponível na secção de recursos.",
+          "linkText": "Explorar documentação",
+          "href": "/training"
+        }
+      ]
+    },
+    "ctaSection": {
+      "title": "Pronto para iniciar o processo de integração?",
+      "description": "Contacte a equipa do eduID.africa para agendar a sua avaliação inicial. Se houver um Roadshow de T&I na sua região, esse é o caminho mais rápido para uma implementação apoiada.",
+      "btnRoadshows": "Ver próximos roadshows",
+      "btnAssessment": "Solicitar uma avaliação"
+    }
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"
