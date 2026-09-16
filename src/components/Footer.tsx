@@ -190,7 +190,7 @@ export function Footer({ locale, dict }: FooterProps) {
       <div className="w-full px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 select-none overflow-x-clip">
         <svg
           viewBox="0 0 880 145"
-          className="w-full h-auto block select-none overflow-visible max-h-[260px] opacity-20 hover:opacity-30 transition-opacity duration-300"
+          className="w-full h-auto block select-none overflow-visible max-h-[260px] opacity-40 hover:opacity-60 transition-opacity duration-300"
           preserveAspectRatio="xMidYMid meet"
           aria-label="eduID.africa"
           role="img"
