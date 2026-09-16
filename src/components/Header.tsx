@@ -96,7 +96,7 @@ export function Header({ locale, dict }: HeaderProps) {
     {
       title: dict.nav.communities.nrens.title,
       desc: dict.nav.communities.nrens.desc,
-      href: `/${locale}/communities/nrens`,
+      href: `/${locale}/for-nren`,
       tag: "Networks",
     },
     {

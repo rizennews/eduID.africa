@@ -520,6 +520,93 @@
       }
     }
   },
+  "nrenPage": {
+    "hero": {
+      "title": "Pour les RNRE",
+      "subtitle": "Infrastructure d'identité souveraine, cadres de gouvernance, ateliers de formation et appairage continental pour les Réseaux Nationaux de Recherche et d'Éducation d'Afrique."
+    },
+    "overview": {
+      "eyebrow": "Voie de fédération nationale",
+      "headline1": "Infrastructure d'identité souveraine",
+      "headline2": "pour votre pays.",
+      "description": "Deux voies vers la fédération continentale. Que votre RNRE soit prêt à exploiter une fédération nationale d'identité ou qu'il soit encore en cours de construction — eduID.africa soutient les deux, avec des outils, des cadres de gouvernance et un soutien programmatique direct."
+    },
+    "sovereignSection": {
+      "eyebrow": "Voie privilégiée",
+      "headline": "Votre RNRE possède l'infrastructure.",
+      "description": "La voie privilégiée. Votre pays exploite une fédération nationale d'identité souveraine — avec eduID.africa fournissant le toit continental au-dessus. Vos institutions s'enregistrent auprès de votre RNRE ; votre RNRE s'appaire avec eduID.africa.",
+      "featureA": {
+        "letter": "A",
+        "title": "Souveraineté de gouvernance",
+        "desc": "Votre pays définit le cadre de confiance, les critères d'adhésion et les politiques de votre fédération nationale. eduID.africa opère uniquement au niveau continental."
+      },
+      "featureB": {
+        "letter": "B",
+        "title": "Outillage et support technique",
+        "desc": "eduID.africa fournit des modèles de gouvernance, des logiciels de fédération, de la documentation d'appairage et un support technique pour les déploiements menés par les RNRE."
+      },
+      "featureC": {
+        "letter": "C",
+        "title": "Programme de Roadshow T&I",
+        "desc": "Des ateliers régionaux favorisent l'adoption dans les pays — aidant votre RNRE à développer la base de membres institutionnels qui rend viable une fédération nationale.",
+        "linkText": "Voir le calendrier des roadshows"
+      }
+    },
+    "checklistSection": {
+      "eyebrow": "Liste de contrôle",
+      "headline": "Ce qu'il faut pour commencer",
+      "intro": "L'équipe d'évaluation d'eduID.africa examinera l'état de préparation de votre RNRE dans ces domaines avant le début du déploiement.",
+      "items": [
+        "RNRE mandaté avec l'appui du gouvernement ou un accord du secteur de l'ESR",
+        "Au moins 5 à 10 établissements prêts à déployer BonafID ou des IdP existants",
+        "Personnel technique (au moins une personne) pour gérer les opérations de la fédération",
+        "Volonté d'adopter les politiques du cadre de confiance d'eduID.africa",
+        "Infrastructure serveur de base ou accès cloud pour l'hébergement des métadonnées de la fédération"
+      ],
+      "callout": {
+        "title": "Pas encore prêt pour la Voie A ?",
+        "desc": "Vos établissements peuvent participer via la fédération de rattrapage pendant que votre RNRE renforce ses capacités vers une fédération nationale. Le rattrapage est un tremplin, pas une impasse.",
+        "linkText": "Explorer l'architecture de rattrapage"
+      }
+    },
+    "docsSection": {
+      "title": "Documentation et outils",
+      "items": [
+        {
+          "category": "Guide",
+          "title": "Guide de déploiement de la fédération nationale",
+          "meta": "PDF · 38 pages · Mis à jour en avril 2026",
+          "action": "Télécharger le PDF"
+        },
+        {
+          "category": "Modèle",
+          "title": "Modèles de politique de fédération (prêts pour les RNRE)",
+          "meta": "ZIP · Documents de gouvernance · v2.1",
+          "action": "Télécharger"
+        },
+        {
+          "category": "Spécification technique",
+          "title": "Appairage avec eduID.africa — Référence technique",
+          "meta": "PDF · 22 pages · Juin 2026",
+          "action": "Télécharger le PDF"
+        }
+      ]
+    },
+    "pillars": {
+      "sovereignty": {
+        "title": "Souveraineté Nationale",
+        "desc": "Votre RNER exploite et administre sa propre fédération nationale d'identité."
+      },
+      "roadshows": {
+        "title": "Ateliers T&I Roadshows",
+        "desc": "Accompagnement technique sur site, renforcement des compétences et déploiement."
+      },
+      "peering": {
+        "title": "Appairage Mondial",
+        "desc": "Passerelle directe vers les ressources continentales, eduGAIN et geteduroam."
+      }
+    }
+  },
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"

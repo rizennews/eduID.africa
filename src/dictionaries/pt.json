@@ -520,6 +520,93 @@
       }
     }
   },
+  "nrenPage": {
+    "hero": {
+      "title": "Para as RNER",
+      "subtitle": "Infraestrutura de identidade soberana, quadros de governança, roadshows de capacitação e peering continental para as Redes Nacionais de Ensino e Pesquisa de África."
+    },
+    "overview": {
+      "eyebrow": "Caminho da Federação Nacional",
+      "headline1": "Infraestrutura de identidade soberana",
+      "headline2": "para o seu país.",
+      "description": "Dois caminhos para a federação continental. Quer a sua RNER esteja pronta para operar uma federação nacional de identidade ou ainda esteja a construí-la — o eduID.africa apoia ambas, com ferramentas, quadros de governança e apoio direto ao programa."
+    },
+    "sovereignSection": {
+      "eyebrow": "Caminho de Preferência",
+      "headline": "A sua RNER é proprietária da infraestrutura.",
+      "description": "O caminho de preferência. O seu país opera uma federação nacional de identidade soberana — com o eduID.africa fornecendo a cobertura continental. As suas instituições registam-se na sua RNER; a sua RNER emparelha com o eduID.africa.",
+      "featureA": {
+        "letter": "A",
+        "title": "Soberania de governação",
+        "desc": "O seu país define o quadro de confiança, os critérios de adesão e as políticas para a sua federação nacional. O eduID.africa opera apenas a nível continental."
+      },
+      "featureB": {
+        "letter": "B",
+        "title": "Ferramentas e suporte técnico",
+        "desc": "O eduID.africa fornece modelos de governança, software de federação, documentação de peering e suporte técnico para implementações lideradas pela RNER."
+      },
+      "featureC": {
+        "letter": "C",
+        "title": "Programa de Roadshow de T&I",
+        "desc": "Workshops regionais impulsionam a adoção no país — ajudando a sua RNER a construir a base de membros institucionais que torna viável uma federação nacional.",
+        "linkText": "Ver calendário dos roadshows"
+      }
+    },
+    "checklistSection": {
+      "eyebrow": "Lista de verificação",
+      "headline": "O que é necessário para começar",
+      "intro": "A equipa de avaliação do eduID.africa analisará a prontidão da sua RNER nestas áreas antes de iniciar o processo de implementação.",
+      "items": [
+        "RNER com mandato governamental ou acordo com o setor de ensino superior",
+        "Mínimo de 5 a 10 instituições dispostas a implementar o BonafID ou IdPs existentes",
+        "Equipa técnica (pelo menos uma pessoa) para gerir as operações da federação",
+        "Disponibilidade para adotar as políticas do quadro de confiança do eduID.africa",
+        "Infraestrutura básica de servidores ou acesso em nuvem para alojamento de metadados da federação"
+      ],
+      "callout": {
+        "title": "Ainda não está pronto para o Caminho A?",
+        "desc": "As suas instituições podem participar através da federação abrangente enquanto a sua RNER desenvolve capacidade para uma federação nacional. A federação abrangente é um trampolim, não um beco sem saída.",
+        "linkText": "Explorar a arquitetura abrangente"
+      }
+    },
+    "docsSection": {
+      "title": "Documentação e ferramentas",
+      "items": [
+        {
+          "category": "Guia",
+          "title": "Guia de Implementação de Federação Nacional",
+          "meta": "PDF · 38 páginas · Atualizado em abril de 2026",
+          "action": "Descarregar PDF"
+        },
+        {
+          "category": "Modelo",
+          "title": "Modelos de Políticas de Federação (prontos para RNER)",
+          "meta": "ZIP · Documentos de governação · v2.1",
+          "action": "Descarregar"
+        },
+        {
+          "category": "Especificação técnica",
+          "title": "Peering com o eduID.africa — Referência Técnica",
+          "meta": "PDF · 22 páginas · Junho de 2026",
+          "action": "Descarregar PDF"
+        }
+      ]
+    },
+    "pillars": {
+      "sovereignty": {
+        "title": "Soberania Nacional",
+        "desc": "Sua NREN opera e governa sua própria federação nacional de identidade."
+      },
+      "roadshows": {
+        "title": "Roadshows de T&I",
+        "desc": "Apoio técnico no local, capacitação técnica e suporte prático de implementação."
+      },
+      "peering": {
+        "title": "Emparelhamento Global",
+        "desc": "Acesso imediato a recursos continentais, eduGAIN e geteduroam."
+      }
+    }
+  },
   "notFoundPage": {
     "title": "Perdido em voo?",
     "homeButton": "Encontre o caminho de volta"

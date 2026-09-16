@@ -520,6 +520,93 @@
       }
     }
   },
+  "nrenPage": {
+    "hero": {
+      "title": "For NRENs",
+      "subtitle": "Sovereign identity infrastructure, governance frameworks, training roadshows, and continental peering for Africa's National Research and Education Networks."
+    },
+    "overview": {
+      "eyebrow": "National Federation Pathway",
+      "headline1": "Sovereign identity infrastructure",
+      "headline2": "for your country.",
+      "description": "Two paths to the continental federation. Whether your NREN is ready to operate a national identity federation or still building toward it — eduID.africa supports both, with tooling, governance frameworks, and direct programme support."
+    },
+    "sovereignSection": {
+      "eyebrow": "Path of Preference",
+      "headline": "Your NREN owns the infrastructure.",
+      "description": "The path of preference. Your country operates a sovereign national identity federation — with eduID.africa providing the continental roof above it. Your institutions register with your NREN; your NREN peers with eduID.africa.",
+      "featureA": {
+        "letter": "A",
+        "title": "Governance sovereignty",
+        "desc": "Your country sets the trust framework, membership criteria, and policies for your national federation. eduID.africa operates at the continental level only."
+      },
+      "featureB": {
+        "letter": "B",
+        "title": "Tooling and technical support",
+        "desc": "eduID.africa provides governance templates, federation software, peering documentation, and technical support for NREN-led deployments."
+      },
+      "featureC": {
+        "letter": "C",
+        "title": "T&I Roadshow programme",
+        "desc": "Regional workshops drive adoption in-country — helping your NREN build the institutional membership base that makes a national federation viable.",
+        "linkText": "View roadshow schedule"
+      }
+    },
+    "checklistSection": {
+      "eyebrow": "Checklist",
+      "headline": "What's needed to start",
+      "intro": "eduID.africa's assessment team will review your NREN's readiness across these areas before the deployment engagement begins.",
+      "items": [
+        "Mandated NREN with government backing or HEI sector agreement",
+        "Minimum 5–10 institutions willing to deploy BonafID or existing IdPs",
+        "Technical staff (at least one) to own federation operations",
+        "Willingness to adopt eduID.africa's trust framework policies",
+        "Basic server infrastructure or cloud access for federation metadata hosting"
+      ],
+      "callout": {
+        "title": "Not ready for Path A yet?",
+        "desc": "Your institutions can participate via the catchall federation while your NREN builds capacity toward a national federation. The catchall is a stepping stone, not a dead end.",
+        "linkText": "Explore Catchall Architecture"
+      }
+    },
+    "docsSection": {
+      "title": "Documentation and tooling",
+      "items": [
+        {
+          "category": "Guide",
+          "title": "National Federation Deployment Guide",
+          "meta": "PDF · 38 pages · Updated April 2026",
+          "action": "Download PDF"
+        },
+        {
+          "category": "Template",
+          "title": "Federation Policy Templates (NREN-ready)",
+          "meta": "ZIP · Governance docs · v2.1",
+          "action": "Download"
+        },
+        {
+          "category": "Technical spec",
+          "title": "Peering with eduID.africa — Technical Reference",
+          "meta": "PDF · 22 pages · June 2026",
+          "action": "Download PDF"
+        }
+      ]
+    },
+    "pillars": {
+      "sovereignty": {
+        "title": "Sovereign Ownership",
+        "desc": "Your NREN operates and governs its own national identity federation."
+      },
+      "roadshows": {
+        "title": "T&I Roadshows",
+        "desc": "On-site engineering, capacity building, and hands-on deployment support."
+      },
+      "peering": {
+        "title": "Global Peering",
+        "desc": "Instant gateway to continental resources, eduGAIN, and geteduroam."
+      }
+    }
+  },
   "notFoundPage": {
     "title": "Lost in flight?",
     "homeButton": "Find your way home"

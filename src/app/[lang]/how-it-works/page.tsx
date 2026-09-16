@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
-import { HowItWorksHero } from "@/components/HowItWorksHero";
+import { AboutHero } from "@/components/AboutHero";
 import { HowItWorksIntroSection } from "@/components/HowItWorksIntroSection";
 import { HowItWorksLayersSection } from "@/components/HowItWorksLayersSection";
 import { UserJourneySection } from "@/components/UserJourneySection";
@@ -46,14 +46,21 @@ export default async function HowItWorksPage({
   const dict = await getDictionary(locale);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0A162B]">
+    <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
       {/* Searchable-Style Navbar */}
       <Header locale={locale} dict={dict} />
 
       {/* Main Content Area */}
       <main className="flex-1">
-        {/* Hero Banner: How it works */}
-        <HowItWorksHero locale={locale} dict={dict} />
+        {/* Hero Banner using shared AboutHero */}
+        <AboutHero
+          title={
+            <>
+              How it <span className="text-[#1A73C3]">works</span>
+            </>
+          }
+          subtitle="From campus credentials to continental access: the technical and operational architecture of eduID.africa."
+        />
 
         {/* Intro Section: Three layers. One identity. Continent-scale access. */}
         <HowItWorksIntroSection locale={locale} dict={dict} />

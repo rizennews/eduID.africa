@@ -3,10 +3,10 @@ import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } fro
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { AboutHero } from "@/components/AboutHero";
-import { GovernanceIntroSection } from "@/components/GovernanceIntroSection";
-import { GovernanceLeadershipSection } from "@/components/GovernanceLeadershipSection";
-import { GovernancePoliciesSection } from "@/components/GovernancePoliciesSection";
-import { GovernanceProgrammeSection } from "@/components/GovernanceProgrammeSection";
+import { NrenOverviewSection } from "@/components/NrenOverviewSection";
+import { NrenSovereignSection } from "@/components/NrenSovereignSection";
+import { NrenChecklistSection } from "@/components/NrenChecklistSection";
+import { NrenDocsSection } from "@/components/NrenDocsSection";
 import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
@@ -25,14 +25,14 @@ export async function generateMetadata({
 
   return createLocalizedMetadata({
     locale,
-    path: "/governance",
-    title: "Governance — eduID.africa",
+    path: "/for-nren",
+    title: "For NRENs — Build a National Federation — eduID.africa",
     description:
-      "Standards-aligned. Transparently governed. Built to last. eduID.africa's governance framework ensures the continental federation operates to international standards.",
+      "Sovereign identity infrastructure, governance frameworks, training roadshows, and continental peering for Africa's National Research and Education Networks.",
   });
 }
 
-export default async function GovernancePage({
+export default async function ForNrenPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
@@ -51,30 +51,27 @@ export default async function GovernancePage({
 
       {/* Main Content Area */}
       <main className="flex-1">
-        {/* Unified Hero Banner using shared AboutHero */}
+        {/* Reusable Hero Component */}
         <AboutHero
           title={
             <>
-              Governance &amp; <span className="text-[#1A73C3]">Trust</span>
+              For <span className="text-[#1A73C3]">NRENs</span>
             </>
           }
-          subtitle={
-            dict.governancePage.hero.subtitle ||
-            "Standards-aligned continental oversight and operational framework."
-          }
+          subtitle={dict.nrenPage.hero.subtitle}
         />
 
-        {/* Standards & Accountability Overview Section */}
-        <GovernanceIntroSection locale={locale} dict={dict} />
+        {/* NREN Sovereign Infrastructure Overview Section */}
+        <NrenOverviewSection locale={locale} dict={dict} />
 
-        {/* Programme Leadership Section */}
-        <GovernanceLeadershipSection locale={locale} dict={dict} />
+        {/* Path of Preference: Sovereign Infrastructure Ledger (A, B, C) */}
+        <NrenSovereignSection locale={locale} dict={dict} />
 
-        {/* Policies and Terms Section */}
-        <GovernancePoliciesSection locale={locale} dict={dict} />
+        {/* Readiness Checklist & Stepping Stone Callout */}
+        <NrenChecklistSection locale={locale} dict={dict} />
 
-        {/* AfricaConnect4 Programme Section */}
-        <GovernanceProgrammeSection locale={locale} dict={dict} />
+        {/* Documentation and Tooling Ledger */}
+        <NrenDocsSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Wordmark Footer */}
