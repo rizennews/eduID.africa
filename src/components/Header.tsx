@@ -332,8 +332,8 @@ export function Header({ locale, dict }: HeaderProps) {
           </div>
         </nav>
 
-        {/* Right: SVG Flag Selector & "Get Started" CTA Button */}
-        <div className="hidden sm:flex items-center gap-3">
+        {/* Right: SVG Flag Selector & "Get Started" CTA Button (Desktop >= lg) */}
+        <div className="hidden lg:flex items-center gap-3">
           <SearchableLanguageSelector currentLocale={locale} />
 
           <Link
@@ -345,16 +345,25 @@ export function Header({ locale, dict }: HeaderProps) {
           </Link>
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <div className="flex items-center gap-2.5 lg:hidden">
+        {/* Mobile & Tablet Controls (< lg): Single Flag Selector + CTA + Hamburger Button */}
+        <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
           <SearchableLanguageSelector currentLocale={locale} />
+
+          <Link
+            href={`/${locale}/get-started`}
+            className="hidden sm:inline-flex items-center justify-center gap-1 h-9 px-3.5 rounded-full text-xs font-medium font-sans text-[#DE4A1B] bg-white border border-[#DE4A1B] hover:bg-[#DE4A1B] hover:text-white shadow-2xs transition-all active:scale-[0.98] select-none"
+          >
+            <span>{dict.nav.actions.getStarted}</span>
+            <ArrowUpRight size={13} className="stroke-[2]" />
+          </Link>
+
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors"
+            className="p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
