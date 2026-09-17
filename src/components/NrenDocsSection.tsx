@@ -62,11 +62,13 @@ export function NrenDocsSection({ locale: _locale, dict }: NrenDocsSectionProps)
               </div>
 
               {/* Action Button / Link */}
-              <div className="mt-8 pt-4 border-t border-dashed border-slate-300/80">
+              <div className="mt-8 pt-5 border-t border-dashed border-slate-300/80">
                 <a
                   href="#"
                   onClick={(e) => e.preventDefault()}
-                  className="group inline-flex items-center gap-2 text-sm font-medium text-[#0B357B] hover:text-[#1A73C3] transition-colors"
+                  className={`group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-opacity hover:opacity-90 ${
+                    ["bg-[#0B357B]", "bg-[#1A73C3]", "bg-[#DE4A1B]"][idx % 3]
+                  }`}
                 >
                   <span>{item.action}</span>
                   <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>

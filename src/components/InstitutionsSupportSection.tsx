@@ -28,10 +28,10 @@ export function InstitutionsSupportSection({ locale, dict }: InstitutionsSupport
   const { supportSection } = dict.institutionsPage;
 
   return (
-    <section className="py-12 sm:py-16 bg-[#F8FAFC] border-b border-dashed border-slate-300">
+    <section className="py-6 sm:py-8 lg:py-10 bg-[#F8FAFC] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-12">
+        <div className="max-w-none mb-10 sm:mb-12">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {supportSection.title}
           </h2>
@@ -45,7 +45,7 @@ export function InstitutionsSupportSection({ locale, dict }: InstitutionsSupport
           {supportSection.items.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/40"
+              className="flex flex-col justify-between p-6 sm:p-8 lg:p-8 transition-colors duration-200 hover:bg-slate-100/40"
             >
               <div>
                 <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#0B357B] tracking-tight leading-snug">
@@ -58,10 +58,12 @@ export function InstitutionsSupportSection({ locale, dict }: InstitutionsSupport
 
               {/* Action Link (if present) */}
               {item.linkText && item.href && (
-                <div className="mt-8 pt-4 border-t border-dashed border-slate-300/80">
+                <div className="mt-8 pt-5 border-t border-dashed border-slate-300/80">
                   <Link
                     href={`/${locale}${item.href}`}
-                    className="group inline-flex items-center gap-2 text-sm font-medium text-[#0B357B] hover:text-[#1A73C3] transition-colors"
+                    className={`group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-opacity hover:opacity-90 ${
+                      ["bg-[#0B357B]", "bg-[#1A73C3]", "bg-[#DE4A1B]"][idx % 3]
+                    }`}
                   >
                     <span>{item.linkText}</span>
                     <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>

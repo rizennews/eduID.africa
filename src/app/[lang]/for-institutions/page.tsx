@@ -55,7 +55,7 @@ export default async function ForInstitutionsPage({
               For <span className="text-white/80">Institutions</span>
             </>
           }
-          subtitle="Connect your campus identity management to national federations and continental services across Africa."
+          subtitle="Give your students and staff a credential that works everywhere."
         />
 
         {/* Institution Overview Section */}

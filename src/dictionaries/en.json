@@ -621,7 +621,7 @@
     },
     "benefitsSection": {
       "title": "What your institution gains",
-      "description": "Federation is not just a technical infrastructure project — it unlocks real services for your students, researchers, and staff from day one.",
+      "description": "Federation is not just a technical infrastructure project it unlocks real services for your students, researchers, and staff from day one.",
       "items": [
         {
           "num": "01",

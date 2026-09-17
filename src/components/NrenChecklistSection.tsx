@@ -54,13 +54,15 @@ export function NrenChecklistSection({ locale, dict }: NrenChecklistSectionProps
               <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed mb-4 font-normal">
                 {checklistSection.callout.desc}
               </p>
-              <Link
-                href={`/${locale}/how-it-works`}
-                className="group inline-flex items-center gap-1.5 text-xs font-medium text-[#0B357B] hover:text-[#1A73C3] transition-colors"
-              >
-                <span>{checklistSection.callout.linkText}</span>
-                <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
-              </Link>
+              <div className="mt-4 pt-4 border-t border-dashed border-slate-200">
+                <Link
+                  href={`/${locale}/how-it-works`}
+                  className="group inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-medium text-white bg-[#0B357B] transition-opacity hover:opacity-90"
+                >
+                  <span>{checklistSection.callout.linkText}</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                </Link>
+              </div>
             </div>
           </div>
 
