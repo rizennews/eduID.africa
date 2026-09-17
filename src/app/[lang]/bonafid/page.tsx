@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
 import { createLocalizedMetadata } from "@/lib/seo";
 import { Header } from "@/components/Header";
@@ -50,9 +51,14 @@ export default async function BonafIdPage({
       <main className="flex-1">
         <AboutHero
           title={
-            <>
-              Bonaf<span className="text-white/80">ID</span>
-            </>
+            <Image 
+              src="/BonafID-Logo.png" 
+              alt="BonafID" 
+              width={300} 
+              height={100} 
+              className="mx-auto w-auto h-12 sm:h-16 lg:h-20 object-contain"
+              priority
+            />
           }
           subtitle="Sovereign cloud identity and verifiable academic credentials for African students, researchers, and faculties."
         />
