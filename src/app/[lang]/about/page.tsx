@@ -29,7 +29,7 @@ export async function generateMetadata({
     path: "/about",
     title: "About eduID.africa — Africa's Continental Trust & Identity Framework",
     description:
-      "eduID.africa is the pan-African identity federation connecting the continent's research and education community to each other and to the world. Jointly governed by Africa's three regional research and education networks.",
+      "A Trusted Digital Identity Federation for African Research and Education",
   });
 }
 

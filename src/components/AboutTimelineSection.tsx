@@ -124,13 +124,12 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                 {/* Milestone Node */}
                 <div className="mb-5 flex flex-col items-center">
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs border transition-all bg-white ${
-                      m.isCurrent
+                    className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs border transition-all bg-white ${m.isCurrent
                         ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                         : m.isFuture
-                        ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
-                        : "border-slate-300 text-slate-600 hover:border-[#0B357B]"
-                    }`}
+                          ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
+                          : "border-slate-300 text-slate-600 hover:border-[#0B357B]"
+                      }`}
                   >
                     {m.isFuture ? (
                       <span className="text-sm">{m.indicator}</span>
@@ -140,13 +139,12 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
                   </div>
 
                   <span
-                    className={`mt-2 font-mono text-xs tracking-tight ${
-                      m.isCurrent
+                    className={`mt-2 font-mono text-xs tracking-tight ${m.isCurrent
                         ? "text-[#1A73C3] font-medium"
                         : m.isFuture
-                        ? "text-[#DE4A1B] font-medium"
-                        : "text-slate-500"
-                    }`}
+                          ? "text-[#DE4A1B] font-medium"
+                          : "text-slate-500"
+                      }`}
                   >
                     {m.year}
                   </span>
@@ -184,13 +182,12 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
             <div key={m.year} className="relative">
               {/* Node Marker on Spine */}
               <div
-                className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono bg-white border ${
-                  m.isCurrent
+                className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono bg-white border ${m.isCurrent
                     ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                     : m.isFuture
-                    ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
-                    : "border-slate-300 text-[#0B357B]"
-                }`}
+                      ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
+                      : "border-slate-300 text-[#0B357B]"
+                  }`}
               >
                 {m.isFuture ? m.indicator : idx + 1}
               </div>
