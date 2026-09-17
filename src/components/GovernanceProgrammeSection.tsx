@@ -169,47 +169,10 @@ export function GovernanceProgrammeSection({
   const section = dict.governancePage.programmeSection;
 
   return (
-    <section className="pt-12 sm:pt-16 pb-20 sm:pb-28 bg-[#F8FAFC] border-t border-dashed border-slate-300">
+    <section className="pt-6 sm:pt-8 pb-10 sm:pb-14 bg-[#F8FAFC] border-t border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-8 sm:mb-12">
-          <div className="text-xs font-mono font-bold tracking-widest text-[#1A73C3] uppercase mb-2">
-            {section.kicker}
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-[#0B357B] tracking-tight leading-tight">
-            {section.title}
-          </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
-            {section.description}
-          </p>
-        </div>
-
-        {/* 4 Program Metadata Facts in Monolithic Architectural Grid */}
-        <div className="border border-dashed border-slate-300 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-dashed divide-slate-300">
-          <FactTile
-            icon={ClockIcon}
-            label={section.facts.duration.label}
-            value={section.facts.duration.value}
-          />
-          <FactTile
-            icon={EarthIcon}
-            label={section.facts.funder.label}
-            value={section.facts.funder.value}
-          />
-          <FactTile
-            icon={WorkflowIcon}
-            label={section.facts.partners.label}
-            value={section.facts.partners.value}
-          />
-          <FactTile
-            icon={ShieldCheckIcon}
-            label={section.facts.deliverables.label}
-            value={section.facts.deliverables.value}
-          />
-        </div>
-
         {/* eduID.africa within AC4 Deliverables Architectural Container */}
-        <div className="mt-10 sm:mt-12 border border-dashed border-slate-300 bg-white overflow-hidden">
+        <div className="border border-dashed border-slate-300 bg-white overflow-hidden">
           {/* Card Header Bar */}
           <div className="px-6 sm:px-8 py-4 bg-slate-50/60 border-b border-dashed border-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>

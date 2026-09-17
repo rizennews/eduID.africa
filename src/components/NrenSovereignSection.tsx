@@ -40,7 +40,7 @@ export function NrenSovereignSection({ locale, dict }: NrenSovereignSectionProps
     <section className="py-12 sm:py-16 bg-[#F8FAFC] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl">
+        <div className="max-w-none">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {sovereignSection.headline}
           </h2>
@@ -52,7 +52,7 @@ export function NrenSovereignSection({ locale, dict }: NrenSovereignSectionProps
         {/* 3-Column Monolithic Architectural Ledger (A, B, C) */}
         <div className="mt-10 sm:mt-12 border-y border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-300/80 bg-white/40">
           {/* Card A: Governance sovereignty */}
-          <div className="flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/40">
+          <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-8 transition-colors duration-200 hover:bg-slate-100/40">
             <div>
               <div className="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#0B357B] shadow-2xs mb-6">
                 {sovereignSection.featureA.letter}
@@ -67,7 +67,7 @@ export function NrenSovereignSection({ locale, dict }: NrenSovereignSectionProps
           </div>
 
           {/* Card B: Tooling and technical support */}
-          <div className="flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/40">
+          <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-8 transition-colors duration-200 hover:bg-slate-100/40">
             <div>
               <div className="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#1A73C3] shadow-2xs mb-6">
                 {sovereignSection.featureB.letter}
@@ -82,7 +82,7 @@ export function NrenSovereignSection({ locale, dict }: NrenSovereignSectionProps
           </div>
 
           {/* Card C: T&I Roadshow programme */}
-          <div className="flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/40">
+          <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-8 transition-colors duration-200 hover:bg-slate-100/40">
             <div>
               <div className="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#DE4A1B] shadow-2xs mb-6">
                 {sovereignSection.featureC.letter}

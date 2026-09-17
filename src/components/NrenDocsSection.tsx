@@ -40,7 +40,7 @@ export function NrenDocsSection({ locale: _locale, dict }: NrenDocsSectionProps)
           {docsSection.items.map((item, idx) => (
             <div
               key={idx}
-              className="group flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/40"
+              className="group flex flex-col justify-between p-6 sm:p-8 lg:p-8 transition-colors duration-200 hover:bg-slate-100/40"
             >
               <div>
                 {/* Category Pill / Tag */}

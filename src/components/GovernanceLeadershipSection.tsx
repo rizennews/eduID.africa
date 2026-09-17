@@ -160,10 +160,10 @@ export function GovernanceLeadershipSection({
   const section = dict.governancePage.leadershipSection;
 
   return (
-    <section className="pt-12 sm:pt-16 pb-16 sm:pb-20 bg-[#F8FAFC]">
+    <section className="pt-6 sm:pt-8 pb-8 sm:pb-12 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-8 sm:mb-12">
+        <div className="max-w-none mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-[#0B357B] tracking-tight leading-tight">
             {section.title}
           </h2>
