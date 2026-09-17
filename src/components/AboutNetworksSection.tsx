@@ -55,7 +55,7 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
       shortName: data.network3.shortName,
       fullName: data.network3.fullName,
       region: data.network3.region,
-      url: "https://asrenorg.net/",
+      url: "https://www.asren.net",
       logo: "/networks-logo/asren.png",
       accent: "#DE4A1B",
     },
@@ -99,11 +99,11 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
                 </div>
 
                 <div className="mb-4 h-12 sm:h-14 lg:h-16 flex items-center">
-                  <Image 
-                    src={net.logo} 
-                    alt={net.shortName} 
-                    width={180} 
-                    height={60} 
+                  <Image
+                    src={net.logo}
+                    alt={net.shortName}
+                    width={180}
+                    height={60}
                     className="max-w-[140px] max-h-[48px] object-contain object-left"
                   />
                 </div>
