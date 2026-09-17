@@ -53,15 +53,10 @@ export default async function GovernancePage({
       <main className="flex-1">
         {/* Unified Hero Banner using shared AboutHero */}
         <AboutHero
-          title={
-            <>
-              Governance &amp; <span className="text-white/80">Trust</span>
-            </>
-          }
-          subtitle={
-            dict.governancePage.hero.subtitle ||
-            "Standards-aligned continental oversight and operational framework."
-          }
+          title={dict.governancePage.hero.title}
+          subtitle={dict.governancePage.hero.subtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Standards & Accountability Overview Section */}

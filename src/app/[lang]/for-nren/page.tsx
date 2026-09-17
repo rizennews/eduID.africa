@@ -53,12 +53,10 @@ export default async function ForNrenPage({
       <main className="flex-1">
         {/* Reusable Hero Component */}
         <AboutHero
-          title={
-            <>
-              For <span className="text-white/80">NRENs</span>
-            </>
-          }
+          title={dict.nrenPage.hero.title}
           subtitle={dict.nrenPage.hero.subtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* NREN Sovereign Infrastructure Overview Section */}

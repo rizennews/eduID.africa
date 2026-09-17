@@ -50,12 +50,10 @@ export default async function ForInstitutionsPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              For <span className="text-white/80">Institutions</span>
-            </>
-          }
-          subtitle="Give your students and staff a credential that works everywhere."
+          title={dict.institutionsPage.hero.title}
+          subtitle={dict.institutionsPage.hero.subtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Institution Overview Section */}

@@ -29,7 +29,7 @@ export function GetStartedNotConnectedSection({
   };
 
   return (
-    <section className="pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12 bg-[#F8FAFC]">
+    <section className="pb-8 pt-6 sm:pb-10 sm:pt-8 lg:pb-12 lg:pt-10 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative border border-dashed border-slate-300 rounded-2xl bg-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xs">
           {/* Subtle background radial tint */}
@@ -38,7 +38,7 @@ export function GetStartedNotConnectedSection({
             aria-hidden="true"
           />
 
-          <div className="relative z-10 max-w-3xl">
+          <div className="relative z-10 max-w-none">
             {/* Main Headline */}
             <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[42px] text-[#0B357B] tracking-tight leading-tight">
               {sectionData.title}

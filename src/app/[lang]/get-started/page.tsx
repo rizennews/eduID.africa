@@ -49,15 +49,10 @@ export default async function GetStartedPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              Get <span className="text-white/80">Started</span>
-            </>
-          }
-          subtitle={
-            (dict as any).getStartedPage?.heroSubtitle ||
-            "Fast, seamless access to eduroam Wi-Fi and continental academic resources across Africa."
-          }
+          title={dict.getStartedPage.heroTitle}
+          subtitle={dict.getStartedPage.heroSubtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Page Overview Section: Set up geteduroam in under three minutes */}

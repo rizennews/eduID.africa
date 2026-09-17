@@ -46,12 +46,10 @@ export default async function NewsPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              News &amp; <span className="text-white/80">Updates</span>
-            </>
-          }
-          subtitle="Continental federation announcements, deployment milestones, and community updates."
+          title={dict.newsPage.title}
+          subtitle={dict.newsPage.subtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Latest Announcements Listing Section */}

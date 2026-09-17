@@ -45,12 +45,9 @@ export default async function PoliciesPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              Policies &amp; <span className="text-white/80">Terms</span>
-            </>
-          }
-          subtitle="Authoritative frameworks, participation agreements, and legal templates governing the eduID.africa ecosystem."
+          title={dict.footer.terms}
+          locale={locale}
+          dict={dict}
         />
       </main>
       <Footer locale={locale} dict={dict} />

@@ -48,12 +48,10 @@ export default async function ModulesPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              Federation <span className="text-white/80">Modules</span>
-            </>
-          }
-          subtitle="Open-source federation libraries, protocol adapters, and integration toolsets for African research and education."
+          title={dict.modulesPage.hero.title}
+          subtitle={dict.modulesPage.hero.subtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Modules Overview: Modular federation tooling */}

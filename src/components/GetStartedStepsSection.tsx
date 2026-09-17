@@ -44,10 +44,10 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
   const { step1, step2, step3 } = stepsSection;
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white border-b border-dashed border-slate-300">
+    <section className="py-8 sm:py-10 lg:py-12 bg-white border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title (No Eyebrow) */}
-        <div className="max-w-3xl mb-10 sm:mb-14">
+        <div className="max-w-none mb-6 sm:mb-8">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {stepsSection.title}
           </h2>
@@ -56,7 +56,7 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
         {/* Steps Sequence Ledger */}
         <div className="border-t border-dashed border-slate-300 divide-y divide-dashed divide-slate-300/80">
           {/* STEP 1: Download geteduroam app */}
-          <div className="py-10 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="py-6 sm:py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-4">
                 <span className="w-9 h-9 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#0B357B] shadow-2xs shrink-0">
@@ -173,7 +173,7 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
           </div>
 
           {/* STEP 2: Sign in with your institutional account */}
-          <div className="py-10 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="py-6 sm:py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-4">
               <div className="flex items-center gap-4">
                 <span className="w-9 h-9 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#0B357B] shadow-2xs shrink-0">
@@ -224,8 +224,8 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
           </div>
 
           {/* STEP 3: You're connected — everywhere */}
-          <div className="py-10 sm:py-12 space-y-8">
-            <div className="max-w-3xl space-y-4">
+          <div className="py-6 sm:py-8 space-y-8">
+            <div className="max-w-none space-y-4">
               <div className="flex items-center gap-4">
                 <span className="w-9 h-9 rounded-full bg-[#1A73C3] text-white flex items-center justify-center font-mono text-sm font-bold shadow-2xs shrink-0">
                   {step3.num}

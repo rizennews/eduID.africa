@@ -47,12 +47,10 @@ export default async function TrainingPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              Training &amp; <span className="text-white/80">Capacity</span>
-            </>
-          }
-          subtitle="Technical tutorials, administrator workshops, and deployment roadshows for African campus engineers."
+          title={dict.nav.resources.training.title}
+          subtitle={dict.nav.resources.training.desc}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Training Overview: Hands-on deployment support */}

@@ -60,6 +60,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
       className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
     >
       <head>

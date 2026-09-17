@@ -53,14 +53,12 @@ export default async function AboutPage({
       {/* Main Content Area */}
       <main className="flex-1">
         {/* Hero Banner: About eduID */}
-        <AboutHero 
-          subtitle="A Trusted Digital Identity Federation for African Research and Education"
-          locale={locale} 
-          dict={dict} 
+        <AboutHero
+          title={dict.nav.eduid.about.title}
+          subtitle={dict.about.description}
+          locale={locale}
+          dict={dict}
         />
-
-        {/* Framework Architecture & Regional REN Governance Overview Card */}
-        <AboutOverviewSection locale={locale} dict={dict} />
 
         {/* Three networks. One framework. (Three Joined Side-by-Side) */}
         <AboutNetworksSection locale={locale} dict={dict} />

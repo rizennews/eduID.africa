@@ -54,12 +54,10 @@ export default async function HowItWorksPage({
       <main className="flex-1">
         {/* Hero Banner using shared AboutHero */}
         <AboutHero
-          title={
-            <>
-              How it <span className="text-white/80">works</span>
-            </>
-          }
-          subtitle="From campus credentials to continental access: the technical and operational architecture of eduID.africa."
+          title={dict.howItWorks.heroTitle}
+          subtitle={dict.howItWorks.description}
+          locale={locale}
+          dict={dict}
         />
 
         {/* Intro Section: Three layers. One identity. Continent-scale access. */}

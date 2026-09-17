@@ -22,8 +22,8 @@ export function ModulesCtaSection({ locale, dict }: ModulesCtaSectionProps) {
   const { ctaSection } = dict.modulesPage;
 
   return (
-    <section className="py-16 sm:py-20 bg-[#F8FAFC] border-b border-dashed border-slate-300">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-6 sm:py-8 lg:py-10 bg-[#F8FAFC] border-b border-dashed border-slate-300">
+      <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Editorial Display Headline */}
         <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[42px] text-[#0B357B] tracking-tight leading-tight mb-4">
           {ctaSection.title}

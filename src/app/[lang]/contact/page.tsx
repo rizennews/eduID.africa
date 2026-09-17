@@ -45,12 +45,9 @@ export default async function ContactPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              Contact <span className="text-white/80">eduID.africa</span>
-            </>
-          }
-          subtitle="Get in touch with regional RREN leadership, technical teams, and support staff across the continent."
+          title={dict.footer.colOrgLink4}
+          locale={locale}
+          dict={dict}
         />
       </main>
       <Footer locale={locale} dict={dict} />

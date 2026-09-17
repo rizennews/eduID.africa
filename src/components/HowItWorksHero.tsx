@@ -23,7 +23,7 @@ export function HowItWorksHero({ locale: _locale, dict }: HowItWorksHeroProps) {
           How it <span className="text-[#1A73C3]">works</span>
         </h1>
 
-        <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans max-w-2xl mx-auto font-normal leading-relaxed">
+        <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans font-normal leading-relaxed">
           Africa&apos;s continental Trust &amp; Identity framework for research and education.
         </p>
       </div>

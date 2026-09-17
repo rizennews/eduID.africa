@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { locales, type Locale } from "@/lib/i18n";
 import { ChevronDown, Check } from "lucide-react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { FlagUK, FlagFrance, FlagPortugal } from "@/components/ui/flags";
+import { FlagUK, FlagFrance, FlagPortugal, FlagArabic } from "@/components/ui/flags";
 import { cn } from "@/lib/utils";
 
 interface LanguageOption {
@@ -18,6 +18,7 @@ const languages: LanguageOption[] = [
   { code: "en", label: "English", flagComponent: FlagUK },
   { code: "fr", label: "Français", flagComponent: FlagFrance },
   { code: "pt", label: "Português", flagComponent: FlagPortugal },
+  { code: "ar", label: "العربية", flagComponent: FlagArabic },
 ];
 
 interface SearchableLanguageSelectorProps {

@@ -46,18 +46,10 @@ export default async function EventsPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <>
-              Events &amp; <span className="text-white/80">Roadshows</span>
-            </>
-          }
-          subtitle={
-            locale === "fr"
-              ? "Conférences, webinaires, ateliers techniques et sommets de l'identité continentale."
-              : locale === "pt"
-              ? "Conferências, webinars, workshops técnicos e cúpulas de identidade continental."
-              : "Conferences, webinars, technical workshops, and continental identity summits."
-          }
+          title={dict.eventsPage.title}
+          subtitle={dict.eventsPage.subtitle}
+          locale={locale}
+          dict={dict}
         />
         <EventsScheduleSection locale={locale} dict={dict as any} />
       </main>

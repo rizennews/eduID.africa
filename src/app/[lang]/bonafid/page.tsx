@@ -50,17 +50,10 @@ export default async function BonafIdPage({
       <Header locale={locale} dict={dict} />
       <main className="flex-1">
         <AboutHero
-          title={
-            <Image 
-              src="/BonafID-Logo.png" 
-              alt="BonafID" 
-              width={300} 
-              height={100} 
-              className="mx-auto w-auto h-12 sm:h-16 lg:h-20 object-contain"
-              priority
-            />
-          }
-          subtitle="Sovereign cloud identity and verifiable academic credentials for African students, researchers, and faculties."
+          title={dict.bonafidPage.hero.title}
+          subtitle={dict.bonafidPage.hero.subtitle}
+          locale={locale}
+          dict={dict}
         />
 
         {/* BonafID Overview Section */}

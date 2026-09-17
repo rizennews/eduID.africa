@@ -179,10 +179,10 @@ export function ModulesCatalogSection({ locale, dict }: ModulesCatalogSectionPro
   const { catalogSection } = dict.modulesPage;
 
   return (
-    <section id="catalog" className="py-12 sm:py-16 bg-[#F8FAFC] border-b border-dashed border-slate-300">
+    <section id="catalog" className="py-6 sm:py-8 lg:py-10 bg-[#F8FAFC] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header: Minimal Headline (No Eyebrow) */}
-        <div className="max-w-3xl mb-10 sm:mb-12">
+        <div className="max-w-none mb-10 sm:mb-12">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {catalogSection.title}
           </h2>

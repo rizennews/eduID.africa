@@ -64,3 +64,22 @@ export function FlagPortugal({ className = "w-5 h-3.5" }: { className?: string }
     </svg>
   );
 }
+
+export function FlagArabic({ className = "w-5 h-3.5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 60 40"
+      className={`rounded-sm overflow-hidden shrink-0 shadow-xs border border-black/10 ${className}`}
+      aria-hidden="true"
+    >
+      {/* Green background (Arab League flag) */}
+      <rect width="60" height="40" fill="#007A3D" />
+      {/* White Arab League emblem (simplified wreath + circle) */}
+      <circle cx="30" cy="20" r="9" fill="none" stroke="white" strokeWidth="1.2" />
+      <circle cx="30" cy="20" r="4" fill="none" stroke="white" strokeWidth="1" />
+      {/* Simplified wreath arcs */}
+      <path d="M22 20 Q23 14 30 13 Q37 14 38 20" fill="none" stroke="white" strokeWidth="1" />
+      <path d="M22 20 Q23 26 30 27 Q37 26 38 20" fill="none" stroke="white" strokeWidth="1" />
+    </svg>
+  );
+}
