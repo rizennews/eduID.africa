@@ -349,12 +349,12 @@ export function getNewsArticles(locale: Locale): {
   return newsArticles.map((article) => ({
     slug: article.slug,
     image: article.image,
-    imageCaption: article.imageCaption[locale] || article.imageCaption.en,
-    category: article.category[locale] || article.category.en,
+    imageCaption: (article.imageCaption as any)[locale] || article.imageCaption.en,
+    category: (article.category as any)[locale] || article.category.en,
     date: article.date,
-    readTime: article.readTime[locale] || article.readTime.en,
-    title: article.title[locale] || article.title.en,
-    excerpt: article.excerpt[locale] || article.excerpt.en,
+    readTime: (article.readTime as any)[locale] || article.readTime.en,
+    title: (article.title as any)[locale] || article.title.en,
+    excerpt: (article.excerpt as any)[locale] || article.excerpt.en,
     meta: article.meta,
   }));
 }
@@ -377,14 +377,14 @@ export function getNewsArticleBySlug(slug: string, locale: Locale): {
   return {
     slug: article.slug,
     image: article.image,
-    imageCaption: article.imageCaption[locale] || article.imageCaption.en,
-    category: article.category[locale] || article.category.en,
+    imageCaption: (article.imageCaption as any)[locale] || article.imageCaption.en,
+    category: (article.category as any)[locale] || article.category.en,
     date: article.date,
-    readTime: article.readTime[locale] || article.readTime.en,
-    title: article.title[locale] || article.title.en,
-    excerpt: article.excerpt[locale] || article.excerpt.en,
-    content: article.content[locale] || article.content.en,
-    keyTakeaways: article.keyTakeaways[locale] || article.keyTakeaways.en,
+    readTime: (article.readTime as any)[locale] || article.readTime.en,
+    title: (article.title as any)[locale] || article.title.en,
+    excerpt: (article.excerpt as any)[locale] || article.excerpt.en,
+    content: (article.content as any)[locale] || article.content.en,
+    keyTakeaways: (article.keyTakeaways as any)[locale] || article.keyTakeaways.en,
     meta: article.meta,
   };
 }

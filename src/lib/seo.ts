@@ -42,12 +42,14 @@ export function createLocalizedMetadata({
     en: "eduID.africa — Sovereign Digital Identity Federation for African Academia",
     fr: "eduID.africa — Fédération d'Identité Numérique Souveraine pour l'Afrique",
     pt: "eduID.africa — Federação Soberana de Identidade Digital para África",
+    ar: "eduID.africa — اتحاد الهوية الرقمية السيادية للأكاديميا الأفريقية",
   };
 
   const defaultDescriptions: Record<Locale, string> = {
     en: "Pan-African trust federation providing sovereign federated single sign-on, verifiable digital credentials, and cross-border research access across 54 African nations.",
     fr: "Fédération de confiance panafricaine offrant une authentification unique souveraine, des diplômes numériques vérifiables et un accès à la recherche dans 54 nations.",
     pt: "Federação pan-africana de confiança fornecendo Single Sign-On soberano, credenciais digitais verificáveis e acesso à pesquisa em 54 nações.",
+    ar: "اتحاد ثقة أفريقي شامل يوفر دخولاً موحداً سيادياً، وشهادات أكاديمية رقمية قابلة للتحقق، وإمكانية وصول بحثي عابرة للحدود عبر 54 دولة أفريقية.",
   };
 
   const finalTitle = title || defaultTitles[locale];
@@ -70,10 +72,10 @@ export function createLocalizedMetadata({
       description: finalDescription,
       url: canonicalUrl,
       siteName: siteConfig.name,
-      locale: locale === "en" ? "en_US" : locale === "fr" ? "fr_FR" : "pt_PT",
+      locale: locale === "en" ? "en_US" : locale === "fr" ? "fr_FR" : locale === "pt" ? "pt_PT" : "ar_SA",
       alternateLocale: locales
         .filter((l) => l !== locale)
-        .map((l) => (l === "en" ? "en_US" : l === "fr" ? "fr_FR" : "pt_PT")),
+        .map((l) => (l === "en" ? "en_US" : l === "fr" ? "fr_FR" : l === "pt" ? "pt_PT" : "ar_SA")),
       type: ogType,
       images: [
         {
@@ -125,6 +127,8 @@ export function generateOrganizationSchema(locale: Locale) {
             ? "Fédération panafricaine d'identité souveraine pour l'enseignement supérieur et la recherche."
             : locale === "pt"
             ? "Federação pan-africana de identidade soberana para o ensino superior e pesquisa."
+            : locale === "ar"
+            ? "اتحاد الهوية الرقمية السيادية الأفريقي للتعليم العالي والبحث العلمي."
             : "Pan-African sovereign digital identity federation for higher education and research.",
         areaServed: {
           "@type": "Place",
@@ -141,7 +145,7 @@ export function generateOrganizationSchema(locale: Locale) {
         publisher: {
           "@id": `${siteConfig.baseUrl}/#organization`,
         },
-        inLanguage: ["en", "fr", "pt"],
+        inLanguage: ["en", "fr", "pt", "ar"],
       },
     ],
   };

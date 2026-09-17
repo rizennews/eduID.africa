@@ -192,14 +192,14 @@ export const roadshowEvents: RoadshowEvent[] = [
 export function getRoadshowEvents(locale: Locale) {
   return roadshowEvents.map((event) => ({
     id: event.id,
-    month: event.month[locale] || event.month.en,
+    month: (event.month as any)[locale] || event.month.en,
     day: event.day,
     year: event.year,
-    title: event.title[locale] || event.title.en,
-    venue: event.venue[locale] || event.venue.en,
-    duration: event.duration[locale] || event.duration.en,
-    audience: event.audience[locale] || event.audience.en,
-    status: event.status[locale] || event.status.en,
+    title: (event.title as any)[locale] || event.title.en,
+    venue: (event.venue as any)[locale] || event.venue.en,
+    duration: (event.duration as any)[locale] || event.duration.en,
+    audience: (event.audience as any)[locale] || event.audience.en,
+    status: (event.status as any)[locale] || event.status.en,
     statusType: event.statusType,
     indicoUrl: event.indicoUrl,
   }));

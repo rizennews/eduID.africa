@@ -68,10 +68,10 @@ export default async function NewsDetailPage({
     .map((a) => ({
       slug: a.slug,
       image: a.image,
-      title: a.title[locale] || a.title.en,
-      category: a.category[locale] || a.category.en,
+      title: (a.title as any)[locale] || a.title.en,
+      category: (a.category as any)[locale] || a.category.en,
       date: a.date,
-      excerpt: a.excerpt[locale] || a.excerpt.en,
+      excerpt: (a.excerpt as any)[locale] || a.excerpt.en,
     }));
 
   return (
