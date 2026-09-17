@@ -49,7 +49,7 @@ export default async function TrainingPage({
         <AboutHero
           title={
             <>
-              Training &amp; <span className="text-[#1A73C3]">Capacity</span>
+              Training &amp; <span className="text-white/80">Capacity</span>
             </>
           }
           subtitle="Technical tutorials, administrator workshops, and deployment roadshows for African campus engineers."

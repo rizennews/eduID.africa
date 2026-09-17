@@ -55,7 +55,7 @@ export default async function ForNrenPage({
         <AboutHero
           title={
             <>
-              For <span className="text-[#1A73C3]">NRENs</span>
+              For <span className="text-white/80">NRENs</span>
             </>
           }
           subtitle={dict.nrenPage.hero.subtitle}

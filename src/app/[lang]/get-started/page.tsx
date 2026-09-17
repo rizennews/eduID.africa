@@ -51,7 +51,7 @@ export default async function GetStartedPage({
         <AboutHero
           title={
             <>
-              Get <span className="text-[#1A73C3]">Started</span>
+              Get <span className="text-white/80">Started</span>
             </>
           }
           subtitle={

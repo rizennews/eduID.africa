@@ -51,7 +51,7 @@ export default async function BonafIdPage({
         <AboutHero
           title={
             <>
-              Bonaf<span className="text-[#1A73C3]">ID</span>
+              Bonaf<span className="text-white/80">ID</span>
             </>
           }
           subtitle="Sovereign cloud identity and verifiable academic credentials for African students, researchers, and faculties."

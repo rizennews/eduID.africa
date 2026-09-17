@@ -29,7 +29,7 @@ export function GetStartedNotConnectedSection({
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#F8FAFC]">
+    <section className="pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative border border-dashed border-slate-300 rounded-2xl bg-white p-8 sm:p-12 lg:p-16 overflow-hidden shadow-2xs">
           {/* Subtle background radial tint */}

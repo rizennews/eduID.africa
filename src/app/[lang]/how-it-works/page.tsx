@@ -56,7 +56,7 @@ export default async function HowItWorksPage({
         <AboutHero
           title={
             <>
-              How it <span className="text-[#1A73C3]">works</span>
+              How it <span className="text-white/80">works</span>
             </>
           }
           subtitle="From campus credentials to continental access: the technical and operational architecture of eduID.africa."

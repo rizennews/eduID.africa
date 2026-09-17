@@ -55,7 +55,7 @@ export default async function GovernancePage({
         <AboutHero
           title={
             <>
-              Governance &amp; <span className="text-[#1A73C3]">Trust</span>
+              Governance &amp; <span className="text-white/80">Trust</span>
             </>
           }
           subtitle={

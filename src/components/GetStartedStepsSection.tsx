@@ -85,23 +85,23 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
             </div>
 
             {/* App Store Download Badges */}
-            <div className="lg:col-span-5 flex flex-wrap sm:flex-col lg:flex-row gap-3 pt-2 lg:pt-4">
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 lg:pt-4">
               <a
                 href="https://play.google.com/store/apps/details?id=app.eduroam.geteduroam"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group flex-1 min-w-[200px]"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
               >
                 <img
                   src="/google-play.svg"
                   alt="Google Play"
                   className="w-7 h-7 object-contain shrink-0"
                 />
-                <div className="text-left">
-                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none">
+                <div className="text-left min-w-0">
+                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
                     Android
                   </span>
-                  <span className="text-xs sm:text-sm font-medium font-sans text-slate-800 group-hover:text-[#0B357B]">
+                  <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
                     {step1.playStore}
                   </span>
                 </div>
@@ -111,19 +111,61 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                 href="https://apps.apple.com/app/geteduroam/id1504076137"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group flex-1 min-w-[200px]"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
               >
                 <img
                   src="/app-store.svg"
                   alt="App Store"
                   className="w-7 h-7 object-contain shrink-0"
                 />
-                <div className="text-left">
-                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none">
+                <div className="text-left min-w-0">
+                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
                     iOS &amp; Apple
                   </span>
-                  <span className="text-xs sm:text-sm font-medium font-sans text-slate-800 group-hover:text-[#0B357B]">
+                  <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
                     {step1.appStore}
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.geteduroam.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
+              >
+                <img
+                  src="/windows.svg"
+                  alt="Windows"
+                  className="w-7 h-7 object-contain shrink-0"
+                />
+                <div className="text-left min-w-0">
+                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
+                    Windows
+                  </span>
+                  <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
+                    {(step1 as any).windowsStore || "Get for Windows"}
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://www.geteduroam.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
+              >
+                <img
+                  src="/linux.svg"
+                  alt="Linux"
+                  className="w-7 h-7 object-contain shrink-0"
+                />
+                <div className="text-left min-w-0">
+                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
+                    Linux
+                  </span>
+                  <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
+                    {(step1 as any).linuxStore || "Get for Linux"}
                   </span>
                 </div>
               </a>
@@ -154,7 +196,6 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                   <span className="font-mono text-[11px] font-medium text-slate-400 uppercase tracking-wider">
                     {step2.mockupLabel}
                   </span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
                 <div className="pt-4 space-y-3">
                   <h4 className="font-serif text-lg font-normal text-[#0B357B]">

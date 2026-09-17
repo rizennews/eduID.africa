@@ -52,7 +52,7 @@ export default async function ForInstitutionsPage({
         <AboutHero
           title={
             <>
-              For <span className="text-[#1A73C3]">Institutions</span>
+              For <span className="text-white/80">Institutions</span>
             </>
           }
           subtitle="Connect your campus identity management to national federations and continental services across Africa."

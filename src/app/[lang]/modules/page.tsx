@@ -50,7 +50,7 @@ export default async function ModulesPage({
         <AboutHero
           title={
             <>
-              Federation <span className="text-[#1A73C3]">Modules</span>
+              Federation <span className="text-white/80">Modules</span>
             </>
           }
           subtitle="Open-source federation libraries, protocol adapters, and integration toolsets for African research and education."

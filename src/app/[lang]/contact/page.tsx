@@ -47,7 +47,7 @@ export default async function ContactPage({
         <AboutHero
           title={
             <>
-              Contact <span className="text-[#1A73C3]">eduID.africa</span>
+              Contact <span className="text-white/80">eduID.africa</span>
             </>
           }
           subtitle="Get in touch with regional RREN leadership, technical teams, and support staff across the continent."

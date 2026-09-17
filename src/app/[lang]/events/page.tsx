@@ -48,7 +48,7 @@ export default async function EventsPage({
         <AboutHero
           title={
             <>
-              Events &amp; <span className="text-[#1A73C3]">Roadshows</span>
+              Events &amp; <span className="text-white/80">Roadshows</span>
             </>
           }
           subtitle={

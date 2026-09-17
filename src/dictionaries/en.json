@@ -1002,7 +1002,9 @@
         "description": "Available on Android and iOS. The app handles certificate generation automatically using your institutional identity — no technical knowledge required.",
         "platforms": ["Android", "iOS", "Windows", "macOS"],
         "playStore": "Get on Play Store",
-        "appStore": "Get on App Store"
+        "appStore": "Get on App Store",
+        "windowsStore": "Get for Windows",
+        "linuxStore": "Get for Linux"
       },
       "step2": {
         "num": "2",

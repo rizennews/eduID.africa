@@ -47,7 +47,7 @@ export default async function PoliciesPage({
         <AboutHero
           title={
             <>
-              Policies &amp; <span className="text-[#1A73C3]">Terms</span>
+              Policies &amp; <span className="text-white/80">Terms</span>
             </>
           }
           subtitle="Authoritative frameworks, participation agreements, and legal templates governing the eduID.africa ecosystem."

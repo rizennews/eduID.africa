@@ -48,7 +48,7 @@ export default async function NewsPage({
         <AboutHero
           title={
             <>
-              News &amp; <span className="text-[#1A73C3]">Updates</span>
+              News &amp; <span className="text-white/80">Updates</span>
             </>
           }
           subtitle="Continental federation announcements, deployment milestones, and community updates."
