@@ -13,7 +13,7 @@ export interface AboutHeroProps {
 export function AboutHero({
   title = (
     <>
-      About <span className="text-[#1A73C3]">eduID.africa</span>
+      About <span className="text-white/80">eduID.africa</span>
     </>
   ),
   subtitle = "Africa's continental Trust & Identity framework for research and education.",

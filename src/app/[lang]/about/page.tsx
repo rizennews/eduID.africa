@@ -53,7 +53,11 @@ export default async function AboutPage({
       {/* Main Content Area */}
       <main className="flex-1">
         {/* Hero Banner: About eduID */}
-        <AboutHero locale={locale} dict={dict} />
+        <AboutHero 
+          subtitle="A Trusted Digital Identity Federation for African Research and Education"
+          locale={locale} 
+          dict={dict} 
+        />
 
         {/* Framework Architecture & Regional REN Governance Overview Card */}
         <AboutOverviewSection locale={locale} dict={dict} />
@@ -66,9 +70,6 @@ export default async function AboutPage({
 
         {/* Timeline: How we got here */}
         <AboutTimelineSection locale={locale} dict={dict} />
-
-        {/* Continental Governance & Global REN Partners */}
-        <GovernancePartnersSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Massive Wordmark Footer */}

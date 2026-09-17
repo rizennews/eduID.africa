@@ -40,7 +40,7 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
   const mission = dict.about.mission;
 
   return (
-    <section className="py-12 sm:py-16 bg-[#F8FAFC]">
+    <section className="pt-6 sm:pt-8 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
@@ -130,13 +130,10 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
                 </p>
               </div>
 
-              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 space-y-2">
-                <div className="text-xs font-medium text-slate-700 font-sans">
-                  Sovereign country-owned identity infrastructure
-                </div>
-                <div className="text-xs font-medium text-slate-700 font-sans">
-                  NREN governance tooling, training &amp; roadshows
-                </div>
+              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-700 font-sans">
+                <span>Sovereign country-owned identity infrastructure</span>
+                <span className="text-slate-300" aria-hidden="true">/</span>
+                <span>NREN governance tooling, training &amp; roadshows</span>
               </div>
             </div>
 
@@ -165,14 +162,13 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
                 </p>
               </div>
 
-              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 space-y-2">
-                <div className="text-xs font-medium text-slate-700 font-sans">
-                  Cloud-hosted, open-source federated IAM
-                </div>
-                <div className="text-xs font-medium text-slate-700 font-sans">
+              <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-700 font-sans">
+                <span>Cloud-hosted, open-source federated IAM</span>
+                <span className="text-slate-300" aria-hidden="true">/</span>
+                <span>
                   Instant participation via{" "}
                   <span className="text-[#0B357B] font-medium">BonafID</span>
-                </div>
+                </span>
               </div>
             </div>
           </div>

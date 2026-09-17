@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import type { Locale } from "@/lib/i18n";
 
 interface AboutNetworksSectionProps {
@@ -38,24 +39,30 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
       shortName: data.network1.shortName,
       fullName: data.network1.fullName,
       region: data.network1.region,
+      url: "https://ubuntunet.net/",
+      logo: "/networks-logo/ubuntunet-alliance-logo-2.png",
       accent: "#0B357B",
     },
     {
       shortName: data.network2.shortName,
       fullName: data.network2.fullName,
       region: data.network2.region,
+      url: "https://wacren.net/",
+      logo: "/networks-logo/wacren.png",
       accent: "#1A73C3",
     },
     {
       shortName: data.network3.shortName,
       fullName: data.network3.fullName,
       region: data.network3.region,
+      url: "https://asrenorg.net/",
+      logo: "/networks-logo/asren.png",
       accent: "#DE4A1B",
     },
   ];
 
   return (
-    <section className="py-12 sm:py-16 bg-[#F8FAFC]">
+    <section className="pt-12 sm:pt-16 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
@@ -75,9 +82,13 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
         {/* Monolithic 3-Column Architectural Grid */}
         <div className="border-y border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-300/80">
           {networks.map((net) => (
-            <div
+            <a
               key={net.shortName}
+              href={net.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative flex flex-col justify-between p-8 sm:p-10 lg:p-12 transition-colors duration-200 hover:bg-slate-100/50"
+              style={{ "--card-accent": net.accent } as React.CSSProperties}
             >
               {/* Upper Content: Serif Headline & Relaxed Body */}
               <div>
@@ -87,7 +98,17 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
                   </span>
                 </div>
 
-                <h3 className="font-serif text-2xl sm:text-[28px] lg:text-[30px] font-normal text-[#0B357B] tracking-tight leading-snug">
+                <div className="mb-4 h-12 sm:h-14 lg:h-16 flex items-center">
+                  <Image 
+                    src={net.logo} 
+                    alt={net.shortName} 
+                    width={180} 
+                    height={60} 
+                    className="max-w-[140px] max-h-[48px] object-contain object-left"
+                  />
+                </div>
+
+                <h3 className="font-serif text-2xl sm:text-[28px] lg:text-[30px] font-normal text-[#0B357B] tracking-tight leading-snug group-hover:text-[var(--card-accent)] transition-colors">
                   {net.shortName}
                 </h3>
 
@@ -96,16 +117,19 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
                 </p>
               </div>
 
-              {/* Spacious Negative Space Spacer */}
-              <div className="min-h-[80px] sm:min-h-[100px] flex-1" />
+              {/* Normal Spacer to push footer down */}
+              <div className="flex-1 mt-8" />
 
               {/* Footer Area: Dashed Divider + Region Tag */}
               <div className="pt-4 border-t border-dashed border-slate-300/80 flex items-center justify-between">
                 <span className="font-mono text-xs text-slate-600 tracking-wider">
                   {net.region}
                 </span>
+                <span className="font-mono font-bold text-[var(--card-accent)] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200">
+                  →
+                </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
