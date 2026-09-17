@@ -26,7 +26,7 @@ export function AboutHero({
         </h1>
 
         {subtitle && (
-          <p className="mt-4 text-base sm:text-lg text-blue-50/95 font-sans font-normal leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-blue-50/95 font-sans font-normal leading-relaxed w-full max-w-none mx-auto">
             {subtitle}
           </p>
         )}
