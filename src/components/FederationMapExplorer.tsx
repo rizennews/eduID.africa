@@ -34,6 +34,11 @@ interface FederationMapExplorerProps {
       placeholder: string;
       noResults: string;
     };
+    cta: {
+      headline: string;
+      description: string;
+      button: string;
+    };
   };
 }
 
@@ -463,6 +468,29 @@ export function FederationMapExplorer({
                 </div>
               </div>
             )}
+            {/* Call to Action: Is your country not listed? */}
+            <div className="bg-white border border-dashed border-slate-300 p-5 sm:p-7">
+              <h3 className="font-serif font-normal text-xl sm:text-2xl text-[#0B357B] tracking-tight leading-snug">
+                {dict.cta.headline}
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                {dict.cta.description}
+              </p>
+              <div className="pt-5 flex flex-col sm:flex-row items-stretch gap-3">
+                <Link
+                  href={`/${locale}/get-started`}
+                  className="flex-1 flex items-center justify-center py-2.5 px-2 rounded-lg bg-[#0B357B] text-white hover:bg-[#1A73C3] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors"
+                >
+                  {dict.cta.button}
+                </Link>
+                <Link
+                  href={`/${locale}/how-it-works`}
+                  className="flex-1 flex items-center justify-center py-2.5 px-2 rounded-lg bg-[#DE4A1B] text-white hover:bg-[#c23e14] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors leading-tight"
+                >
+                  Learn how it works
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

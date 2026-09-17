@@ -146,7 +146,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
   ];
 
   return (
-    <section className="pt-2 sm:pt-4 pb-12 sm:pb-16 bg-[#F8FAFC]">
+    <section className="pt-2 sm:pt-4 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Monolithic 3-Column Architectural Grid */}
         <div className="border-t border-b border-dashed border-slate-300">

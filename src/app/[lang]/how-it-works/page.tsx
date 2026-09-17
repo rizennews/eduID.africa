@@ -73,9 +73,6 @@ export default async function HowItWorksPage({
 
         {/* Architecture Section: Where your country fits (Path A & Path B) */}
         <ArchitecturePathsSection locale={locale} dict={dict} />
-
-        {/* Continental Governance & Global REN Partners */}
-        <GovernancePartnersSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Massive Wordmark Footer */}

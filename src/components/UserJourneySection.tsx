@@ -68,14 +68,14 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
   ];
 
   return (
-    <section className="pt-10 sm:pt-14 pb-12 sm:pb-16 bg-[#F8FAFC]">
+    <section className="pt-6 sm:pt-8 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-12">
+        <div className="max-w-none mb-10 sm:mb-12">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl text-[#0B357B] tracking-tight leading-[1.18]">
             {journey.headline}
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal whitespace-nowrap">
             {journey.description}
           </p>
         </div>

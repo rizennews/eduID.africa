@@ -59,11 +59,6 @@ export default async function FederationMapPage({
           <FederationMapExplorer locale={locale} dict={dict.federationMapPage} />
         </React.Suspense>
 
-        {/* Call to Action: Is your country not listed? */}
-        <FederationContactCtaSection locale={locale} dict={dict} />
-
-        {/* Continental Governance & Regional REN Partners */}
-        <GovernancePartnersSection locale={locale} dict={dict} />
       </main>
 
       {/* Modern Massive Wordmark Footer */}
