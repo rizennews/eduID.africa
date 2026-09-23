@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRightIcon, type ArrowRightIconHandle, SearchIcon, type SearchIconHandle } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
 
@@ -29,7 +30,7 @@ export function Hero({ locale, dict }: HeroProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           {/* Left Column: Consistent Editorial Typography & Minimal CTAs */}
-          <div className="lg:col-span-7 xl:col-span-7 space-y-5 text-left">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-5 text-left">
             <div>
               {/* Main Headline in white and soft highlight */}
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.16] max-w-2xl text-white">
@@ -73,15 +74,16 @@ export function Hero({ locale, dict }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Column: Architectural Dashed Container matching the new blue theme */}
-          <div className="lg:col-span-5 xl:col-span-5 flex items-center justify-center">
-            <div className="w-full max-w-lg lg:max-w-none aspect-[4/3] max-h-[320px] lg:max-h-[350px] border border-dashed border-white/35 bg-white/10 p-8 text-center flex flex-col items-center justify-center select-none rounded-2xl backdrop-blur-xs">
-              <span className="font-mono text-xs font-bold uppercase tracking-widest text-white/90">
-                Visual Graphic Asset
-              </span>
-              <span className="text-xs text-blue-100/80 font-sans mt-1.5">
-                (Pan-African Trust Topology)
-              </span>
+          {/* Right Column: Hero Image */}
+          <div className="lg:col-span-6 xl:col-span-6 flex items-center justify-center">
+            <div className="relative w-full max-w-xl lg:max-w-none aspect-[4/3] lg:aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+              <Image 
+                src="/young-adults-walking-and-talking-on-college-campus-2026-09-21-11-39-22-utc .jpg"
+                alt="Students walking and talking on a college campus"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
