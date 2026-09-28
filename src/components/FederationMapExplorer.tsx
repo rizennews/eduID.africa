@@ -38,7 +38,32 @@ interface FederationMapExplorerProps {
       headline: string;
       description: string;
       button: string;
+      learnMore?: string;
     };
+    showingCountries?: string;
+    ofCountries?: string;
+    selectedCountry?: string;
+    trustStatus?: string;
+    nrenLabel?: string;
+    federationArchitecture?: string;
+    regionalRenLabel?: string;
+    connectedInstitutions?: string;
+    institutionsSuffix?: string;
+    howItWorksButton?: string;
+    getStartedButton?: string;
+    clearSelection?: string;
+    summaryTitle?: string;
+    summaryDescription?: string;
+    nationalFederationsLabel?: string;
+    catchallLabel?: string;
+    inDevelopmentLabel?: string;
+    notConnectedLabel?: string;
+    countriesCount?: string;
+    interactiveMapTitle?: string;
+    countriesMapped?: string;
+    nrenPrefix?: string;
+    regionPrefix?: string;
+    learnHowItWorks?: string;
   };
 }
 
@@ -239,7 +264,7 @@ export function FederationMapExplorer({
 
             {/* Total Filtered Count */}
             <div className="text-xs font-mono text-slate-500 text-left sm:text-right shrink-0">
-              Showing <span className="font-bold text-[#0B357B]">{filteredCountries.length}</span> of 54 countries
+              {dict.showingCountries || "Showing"} <span className="font-bold text-[#0B357B]">{filteredCountries.length}</span> {dict.ofCountries || "of 54 countries"}
             </div>
           </div>
 
@@ -315,7 +340,7 @@ export function FederationMapExplorer({
                     <CountryFlag iso2={selectedCountry.iso2} name={selectedCountry.name} className="w-8 h-5.5 rounded-xs shadow-2xs shrink-0" />
                     <div className="min-w-0">
                       <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 block mb-0.5">
-                        Selected Country
+                        {dict.selectedCountry || "Selected Country"}
                       </span>
                       <h3 className="font-serif font-normal text-xl sm:text-2xl text-[#0B357B] tracking-tight truncate">
                         {selectedCountry.name}
@@ -331,7 +356,7 @@ export function FederationMapExplorer({
                 {/* Status Badge (No dot) */}
                 <div>
                   <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
-                    Trust Status
+                    {dict.trustStatus || "Trust Status"}
                   </span>
                   {(() => {
                     const badge = getCategoryBadge(selectedCountry.category);
@@ -351,7 +376,7 @@ export function FederationMapExplorer({
                   <div className="group/item bg-slate-50/60 hover:bg-slate-50 transition-colors border border-dashed border-slate-200 p-3 sm:p-3.5">
                     <div className="flex items-center gap-2 text-slate-500 text-[10px] font-mono uppercase tracking-wider mb-1">
                       <Building2Icon size={14} className="text-[#1A73C3] shrink-0" />
-                      <span>National R&amp;E Network (NREN)</span>
+                      <span>{dict.nrenLabel || "National R&E Network (NREN)"}</span>
                     </div>
                     <p className="text-sm font-semibold text-slate-800 font-sans">
                       {selectedCountry.nren}
@@ -362,7 +387,7 @@ export function FederationMapExplorer({
                   <div className="group/item bg-slate-50/60 hover:bg-slate-50 transition-colors border border-dashed border-slate-200 p-3 sm:p-3.5">
                     <div className="flex items-center gap-2 text-slate-500 text-[10px] font-mono uppercase tracking-wider mb-1">
                       <ShieldCheckIcon size={14} className="text-[#0B357B] shrink-0" />
-                      <span>Federation Architecture</span>
+                      <span>{dict.federationArchitecture || "Federation Architecture"}</span>
                     </div>
                     <p className="text-sm font-medium text-slate-800 font-sans">
                       {selectedCountry.federationName}
@@ -373,7 +398,7 @@ export function FederationMapExplorer({
                   <div className="group/item bg-slate-50/60 hover:bg-slate-50 transition-colors border border-dashed border-slate-200 p-3 sm:p-3.5">
                     <div className="flex items-center gap-2 text-slate-500 text-[10px] font-mono uppercase tracking-wider mb-1">
                       <EarthIcon size={14} className="text-[#DE4A1B] shrink-0" />
-                      <span>Regional R&amp;E Network</span>
+                      <span>{dict.regionalRenLabel || "Regional R&E Network"}</span>
                     </div>
                     <p className="text-sm font-medium text-slate-800 font-sans">
                       {selectedCountry.regionalRen}
@@ -385,10 +410,10 @@ export function FederationMapExplorer({
                     <div className="group/item bg-blue-50/30 hover:bg-blue-50/50 transition-colors border border-dashed border-blue-200 p-3 sm:p-3.5">
                       <div className="flex items-center gap-2 text-[#0B357B] text-[10px] font-mono uppercase tracking-wider mb-1">
                         <CircleCheckIcon size={14} className="text-[#0B357B] shrink-0" />
-                        <span>Connected Institutions</span>
+                        <span>{dict.connectedInstitutions || "Connected Institutions"}</span>
                       </div>
                       <p className="font-serif font-normal text-base sm:text-lg text-[#0B357B]">
-                        {selectedCountry.institutionsCount}+ Higher Education Institutions
+                        {selectedCountry.institutionsCount}+ {dict.institutionsSuffix || "Higher Education Institutions"}
                       </p>
                     </div>
                   )}
@@ -400,13 +425,13 @@ export function FederationMapExplorer({
                     href={`/${locale}/how-it-works`}
                     className="flex-1 py-2.5 px-3 rounded-lg bg-white border border-slate-300 text-slate-700 hover:text-[#0B357B] hover:border-[#0B357B] text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors"
                   >
-                    How it Works
+                    {dict.howItWorksButton || "How it Works"}
                   </Link>
                   <Link
                     href={`/${locale}/get-started`}
                     className="flex-1 py-2.5 px-3 rounded-lg bg-[#0B357B] text-white hover:bg-[#1A73C3] text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors"
                   >
-                    Get Started
+                    {dict.getStartedButton || "Get Started"}
                   </Link>
                 </div>
 
@@ -414,17 +439,17 @@ export function FederationMapExplorer({
                   onClick={() => setSelectedCountry(null)}
                   className="w-full py-2 rounded-lg border border-dashed border-slate-300 text-xs font-mono font-medium uppercase tracking-wider text-slate-500 hover:border-slate-400 hover:text-slate-800 transition-colors cursor-pointer"
                 >
-                  Clear Selection
+                  {dict.clearSelection || "Clear Selection"}
                 </button>
               </div>
             ) : (
               <div className="bg-white border border-dashed border-slate-300 p-5 sm:p-7 lg:p-8 space-y-5 sm:space-y-6">
                 <div>
                   <h3 className="font-serif font-normal text-xl sm:text-2xl text-[#0B357B] tracking-tight leading-snug">
-                    African Federation Summary
+                    {dict.summaryTitle || "African Federation Summary"}
                   </h3>
                   <p className="mt-2 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Tap or click any country on the map or use the search bar above to inspect its sovereign NREN, federation deployment, and regional connectivity.
+                    {dict.summaryDescription || "Tap or click any country on the map or use the search bar above to inspect its sovereign NREN, federation deployment, and regional connectivity."}
                   </p>
                 </div>
 
@@ -432,37 +457,37 @@ export function FederationMapExplorer({
                 <div className="space-y-2 sm:space-y-2.5 pt-1">
                   <div className="flex items-center justify-between p-3 sm:p-3.5 bg-blue-50/40 border border-dashed border-blue-200">
                     <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#0B357B]">
-                      National Federations
+                      {dict.nationalFederationsLabel || "National Federations"}
                     </span>
                     <span className="font-mono text-xs font-bold text-[#0B357B]">
-                      {counts.national_federation} countries
+                      {counts.national_federation} {dict.countriesCount || "countries"}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between p-3 sm:p-3.5 bg-orange-50/40 border border-dashed border-orange-200">
                     <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#DE4A1B]">
-                      Catchall / BonafID On-Ramp
+                      {dict.catchallLabel || "Catchall / BonafID On-Ramp"}
                     </span>
                     <span className="font-mono text-xs font-bold text-[#DE4A1B]">
-                      {counts.catchall_bonafid} countries
+                      {counts.catchall_bonafid} {dict.countriesCount || "countries"}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between p-3 sm:p-3.5 bg-amber-50/40 border border-dashed border-amber-200">
                     <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-amber-800">
-                      Roadmap in Development
+                      {dict.inDevelopmentLabel || "Roadmap in Development"}
                     </span>
                     <span className="font-mono text-xs font-bold text-amber-800">
-                      {counts.in_development} countries
+                      {counts.in_development} {dict.countriesCount || "countries"}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between p-3 sm:p-3.5 bg-slate-50/60 border border-dashed border-slate-200">
                     <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-600">
-                      Not Yet Connected
+                      {dict.notConnectedLabel || "Not Yet Connected"}
                     </span>
                     <span className="font-mono text-xs font-medium text-slate-600">
-                      {counts.not_connected} countries
+                      {counts.not_connected} {dict.countriesCount || "countries"}
                     </span>
                   </div>
                 </div>
@@ -487,7 +512,7 @@ export function FederationMapExplorer({
                   href={`/${locale}/how-it-works`}
                   className="flex-1 flex items-center justify-center py-2.5 px-2 rounded-lg bg-[#DE4A1B] text-white hover:bg-[#c23e14] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors leading-tight"
                 >
-                  Learn how it works
+                  {dict.cta.learnMore || dict.learnHowItWorks || "Learn how it works"}
                 </Link>
               </div>
             </div>

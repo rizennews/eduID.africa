@@ -13,7 +13,9 @@ interface FederationContactCtaSectionProps {
         headline: string;
         description: string;
         button: string;
+        learnMore?: string;
       };
+      learnHowItWorks?: string;
     };
   };
 }
@@ -57,7 +59,7 @@ export function FederationContactCtaSection({
                 href={`/${locale}/how-it-works`}
                 className="text-xs font-mono font-bold uppercase tracking-wider text-[#1A73C3] hover:text-[#0B357B] transition-colors text-center sm:text-left py-2 sm:py-0"
               >
-                Learn how it works →
+                {dict.federationMapPage.learnHowItWorks || (cta.learnMore ? `${cta.learnMore} →` : "Learn how it works →")}
               </Link>
             </div>
           </div>

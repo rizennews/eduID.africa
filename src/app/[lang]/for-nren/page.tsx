@@ -22,13 +22,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/for-nren",
-    title: "For NRENs — Build a National Federation — eduID.africa",
-    description:
-      "Sovereign identity infrastructure, governance frameworks, training roadshows, and continental peering for Africa's National Research and Education Networks.",
+    title: `${dict.nrenPage.hero.title} — eduID.africa`,
+    description: dict.nrenPage.hero.subtitle,
   });
 }
 

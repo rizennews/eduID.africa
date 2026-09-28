@@ -16,20 +16,24 @@ interface HowItWorksLayersSectionProps {
   dict: {
     howItWorks: {
       layers: {
+        solvesLabel?: string;
         card1: {
           title: string;
           description: string;
           solves: string;
+          layerTag?: string;
         };
         card2: {
           title: string;
           description: string;
           solves: string;
+          layerTag?: string;
         };
         card3: {
           title: string;
           description: string;
           solves: string;
+          layerTag?: string;
         };
       };
     };
@@ -41,6 +45,7 @@ interface LayerColumnProps {
   title: string;
   description: string;
   solves: string;
+  solvesLabel?: string;
   tagClass: string;
   icon: React.ReactNode;
   onHover?: () => void;
@@ -52,6 +57,7 @@ function LayerColumn({
   title,
   description,
   solves,
+  solvesLabel,
   tagClass,
   icon,
   onHover,
@@ -94,7 +100,7 @@ function LayerColumn({
       <div className="mt-8 pt-4 border-t border-dashed border-slate-200">
         <div className="p-3.5 bg-slate-50/70 border border-dashed border-slate-200">
           <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#0B357B] block mb-1">
-            Solves
+            {solvesLabel || "Solves"}
           </span>
           <p className="text-xs sm:text-sm font-medium text-slate-700 font-sans leading-relaxed">
             {solves}
@@ -114,7 +120,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
 
   const cards = [
     {
-      layerTag: "LAYER 1 — CAMPUS IAM",
+      layerTag: layers.card1.layerTag || "LAYER 1 — CAMPUS IAM",
       title: layers.card1.title,
       description: layers.card1.description,
       solves: layers.card1.solves,
@@ -124,7 +130,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
       onLeave: () => cloudRef.current?.stopAnimation(),
     },
     {
-      layerTag: "LAYER 2 — CONTINENTAL FEDERATION",
+      layerTag: layers.card2.layerTag || "LAYER 2 — CONTINENTAL FEDERATION",
       title: layers.card2.title,
       description: layers.card2.description,
       solves: layers.card2.solves,
@@ -134,7 +140,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
       onLeave: () => earthRef.current?.stopAnimation(),
     },
     {
-      layerTag: "LAYER 3 — WI-FI & SERVICES",
+      layerTag: layers.card3.layerTag || "LAYER 3 — WI-FI & SERVICES",
       title: layers.card3.title,
       description: layers.card3.description,
       solves: layers.card3.solves,
@@ -158,6 +164,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
                 title={card.title}
                 description={card.description}
                 solves={card.solves}
+                solvesLabel={layers.solvesLabel}
                 tagClass={card.tagClass}
                 icon={card.icon}
                 onHover={card.onHover}

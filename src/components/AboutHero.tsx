@@ -11,23 +11,27 @@ export interface AboutHeroProps {
 }
 
 export function AboutHero({
-  title = (
+  title,
+  subtitle,
+  dict,
+}: AboutHeroProps) {
+  const displayTitle = title ?? dict?.nav?.eduid?.about?.title ?? (
     <>
       About <span className="text-white/80">eduID.africa</span>
     </>
-  ),
-  subtitle = "Africa's continental Trust & Identity framework for research and education.",
-}: AboutHeroProps) {
+  );
+
+  const displaySubtitle = subtitle ?? dict?.howItWorks?.heroSubtitle ?? dict?.about?.description;
   return (
     <section className="relative overflow-hidden pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-[#1A73C3] text-white border-b border-[#145FA3]">
       <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-white tracking-tight">
-          {title}
+          {displayTitle}
         </h1>
 
-        {subtitle && (
+        {displaySubtitle && (
           <p className="mt-4 text-base sm:text-lg text-blue-50/95 font-sans font-normal leading-relaxed w-full max-w-none mx-auto">
-            {subtitle}
+            {displaySubtitle}
           </p>
         )}
       </div>

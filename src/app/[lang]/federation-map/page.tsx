@@ -22,13 +22,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/federation-map",
-    title: "Federation Map — eduID.africa",
-    description:
-      "Explore the interactive map of African countries in the eduID.africa federation categorized by National federation, Catchall / BonafID, In development, and Not connected.",
+    title: `${dict.federationMapPage.hero.title} — eduID.africa`,
+    description: dict.federationMapPage.hero.subtitle,
   });
 }
 

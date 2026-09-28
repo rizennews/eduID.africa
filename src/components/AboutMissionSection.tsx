@@ -17,16 +17,19 @@ interface AboutMissionSectionProps {
           title: string;
           description: string;
         };
+        level1Features?: string[];
         level2: {
           tag: string;
           title: string;
           description: string;
         };
+        level2Points?: string[];
         level2b: {
           tag: string;
           title: string;
           description: string;
         };
+        level2bPoints?: string[];
       };
     };
   };
@@ -89,15 +92,18 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
                 </p>
 
                 <div className="flex flex-wrap items-center gap-2.5 pt-2">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
-                    eduGAIN Global Node
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
-                    Standardization &amp; Trust Governance
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans">
-                    International R&amp;E Representation
-                  </span>
+                  {(mission.level1Features || [
+                    "eduGAIN Global Node",
+                    "Standardization & Trust Governance",
+                    "International R&E Representation",
+                  ]).map((feat, idx) => (
+                    <span
+                      key={idx}
+                      className="inline-flex items-center px-3 py-1 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-medium text-slate-700 font-sans"
+                    >
+                      {feat}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -131,9 +137,17 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
               </div>
 
               <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-700 font-sans">
-                <span>Sovereign country-owned identity infrastructure</span>
-                <span className="text-slate-300" aria-hidden="true">/</span>
-                <span>NREN governance tooling, training &amp; roadshows</span>
+                {(mission.level2Points || [
+                  "Sovereign country-owned identity infrastructure",
+                  "NREN governance tooling, training & roadshows",
+                ]).map((pt, idx, arr) => (
+                  <React.Fragment key={idx}>
+                    <span>{pt}</span>
+                    {idx < arr.length - 1 && (
+                      <span className="text-slate-300" aria-hidden="true">/</span>
+                    )}
+                  </React.Fragment>
+                ))}
               </div>
             </div>
 
@@ -163,12 +177,17 @@ export function AboutMissionSection({ locale: _locale, dict }: AboutMissionSecti
               </div>
 
               <div className="pt-6 mt-8 border-t border-dashed border-slate-300/80 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-700 font-sans">
-                <span>Cloud-hosted, open-source federated IAM</span>
-                <span className="text-slate-300" aria-hidden="true">/</span>
-                <span>
-                  Instant participation via{" "}
-                  <span className="text-[#0B357B] font-medium">BonafID</span>
-                </span>
+                {(mission.level2bPoints || [
+                  "Cloud-hosted, open-source federated IAM",
+                  "Instant participation via BonafID",
+                ]).map((pt, idx, arr) => (
+                  <React.Fragment key={idx}>
+                    <span>{pt}</span>
+                    {idx < arr.length - 1 && (
+                      <span className="text-slate-300" aria-hidden="true">/</span>
+                    )}
+                  </React.Fragment>
+                ))}
               </div>
             </div>
           </div>

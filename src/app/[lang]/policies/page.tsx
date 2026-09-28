@@ -18,13 +18,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/policies",
-    title: "Policies & Terms — eduID.africa",
-    description:
-      "Authoritative frameworks, participation agreements, data sovereignty terms, and legal templates governing the eduID.africa ecosystem.",
+    title: `${dict.footer.terms} — eduID.africa`,
+    description: dict.about.description,
   });
 }
 

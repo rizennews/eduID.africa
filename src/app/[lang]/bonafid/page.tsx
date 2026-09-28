@@ -23,13 +23,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/bonafid",
-    title: "BonafID Platform — eduID.africa",
-    description:
-      "Cloud-hosted academic identity and verifiable digital student and researcher credentials for African institutions.",
+    title: `${dict.bonafidPage.hero.title} — eduID.africa`,
+    description: dict.bonafidPage.hero.subtitle,
   });
 }
 

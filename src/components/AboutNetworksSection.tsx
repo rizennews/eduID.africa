@@ -11,6 +11,8 @@ interface AboutNetworksSectionProps {
       networksSection: {
         headline: string;
         description: string;
+        kicker?: string;
+        tag?: string;
         network1: {
           shortName: string;
           fullName: string;
@@ -68,7 +70,7 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <div className="mb-4">
             <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
-              Regional Leadership
+              {data.kicker || "Regional Leadership"}
             </span>
           </div>
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
@@ -94,7 +96,7 @@ export function AboutNetworksSection({ locale: _locale, dict }: AboutNetworksSec
               <div>
                 <div className="mb-4">
                   <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
-                    Regional REN
+                    {data.tag || "Regional REN"}
                   </span>
                 </div>
 

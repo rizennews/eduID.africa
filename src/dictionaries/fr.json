@@ -85,19 +85,21 @@
       "description": "eduID.africa est conjointement gouverné par les trois réseaux régionaux de recherche et d'éducation d'Afrique, couvrant chacun une région distincte du continent.",
       "network1": {
         "shortName": "UbuntuNet",
-        "fullName": "UbuntuNet Alliance for Research and Education Networking",
+        "fullName": "Alliance UbuntuNet pour les réseaux de recherche et d'éducation",
         "region": "Afrique australe et de l'Est"
       },
       "network2": {
         "shortName": "WACREN",
-        "fullName": "West and Central African Research and Education Network",
+        "fullName": "Réseau de recherche et d'éducation de l'Afrique de l'Ouest et du Centre",
         "region": "Afrique de l'Ouest et Centrale"
       },
       "network3": {
         "shortName": "ASREN",
-        "fullName": "Arab States Research and Education Network",
+        "fullName": "Réseau de recherche et d'éducation des États arabes",
         "region": "Afrique du Nord et États arabes"
-      }
+      },
+      "kicker": "Leadership Régional",
+      "tag": "RNRE Régional"
     },
     "mission": {
       "kicker": "Mission",
@@ -117,7 +119,20 @@
         "tag": "NIVEAU 2B — PASSERELLE (CATCHALL)",
         "title": "Niveau 2b — Passerelle pour les institutions en attente",
         "description": "Pour les NRENs qui manquent de capacité institutionnelle, de financement ou de masse critique pour gérer une fédération nationale, eduID.africa opère une passerelle. BonafID est la plateforme d'activation : gestion d'identités fédérées open-source hébergée dans le cloud pour toute institution."
-      }
+      },
+      "level1Features": [
+        "Nœud mondial eduGAIN",
+        "Gouvernance de la standardisation et de la confiance",
+        "Représentation internationale ESR"
+      ],
+      "level2Points": [
+        "Infrastructure d'identité souveraine nationale",
+        "Outils de gouvernance, formations et tournées NREN"
+      ],
+      "level2bPoints": [
+        "IAM fédéré open source hébergé dans le cloud",
+        "Participation instantanée via BonafID"
+      ]
     },
     "timeline": {
       "kicker": "Chronologie",
@@ -161,18 +176,22 @@
       "card1": {
         "title": "BonafID — Gouvernance de l'identité sur campus",
         "description": "La plupart des établissements d'enseignement supérieur africains ne disposent pas d'un fournisseur d'identité géré. BonafID est un système IAM open-source, co-créé par le WACREN, qui fournit à chaque institution un fournisseur d'identité prêt pour la production. Une identité unifiée et permanente pour chaque étudiant et membre du personnel — opérationnelle à travers les institutions et les pays.",
-        "solves": "identifiants fragmentés, absence d'IdP géré, exclusion des ressources mondiales"
+        "solves": "identifiants fragmentés, absence d'IdP géré, exclusion des ressources mondiales",
+        "layerTag": "COUCHE 1 — IAM DU CAMPUS"
       },
       "card2": {
         "title": "eduID.africa — Fédération continentale",
         "description": "La fédération régionale d'identités reliant les établissements africains entre eux et, via eduGAIN, au réseau mondial de recherche et d'éducation. Les NRENs peuvent bâtir des fédérations nationales souveraines connectées vers le haut — ou les institutions peuvent participer directement via la fédération passerelle.",
-        "solves": "aucun chemin vers la recherche mondiale, infrastructure nationale fragmentée"
+        "solves": "aucun chemin vers la recherche mondiale, infrastructure nationale fragmentée",
+        "layerTag": "COUCHE 2 — FÉDÉRATION CONTINENTALE"
       },
       "card3": {
         "title": "geteduroam — Wi-Fi basé sur certificats",
         "description": "Un service régional qui s'appuie sur l'identité fédérée de l'utilisateur pour générer automatiquement un certificat de connexion Wi-Fi via une application simple. Aucune configuration manuelle. Un accès sécurisé authentifié RADIUS-over-TLS sur chaque campus connecté de la région.",
-        "solves": "complexité de configuration d'eduroam, protocoles d'authentification obsolètes"
-      }
+        "solves": "complexité de configuration d'eduroam, protocoles d'authentification obsolètes",
+        "layerTag": "COUCHE 3 — WI-FI & SERVICES"
+      },
+      "solvesLabel": "Résout"
     },
     "userJourney": {
       "kicker": "Parcours utilisateur",
@@ -224,8 +243,10 @@
         "title": "Voie B — Fédération de repli (Catchall)",
         "description": "Les établissements participent directement à la fédération continentale via BonafID. Aucune fédération au niveau du RNRE n'est requise. Il s'agit d'une passerelle d'accès — pas d'un point d'arrivée permanent.",
         "bestFor": "Idéal pour les RNRE qui ne sont pas encore prêts à exploiter une infrastructure nationale"
-      }
-    }
+      },
+      "recommendedForLabel": "Recommandé pour"
+    },
+    "heroSubtitle": "Le cadre continental de confiance et d'identité pour la recherche et l'éducation en Afrique."
   },
   "federationMapPage": {
     "hero": {
@@ -246,8 +267,33 @@
     "cta": {
       "headline": "Votre pays n'est pas répertorié ?",
       "description": "Contactez l'équipe eduID.africa pour discuter de la façon dont votre RNRE ou établissement peut se connecter.",
-      "button": "Commencer"
-    }
+      "button": "Commencer",
+      "learnMore": "Découvrir comment ça marche"
+    },
+    "showingCountries": "Affichage de",
+    "ofCountries": "sur 54 pays",
+    "selectedCountry": "Pays sélectionné",
+    "trustStatus": "Statut de confiance",
+    "nrenLabel": "Réseau National d'Enseignement et de Recherche (RNRE)",
+    "federationArchitecture": "Architecture de la fédération",
+    "regionalRenLabel": "Réseau Régional de Recherche et d'Éducation",
+    "connectedInstitutions": "Établissements connectés",
+    "institutionsSuffix": "Établissements d'enseignement supérieur",
+    "howItWorksButton": "Comment ça marche",
+    "getStartedButton": "Commencer",
+    "clearSelection": "Effacer la sélection",
+    "summaryTitle": "Synthèse de la fédération africaine",
+    "summaryDescription": "Cliquez sur un pays sur la carte ou utilisez la barre de recherche ci-dessus pour inspecter son RNRE souverain, son déploiement de fédération et sa connectivité régionale.",
+    "nationalFederationsLabel": "Fédérations nationales",
+    "catchallLabel": "Fédération passerelle / BonafID",
+    "inDevelopmentLabel": "Feuille de route en développement",
+    "notConnectedLabel": "Pas encore connecté",
+    "countriesCount": "pays",
+    "interactiveMapTitle": "Carte interactive de confiance continentale",
+    "countriesMapped": "54 pays africains cartographiés",
+    "nrenPrefix": "RNRE :",
+    "regionPrefix": "Région :",
+    "learnHowItWorks": "Découvrir comment ça marche →"
   },
   "hero": {
     "badge": "La couche d'identité pour la recherche et l'éducation en Afrique",
@@ -335,7 +381,7 @@
     "colNrenLink1": "Bâtir une fédération nationale",
     "colNrenLink2": "Rejoindre le catchall",
     "colNrenLink3": "Plateforme BonafID",
-    "colNrenLink4": "T&I Roadshows",
+    "colNrenLink4": "Tournées T&I",
     "colResourcesTitle": "Ressources",
     "colResourcesLink1": "Documentation",
     "colResourcesLink2": "Supports de formation",
@@ -417,7 +463,8 @@
             "Alignement sur les normes"
           ]
         }
-      }
+      },
+      "responsibilitiesLabel": "Responsabilités"
     },
     "policiesSection": {
       "kicker": "Documents de la fédération",
@@ -516,7 +563,13 @@
             "timeline": "Année 3",
             "status": "scheduled"
           }
-        ]
+        ],
+        "deliverablesLabel": "Livrables & Jalons",
+        "ac4Deliverables": "Livrables AC4 · 2026–2029",
+        "phaseLabel": "Phase",
+        "completedStatus": "Terminé · Actif en production",
+        "upcomingStatus": "Jalon cible à venir",
+        "scheduledStatus": "Livraison continentale prévue"
       }
     }
   },
@@ -566,7 +619,8 @@
       "callout": {
         "title": "Pas encore prêt pour la Voie A ?",
         "desc": "Vos établissements peuvent participer via la fédération de rattrapage pendant que votre RNRE renforce ses capacités vers une fédération nationale. Le rattrapage est un tremplin, pas une impasse.",
-        "linkText": "Explorer l'architecture de rattrapage"
+        "linkText": "Explorer l'architecture de rattrapage",
+        "badge": "Alternative Voie B"
       }
     },
     "docsSection": {
@@ -812,7 +866,8 @@
         "description": "BonafID est open source. L'ensemble de la base de code, la documentation de déploiement et la référence de l'API sont disponibles sur GitHub. Les RNRE peuvent l'auto-héberger ou contribuer au projet.",
         "action": "Voir sur GitHub",
         "href": "https://github.com/WACREN"
-      }
+      },
+      "visitWebsite": "Visiter le site web de BonafID"
     }
   },
   "trainingPage": {
@@ -985,14 +1040,40 @@
       "noResults": "Aucun établissement trouvé correspondant à votre recherche.",
       "requestOnboarding": "Demander l'intégration de votre établissement",
       "domainRecognized": "Domaine institutionnel reconnu",
-      "domainUnrecognized": "Domaine introuvable dans l'annuaire",
-      "domainReady": "Profil geteduroam actif disponible pour ce domaine",
-      "domainNotConnected": "Ce domaine n'est pas encore enregistré auprès d'un fournisseur d'identité eduroam.",
+      "domainUnrecognized": "Domaine non trouvé dans le registre",
+      "domainReady": "Profil geteduroam actif disponible.",
+      "domainNotConnected": "Pas encore connecté à eduroam.",
       "statusLabels": {
         "national": "Fédération nationale",
         "catchall": "Fédération d'accueil",
         "notConnected": "Non connecté"
-      }
+      },
+      "resetFilters": "Réinitialiser les filtres",
+      "downloadGeteduroam": "Télécharger geteduroam",
+      "requestConnection": "Demander la connexion",
+      "connect": "Se connecter",
+      "connected": "Connecté",
+      "infoForAdmins": "Informations pour les administrateurs informatiques",
+      "clearSearch": "Effacer la recherche",
+      "matchesLabel": "Correspond à",
+      "domainUnregisteredDesc": "Ce domaine n'est pas encore enregistré auprès d'un fournisseur d'identité eduroam.",
+      "connectedCountLabel": "connectés",
+      "notConnectedCountLabel": "pas encore connectés",
+      "registeredInstitutionsDesc": "établissements enregistrés dans le répertoire des universités africaines",
+      "viewNrenProfiles": "Voir les profils RNRE →",
+      "institutionsCountLabel": "établissements",
+      "inCountryLabel": "en",
+      "showingInstitutionsAfrica": "Affichage des établissements à travers l'Afrique",
+      "searchTip": "Tapez une université, un pays ou un @e-mail pour rechercher",
+      "sourcesLabel": "Sources : geteduroam + Registre Hipo",
+      "emptyStateHelp": "Si votre université ou domaine d'e-mail n'apparaît pas, votre équipe informatique peut se connecter via eduID.africa ou votre RNRE national.",
+      "paginationNotice": "Affichage de 50 résultats. Affinez votre recherche pour préciser les résultats.",
+      "profileLabel": "profil eduroam",
+      "profilesLabel": "profils eduroam",
+      "browseAll": "Parcourir les {count} institutions →",
+      "showModels": "← Afficher 3 modèles de connexion",
+      "institutionsIndexed": "institutions répertoriées",
+      "statsCountries": "pays"
     },
     "stepsSection": {
       "title": "Trois étapes pour geteduroam",
@@ -1000,9 +1081,16 @@
         "num": "1",
         "title": "Téléchargez l'application geteduroam",
         "description": "Disponible sur Android et iOS. L'application gère automatiquement la génération de certificats à l'aide de votre identité institutionnelle — aucune compétence technique requise.",
-        "platforms": ["Android", "iOS", "Windows", "macOS"],
+        "platforms": [
+          "Android",
+          "iOS",
+          "Windows",
+          "macOS"
+        ],
         "playStore": "Disponible sur Play Store",
-        "appStore": "Disponible sur l'App Store"
+        "appStore": "Disponible sur l'App Store",
+        "windowsStore": "Obtenir pour Windows",
+        "linuxStore": "Obtenir pour Linux"
       },
       "step2": {
         "num": "2",
@@ -1037,6 +1125,32 @@
   "notFoundPage": {
     "title": "Perdu en vol ?",
     "homeButton": "Retrouver votre chemin"
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Contactez eduID.africa",
+      "subtitle": "Contactez les équipes régionales des réseaux de recherche et d'éducation, les coordinateurs techniques et les ingénieurs de support continental."
+    },
+    "inquiries": {
+      "title": "Demandes générales & techniques",
+      "description": "Vous avez des questions sur le raccordement de votre établissement, la mise en place d'une fédération nationale ou le déploiement de BonafID ? Contactez notre équipe de coordination.",
+      "emailLabel": "Coordination par e-mail",
+      "socialsLabel": "Réseaux sociaux",
+      "followX": "Suivre @wacren sur X",
+      "connectLinkedIn": "Se connecter sur LinkedIn",
+      "followFacebook": "Suivre @WACRENinfo sur Facebook",
+      "followBluesky": "Suivre sur Bluesky",
+      "followMastodon": "Suivre sur Mastodon"
+    },
+    "regionalPartners": {
+      "title": "Réseaux régionaux de R&E",
+      "subtitle": "eduID.africa est exploité conjointement par les trois réseaux régionaux de recherche et d'éducation d'Afrique dans le cadre du programme AfricaConnect4.",
+      "wacrenName": "WACREN",
+      "wacrenDesc": "Réseau de recherche et d'éducation d'Afrique occidentale et centrale",
+      "ubuntunetName": "UbuntuNet Alliance",
+      "ubuntunetDesc": "Réseau de recherche et d'éducation d'Afrique orientale et australe",
+      "asrenName": "ASREN",
+      "asrenDesc": "Réseau de recherche et d'éducation des États arabes"
+    }
   }
 }
-
