@@ -35,12 +35,12 @@ export function DeveloperFootprint() {
 
       console.log(
         "%c\n" +
-          "  Portfolio:  https://padmoreaning.com/\n" +
-          "  Contact:    hello@padmoreaning.com\n\n" +
-          "  [ATTRIBUTION NOTE]\n" +
-          "  Padmore Aning crafted and engineered this website platform.\n" +
-          "  The eduID.africa identity federation network itself is governed\n" +
-          "  and operated by WACREN, UbuntuNet Alliance, and ASREN.\n",
+        "  Portfolio:  https://padmoreaning.com/\n" +
+        "  Contact:    hello@padmoreaning.com\n\n" +
+        "  [ATTRIBUTION NOTE]\n" +
+        "  Padmore Aning crafted and engineered this website platform.\n" +
+        "  The eduID.africa identity federation network itself is governed\n" +
+        "  and operated by WACREN, UbuntuNet Alliance, and ASREN.\n",
         "color: #94A3B8; font-family: monospace; font-size: 11px; line-height: 1.6;"
       );
     }
