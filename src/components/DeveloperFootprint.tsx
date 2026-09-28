@@ -19,14 +19,14 @@ export function DeveloperFootprint() {
 
       console.log(
         `%c${dottedBanner}`,
-        "color: #0B357B; font-family: 'Courier New', Courier, monospace; font-size: 11px; font-weight: 900; line-height: 1.25;"
+        "color: #64748B; font-family: 'Courier New', Courier, monospace; font-size: 11px; font-weight: 900; line-height: 1.25;"
       );
 
       console.log(
         "%c Crafted by %c Padmore Aning %c https://padmoreaning.com/ ",
-        "background: #0B357B; color: #FFFFFF; font-weight: 600; font-size: 11px; padding: 3px 6px; border-radius: 4px 0 0 4px;",
-        "background: #1A73C3; color: #FFFFFF; font-weight: 700; font-size: 11px; padding: 3px 8px;",
-        "background: #DE4A1B; color: #FFFFFF; font-weight: 600; font-size: 11px; padding: 3px 8px; border-radius: 0 4px 4px 0;"
+        "background: #1E293B; color: #94A3B8; font-weight: 600; font-size: 11px; padding: 3px 6px; border-radius: 4px 0 0 4px;",
+        "background: #475569; color: #F8FAFC; font-weight: 700; font-size: 11px; padding: 3px 8px;",
+        "background: #334155; color: #E2E8F0; font-weight: 600; font-size: 11px; padding: 3px 8px; border-radius: 0 4px 4px 0;"
       );
 
       console.log(
