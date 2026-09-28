@@ -280,7 +280,7 @@ export function Footer({ locale, dict }: FooterProps) {
           </div>
 
           <div className="text-center sm:text-right">
-            {dict.footer.copyright}
+            <div>{dict.footer.copyright}</div>
           </div>
         </div>
       </div>

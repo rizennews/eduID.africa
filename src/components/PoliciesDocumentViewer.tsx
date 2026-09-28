@@ -3,6 +3,8 @@
 import * as React from "react";
 import type { Locale } from "@/lib/i18n";
 import { federationPolicy, mrpsPolicy, type PolicyDocument, type PolicySection } from "@/data/policies";
+import { Search, X, Printer, Link2, Check, ArrowRight, FileText } from "lucide-react";
+import { AnimatedIcon } from "@/components/ui/animated-icon";
 
 interface PoliciesDocumentViewerProps {
   locale: Locale;
@@ -104,20 +106,21 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
           {activeTab !== "downloads" && (
             <div className="flex items-center gap-3">
               <div className="relative flex-1 sm:w-64">
+                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5 pointer-events-none" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder={locale === "fr" ? "Rechercher dans le texte..." : locale === "pt" ? "Pesquisar nos termos..." : locale === "ar" ? "البحث في السياسة..." : "Search clauses..."}
-                  className="w-full text-xs font-sans pl-8 pr-3 py-2 bg-white border border-slate-300 rounded-md focus:outline-hidden focus:border-[#0B357B] text-slate-800 placeholder-slate-400"
+                  className="w-full text-xs font-sans pl-8 pr-7 py-2 bg-white border border-slate-300 rounded-md focus:outline-hidden focus:border-[#0B357B] text-slate-800 placeholder-slate-400"
                 />
-                <span className="absolute left-2.5 top-2.5 text-slate-400 text-xs">🔍</span>
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute right-2.5 top-2 text-slate-400 hover:text-slate-600 text-xs"
+                    aria-label="Clear search query"
+                    className="absolute right-2 top-2 text-slate-400 hover:text-slate-600 p-0.5 rounded cursor-pointer"
                   >
-                    ✕
+                    <X className="w-3.5 h-3.5" />
                   </button>
                 )}
               </div>
@@ -125,9 +128,11 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
               <button
                 onClick={handlePrint}
                 title="Print Policy"
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-[#0B357B] hover:border-[#0B357B] text-xs font-mono transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-md bg-white border border-slate-200 text-slate-600 hover:text-[#0B357B] hover:border-[#0B357B] text-xs font-mono transition-colors cursor-pointer group"
               >
-                <span>🖨</span>
+                <AnimatedIcon animation="hover-scale">
+                  <Printer className="w-3.5 h-3.5" />
+                </AnimatedIcon>
                 <span>Print</span>
               </button>
             </div>
@@ -176,15 +181,18 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
                   <div className="pt-2 flex items-center gap-3">
                     <button
                       onClick={() => setActiveTab("federation-policy")}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0B357B] text-white text-xs font-mono font-medium hover:bg-[#1A73C3] transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0B357B] text-white text-xs font-mono font-medium hover:bg-[#1A73C3] transition-colors cursor-pointer group"
                     >
                       <span>Read Policy Online</span>
-                      <span>→</span>
+                      <AnimatedIcon animation="hover-right">
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </AnimatedIcon>
                     </button>
                     <button
                       onClick={handlePrint}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white border border-slate-300 text-slate-700 text-xs font-mono font-medium hover:border-[#0B357B] transition-colors"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-white border border-slate-300 text-slate-700 text-xs font-mono font-medium hover:border-[#0B357B] transition-colors cursor-pointer"
                     >
+                      <Printer className="w-3.5 h-3.5" />
                       <span>Export / Print</span>
                     </button>
                   </div>
@@ -215,15 +223,18 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
                   <div className="pt-2 flex items-center gap-3">
                     <button
                       onClick={() => setActiveTab("mrps")}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0B357B] text-white text-xs font-mono font-medium hover:bg-[#1A73C3] transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#0B357B] text-white text-xs font-mono font-medium hover:bg-[#1A73C3] transition-colors cursor-pointer group"
                     >
                       <span>Read MRPS Online</span>
-                      <span>→</span>
+                      <AnimatedIcon animation="hover-right">
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </AnimatedIcon>
                     </button>
                     <button
                       onClick={handlePrint}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white border border-slate-300 text-slate-700 text-xs font-mono font-medium hover:border-[#0B357B] transition-colors"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md bg-white border border-slate-300 text-slate-700 text-xs font-mono font-medium hover:border-[#0B357B] transition-colors cursor-pointer"
                     >
+                      <Printer className="w-3.5 h-3.5" />
                       <span>Export / Print</span>
                     </button>
                   </div>
@@ -320,9 +331,19 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
                       <button
                         onClick={() => handleCopyLink(section.id)}
                         title="Copy section link"
-                        className="text-xs font-mono text-slate-400 hover:text-[#0B357B] transition-colors flex items-center gap-1"
+                        className="text-xs font-mono text-slate-400 hover:text-[#0B357B] transition-colors flex items-center gap-1.5 cursor-pointer py-1 px-2 rounded hover:bg-slate-50"
                       >
-                        <span>{copiedId === section.id ? "✓ Copied" : "🔗 Link"}</span>
+                        {copiedId === section.id ? (
+                          <>
+                            <Check className="w-3.5 h-3.5 text-emerald-600" />
+                            <span className="text-emerald-600 font-medium">Copied</span>
+                          </>
+                        ) : (
+                          <>
+                            <Link2 className="w-3.5 h-3.5" />
+                            <span>Link</span>
+                          </>
+                        )}
                       </button>
                     </div>
 
