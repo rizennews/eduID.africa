@@ -266,16 +266,16 @@ export function Footer({ locale, dict }: FooterProps) {
         <div className="pt-6 pb-8 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-500 font-sans text-center sm:text-left">
           <div className="flex items-center gap-6 justify-center sm:justify-start">
             <Link
-              href={`/${locale}/privacy`}
-              className="hover:text-slate-800 transition-colors"
-            >
-              {dict.footer.privacy}
-            </Link>
-            <Link
-              href={`/${locale}/terms`}
+              href={`/${locale}/policies`}
               className="hover:text-slate-800 transition-colors"
             >
               {dict.footer.terms}
+            </Link>
+            <Link
+              href={`/${locale}/policies`}
+              className="hover:text-slate-800 transition-colors"
+            >
+              {dict.footer.privacy}
             </Link>
           </div>
 
