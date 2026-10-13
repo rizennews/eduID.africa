@@ -10,6 +10,7 @@ import {
   type ShieldCheckIconHandle,
 } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
+import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface HowItWorksLayersSectionProps {
   locale?: Locale;
@@ -120,7 +121,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
 
   const cards = [
     {
-      layerTag: layers.card1.layerTag || "LAYER 1 — CAMPUS IAM",
+      layerTag: layers.card1.layerTag || "LAYER 1: CAMPUS IAM",
       title: layers.card1.title,
       description: layers.card1.description,
       solves: layers.card1.solves,
@@ -130,7 +131,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
       onLeave: () => cloudRef.current?.stopAnimation(),
     },
     {
-      layerTag: layers.card2.layerTag || "LAYER 2 — CONTINENTAL FEDERATION",
+      layerTag: layers.card2.layerTag || "LAYER 2: CONTINENTAL FEDERATION",
       title: layers.card2.title,
       description: layers.card2.description,
       solves: layers.card2.solves,
@@ -140,7 +141,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
       onLeave: () => earthRef.current?.stopAnimation(),
     },
     {
-      layerTag: layers.card3.layerTag || "LAYER 3 — WI-FI & SERVICES",
+      layerTag: layers.card3.layerTag || "LAYER 3: WI-FI & SERVICES",
       title: layers.card3.title,
       description: layers.card3.description,
       solves: layers.card3.solves,
@@ -154,6 +155,18 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
   return (
     <section className="pt-2 sm:pt-4 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* End-to-End Authentication Flow Illustration Slot */}
+        <div className="mb-8">
+          <VisualPlaceholder
+            type="illustration"
+            title="End-to-End Authentication Flow Diagram Slot"
+            dimensions="Full Width (21:9 Flow Illustration)"
+            description="Slot for illustrated diagram showing student campus sign-on unlocking eduroam and global research resources across Africa."
+            aspectRatio="aspect-[21/9]"
+            theme="light"
+          />
+        </div>
+
         {/* Monolithic 3-Column Architectural Grid */}
         <div className="border-t border-b border-dashed border-slate-300">
           <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-300/80 border-x border-slate-300/80 bg-white">

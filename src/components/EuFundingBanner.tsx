@@ -11,7 +11,7 @@ export function EuFundingBanner({ locale: _locale, dict }: EuFundingBannerProps)
   const fundedBy = dict?.fundingBanner?.fundedBy || "FUNDED BY";
   const statement =
     dict?.fundingBanner?.statement ||
-    "The European Union — under the EU Global Gateway Strategy and the Africa-Europe Investment Package, through DG INTPA.";
+    "The European Union, under the EU Global Gateway Strategy and the Africa-Europe Investment Package, through DG INTPA.";
   const disclaimer =
     dict?.fundingBanner?.disclaimer ||
     "Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible.";

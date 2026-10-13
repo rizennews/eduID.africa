@@ -9,6 +9,7 @@ import { AboutMissionSection } from "@/components/AboutMissionSection";
 import { AboutTimelineSection } from "@/components/AboutTimelineSection";
 import { GovernancePartnersSection } from "@/components/GovernancePartnersSection";
 import { Footer } from "@/components/Footer";
+import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -28,7 +29,7 @@ export async function generateMetadata({
   return createLocalizedMetadata({
     locale,
     path: "/about",
-    title: `${dict.nav.eduid.about.title} — eduID.africa`,
+    title: `${dict.nav.eduid.about.title} | eduID.africa`,
     description: dict.about.description,
   });
 }
@@ -58,6 +59,16 @@ export default async function AboutPage({
           subtitle={dict.about.description}
           locale={locale}
           dict={dict}
+          visualPlaceholder={
+            <VisualPlaceholder
+              type="photo"
+              title="Academic & Research Photo Slot"
+              dimensions="1200 × 750 (16:10 Photo Slot)"
+              description="Slot for photography of African researchers and faculty collaborating in a modern university library or laboratory."
+              theme="dark"
+              aspectRatio="aspect-[16/10] w-full max-w-xl lg:max-w-none"
+            />
+          }
         />
 
         {/* Three networks. One framework. (Three Joined Side-by-Side) */}

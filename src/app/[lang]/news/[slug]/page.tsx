@@ -33,14 +33,14 @@ export async function generateMetadata({
   const article = getNewsArticleBySlug(resolvedParams.slug, locale);
   if (!article) {
     return {
-      title: "Announcement Not Found — eduID.africa",
+      title: "Announcement Not Found | eduID.africa",
     };
   }
 
   return createLocalizedMetadata({
     locale,
     path: `/news/${resolvedParams.slug}`,
-    title: `${article.title} — eduID.africa`,
+    title: `${article.title} | eduID.africa`,
     description: article.excerpt,
     image: article.image,
     imageAlt: article.imageCaption || article.title,

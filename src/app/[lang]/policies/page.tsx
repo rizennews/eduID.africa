@@ -38,7 +38,7 @@ export async function generateMetadata({
   return createLocalizedMetadata({
     locale,
     path: "/policies",
-    title: `${titleMap[locale]} — eduID.africa`,
+    title: `${titleMap[locale]} | eduID.africa`,
     description: descMap[locale],
   });
 }

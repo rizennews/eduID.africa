@@ -17,6 +17,8 @@ interface GetStartedStepsSectionProps {
           platforms: string[];
           playStore: string;
           appStore: string;
+          windowsStore?: string;
+          linuxStore?: string;
         };
         step2: {
           num: string;
@@ -39,7 +41,7 @@ interface GetStartedStepsSectionProps {
   };
 }
 
-export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStepsSectionProps) {
+export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
   const { stepsSection } = dict.getStartedPage;
   const { step1, step2, step3 } = stepsSection;
 
@@ -92,9 +94,11 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
               >
-                <img
+                <Image
                   src="/google-play.svg"
                   alt="Google Play"
+                  width={28}
+                  height={28}
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
@@ -113,9 +117,11 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
               >
-                <img
+                <Image
                   src="/app-store.svg"
                   alt="App Store"
+                  width={28}
+                  height={28}
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
@@ -134,9 +140,11 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
               >
-                <img
+                <Image
                   src="/windows.svg"
                   alt="Windows"
+                  width={28}
+                  height={28}
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
@@ -144,7 +152,7 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                     Windows
                   </span>
                   <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
-                    {(step1 as any).windowsStore || "Get for Windows"}
+                    {step1.windowsStore || "Get for Windows"}
                   </span>
                 </div>
               </a>
@@ -155,9 +163,11 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-4 py-3 rounded-2xl border border-slate-300 bg-white hover:border-[#0B357B] hover:bg-slate-50 transition-all shadow-2xs group w-full"
               >
-                <img
+                <Image
                   src="/linux.svg"
                   alt="Linux"
+                  width={28}
+                  height={28}
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
@@ -165,7 +175,7 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
                     Linux
                   </span>
                   <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
-                    {(step1 as any).linuxStore || "Get for Linux"}
+                    {step1.linuxStore || "Get for Linux"}
                   </span>
                 </div>
               </a>
@@ -223,7 +233,7 @@ export function GetStartedStepsSection({ locale: _locale, dict }: GetStartedStep
             </div>
           </div>
 
-          {/* STEP 3: You're connected — everywhere */}
+          {/* STEP 3: You're connected everywhere */}
           <div className="py-6 sm:py-8 space-y-8">
             <div className="max-w-none space-y-4">
               <div className="flex items-center gap-4">

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "eduID.africa — Sovereign Academic Digital Identity Federation",
+    name: "eduID.africa: Sovereign Academic Digital Identity Federation",
     short_name: "eduID.africa",
     description: "Pan-African sovereign digital identity federation for higher education and research.",
     start_url: "/en",

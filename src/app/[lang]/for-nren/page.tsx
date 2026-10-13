@@ -27,7 +27,7 @@ export async function generateMetadata({
   return createLocalizedMetadata({
     locale,
     path: "/for-nren",
-    title: `${dict.nrenPage.hero.title} — eduID.africa`,
+    title: `${dict.nrenPage.hero.title} | eduID.africa`,
     description: dict.nrenPage.hero.subtitle,
   });
 }

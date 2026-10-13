@@ -26,7 +26,7 @@ export async function generateMetadata({
   return createLocalizedMetadata({
     locale,
     path: "/modules",
-    title: `${dict.modulesPage.hero.title} — eduID.africa`,
+    title: `${dict.modulesPage.hero.title} | eduID.africa`,
     description: dict.modulesPage.hero.subtitle,
   });
 }

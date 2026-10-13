@@ -3,6 +3,7 @@
 import * as React from "react";
 import { EarthIcon, type EarthIconHandle, WorkflowIcon, type WorkflowIconHandle, CloudSyncIcon, type CloudSyncIconHandle } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
+import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface AboutMissionSectionProps {
   locale: Locale;
@@ -57,7 +58,7 @@ export function AboutMissionSection({ dict }: AboutMissionSectionProps) {
 
         {/* Architectural Schematic: Level 1 Roof over Level 2 Dual Tracks */}
         <div className="space-y-6 max-w-6xl mx-auto">
-          {/* Top Overarching Card: Level 1 — Continental framework */}
+          {/* Top Overarching Card: Level 1: Continental framework */}
           <div
             className="group relative border border-dashed border-slate-300 bg-white p-8 sm:p-10 transition-colors duration-200 hover:bg-slate-50/50"
             onMouseEnter={() => earthRef.current?.startAnimation()}
@@ -104,9 +105,19 @@ export function AboutMissionSection({ dict }: AboutMissionSectionProps) {
             </div>
           </div>
 
+          {/* Architecture Schematic Illustration Slot */}
+          <VisualPlaceholder
+            type="illustration"
+            title="Continental Federation Architecture Diagram Slot"
+            dimensions="Full Width (21:9 Schematic Diagram)"
+            description="Slot for technical illustration mapping Global eduGAIN peering ↔ eduID.africa continental hub ↔ National NRENs ↔ Campus Identity Providers."
+            aspectRatio="aspect-[21/9]"
+            theme="light"
+          />
+
           {/* Bottom Dual Tracks: Level 2 & Level 2b Monolithic Grid */}
           <div className="border-y border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-300/80 bg-white">
-            {/* Pathway 1: Level 2 — National federation support */}
+            {/* Pathway 1: Level 2: National federation support */}
             <div
               className="group relative p-8 sm:p-10 flex flex-col justify-between transition-colors duration-200 hover:bg-slate-50/50"
               onMouseEnter={() => workflowRef.current?.startAnimation()}
@@ -146,7 +157,7 @@ export function AboutMissionSection({ dict }: AboutMissionSectionProps) {
               </div>
             </div>
 
-            {/* Pathway 2: Level 2b — Catchall for those that cannot yet */}
+            {/* Pathway 2: Level 2b: Catchall for those that cannot yet */}
             <div
               className="group relative p-8 sm:p-10 flex flex-col justify-between transition-colors duration-200 hover:bg-slate-50/50"
               onMouseEnter={() => cloudRef.current?.startAnimation()}

@@ -56,10 +56,10 @@ export const roadshowEvents: RoadshowEvent[] = [
     day: "19",
     year: "2026",
     title: {
-      en: "West Africa T&I Roadshow — Accra",
-      fr: "Roadshow T&I Afrique de l'Ouest — Accra",
-      pt: "Roadshow de T&I da África Ocidental — Acra",
-      ar: "جولة T&I في غرب أفريقيا — أكرا",
+      en: "West Africa T&I Roadshow: Accra",
+      fr: "Roadshow T&I Afrique de l'Ouest: Accra",
+      pt: "Roadshow de T&I da África Ocidental: Acra",
+      ar: "جولة T&I في غرب أفريقيا: أكرا",
     },
     venue: {
       en: "University of Ghana, Legon",
@@ -99,10 +99,10 @@ export const roadshowEvents: RoadshowEvent[] = [
     day: "9",
     year: "2026",
     title: {
-      en: "East Africa T&I Roadshow — Nairobi",
-      fr: "Roadshow T&I Afrique de l'Est — Nairobi",
-      pt: "Roadshow de T&I da África Oriental — Nairóbi",
-      ar: "جولة T&I في شرق أفريقيا — نيروبي",
+      en: "East Africa T&I Roadshow: Nairobi",
+      fr: "Roadshow T&I Afrique de l'Est: Nairobi",
+      pt: "Roadshow de T&I da África Oriental: Nairóbi",
+      ar: "جولة T&I في شرق أفريقيا: نيروبي",
     },
     venue: {
       en: "KENET offices",
@@ -142,10 +142,10 @@ export const roadshowEvents: RoadshowEvent[] = [
     day: "14",
     year: "2026",
     title: {
-      en: "Francophone Africa — Dakar",
-      fr: "Afrique Francophone — Dakar",
-      pt: "África Francófona — Dacar",
-      ar: "أفريقيا الناطقة بالفرنسية — داكار",
+      en: "Francophone Africa: Dakar",
+      fr: "Afrique Francophone: Dakar",
+      pt: "África Francófona: Dacar",
+      ar: "أفريقيا الناطقة بالفرنسية: داكار",
     },
     venue: {
       en: "UCAD",
@@ -185,10 +185,10 @@ export const roadshowEvents: RoadshowEvent[] = [
     day: "4",
     year: "2026",
     title: {
-      en: "Southern Africa T&I Roadshow — Lusaka",
-      fr: "Roadshow T&I Afrique Australe — Lusaka",
-      pt: "Roadshow de T&I da África Austral — Lusaca",
-      ar: "جولة T&I في أفريقيا الجنوبية — لوساكا",
+      en: "Southern Africa T&I Roadshow: Lusaka",
+      fr: "Roadshow T&I Afrique Australe: Lusaka",
+      pt: "Roadshow de T&I da África Austral: Lusaca",
+      ar: "جولة T&I في أفريقيا الجنوبية: لوساكا",
     },
     venue: {
       en: "ZAMREN host",

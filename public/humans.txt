@@ -9,7 +9,7 @@ The eduID.africa identity federation network itself is governed and operated by
 WACREN, UbuntuNet Alliance, and ASREN under the AfricaConnect project.
 
 /* FEDERATION OPERATORS */
-Federation: eduID.africa — Sovereign Digital Identity Federation
+Federation: eduID.africa | Sovereign Digital Identity Federation
 Regional Partners: WACREN, UbuntuNet Alliance, ASREN
 Initiative: AfricaConnect4 (Co-funded by the European Union)
 International Trust: eduGAIN, REFEDS, GÉANT

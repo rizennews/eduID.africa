@@ -65,10 +65,10 @@ export function createLocalizedMetadata({
   languageAlternates["x-default"] = `${siteConfig.baseUrl}/${defaultLocale}${cleanPath === "/" ? "" : cleanPath}`;
 
   const defaultTitles: Record<Locale, string> = {
-    en: "eduID.africa — Sovereign Digital Identity Federation for African Academia",
-    fr: "eduID.africa — Fédération d'Identité Numérique Souveraine pour l'Afrique",
-    pt: "eduID.africa — Federação Soberana de Identidade Digital para África",
-    ar: "eduID.africa — اتحاد الهوية الرقمية السيادية للأكاديميا الأفريقية",
+    en: "eduID.africa | Sovereign Digital Identity Federation for African Academia",
+    fr: "eduID.africa | Fédération d'Identité Numérique Souveraine pour l'Afrique",
+    pt: "eduID.africa | Federação Soberana de Identidade Digital para África",
+    ar: "eduID.africa | اتحاد الهوية الرقمية السيادية للأكاديميا الأفريقية",
   };
 
   const defaultDescriptions: Record<Locale, string> = {
@@ -91,7 +91,7 @@ export function createLocalizedMetadata({
   const resolvedImageAlt =
     imageAlt ||
     title ||
-    `${siteConfig.name} — Sovereign Identity for African Education & Research`;
+    `${siteConfig.name} | Sovereign Identity for African Education & Research`;
 
   const isJpg = resolvedImageUrl.endsWith(".jpg") || resolvedImageUrl.endsWith(".jpeg");
 

@@ -23,7 +23,7 @@ export function GetStartedNotConnectedSection({
   const sectionData = dict.getStartedPage?.notConnectedSection || {
     title: "Is your institution not connected yet?",
     description:
-      "If your university doesn't appear in the directory, the path forward depends on your country's NREN. We can point you to the right contact — or help your IT team start the onboarding process directly.",
+      "If your university doesn't appear in the directory, the path forward depends on your country's NREN. We can point you to the right contact, or help your IT team start the onboarding process directly.",
     actionAdmins: "Information for IT admins",
     actionContact: "Contact the eduID.africa team",
   };

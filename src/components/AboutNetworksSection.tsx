@@ -3,6 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import type { Locale } from "@/lib/i18n";
+import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface AboutNetworksSectionProps {
   locale: Locale;
@@ -74,6 +75,18 @@ export function AboutNetworksSection({ dict }: AboutNetworksSectionProps) {
           <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
             {data.description}
           </p>
+        </div>
+
+        {/* Regional Network Map Illustration Slot */}
+        <div className="mb-10 max-w-5xl mx-auto">
+          <VisualPlaceholder
+            type="map"
+            title="Three Regional REN Operational Map Slot"
+            dimensions="1200 × 420 (Regional Network Topology)"
+            description="Slot for continental map illustration showing the operational footprint of UbuntuNet Alliance, WACREN, and ASREN."
+            aspectRatio="aspect-[21/9]"
+            theme="light"
+          />
         </div>
 
         {/* Monolithic 3-Column Architectural Grid */}

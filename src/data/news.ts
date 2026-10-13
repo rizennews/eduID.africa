@@ -76,10 +76,10 @@ export const newsArticles: NewsArticle[] = [
       ar: "قراءة في 4 دقائق",
     },
     title: {
-      en: "BonafID 1.0 released — first production-ready deployment begins across six institutions",
-      fr: "Sortie de BonafID 1.0 — premier déploiement en production auprès de six établissements",
-      pt: "Lançamento do BonafID 1.0 — primeira implementação em produção começa em seis instituições",
-      ar: "إطلاق BonafID 1.0 — بدء أول نشر جاهز للإنتاج عبر ست مؤسسات",
+      en: "BonafID 1.0 released: first production-ready deployment begins across six institutions",
+      fr: "Sortie de BonafID 1.0: premier déploiement en production auprès de six établissements",
+      pt: "Lançamento do BonafID 1.0: primeira implementação em produção começa em seis instituições",
+      ar: "إطلاق BonafID 1.0: بدء أول نشر جاهز للإنتاج عبر ست مؤسسات",
     },
     excerpt: {
       en: "WACREN announces the AC4 production release of BonafID, marking the transition from pilot to operational platform. Six institutions across Ghana, Senegal, and Cameroon are the first to deploy the production version, with 14 additional onboardings scheduled before year-end.",
@@ -254,10 +254,10 @@ export const newsArticles: NewsArticle[] = [
       ar: "قراءة في 3 دقائق",
     },
     title: {
-      en: "Ethiopia joins the continental federation — 18 institutions now connected via CERENET",
-      fr: "L'Éthiopie rejoint la fédération continentale — 18 établissements désormais connectés via CERENET",
-      pt: "Etiópia junta-se à federação continental — 18 instituições conectadas através da CERENET",
-      ar: "إثيوبيا تنضم إلى الاتحاد القاري — 18 مؤسسة متصلة الآن عبر CERENET",
+      en: "Ethiopia joins the continental federation: 18 institutions now connected via CERENET",
+      fr: "L'Éthiopie rejoint la fédération continentale: 18 établissements désormais connectés via CERENET",
+      pt: "Etiópia junta-se à federação continental: 18 instituições conectadas através da CERENET",
+      ar: "إثيوبيا تنضم إلى الاتحاد القاري: 18 مؤسسة متصلة الآن عبر CERENET",
     },
     excerpt: {
       en: "CERENET's national federation officially peers with eduID.africa, adding Ethiopia's 18 registered research institutions to the continental network and expanding eduGAIN access across the Horn of Africa.",

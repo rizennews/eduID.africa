@@ -53,10 +53,10 @@ export const federationPolicy: PolicyDocument = {
   license: "Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)",
   licenseUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
   attribution: {
-    en: 'Based on the "SWAMID Federation Policy", written by L. Johansson, T. Wiberg, V. Nordh, P. Axelsson, M. Berglund (©2020 SUNET — Swedish University Computer Network).',
-    fr: 'Basé sur la « SWAMID Federation Policy », rédigée par L. Johansson, T. Wiberg, V. Nordh, P. Axelsson, M. Berglund (©2020 SUNET — Swedish University Computer Network).',
-    pt: 'Baseado na "SWAMID Federation Policy", da autoria de L. Johansson, T. Wiberg, V. Nordh, P. Axelsson, M. Berglund (©2020 SUNET — Swedish University Computer Network).',
-    ar: 'مبني على "SWAMID Federation Policy"، صاغها L. Johansson و T. Wiberg و V. Nordh و P. Axelsson و M. Berglund (حقوق النشر ©2020 SUNET — شبكة حواسيب الجامعات السويدية).',
+    en: 'Based on the "SWAMID Federation Policy", written by L. Johansson, T. Wiberg, V. Nordh, P. Axelsson, M. Berglund (©2020 SUNET, Swedish University Computer Network).',
+    fr: 'Basé sur la « SWAMID Federation Policy », rédigée par L. Johansson, T. Wiberg, V. Nordh, P. Axelsson, M. Berglund (©2020 SUNET, Swedish University Computer Network).',
+    pt: 'Baseado na "SWAMID Federation Policy", da autoria de L. Johansson, T. Wiberg, V. Nordh, P. Axelsson, M. Berglund (©2020 SUNET, Swedish University Computer Network).',
+    ar: 'مبني على "SWAMID Federation Policy"، صاغها L. Johansson و T. Wiberg و V. Nordh و P. Axelsson و M. Berglund (حقوق النشر ©2020 SUNET، شبكة حواسيب الجامعات السويدية).',
   },
   description: {
     en: "Governing framework defining rights, operational obligations, legal terms, and dispute resolution for all participants in the African continental catch-all identity federation.",
