@@ -43,7 +43,7 @@ interface AboutTimelineSectionProps {
   };
 }
 
-export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSectionProps) {
+export function AboutTimelineSection({ dict }: AboutTimelineSectionProps) {
   const data = dict.about.timeline;
 
   const milestones = [
@@ -100,11 +100,6 @@ export function AboutTimelineSection({ locale: _locale, dict }: AboutTimelineSec
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="mb-4">
-            <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
-              {data.kicker}
-            </span>
-          </div>
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
           </h2>

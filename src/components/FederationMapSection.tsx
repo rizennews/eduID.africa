@@ -71,13 +71,6 @@ export function FederationMapSection({
 
   const ctaText = dict.mapSection.cta.replace(/→\s*$/, "").trim();
 
-  const eyebrow =
-    locale === "fr"
-      ? "Carte continentale"
-      : locale === "pt"
-      ? "Mapa continental"
-      : "Continental Map";
-
   const taxonomyLabel =
     locale === "fr"
       ? "Catégories de statut"
@@ -98,14 +91,9 @@ export function FederationMapSection({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Title, Narrative & Primary Action */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-5 text-left">
-            <div>
-              <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200/90 shadow-2xs">
-                {eyebrow}
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#0B357B] tracking-tight leading-[1.16] mt-4 max-w-xl">
-                {dict.mapSection.title}
-              </h2>
-            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal text-[#0B357B] tracking-tight leading-[1.16] max-w-xl">
+              {dict.mapSection.title}
+            </h2>
 
             <p className="font-sans text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
               {dict.mapSection.description}
