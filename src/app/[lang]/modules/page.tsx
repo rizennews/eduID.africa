@@ -21,13 +21,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/modules",
-    title: "Federation Modules & Integration SDKs — eduID.africa",
-    description:
-      "Federation libraries, protocol adapters, automated connectors, and deployment recipes for African campus engineers and national federations.",
+    title: `${dict.modulesPage.hero.title} — eduID.africa`,
+    description: dict.modulesPage.hero.subtitle,
   });
 }
 

@@ -7,37 +7,44 @@ export interface NewsArticle {
     en: string;
     fr: string;
     pt: string;
+    ar: string;
   };
   category: {
     en: string;
     fr: string;
     pt: string;
+    ar: string;
   };
   date: string;
   readTime: {
     en: string;
     fr: string;
     pt: string;
+    ar: string;
   };
   title: {
     en: string;
     fr: string;
     pt: string;
+    ar: string;
   };
   excerpt: {
     en: string;
     fr: string;
     pt: string;
+    ar: string;
   };
   content: {
     en: string[];
     fr: string[];
     pt: string[];
+    ar: string[];
   };
   keyTakeaways: {
     en: string[];
     fr: string[];
     pt: string[];
+    ar: string[];
   };
   meta: {
     programme: string;
@@ -53,27 +60,32 @@ export const newsArticles: NewsArticle[] = [
       en: "Engineering teams in West Africa deploying BonafID 1.0 production identity provider infrastructure.",
       fr: "Équipes d'ingénierie en Afrique de l'Ouest déployant l'infrastructure de fournisseur d'identité BonafID 1.0.",
       pt: "Equipas de engenharia na África Ocidental a implementar a infraestrutura do provedor de identidade BonafID 1.0.",
+      ar: "فرق هندسية في غرب أفريقيا تنشر البنية التحتية لمزود الهوية BonafID 1.0 الجاهز للإنتاج.",
     },
     category: {
       en: "Platform Announcement",
       fr: "Annonce de la plateforme",
       pt: "Anúncio da Plataforma",
+      ar: "إعلان المنصة",
     },
     date: "12 May 2026",
     readTime: {
       en: "4 min read",
       fr: "4 min de lecture",
       pt: "4 min de leitura",
+      ar: "قراءة في 4 دقائق",
     },
     title: {
       en: "BonafID 1.0 released — first production-ready deployment begins across six institutions",
       fr: "Sortie de BonafID 1.0 — premier déploiement en production auprès de six établissements",
       pt: "Lançamento do BonafID 1.0 — primeira implementação em produção começa em seis instituições",
+      ar: "إطلاق BonafID 1.0 — بدء أول نشر جاهز للإنتاج عبر ست مؤسسات",
     },
     excerpt: {
       en: "WACREN announces the AC4 production release of BonafID, marking the transition from pilot to operational platform. Six institutions across Ghana, Senegal, and Cameroon are the first to deploy the production version, with 14 additional onboardings scheduled before year-end.",
       fr: "WACREN annonce la sortie en production AC4 de BonafID, marquant la transition du statut pilote à une plateforme opérationnelle. Six établissements au Ghana, au Sénégal et au Cameroun sont les premiers à déployer la version de production, avec 14 intégrations supplémentaires prévues avant la fin de l'année.",
       pt: "A WACREN anuncia o lançamento em produção AC4 do BonafID, assinalando a transição de piloto para plataforma operacional. Seis instituições no Gana, Senegal e Camarões são as primeiras a implementar a versão de produção, com 14 integrações adicionais agendadas até ao final do ano.",
+      ar: "تعلن WACREN عن إطلاق الإصدار الإنتاجي AC4 من BonafID، مما يمثل الانتقال من المرحلة التجريبية إلى منصة تشغيلية. ست مؤسسات في غانا والسنغال والكاميرون هي الأولى في نشر إصدار الإنتاج، مع جدولة 14 مؤسسة إضافية قبل نهاية العام.",
     },
     keyTakeaways: {
       en: [
@@ -93,6 +105,12 @@ export const newsArticles: NewsArticle[] = [
         "A coorte inicial inclui seis grandes instituições de ensino superior na África Ocidental e Central.",
         "Ferramentas automáticas de conexão SIS e LDAP eliminam a ingestão manual de credenciais.",
         "Conformidade total com eduID.africa, eduGAIN e geteduroam pronta a usar.",
+      ],
+      ar: [
+        "النشر الرسمي للإصدار الإنتاجي الأول (v1.0) ضمن برنامج AfricaConnect4.",
+        "تشمل الدفعة الأولى ست مؤسسات تعليم عالي كبرى في غرب ووسط أفريقيا.",
+        "أدوات موصلات SIS و LDAP المؤتمتة تلغي الإدخال اليدوي لبيانات اعتماد الطلاب.",
+        "توافق كامل مع اتحادات eduID.africa و eduGAIN و geteduroam بشكل جاهز ومباشر.",
       ],
     },
     content: {
@@ -114,6 +132,12 @@ export const newsArticles: NewsArticle[] = [
         "A coorte inaugural de seis instituições compreende universidades nacionais de investigação e faculdades técnicas no Gana (GARNET), Senegal (snRER) e Camarões (RIC). Através dos conectores integrados do BonafID, os sistemas de gestão académica (SIS) e diretórios LDAP existentes foram sincronizados com os metadados da federação eduID.africa sem migrações complexas de dados.",
         "Com esta entrada em produção, estudantes, professores e investigadores destes seis campi ganham acesso imediato à autenticação Wi-Fi mundial eduroam e a milhares de repositórios digitais no eduGAIN. Mais 14 instituições encontram-se em fase de validação de dados com ativação prevista para os 3º e 4º trimestres de 2026.",
       ],
+      ar: [
+        "تعلن WACREN عن إطلاق الإصدار الإنتاجي AC4 من BonafID، مما يمثل الانتقال من المرحلة التجريبية إلى منصة تشغيلية. ست مؤسسات في غانا والسنغال والكاميرون هي الأولى في نشر إصدار الإنتاج، مع جدولة 14 مؤسسة إضافية قبل نهاية العام.",
+        "يُعد BonafID مزود هوية أكاديمياً مفتوح المصدر ومستضافاً على السحابة، مصمماً خصيصاً للقضاء على الحواجز الهيكلية التي منعت تاريخياً الجامعات الأفريقية من الانضمام إلى اتحادات الثقة. من خلال إلغاء الحاجة إلى خوادم محلية، وخبراء تشفير متخصصين، والصيانة المعقدة لخوادم Shibboleth/SimpleSAMLphp، يُمكّن BonafID فرق تقنية المعلومات في الحرم الجامعي من إنشاء خدمات هوية سيادية في غضون أسابيع.",
+        "تشمل الدفعة الأولى المكونة من ست مؤسسات جامعات بحثية وطنية وكليات تقنية في غانا (GARNET) والسنغال (snRER) والكاميرون (RIC). من خلال وحدات الربط المدمجة في BonafID، تمت مزامنة أنظمة معلومات الطلاب الحالية (SIS) وقواعد بيانات الدليل النشط مع البيانات الوصفية لاتحاد eduID.africa دون الحاجة إلى ترحيل معقد للبيانات.",
+        "مع بدء النشر الإنتاجي، يحصل الطلاب وأعضاء هيئة التدريس والباحثون في هذه الحرم الجامعية الستة على الفور على مصادقة Wi-Fi العالمية عبر eduroam والوصول إلى مستودعات الأبحاث الرقمية العابرة للحدود في eduGAIN. وتخضع 14 مؤسسة أخرى حالياً للتحقق من البيانات ومن المقرر بدء تشغيلها خلال الربعين الثالث والرابع من عام 2026.",
+      ],
     },
     meta: {
       programme: "AfricaConnect4 (Year 2)",
@@ -127,27 +151,32 @@ export const newsArticles: NewsArticle[] = [
       en: "HEI IT administrators and campus engineers collaborating during hands-on BonafID assessment in Abidjan.",
       fr: "Administrateurs informatiques et ingénieurs d'ESR collaborant lors de l'évaluation pratique BonafID à Abidjan.",
       pt: "Administradores de TI e engenheiros de IES a colaborar durante a avaliação prática do BonafID em Abidjan.",
+      ar: "مسؤولو تكنولوجيا المعلومات في مؤسسات التعليم العالي ومهندسو الحرم الجامعي يتعاونون أثناء تقييم BonafID العملي في أبيدجان.",
     },
     category: {
       en: "Capacity Building",
       fr: "Renforcement des capacités",
       pt: "Capacitação",
+      ar: "بناء القدرات",
     },
     date: "28 April 2026",
     readTime: {
       en: "3 min read",
       fr: "3 min de lecture",
       pt: "3 min de leitura",
+      ar: "قراءة في 3 دقائق",
     },
     title: {
       en: "Abidjan T&I Roadshow: 12 institutions begin BonafID assessment",
       fr: "Roadshow T&I d'Abidjan : 12 établissements entament l'évaluation BonafID",
       pt: "Roadshow de T&I de Abidjan: 12 instituições iniciam avaliação BonafID",
+      ar: "جولة T&I في أبيدجان: 12 مؤسسة تبدأ تقييم BonafID",
     },
     excerpt: {
       en: "The May West Africa roadshow hosted 34 HEI IT administrators from Côte d'Ivoire, Mali, and Burkina Faso. Twelve institutions completed the initial BonafID readiness assessment.",
       fr: "Le roadshow d'Afrique de l'Ouest organisé à Abidjan a réuni 34 administrateurs informatiques d'ESR de Côte d'Ivoire, du Mali et du Burkina Faso. Douze établissements ont finalisé avec succès leur évaluation de maturité BonafID.",
       pt: "O roadshow da África Ocidental em Abidjan reuniu 34 administradores de TI de IES da Costa do Marfim, Mali e Burkina Faso. Doze instituições concluíram a avaliação inicial de prontidão do BonafID.",
+      ar: "استضافت جولة غرب أفريقيا في مايو 34 مسؤولاً عن تكنولوجيا المعلومات في مؤسسات التعليم العالي من كوت ديفوار ومالي وبوركينا فاسو. وأكملت 12 مؤسسة التقييم الأولي للجاهزية لمنصة BonafID.",
     },
     keyTakeaways: {
       en: [
@@ -164,6 +193,11 @@ export const newsArticles: NewsArticle[] = [
         "34 engenheiros e diretores de TI reuniram-se em Abidjan para 4 dias de laboratórios práticos.",
         "12 instituições finalizaram o diagnóstico de prontidão e mapeamento de sistemas académicos.",
         "Os participantes configuraram instâncias de teste do BonafID e validaram metadados SAML/OIDC.",
+      ],
+      ar: [
+        "اجتمع 34 مهندس حرم جامعي ومدير تقنية معلومات في أبيدجان لمدة 4 أيام من المعامل التقنية العملية.",
+        "أكملت 12 مؤسسة تقييم جاهزية الهوية ومواءمة أنظمة معلومات الطلاب (SIS).",
+        "قام المشاركون بنشر نسخ تجريبية عاملة من BonafID وتحققوا من البيانات الوصفية لـ SAML/OIDC.",
       ],
     },
     content: {
@@ -185,6 +219,12 @@ export const newsArticles: NewsArticle[] = [
         "Os participantes trabalharam diretamente com os engenheiros do eduID.africa na auditoria de diretórios de campus, validação de integridade de dados e testes práticos com o motor de integração do BonafID.",
         "No encerramento do evento, 12 universidades finalizaram avaliações formais de prontidão e roteiros técnicos para concluir o processo de adesão nos próximos 90 dias.",
       ],
+      ar: [
+        "استضافت جولة غرب أفريقيا في مايو 34 مسؤولاً عن تكنولوجيا المعلومات في مؤسسات التعليم العالي من كوت ديفوار ومالي وبوركينا فاسو. وأكملت 12 مؤسسة التقييم الأولي للجاهزية لمنصة BonafID.",
+        "جمعت ورشة العمل المكثفة التي نظمتها WACREN بالتعاون مع RITER (كوت ديفوار) على مدار أربعة أيام مديري تكنولوجيا المعلومات بالجامعات ومهندسي الأنظمة ومهندسي شبكات الحرم الجامعي لمعالجة الجوانب العملية لاتحاد هويات الحرم الجامعي.",
+        "عمل المشاركون مباشرة مع الفريق الهندسي لـ eduID.africa لمراجعة هياكل أدلة الحرم الجامعي، وتقييم جودة البيانات في أنظمة إدارة الطلاب، واختبار محرك الربط التلقائي للمخططات في BonafID.",
+        "مع ختام الجولة، أصدرت 12 جامعة تقييمات جاهزية معتمدة وخرائط طريق للنشر التقني، مما يضعها في موقع متميز لإكمال الانضمام إلى الاتحاد خلال التسعين يوماً القادمة.",
+      ],
     },
     meta: {
       programme: "WACREN T&I Roadshows",
@@ -198,27 +238,32 @@ export const newsArticles: NewsArticle[] = [
       en: "Addis Ababa research and education network interconnected with eduID.africa continental federation.",
       fr: "Réseau d'enseignement et de recherche d'Addis-Abeba interconnecté avec la fédération continentale eduID.africa.",
       pt: "Rede de investigação e educação de Adis Abeba interligada com a federação continental eduID.africa.",
+      ar: "شبكة البحث والتعليم في أديس أبابا تترابط مع اتحاد eduID.africa القاري.",
     },
     category: {
       en: "Federation Expansion",
       fr: "Extension de la fédération",
       pt: "Expansão da Federação",
+      ar: "توسع الاتحاد",
     },
     date: "14 April 2026",
     readTime: {
       en: "3 min read",
       fr: "3 min de lecture",
       pt: "3 min de leitura",
+      ar: "قراءة في 3 دقائق",
     },
     title: {
       en: "Ethiopia joins the continental federation — 18 institutions now connected via CERENET",
       fr: "L'Éthiopie rejoint la fédération continentale — 18 établissements désormais connectés via CERENET",
       pt: "Etiópia junta-se à federação continental — 18 instituições conectadas através da CERENET",
+      ar: "إثيوبيا تنضم إلى الاتحاد القاري — 18 مؤسسة متصلة الآن عبر CERENET",
     },
     excerpt: {
       en: "CERENET's national federation officially peers with eduID.africa, adding Ethiopia's 18 registered research institutions to the continental network and expanding eduGAIN access across the Horn of Africa.",
       fr: "La fédération nationale de CERENET s'interconnecte officiellement avec eduID.africa, ajoutant 18 établissements de recherche éthiopiens au réseau continental et étendant l'accès eduGAIN dans la Corne de l'Afrique.",
       pt: "A federação nacional da CERENET interliga-se oficialmente com o eduID.africa, somando 18 instituições de investigação da Etiópia à rede continental e expandindo o acesso eduGAIN no Corno de África.",
+      ar: "اتحاد CERENET الوطني ينشئ ربطاً رسمياً مع eduID.africa، مضيفاً 18 مؤسسة بحثية إثيوبية مسجلة إلى الشبكة القارية وموسعاً وصول eduGAIN عبر القرن الأفريقي.",
     },
     keyTakeaways: {
       en: [
@@ -235,6 +280,11 @@ export const newsArticles: NewsArticle[] = [
         "A CERENET torna-se a mais recente Rede Nacional de Investigação e Educação a interligar-se diretamente com o eduID.africa.",
         "18 universidades e centros de investigação etíopes ganham acesso bilateral aos recursos continentais.",
         "Acelera a colaboração científica entre a África Oriental e instituições parceiras na UbuntuNet, WACREN e ASREN.",
+      ],
+      ar: [
+        "أصبحت CERENET أحدث شبكة وطنية للبحث والتعليم تترابط مباشرة مع eduID.africa.",
+        "18 مؤسسة إثيوبية للتعليم العالي والبحث العلمي تحصل على وصول ثنائي للموارد القارية.",
+        "تسريع التعاون البحثي بين شرق أفريقيا والمؤسسات النظيرة عبر UbuntuNet و WACREN و ASREN.",
       ],
     },
     content: {
@@ -256,6 +306,12 @@ export const newsArticles: NewsArticle[] = [
         "Este marco integra mais de 180.000 estudantes, docentes e investigadores no espaço de confiança continental. A comunidade académica etíope passa a usufruir de acesso simplificado a bibliotecas digitais e clusters computacionais em África e a nível global.",
         "A interligação viabiliza igualmente a expansão rápida do eduroam nos 18 campi universitários com suporte da infraestrutura de proxy RadSec.",
       ],
+      ar: [
+        "اتحاد CERENET الوطني ينشئ ربطاً رسمياً مع eduID.africa، مضيفاً 18 مؤسسة بحثية إثيوبية مسجلة إلى الشبكة القارية وموسعاً وصول eduGAIN عبر القرن الأفريقي.",
+        "عقب تبادل شامل للبيانات الوصفية واختبارات التوافق الأمني مع الفرق التشغيلية لـ UbuntuNet Alliance و WACREN، أكمل مركز الاتحاد الرئيسي لشبكة CERENET الربط الثنائي مع eduID.africa.",
+        "يُدخل هذا الإنجاز أكثر من 180,000 طالب وباحث وموظف علمي ضمن نطاق الثقة القاري. ويمكن للأكاديميين الإثيوبيين الآن الوصول إلى المكتبات الرقمية، ومجموعات الحوسبة، ومجموعات البيانات العلمية المشتركة في جميع أنحاء أفريقيا ودولياً دون عوائق مصادقة منفصلة.",
+        "كما يُمهد هذا الربط الطريق لنشر سريع لشبكة eduroam اللاسلكية على مستوى البلاد في جميع الجامعات الأعضاء البالغ عددها 18، بدعم من بنية وكيل RadSec الإقليمية.",
+      ],
     },
     meta: {
       programme: "UbuntuNet Alliance & AfricaConnect4",
@@ -269,27 +325,32 @@ export const newsArticles: NewsArticle[] = [
       en: "African university students and researchers securely connecting to global eduroam Wi-Fi across campus.",
       fr: "Étudiants et chercheurs africains se connectant en toute sécurité au réseau Wi-Fi mondial eduroam sur les campus.",
       pt: "Estudantes e investigadores universitários africanos a ligarem-se com segurança ao Wi-Fi mundial eduroam nos campi.",
+      ar: "طلاب وباحثون في جامعات أفريقية يتصلون بأمان بشبكة Wi-Fi العالمية eduroam في الحرم الجامعي.",
     },
     category: {
       en: "Service Milestones",
       fr: "Jalons du service",
       pt: "Marcos do Serviço",
+      ar: "إنجازات الخدمة",
     },
     date: "2 April 2026",
     readTime: {
       en: "2 min read",
       fr: "2 min de lecture",
       pt: "2 min de leitura",
+      ar: "قراءة في دقيقتين",
     },
     title: {
       en: "geteduroam regional service reaches 4,200 active certificate installations",
       fr: "Le service régional geteduroam franchit le cap des 4 200 certificats actifs installés",
       pt: "Serviço regional geteduroam atinge 4.200 instalações ativas de certificados",
+      ar: "خدمة geteduroam الإقليمية تصل إلى 4,200 تثبيت نشط للشهادات",
     },
     excerpt: {
       en: "The AC4 geteduroam deployment passes 4,200 active certificates, reflecting growing student and staff adoption at connected campuses across the WACREN region.",
       fr: "Le déploiement geteduroam AC4 franchit le cap des 4 200 certificats actifs, témoignant d'une adoption croissante parmi les étudiants et le personnel sur les campus connectés de la région WACREN.",
       pt: "A implementação geteduroam AC4 ultrapassa 4.200 certificados ativos, refletindo a crescente adoção por estudantes e funcionários em campi conectados na região da WACREN.",
+      ar: "تجاوز نشر geteduroam ضمن برنامج AC4 حاجز 4,200 شهادة نشطة، مما يعكس تزايد اعتماد الطلاب والموظفين في الجامعات المتصلة عبر منطقة WACREN.",
     },
     keyTakeaways: {
       en: [
@@ -306,6 +367,11 @@ export const newsArticles: NewsArticle[] = [
         "Mais de 4.200 certificados Wi-Fi seguros instalados em dispositivos Android, iOS, Windows e macOS.",
         "A autenticação por certificado EAP-TLS substitui métodos vulneráveis baseados em palavras-passe.",
         "O programa catchall disponibiliza perfis geteduroam imediatos para instituições sem federação nacional.",
+      ],
+      ar: [
+        "أكثر من 4,200 شهادة Wi-Fi آمنة مثبتة ونشطة عبر أجهزة Android و iOS و Windows و macOS.",
+        "المصادقة المستندة إلى شهادات EAP-TLS تحل محل التسجيل الضعيف القائم على كلمات المرور.",
+        "برنامج الاتحاد الشامل يوفر للمؤسسات غير المرتبطة باتحادات وطنية ملفات تعريف geteduroam فورية.",
       ],
     },
     content: {
@@ -326,6 +392,12 @@ export const newsArticles: NewsArticle[] = [
         "Com o geteduroam, estudantes e professores transferem certificados criptográficos diretamente para portáteis e telemóveis numa única etapa de autenticação, eliminando os riscos de segurança de redes abertas de campus.",
         "A infraestrutura regional de RADIUS / RadSec mantida pela WACREN e UbuntuNet Alliance garante que utilizadores em mobilidade acedem à rede instantaneamente em qualquer instituição participante.",
         "Com as ferramentas simplificadas do BonafID 1.0, as universidades parceiras registam uma redução de 70% nos pedidos de suporte técnico relacionados com Wi-Fi.",
+      ],
+      ar: [
+        "تجاوز نشر geteduroam ضمن برنامج AC4 حاجز 4,200 شهادة نشطة، مما يعكس تزايد اعتماد الطلاب والموظفين في الجامعات المتصلة عبر منطقة WACREN.",
+        "باستخدام geteduroam، يقوم الطلاب وأعضاء هيئة التدريس بتنزيل شهادات العميل المشفرة مباشرة إلى حواسيبهم وهواتفهم الذكية بخطوة مصادقة واحدة. ويقضي ذلك على المخاطر الشائعة لسرقة بيانات الاعتماد المرتبطة بكلمات المرور المشتركة على شبكات الحرم الجامعي المفتوحة.",
+        "تضمن شبكة RADIUS / RadSec الإقليمية التي تديرها WACREN و UbuntuNet Alliance مصادقة مستخدمي التجوال بسلاسة سواء كانوا يعملون في مختبراتهم الأصلية أو يزورون معاهد أبحاث في جميع أنحاء أفريقيا.",
+        "مع أدوات التهيئة الجديدة التي تم إطلاقها في BonafID 1.0، أبلغت المؤسسات المشاركة عن انخفاض بنسبة 70% في تذاكر الدعم الفني المتعلقة بإعداد الشبكات اللاسلكية.",
       ],
     },
     meta: {
@@ -349,12 +421,12 @@ export function getNewsArticles(locale: Locale): {
   return newsArticles.map((article) => ({
     slug: article.slug,
     image: article.image,
-    imageCaption: (article.imageCaption as any)[locale] || article.imageCaption.en,
-    category: (article.category as any)[locale] || article.category.en,
+    imageCaption: article.imageCaption[locale] || article.imageCaption.en,
+    category: article.category[locale] || article.category.en,
     date: article.date,
-    readTime: (article.readTime as any)[locale] || article.readTime.en,
-    title: (article.title as any)[locale] || article.title.en,
-    excerpt: (article.excerpt as any)[locale] || article.excerpt.en,
+    readTime: article.readTime[locale] || article.readTime.en,
+    title: article.title[locale] || article.title.en,
+    excerpt: article.excerpt[locale] || article.excerpt.en,
     meta: article.meta,
   }));
 }
@@ -377,14 +449,14 @@ export function getNewsArticleBySlug(slug: string, locale: Locale): {
   return {
     slug: article.slug,
     image: article.image,
-    imageCaption: (article.imageCaption as any)[locale] || article.imageCaption.en,
-    category: (article.category as any)[locale] || article.category.en,
+    imageCaption: article.imageCaption[locale] || article.imageCaption.en,
+    category: article.category[locale] || article.category.en,
     date: article.date,
-    readTime: (article.readTime as any)[locale] || article.readTime.en,
-    title: (article.title as any)[locale] || article.title.en,
-    excerpt: (article.excerpt as any)[locale] || article.excerpt.en,
-    content: (article.content as any)[locale] || article.content.en,
-    keyTakeaways: (article.keyTakeaways as any)[locale] || article.keyTakeaways.en,
+    readTime: article.readTime[locale] || article.readTime.en,
+    title: article.title[locale] || article.title.en,
+    excerpt: article.excerpt[locale] || article.excerpt.en,
+    content: article.content[locale] || article.content.en,
+    keyTakeaways: article.keyTakeaways[locale] || article.keyTakeaways.en,
     meta: article.meta,
   };
 }

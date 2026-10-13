@@ -23,13 +23,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/about",
-    title: "About eduID.africa — Africa's Continental Trust & Identity Framework",
-    description:
-      "A Trusted Digital Identity Federation for African Research and Education",
+    title: `${dict.nav.eduid.about.title} — eduID.africa`,
+    description: dict.about.description,
   });
 }
 

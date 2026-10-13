@@ -22,7 +22,7 @@ export function FederationMapHero({ dict }: FederationMapHeroProps) {
 
         {/* Minimal Editorial Serif Title */}
         <h1 className="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
-          Federation <span className="text-white/80">Map</span>
+          {dict.federationMapPage.hero.title}
         </h1>
 
         <p className="mt-3 text-base sm:text-lg text-white/90 font-sans font-normal leading-relaxed">

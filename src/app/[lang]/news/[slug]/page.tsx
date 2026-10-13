@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
-import { createLocalizedMetadata } from "@/lib/seo";
+import { createLocalizedMetadata, generateArticleSchema, generateBreadcrumbSchema } from "@/lib/seo";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { newsArticles, getNewsArticleBySlug } from "@/data/news";
@@ -42,6 +42,10 @@ export async function generateMetadata({
     path: `/news/${resolvedParams.slug}`,
     title: `${article.title} — eduID.africa`,
     description: article.excerpt,
+    image: article.image,
+    imageAlt: article.imageCaption || article.title,
+    ogType: "article",
+    section: article.category,
   });
 }
 
@@ -74,8 +78,32 @@ export default async function NewsDetailPage({
       excerpt: (a.excerpt as any)[locale] || a.excerpt.en,
     }));
 
+  const articleJsonLd = generateArticleSchema({
+    locale,
+    title: article.title,
+    description: article.excerpt,
+    slug: article.slug,
+    image: article.image,
+  });
+
+  const breadcrumbJsonLd = generateBreadcrumbSchema({
+    locale,
+    items: [
+      { name: dict.newsPage.title || "News & Announcements", path: "/news" },
+      { name: article.title, path: `/news/${article.slug}` },
+    ],
+  });
+
   return (
     <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header locale={locale} dict={dict} />
       <main className="flex-1 py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

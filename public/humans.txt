@@ -1,0 +1,23 @@
+/* SITE CRAFTED BY */
+Website Designed & Engineered by: Padmore Aning
+Personal Website: https://padmoreaning.com
+Contact: hello@padmoreaning.com
+
+/* NOTE & ATTRIBUTION */
+Padmore Aning crafted and engineered this website platform.
+The eduID.africa identity federation network itself is governed and operated by
+WACREN, UbuntuNet Alliance, and ASREN under the AfricaConnect project.
+
+/* FEDERATION OPERATORS */
+Federation: eduID.africa — Sovereign Digital Identity Federation
+Regional Partners: WACREN, UbuntuNet Alliance, ASREN
+Initiative: AfricaConnect4 (Co-funded by the European Union)
+International Trust: eduGAIN, REFEDS, GÉANT
+
+/* ARCHITECTURE & TECHNOLOGIES */
+Core: Next.js 16 (Turbopack, App Router)
+Language: TypeScript, React 19
+Styling: Tailwind CSS
+Internationalization: English, French, Portuguese, Arabic (RTL)
+Identity Protocols: SAML 2.0, OpenID Connect, RFC 2119, eduGAIN MRPS
+Last Updated: 2026

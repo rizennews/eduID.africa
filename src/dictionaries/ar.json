@@ -97,7 +97,9 @@
         "shortName": "ASREN",
         "fullName": "شبكة البحث والتعليم للدول العربية",
         "region": "شمال أفريقيا والدول العربية"
-      }
+      },
+      "kicker": "القيادة الإقليمية",
+      "tag": "شبكة بحثية إقليمية"
     },
     "mission": {
       "kicker": "الرسالة",
@@ -117,7 +119,20 @@
         "tag": "المستوى 2ب — الشبكة الشاملة",
         "title": "المستوى 2ب — الشبكة الشاملة لمن لا يستطيع بعد",
         "description": "للشبكات التي تفتقر إلى الطاقة المؤسسية أو التمويل أو الكتلة الحرجة لتشغيل اتحاد وطني، تشغّل eduID.africa شبكة شاملة. BonafID هو المنصة المُمكِّنة: إدارة هوية ووصول مستضافة سحابياً ومفتوحة المصدر لأي مؤسسة."
-      }
+      },
+      "level1Features": [
+        "عقدة eduGAIN العالمية",
+        "حوكمة المعايير والثقة",
+        "تمثيل دولي للبحث والتعليم"
+      ],
+      "level2Points": [
+        "بنية تحتية سيادية للهوية مملوكة للدولة",
+        "أدوات حوكمة شبكات NREN والتدريب والجولات"
+      ],
+      "level2bPoints": [
+        "نظام IAM موحد سحابي ومفتوح المصدر",
+        "مشاركة فورية عبر BonafID"
+      ]
     },
     "timeline": {
       "kicker": "الجدول الزمني",
@@ -161,18 +176,22 @@
       "card1": {
         "title": "BonafID — حوكمة هوية الحرم الجامعي",
         "description": "معظم المؤسسات الأفريقية تفتقر إلى مزود هوية مُدار. BonafID هو نظام IAM مفتوح المصدر، شارك في إنشائه WACREN، يمنح كل مؤسسة مزود هوية جاهزاً للإنتاج. هوية موحدة مدى الحياة لكل طالب وموظف — تعمل عبر المؤسسات والدول.",
-        "solves": "بيانات اعتماد مجزأة، لا مزود هوية مُدار، محاصر خارج الموارد العالمية"
+        "solves": "بيانات اعتماد مجزأة، لا مزود هوية مُدار، محاصر خارج الموارد العالمية",
+        "layerTag": "الطبقة 1 — إدارة هوية الحرم الجامعي"
       },
       "card2": {
         "title": "eduID.africa — الاتحاد القاري",
         "description": "اتحاد الهوية الإقليمي الذي يربط المؤسسات الأفريقية ببعضها، وعبر eduGAIN بشبكة البحث والتعليم العالمية. يمكن لشبكات NREN بناء اتحادات وطنية سيادية تتصل للأعلى — أو يمكن للمؤسسات المشاركة مباشرة عبر الاتحاد الشامل.",
-        "solves": "لا مسار للوصول البحثي العالمي، بنية تحتية وطنية مجزأة"
+        "solves": "لا مسار للوصول البحثي العالمي، بنية تحتية وطنية مجزأة",
+        "layerTag": "الطبقة 2 — الاتحاد القاري"
       },
       "card3": {
         "title": "geteduroam — شبكة Wi-Fi القائمة على الشهادات",
         "description": "خدمة إقليمية تستخدم هوية المستخدم الموحدة لإنشاء شهادة تسجيل دخول Wi-Fi تلقائياً عبر تطبيق بسيط. بدون إعداد يدوي. وصول آمن مصادَق عليه بـ RADIUS-over-TLS عبر كل حرم جامعي متصل في المنطقة.",
-        "solves": "تعقيد إعداد eduroam، بروتوكولات المصادقة القديمة"
-      }
+        "solves": "تعقيد إعداد eduroam، بروتوكولات المصادقة القديمة",
+        "layerTag": "الطبقة 3 — شبكة WI-FI والخدمات"
+      },
+      "solvesLabel": "يحل"
     },
     "userJourney": {
       "kicker": "رحلة المستخدم",
@@ -224,8 +243,10 @@
         "title": "المسار B — الاتحاد الشامل",
         "description": "تشارك المؤسسات مباشرة في الاتحاد القاري عبر BonafID. لا حاجة لاتحاد على مستوى NREN. هذا هو المنحدر — وليس نقطة نهاية دائمة.",
         "bestFor": "الأفضل لشبكات NREN غير المستعدة بعد لتشغيل البنية التحتية الوطنية"
-      }
-    }
+      },
+      "recommendedForLabel": "موصى به لـ"
+    },
+    "heroSubtitle": "إطار الثقة والهوية القاري في أفريقيا للبحث والتعليم."
   },
   "federationMapPage": {
     "hero": {
@@ -246,8 +267,33 @@
     "cta": {
       "headline": "دولتك غير مدرجة؟",
       "description": "تواصل مع فريق eduID.africa لمناقشة كيفية اتصال شبكة NREN أو مؤسستك.",
-      "button": "ابدأ الآن"
-    }
+      "button": "ابدأ الآن",
+      "learnMore": "تعرف على كيفية العمل"
+    },
+    "showingCountries": "عرض",
+    "ofCountries": "من أصل 54 دولة",
+    "selectedCountry": "الدولة المحددة",
+    "trustStatus": "حالة الثقة",
+    "nrenLabel": "الشبكة الوطنية للبحث والتعليم (NREN)",
+    "federationArchitecture": "بنية الاتحاد",
+    "regionalRenLabel": "الشبكة الإقليمية للبحث والتعليم",
+    "connectedInstitutions": "المؤسسات المتصلة",
+    "institutionsSuffix": "مؤسسات تعليم عالي",
+    "howItWorksButton": "كيف يعمل",
+    "getStartedButton": "ابدأ الآن",
+    "clearSelection": "إلغاء التحديد",
+    "summaryTitle": "ملخص الاتحاد الأفريقي",
+    "summaryDescription": "انقر على أي دولة على الخريطة أو استخدم شريط البحث أعلاه لمعاينة شبكة NREN السيادية الخاصة بها، ونشر الاتحاد، والاتصال الإقليمي.",
+    "nationalFederationsLabel": "الاتحادات الوطنية",
+    "catchallLabel": "الاتحاد الشامل / منصة BonafID",
+    "inDevelopmentLabel": "خريطة طريق قيد التطوير",
+    "notConnectedLabel": "غير متصل بعد",
+    "countriesCount": "دول",
+    "interactiveMapTitle": "خريطة الثقة القارية التفاعلية",
+    "countriesMapped": "54 دولة أفريقية مرسومة",
+    "nrenPrefix": "شبكة NREN:",
+    "regionPrefix": "المنطقة:",
+    "learnHowItWorks": "تعرف على كيفية العمل ←"
   },
   "hero": {
     "badge": "طبقة الهوية للبحث والتعليم الأفريقي",
@@ -320,11 +366,11 @@
     "partner2": "WACREN",
     "partner3": "ASREN",
     "partner4": "عضو eduGAIN",
-    "partner5": "AfricaConnect4 (EU)",
+    "partner5": "أفريكا كونيكت 4 (الاتحاد الأوروبي)",
     "partner6": "شريك GÉANT"
   },
   "foundation": {
-    "status": "Foundation Ready",
+    "status": "جاهز للتأسيس",
     "description": "بنية Next.js المؤسسية نشطة مع التوجيه متعدد اللغات و OpenSEO ورؤوس الأمان وبدائيات الحركة الحديثة.",
     "activeLocale": "العربية (ar)",
     "changeLanguage": "تغيير اللغة"
@@ -417,7 +463,8 @@
             "التوافق مع المعايير"
           ]
         }
-      }
+      },
+      "responsibilitiesLabel": "المسؤوليات"
     },
     "policiesSection": {
       "kicker": "وثائق الاتحاد",
@@ -516,7 +563,13 @@
             "timeline": "السنة 3",
             "status": "scheduled"
           }
-        ]
+        ],
+        "deliverablesLabel": "المخرجات والمعالم الرئيسية",
+        "ac4Deliverables": "مخرجات AC4 · 2026–2029",
+        "phaseLabel": "المرحلة",
+        "completedStatus": "مكتمل · نشط في مرحلة الإنتاج",
+        "upcomingStatus": "المعلم المستهدف القادم",
+        "scheduledStatus": "تسليم قاري مجدول"
       }
     }
   },
@@ -566,7 +619,8 @@
       "callout": {
         "title": "لست مستعداً للمسار A بعد؟",
         "desc": "يمكن لمؤسساتك المشاركة عبر الاتحاد الشامل بينما تبني شبكة NREN قدراتها نحو اتحاد وطني. الشبكة الشاملة هي خطوة في الطريق، وليست طريقاً مسدوداً.",
-        "linkText": "استكشاف بنية الشبكة الشاملة"
+        "linkText": "استكشاف بنية الشبكة الشاملة",
+        "badge": "بديل المسار ب"
       }
     },
     "docsSection": {
@@ -812,7 +866,8 @@
         "description": "BonafID مفتوح المصدر. قاعدة الكود الكاملة ووثائق النشر ومرجع API متاحة على GitHub. يمكن لشبكات NREN الاستضافة الذاتية أو المساهمة في المشروع.",
         "action": "عرض على GitHub",
         "href": "https://github.com/WACREN"
-      }
+      },
+      "visitWebsite": "زيارة موقع BonafID"
     }
   },
   "trainingPage": {
@@ -986,13 +1041,39 @@
       "requestOnboarding": "طلب انضمام المؤسسة",
       "domainRecognized": "تم التعرف على النطاق المؤسسي",
       "domainUnrecognized": "النطاق غير موجود في السجل",
-      "domainReady": "ملف geteduroam نشط متاح لهذا النطاق",
-      "domainNotConnected": "هذا النطاق غير مسجّل بعد مع مزود هوية eduroam.",
+      "domainReady": "يتوفر ملف تعريف geteduroam نشط.",
+      "domainNotConnected": "غير متصل بـ eduroam بعد.",
       "statusLabels": {
         "national": "اتحاد وطني",
         "catchall": "شبكة شاملة",
         "notConnected": "غير متصل"
-      }
+      },
+      "resetFilters": "إعادة تعيين المرشحات",
+      "downloadGeteduroam": "تنزيل geteduroam",
+      "requestConnection": "طلب الاتصال",
+      "connect": "اتصال",
+      "connected": "متصل",
+      "infoForAdmins": "معلومات لمسؤولي تكنولوجيا المعلومات",
+      "clearSearch": "مسح البحث",
+      "matchesLabel": "يطابق",
+      "domainUnregisteredDesc": "هذا النطاق غير مسجل لدى مزود هوية eduroam حتى الآن.",
+      "connectedCountLabel": "متصل",
+      "notConnectedCountLabel": "غير متصل بعد",
+      "registeredInstitutionsDesc": "مؤسسات مسجلة في دليل الجامعات الأفريقية",
+      "viewNrenProfiles": "عرض ملفات تعريف NREN ←",
+      "institutionsCountLabel": "مؤسسات",
+      "inCountryLabel": "في",
+      "showingInstitutionsAfrica": "عرض المؤسسات في جميع أنحاء أفريقيا",
+      "searchTip": "اكتب اسم جامعة أو دولة أو @بريد إلكتروني للبحث",
+      "sourcesLabel": "المصادر: geteduroam + سجل Hipo",
+      "emptyStateHelp": "إذا لم تظهر جامعتك أو نطاق بريدك الإلكتروني، يمكن لفريق تكنولوجيا المعلومات الاتصال عبر eduID.africa أو شبكة NREN الوطنية الخاصة بك.",
+      "paginationNotice": "عرض 50 نتيجة. يرجى تحسين البحث لتضييق النتائج.",
+      "profileLabel": "ملف تعريف eduroam",
+      "profilesLabel": "ملفات تعريف eduroam",
+      "browseAll": "تصفح جميع المؤسسات البالغ عددها {count} ←",
+      "showModels": "→ عرض 3 نماذج اتصال",
+      "institutionsIndexed": "مؤسسة مفهرسة",
+      "statsCountries": "دولة"
     },
     "stepsSection": {
       "title": "ثلاث خطوات إلى geteduroam",
@@ -1000,11 +1081,16 @@
         "num": "1",
         "title": "تنزيل تطبيق geteduroam",
         "description": "متاح على Android وiOS. يتولى التطبيق إنشاء الشهادة تلقائياً باستخدام هويتك المؤسسية — لا معرفة تقنية مطلوبة.",
-        "platforms": ["Android", "iOS", "Windows", "macOS"],
+        "platforms": [
+          "Android",
+          "iOS",
+          "Windows",
+          "macOS"
+        ],
         "playStore": "الحصول من Play Store",
         "appStore": "الحصول من App Store",
-        "windowsStore": "الحصول لـ Windows",
-        "linuxStore": "الحصول لـ Linux"
+        "windowsStore": "احصل عليه لنظام Windows",
+        "linuxStore": "احصل عليه لنظام Linux"
       },
       "step2": {
         "num": "2",
@@ -1039,5 +1125,32 @@
   "notFoundPage": {
     "title": "ضائع في الرحلة؟",
     "homeButton": "ابحث عن طريقك للعودة"
+  },
+  "contactPage": {
+    "hero": {
+      "title": "اتصل بـ eduID.africa",
+      "subtitle": "تواصل مع فرق شبكات البحث والتعليم الإقليمية والمنسقين الفنيين ومهندسي الدعم القاري."
+    },
+    "inquiries": {
+      "title": "الاستفسارات العامة والتقنية",
+      "description": "هل لديك أسئلة حول ربط مؤسستك، أو إنشاء اتحاد وطني، أو تنفيذ BonafID؟ تواصل مع فريق التنسيق لدينا.",
+      "emailLabel": "التنسيق عبر البريد الإلكتروني",
+      "socialsLabel": "وسائل التواصل الاجتماعي",
+      "followX": "متابعة @wacren على X",
+      "connectLinkedIn": "تواصل على LinkedIn",
+      "followFacebook": "متابعة @WACRENinfo على Facebook",
+      "followBluesky": "متابعة على Bluesky",
+      "followMastodon": "متابعة على Mastodon"
+    },
+    "regionalPartners": {
+      "title": "شبكات البحث والتعليم الإقليمية",
+      "subtitle": "يتم تشغيل eduID.africa بشكل مشترك من قبل شبكات البحث والتعليم الإقليمية الثلاث في إفريقيا ضمن برنامج AfricaConnect4.",
+      "wacrenName": "WACREN",
+      "wacrenDesc": "شبكة غرب ووسط إفريقيا للبحث والتعليم",
+      "ubuntunetName": "UbuntuNet Alliance",
+      "ubuntunetDesc": "شبكة شرق وجنوب إفريقيا للبحث والتعليم",
+      "asrenName": "ASREN",
+      "asrenDesc": "اتحاد شبكات البحوث والتعليم للدول العربية"
+    }
   }
 }

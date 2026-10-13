@@ -58,6 +58,32 @@ interface InstitutionSearchSectionProps {
           catchall: string;
           notConnected: string;
         };
+        resetFilters?: string;
+        downloadGeteduroam?: string;
+        requestConnection?: string;
+        connect?: string;
+        connected?: string;
+        infoForAdmins?: string;
+        clearSearch?: string;
+        matchesLabel?: string;
+        domainUnregisteredDesc?: string;
+        connectedCountLabel?: string;
+        notConnectedCountLabel?: string;
+        registeredInstitutionsDesc?: string;
+        viewNrenProfiles?: string;
+        institutionsCountLabel?: string;
+        inCountryLabel?: string;
+        showingInstitutionsAfrica?: string;
+        searchTip?: string;
+        sourcesLabel?: string;
+        emptyStateHelp?: string;
+        paginationNotice?: string;
+        profileLabel?: string;
+        profilesLabel?: string;
+        browseAll?: string;
+        showModels?: string;
+        institutionsIndexed?: string;
+        statsCountries?: string;
       };
     };
   };
@@ -194,13 +220,13 @@ export function InstitutionSearchSection({
           </p>
           {/* Live stats */}
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono text-slate-400">
-            <span>{directoryMeta.stats.total} institutions indexed</span>
+            <span>{directoryMeta.stats.total} {searchConfig.institutionsIndexed || "institutions indexed"}</span>
             <span className="text-slate-300">·</span>
             <span className="text-emerald-600">
-              {directoryMeta.stats.connected} connected
+              {directoryMeta.stats.connected} {searchConfig.connectedCountLabel || "connected"}
             </span>
             <span className="text-slate-300">·</span>
-            <span>{directoryMeta.stats.countries} countries</span>
+            <span>{directoryMeta.stats.countries} {searchConfig.statsCountries || "countries"}</span>
           </div>
         </div>
 
@@ -320,7 +346,7 @@ export function InstitutionSearchSection({
                   className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-500 hover:text-[#DE4A1B] transition-colors"
                 >
                   <RotateCcw size={12} strokeWidth={2} />
-                  <span>Reset filters</span>
+                  <span>{searchConfig.resetFilters || "Reset filters"}</span>
                 </button>
               )}
 
@@ -332,8 +358,8 @@ export function InstitutionSearchSection({
                     className="text-xs font-mono text-[#1A73C3] hover:underline underline-offset-4"
                   >
                     {showAllDefault
-                      ? "← Show 3 connection models"
-                      : `Browse all ${allInstitutions.length} institutions →`}
+                      ? (searchConfig.showModels || "← Show 3 connection models")
+                      : (searchConfig.browseAll ? searchConfig.browseAll.replace("{count}", String(allInstitutions.length)) : `Browse all ${allInstitutions.length} institutions →`)}
                   </button>
                 )}
             </div>
@@ -361,7 +387,7 @@ export function InstitutionSearchSection({
                     </span>
                   </div>
                   <p className="text-sm font-sans text-slate-700 pl-6">
-                    Matches{" "}
+                    {searchConfig.matchesLabel || "Matches"}{" "}
                     <strong className="text-[#0B357B]">
                       {domainMatch.name}
                     </strong>{" "}
@@ -384,7 +410,7 @@ export function InstitutionSearchSection({
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#0B357B] text-white font-mono text-xs font-medium hover:bg-[#1A73C3] transition-colors shrink-0 shadow-2xs"
                   >
-                    <span>Download geteduroam</span>
+                    <span>{searchConfig.downloadGeteduroam || "Download geteduroam"}</span>
                     <ExternalLink size={12} strokeWidth={2.5} />
                   </a>
                 ) : (
@@ -392,7 +418,7 @@ export function InstitutionSearchSection({
                     href={`/${locale}/contact`}
                     className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full border border-slate-300 bg-white text-slate-800 font-mono text-xs font-medium hover:border-[#0B357B] hover:text-[#0B357B] transition-colors shrink-0"
                   >
-                    <span>Request connection</span>
+                    <span>{searchConfig.requestConnection || "Request connection"}</span>
                     <ArrowRight size={12} strokeWidth={2.5} />
                   </Link>
                 )}
@@ -415,7 +441,8 @@ export function InstitutionSearchSection({
                     </span>
                   </div>
                   <p className="text-sm font-sans text-slate-600 pl-6">
-                    {searchConfig.domainNotConnected ||
+                    {searchConfig.domainUnregisteredDesc ||
+                      searchConfig.domainNotConnected ||
                       "This domain is not registered with an eduroam identity provider yet."}
                   </p>
                 </div>
@@ -423,7 +450,7 @@ export function InstitutionSearchSection({
                   href={`/${locale}/contact`}
                   className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full border border-slate-300 bg-white text-slate-800 font-mono text-xs font-medium hover:border-[#0B357B] hover:text-[#0B357B] transition-colors shrink-0"
                 >
-                  <span>Request onboarding</span>
+                  <span>{searchConfig.requestOnboarding || "Request onboarding"}</span>
                   <ArrowRight size={12} strokeWidth={2.5} />
                 </Link>
               </div>
@@ -443,26 +470,24 @@ export function InstitutionSearchSection({
                   </span>
                   <span className="text-slate-300">·</span>
                   <span className="text-emerald-700 font-medium">
-                    {selectedCountryStats.connected} connected
+                    {selectedCountryStats.connected} {searchConfig.connectedCountLabel || "connected"}
                   </span>
                   <span className="text-slate-300">·</span>
                   <span className="text-slate-500">
                     {selectedCountryStats.total -
                       selectedCountryStats.connected}{" "}
-                    not yet connected
+                    {searchConfig.notConnectedCountLabel || "not yet connected"}
                   </span>
                 </div>
                 <div className="text-xs font-sans text-slate-500 pl-7">
-                  {selectedCountryStats.total} registered institution
-                  {selectedCountryStats.total !== 1 ? "s" : ""} in the
-                  African university directory
+                  {selectedCountryStats.total} {searchConfig.registeredInstitutionsDesc || "registered institutions in the African university directory"}
                 </div>
               </div>
               <Link
                 href={`/${locale}/communities/nrens`}
                 className="text-xs font-mono text-[#1A73C3] hover:underline underline-offset-4 shrink-0"
               >
-                View NREN profiles →
+                {searchConfig.viewNrenProfiles || "View NREN profiles →"}
               </Link>
             </div>
           </div>
@@ -477,8 +502,8 @@ export function InstitutionSearchSection({
                 <strong className="text-slate-800">
                   {filteredInstitutions.length}
                 </strong>{" "}
-                institution{filteredInstitutions.length !== 1 ? "s" : ""}
-                {hasCountryFilter ? ` in ${selectedCountry}` : ""}
+                {searchConfig.institutionsCountLabel || "institutions"}
+                {hasCountryFilter ? ` ${searchConfig.inCountryLabel || "in"} ${selectedCountry}` : ""}
               </span>
             ) : isShowingRepresentative ? (
               <span>
@@ -487,15 +512,15 @@ export function InstitutionSearchSection({
               </span>
             ) : (
               <span>
-                Showing {filteredInstitutions.length} institutions across
-                Africa
+                {searchConfig.showingInstitutionsAfrica ||
+                  `Showing ${filteredInstitutions.length} institutions across Africa`}
               </span>
             )}
           </div>
           <div className="hidden sm:block text-slate-400">
             {isShowingRepresentative
-              ? "Type a university, country, or @email to search"
-              : "Sources: geteduroam + Hipo Registry"}
+              ? (searchConfig.searchTip || "Type a university, country, or @email to search")
+              : (searchConfig.sourcesLabel || "Sources: geteduroam + Hipo Registry")}
           </div>
         </div>
 
@@ -544,8 +569,7 @@ export function InstitutionSearchSection({
                             ·
                           </span>
                           <span className="text-slate-500 font-sans">
-                            {inst.eduroam.profiles} eduroam profile
-                            {inst.eduroam.profiles !== 1 ? "s" : ""}
+                            {inst.eduroam.profiles} {inst.eduroam.profiles !== 1 ? (searchConfig.profilesLabel || "eduroam profiles") : (searchConfig.profileLabel || "eduroam profile")}
                           </span>
                         </>
                       )}
@@ -559,7 +583,7 @@ export function InstitutionSearchSection({
                     <>
                       <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono font-medium border border-emerald-200 bg-emerald-50 text-emerald-700 shadow-2xs">
                         <CheckCircle2 size={12} strokeWidth={2.5} />
-                        Connected
+                        {searchConfig.connected || "Connected"}
                       </span>
                       <a
                         href="https://www.geteduroam.app/"
@@ -567,7 +591,7 @@ export function InstitutionSearchSection({
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-[#0B357B] group-hover:text-[#1A73C3] group-hover:underline underline-offset-4 transition-all"
                       >
-                        <span>Connect</span>
+                        <span>{searchConfig.connect || "Connect"}</span>
                         <ExternalLink size={12} strokeWidth={2} />
                       </a>
                     </>
@@ -580,7 +604,7 @@ export function InstitutionSearchSection({
                         href={`/${locale}/contact`}
                         className="inline-flex items-center gap-1 text-xs sm:text-sm font-medium text-[#1A73C3] hover:underline underline-offset-4 transition-all"
                       >
-                        <span>Request connection</span>
+                        <span>{searchConfig.requestConnection || "Request connection"}</span>
                         <ArrowRight size={12} strokeWidth={2} />
                       </Link>
                     </>
@@ -599,9 +623,7 @@ export function InstitutionSearchSection({
                   {searchConfig.noResults}
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-500 font-sans">
-                  If your university or email domain doesn&apos;t appear, your
-                  IT team can connect through eduID.africa or your national
-                  NREN.
+                  {searchConfig.emptyStateHelp || "If your university or email domain doesn't appear, your IT team can connect through eduID.africa or your national NREN."}
                 </p>
               </div>
               <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
@@ -616,7 +638,7 @@ export function InstitutionSearchSection({
                   href={`/${locale}/for-institutions`}
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-300 bg-white text-slate-700 font-mono text-xs font-medium hover:bg-slate-50 transition-colors"
                 >
-                  <span>Information for IT admins</span>
+                  <span>{searchConfig.infoForAdmins || "Information for IT admins"}</span>
                   <ArrowRight size={12} strokeWidth={2} />
                 </Link>
                 <button
@@ -628,7 +650,7 @@ export function InstitutionSearchSection({
                   className="inline-flex items-center gap-1 text-xs font-mono text-slate-400 hover:text-slate-700 px-2 py-1"
                 >
                   <RotateCcw size={12} strokeWidth={2} />
-                  Clear search
+                  {searchConfig.clearSearch || "Clear search"}
                 </button>
               </div>
             </div>
@@ -641,8 +663,7 @@ export function InstitutionSearchSection({
             statusFilter !== "all") &&
             filteredInstitutions.length > 50 && (
               <div className="py-4 text-center text-xs font-mono text-slate-400 border-t border-dashed border-slate-200">
-                Showing 50 of {filteredInstitutions.length} results. Refine
-                your search to narrow results.
+                {searchConfig.paginationNotice || `Showing 50 of ${filteredInstitutions.length} results. Refine your search to narrow results.`}
               </div>
             )}
         </div>

@@ -11,6 +11,8 @@ interface AboutNetworksSectionProps {
       networksSection: {
         headline: string;
         description: string;
+        kicker?: string;
+        tag?: string;
         network1: {
           shortName: string;
           fullName: string;
@@ -89,7 +91,7 @@ export function AboutNetworksSection({ dict }: AboutNetworksSectionProps) {
               <div>
                 <div className="mb-4">
                   <span className="font-mono text-xs uppercase tracking-wider text-slate-500">
-                    Regional REN
+                    {data.tag || "Regional REN"}
                   </span>
                 </div>
 

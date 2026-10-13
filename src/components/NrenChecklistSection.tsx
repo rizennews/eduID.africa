@@ -14,6 +14,7 @@ interface NrenChecklistSectionProps {
         intro: string;
         items: string[];
         callout: {
+          badge?: string;
           title: string;
           desc: string;
           linkText: string;
@@ -45,7 +46,7 @@ export function NrenChecklistSection({ locale, dict }: NrenChecklistSectionProps
             <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs">
               <div className="flex items-center gap-2 mb-2">
                 <span className="font-mono text-xs uppercase tracking-wider text-[#1A73C3] font-semibold">
-                  Path B Alternative
+                  {checklistSection.callout.badge || "Path B Alternative"}
                 </span>
               </div>
               <h4 className="font-serif text-lg text-[#0B357B] font-normal mb-2">

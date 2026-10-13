@@ -19,13 +19,13 @@ export async function generateMetadata({
   const locale: Locale = isValidLocale(resolvedParams.lang)
     ? resolvedParams.lang
     : defaultLocale;
+  const dict = await getDictionary(locale);
 
   return createLocalizedMetadata({
     locale,
     path: "/events",
-    title: "Events & Roadshows — eduID.africa",
-    description:
-      "Upcoming conferences, technical workshops, and continental identity engineering roadshows across Africa.",
+    title: `${dict.eventsPage.title} — eduID.africa`,
+    description: dict.eventsPage.subtitle,
   });
 }
 

@@ -11,6 +11,7 @@ interface BonafIdRequestSectionProps {
       requestSection: {
         title: string;
         description: string;
+        visitWebsite?: string;
         card1: {
           title: string;
           description: string;
@@ -49,7 +50,7 @@ export function BonafIdRequestSection({ locale, dict }: BonafIdRequestSectionPro
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2.5 h-11 px-6 rounded-full bg-[#0B357B] text-white text-sm font-medium hover:bg-[#1A73C3] transition-colors shadow-2xs"
             >
-              <span>Visit BonafID website</span>
+              <span>{requestSection.visitWebsite || "Visit BonafID website"}</span>
               <span className="font-mono font-bold transition-transform duration-200 group-hover:translate-x-1">
                 →
               </span>

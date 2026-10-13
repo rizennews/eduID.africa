@@ -19,6 +19,7 @@ interface GovernanceLeadershipSectionProps {
         kicker: string;
         title: string;
         subtitle: string;
+        responsibilitiesLabel?: string;
         roles: {
           programmeLead: LeadershipRoleData;
           technicalLead: LeadershipRoleData;
@@ -107,9 +108,11 @@ function ResponsibilityItem({ item }: { item: string }) {
 function LeadershipRoleCard({
   config,
   roleData,
+  responsibilitiesLabel,
 }: {
   config: RoleCardConfig;
   roleData: LeadershipRoleData;
+  responsibilitiesLabel?: string;
 }) {
   return (
     <div className="p-6 sm:p-7 bg-white border border-dashed border-slate-300 hover:border-[#1A73C3]/60 transition-all duration-200 flex flex-col justify-between group">
@@ -141,7 +144,7 @@ function LeadershipRoleCard({
       {/* Scope of Responsibility List */}
       <div className="pt-4 border-t border-dashed border-slate-200 mt-5">
         <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 block mb-3">
-          Responsibilities
+          {responsibilitiesLabel || "Responsibilities"}
         </span>
         <ul className="space-y-2.5">
           {roleData.scope.map((item, idx) => (
@@ -183,6 +186,7 @@ export function GovernanceLeadershipSection({
                 key={config.key}
                 config={config}
                 roleData={roleData}
+                responsibilitiesLabel={section.responsibilitiesLabel}
               />
             );
           })}

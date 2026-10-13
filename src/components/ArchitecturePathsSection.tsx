@@ -11,6 +11,7 @@ interface ArchitecturePathsSectionProps {
         kicker: string;
         headline: string;
         description: string;
+        recommendedForLabel?: string;
         pathA: {
           tag: string;
           title: string;
@@ -35,6 +36,7 @@ interface PathColumnProps {
   description: string;
   bestFor: string;
   tagClass: string;
+  recommendedForLabel?: string;
 }
 
 function PathColumn({
@@ -44,6 +46,7 @@ function PathColumn({
   description,
   bestFor,
   tagClass,
+  recommendedForLabel,
 }: PathColumnProps) {
   return (
     <div className="group p-8 sm:p-10 lg:p-12 flex flex-col justify-between hover:bg-slate-50/50 transition-colors duration-200">
@@ -75,7 +78,7 @@ function PathColumn({
       <div className="mt-8 pt-5 border-t border-dashed border-slate-200">
         <div className="p-3.5 bg-slate-50/70 border border-dashed border-slate-200">
           <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#0B357B] block mb-1">
-            Recommended For
+            {recommendedForLabel || "Recommended For"}
           </span>
           <p className="text-xs sm:text-sm font-medium text-slate-700 font-sans leading-relaxed">
             {bestFor}
@@ -135,6 +138,7 @@ export function ArchitecturePathsSection({
                 description={path.description}
                 bestFor={path.bestFor}
                 tagClass={path.tagClass}
+                recommendedForLabel={data.recommendedForLabel}
               />
             ))}
           </div>

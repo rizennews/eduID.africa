@@ -22,6 +22,10 @@ interface InteractiveAfricaMapProps {
       in_development: string;
       not_connected: string;
     };
+    interactiveMapTitle?: string;
+    countriesMapped?: string;
+    nrenPrefix?: string;
+    regionPrefix?: string;
   };
 }
 
@@ -78,11 +82,11 @@ export function InteractiveAfricaMap({
       {/* Map Header Status Indicator (No dots) */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-3 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-dashed border-slate-200">
         <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#0B357B]">
-          Interactive Continental Trust Map
+          {dict.interactiveMapTitle || "Interactive Continental Trust Map"}
         </span>
 
         <span className="text-[10px] sm:text-xs font-mono text-slate-400">
-          54 African Countries Mapped
+          {dict.countriesMapped || "54 African Countries Mapped"}
         </span>
       </div>
 
@@ -215,11 +219,11 @@ export function InteractiveAfricaMap({
 
             <div className="text-[11px] font-medium text-slate-300 space-y-0.5 font-sans">
               <p>
-                <span className="text-slate-400">NREN:</span>{" "}
+                <span className="text-slate-400">{dict.nrenPrefix || "NREN:"}</span>{" "}
                 <span className="text-white font-semibold">{hoveredCountry.nren}</span>
               </p>
               <p>
-                <span className="text-slate-400">Region:</span>{" "}
+                <span className="text-slate-400">{dict.regionPrefix || "Region:"}</span>{" "}
                 <span className="text-white font-semibold">{hoveredCountry.regionalRen}</span>
               </p>
             </div>

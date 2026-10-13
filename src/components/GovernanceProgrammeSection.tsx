@@ -39,6 +39,12 @@ interface GovernanceProgrammeSectionProps {
         roadmap: {
           title: string;
           items: RoadmapItem[];
+          deliverablesLabel?: string;
+          ac4Deliverables?: string;
+          phaseLabel?: string;
+          completedStatus?: string;
+          upcomingStatus?: string;
+          scheduledStatus?: string;
         };
       };
     };
@@ -77,7 +83,21 @@ function FactTile({
   );
 }
 
-function MilestoneTile({ item, index }: { item: RoadmapItem; index: number }) {
+function MilestoneTile({
+  item,
+  index,
+  phaseLabel,
+  completedStatus,
+  upcomingStatus,
+  scheduledStatus,
+}: {
+  item: RoadmapItem;
+  index: number;
+  phaseLabel?: string;
+  completedStatus?: string;
+  upcomingStatus?: string;
+  scheduledStatus?: string;
+}) {
   const checkRef = React.useRef<CircleCheckIconHandle>(null);
   const clockRef = React.useRef<ClockIconHandle>(null);
   const earthRef = React.useRef<EarthIconHandle>(null);
@@ -110,7 +130,7 @@ function MilestoneTile({ item, index }: { item: RoadmapItem; index: number }) {
         {/* Milestone Phase & Timeline Pill (No beacon dots) */}
         <div className="flex items-center justify-between gap-2 mb-4">
           <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400">
-            Phase 0{index + 1}
+            {phaseLabel || "Phase"} 0{index + 1}
           </span>
           {isCompleted ? (
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono font-medium bg-emerald-50 text-emerald-800 border border-emerald-200/80">
@@ -152,10 +172,10 @@ function MilestoneTile({ item, index }: { item: RoadmapItem; index: number }) {
       <div className="pt-4 mt-5 border-t border-dashed border-slate-200 flex items-center justify-between text-xs text-slate-500 font-sans">
         <span>
           {isCompleted
-            ? "Completed · Active in production"
+            ? (completedStatus || "Completed · Active in production")
             : isYear2
-            ? "Upcoming target milestone"
-            : "Scheduled continental delivery"}
+            ? (upcomingStatus || "Upcoming target milestone")
+            : (scheduledStatus || "Scheduled continental delivery")}
         </span>
       </div>
     </div>
@@ -177,21 +197,29 @@ export function GovernanceProgrammeSection({
           <div className="px-6 sm:px-8 py-4 bg-slate-50/60 border-b border-dashed border-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 block mb-0.5">
-                Deliverables & Milestones
+                {section.roadmap.deliverablesLabel || "Deliverables & Milestones"}
               </span>
               <h3 className="text-base sm:text-lg font-serif font-normal text-[#0B357B] tracking-tight">
                 {section.roadmap.title}
               </h3>
             </div>
             <span className="text-xs font-mono text-slate-500">
-              AC4 Deliverables · 2026–2029
+              {section.roadmap.ac4Deliverables || "AC4 Deliverables · 2026–2029"}
             </span>
           </div>
 
           {/* 4 Roadmap Milestone Tiles with Dashed Dividers */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-dashed divide-slate-300">
             {section.roadmap.items.map((item, index) => (
-              <MilestoneTile key={item.id} item={item} index={index} />
+              <MilestoneTile
+                key={item.id}
+                item={item}
+                index={index}
+                phaseLabel={section.roadmap.phaseLabel}
+                completedStatus={section.roadmap.completedStatus}
+                upcomingStatus={section.roadmap.upcomingStatus}
+                scheduledStatus={section.roadmap.scheduledStatus}
+              />
             ))}
           </div>
         </div>
