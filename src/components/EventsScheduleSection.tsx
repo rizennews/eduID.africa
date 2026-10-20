@@ -44,67 +44,7 @@ export function EventsScheduleSection({ locale, dict }: EventsScheduleSectionPro
             const isDeactivated = event.isActive === false || event.statusType === "deactivated";
 
             if (isDeactivated) {
-              return (
-                <div
-                  key={event.id}
-                  className="block p-6 sm:p-8 bg-slate-50/40 opacity-60 select-none"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    {/* Left: Date Badge + Title + Metadata */}
-                    <div className="flex items-start sm:items-center gap-5 sm:gap-6 flex-1">
-                      {/* Calendar Date Block */}
-                      <div className="shrink-0 w-18 h-18 sm:w-20 sm:h-20 rounded-2xl border border-dashed border-slate-300 bg-white/80 flex flex-col items-center justify-center text-center shadow-2xs">
-                        <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-400">
-                          {event.month}
-                        </span>
-                        <span className="font-serif text-2xl sm:text-3xl font-medium text-slate-500 leading-none mt-0.5">
-                          {event.day}
-                        </span>
-                        <span className="text-[10px] font-mono text-slate-400 mt-1">
-                          {event.year}
-                        </span>
-                      </div>
-
-                      {/* Title & Metadata Ledger */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-600 tracking-tight leading-snug">
-                            {event.title}
-                          </h3>
-                        </div>
-
-                        {/* Metadata Ledger with Slashes */}
-                        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-sm font-mono text-slate-500 mt-2.5">
-                          <span className="font-medium text-slate-600 font-sans">
-                            {event.venue}
-                          </span>
-                          <span className="text-slate-300" aria-hidden="true">/</span>
-                          <span className="text-slate-400 font-sans">
-                            {event.duration}
-                          </span>
-                          <span className="text-slate-300" aria-hidden="true">/</span>
-                          <span className="text-slate-400 font-sans">
-                            {event.audience}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Right: Status Pill + Deactivated Badge */}
-                    <div className="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-dashed border-slate-200">
-                      <div>
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-slate-300 bg-slate-100 text-slate-500">
-                          {event.status}
-                        </span>
-                      </div>
-
-                      <span className="inline-flex items-center px-4 py-2 rounded-full border border-slate-200 bg-slate-100/80 font-mono text-xs font-medium text-slate-400">
-                        {event.status}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              );
+              return null;
             }
 
             return (
