@@ -62,6 +62,7 @@ export default async function RootLayout({
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
       className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
       <head>
         <script
@@ -69,7 +70,10 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#F8FAFC] text-[#0A162B] font-sans antialiased min-h-screen selection:bg-[#1A73C3] selection:text-white">
+      <body
+        className="bg-[#F8FAFC] text-[#0A162B] font-sans antialiased min-h-screen selection:bg-[#1A73C3] selection:text-white"
+        suppressHydrationWarning
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

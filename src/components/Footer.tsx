@@ -4,16 +4,47 @@ import { AnimatedIcon } from "@/components/ui/animated-icon";
 import { EuFundingBanner } from "@/components/EuFundingBanner";
 import type { Locale } from "@/lib/i18n";
 
-interface FooterProps {
-  locale: Locale;
-  dict: any;
+export interface FooterDict {
+  footer: {
+    tagline: string;
+    colNrenTitle: string;
+    colNrenLink1: string;
+    colNrenLink2: string;
+    colNrenLink3: string;
+    colNrenLink4: string;
+    colResourcesTitle: string;
+    colResourcesLink1: string;
+    colResourcesLink2: string;
+    colResourcesLink3: string;
+    colResourcesLink4: string;
+    colOrgTitle: string;
+    colOrgLink1: string;
+    colOrgLink2: string;
+    colOrgLink3: string;
+    colOrgLink4: string;
+    terms: string;
+    privacy: string;
+    copyright: string;
+  };
+  fundingBanner?: {
+    fundedBy?: string;
+    statement?: string;
+    disclaimer?: string;
+  };
+  [key: string]: unknown;
 }
 
-export function Footer({ locale, dict }: FooterProps) {
+interface FooterProps {
+  locale: Locale;
+  dict: FooterDict;
+  showFundingBanner?: boolean;
+}
+
+export function Footer({ locale, dict, showFundingBanner = false }: FooterProps) {
   return (
     <footer className="relative bg-[#F8FAFC] border-t border-slate-200/90 overflow-hidden">
-      {/* EU / Global Gateway Funding Statement Banner */}
-      <EuFundingBanner locale={locale} dict={dict} />
+      {/* EU / Global Gateway Funding Statement Banner - Only on home and about pages */}
+      {showFundingBanner && <EuFundingBanner locale={locale} dict={dict} />}
 
       {/* Subtle organic ambient glow inspired by modern brand footers */}
       <div

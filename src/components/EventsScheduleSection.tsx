@@ -4,7 +4,6 @@ import * as React from "react";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { getRoadshowEvents } from "@/data/events";
-import { cn } from "@/lib/utils";
 
 interface EventsScheduleSectionProps {
   locale: Locale;
@@ -30,102 +29,170 @@ export function EventsScheduleSection({ locale, dict }: EventsScheduleSectionPro
     <section className="py-12 sm:py-16 bg-[#F8FAFC] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-12">
+        <div className="w-full max-w-none mb-10 sm:mb-12">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {dict.eventsPage.title}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal w-full max-w-none">
             {dict.eventsPage.subtitle}
           </p>
         </div>
 
         {/* Events Ledger Container */}
         <div className="border-y border-dashed border-slate-300 divide-y divide-dashed divide-slate-300/80 bg-white/50">
-          {events.map((event) => (
-            <a
-              key={event.id}
-              href={event.indicoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block p-6 sm:p-8 transition-colors duration-200 hover:bg-slate-100/50"
-            >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                {/* Left: Date Badge + Title + Metadata */}
-                <div className="flex items-start sm:items-center gap-5 sm:gap-6 flex-1">
-                  {/* Calendar Date Block */}
-                  <div className="shrink-0 w-18 h-18 sm:w-20 sm:h-20 rounded-2xl border border-dashed border-slate-300 bg-white flex flex-col items-center justify-center text-center shadow-2xs group-hover:border-[#1A73C3] group-hover:bg-blue-50/30 transition-all">
-                    <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#1A73C3]">
-                      {event.month}
-                    </span>
-                    <span className="font-serif text-2xl sm:text-3xl font-medium text-[#0B357B] leading-none mt-0.5">
-                      {event.day}
-                    </span>
-                    <span className="text-[10px] font-mono text-slate-400 mt-1">
-                      {event.year}
-                    </span>
+          {events.map((event) => {
+            const isDeactivated = event.isActive === false || event.statusType === "deactivated";
+
+            if (isDeactivated) {
+              return (
+                <div
+                  key={event.id}
+                  className="block p-6 sm:p-8 bg-slate-50/40 opacity-60 select-none"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    {/* Left: Date Badge + Title + Metadata */}
+                    <div className="flex items-start sm:items-center gap-5 sm:gap-6 flex-1">
+                      {/* Calendar Date Block */}
+                      <div className="shrink-0 w-18 h-18 sm:w-20 sm:h-20 rounded-2xl border border-dashed border-slate-300 bg-white/80 flex flex-col items-center justify-center text-center shadow-2xs">
+                        <span className="font-mono text-xs font-bold uppercase tracking-widest text-slate-400">
+                          {event.month}
+                        </span>
+                        <span className="font-serif text-2xl sm:text-3xl font-medium text-slate-500 leading-none mt-0.5">
+                          {event.day}
+                        </span>
+                        <span className="text-[10px] font-mono text-slate-400 mt-1">
+                          {event.year}
+                        </span>
+                      </div>
+
+                      {/* Title & Metadata Ledger */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <h3 className="font-serif text-xl sm:text-2xl font-normal text-slate-600 tracking-tight leading-snug">
+                            {event.title}
+                          </h3>
+                        </div>
+
+                        {/* Metadata Ledger with Slashes */}
+                        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-sm font-mono text-slate-500 mt-2.5">
+                          <span className="font-medium text-slate-600 font-sans">
+                            {event.venue}
+                          </span>
+                          <span className="text-slate-300" aria-hidden="true">/</span>
+                          <span className="text-slate-400 font-sans">
+                            {event.duration}
+                          </span>
+                          <span className="text-slate-300" aria-hidden="true">/</span>
+                          <span className="text-slate-400 font-sans">
+                            {event.audience}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right: Status Pill + Deactivated Badge */}
+                    <div className="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-dashed border-slate-200">
+                      <div>
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-slate-300 bg-slate-100 text-slate-500">
+                          {event.status}
+                        </span>
+                      </div>
+
+                      <span className="inline-flex items-center px-4 py-2 rounded-full border border-slate-200 bg-slate-100/80 font-mono text-xs font-medium text-slate-400">
+                        {event.status}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <a
+                key={event.id}
+                href={event.indicoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block p-6 sm:p-8 transition-colors duration-200 hover:bg-slate-100/50"
+              >
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                  {/* Left: Date Badge + Title + Metadata */}
+                  <div className="flex items-start sm:items-center gap-5 sm:gap-6 flex-1">
+                    {/* Calendar Date Block */}
+                    <div className="shrink-0 w-18 h-18 sm:w-20 sm:h-20 rounded-2xl border border-dashed border-slate-300 bg-white flex flex-col items-center justify-center text-center shadow-2xs group-hover:border-[#1A73C3] group-hover:bg-blue-50/30 transition-all">
+                      <span className="font-mono text-xs font-bold uppercase tracking-widest text-[#1A73C3]">
+                        {event.month}
+                      </span>
+                      <span className="font-serif text-2xl sm:text-3xl font-medium text-[#0B357B] leading-none mt-0.5">
+                        {event.day}
+                      </span>
+                      <span className="text-[10px] font-mono text-slate-400 mt-1">
+                        {event.year}
+                      </span>
+                    </div>
+
+                    {/* Title & Metadata Ledger */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#0B357B] tracking-tight leading-snug group-hover:text-[#1A73C3] transition-colors">
+                          {event.title}
+                        </h3>
+                        {/* External Indicator */}
+                        <span className="text-slate-400 group-hover:text-[#1A73C3] transition-colors text-base font-normal">
+                          ↗
+                        </span>
+                      </div>
+
+                      {/* Metadata Ledger with Slashes */}
+                      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-sm font-mono text-slate-600 mt-2.5">
+                        <span className="font-medium text-slate-800 font-sans">
+                          {event.venue}
+                        </span>
+                        <span className="text-slate-300" aria-hidden="true">/</span>
+                        <span className="text-slate-500 font-sans">
+                          {event.duration}
+                        </span>
+                        <span className="text-slate-300" aria-hidden="true">/</span>
+                        <span className="text-slate-500 font-sans">
+                          {event.audience}
+                        </span>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Title & Metadata Ledger */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#0B357B] tracking-tight leading-snug group-hover:text-[#1A73C3] transition-colors">
-                        {event.title}
-                      </h3>
-                      {/* External Indicator */}
-                      <span className="text-slate-400 group-hover:text-[#1A73C3] transition-colors text-base font-normal">
+                  {/* Right: Status Pill + CTA Button */}
+                  <div className="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-dashed border-slate-200">
+                    {/* Status Badge */}
+                    <div>
+                      {event.statusType === "open" && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-emerald-200 bg-emerald-50 text-emerald-700">
+                          {event.status}
+                        </span>
+                      )}
+                      {event.statusType === "filling" && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-amber-200 bg-amber-50 text-amber-700">
+                          {event.status}
+                        </span>
+                      )}
+                      {event.statusType === "planning" && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-slate-300 bg-slate-100 text-slate-600">
+                          {event.status}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Register on Indico Action Link */}
+                    <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-slate-300 bg-white font-mono text-xs font-medium text-[#0B357B] group-hover:border-[#1A73C3] group-hover:text-[#1A73C3] group-hover:bg-blue-50/20 transition-all shadow-2xs">
+                      <span>{dict.eventsPage.registerIndico}</span>
+                      <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                         ↗
                       </span>
-                    </div>
-
-                    {/* Metadata Ledger with Slashes */}
-                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-xs sm:text-sm font-mono text-slate-600 mt-2.5">
-                      <span className="font-medium text-slate-800 font-sans">
-                        {event.venue}
-                      </span>
-                      <span className="text-slate-300" aria-hidden="true">/</span>
-                      <span className="text-slate-500 font-sans">
-                        {event.duration}
-                      </span>
-                      <span className="text-slate-300" aria-hidden="true">/</span>
-                      <span className="text-slate-500 font-sans">
-                        {event.audience}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right: Status Pill + CTA Button */}
-                <div className="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-3 md:pt-0 border-t md:border-t-0 border-dashed border-slate-200">
-                  {/* Status Badge */}
-                  <div>
-                    {event.statusType === "open" && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-emerald-200 bg-emerald-50 text-emerald-700">
-                        {event.status}
-                      </span>
-                    )}
-                    {event.statusType === "filling" && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-amber-200 bg-amber-50 text-amber-700">
-                        {event.status}
-                      </span>
-                    )}
-                    {event.statusType === "planning" && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono font-medium border border-slate-300 bg-slate-100 text-slate-600">
-                        {event.status}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Register on Indico Action Link */}
-                  <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-slate-300 bg-white font-mono text-xs font-medium text-[#0B357B] group-hover:border-[#1A73C3] group-hover:text-[#1A73C3] group-hover:bg-blue-50/20 transition-all shadow-2xs">
-                    <span>{dict.eventsPage.registerIndico}</span>
-                    <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                      ↗
                     </span>
-                  </span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            );
+          })}
         </div>
 
         {/* Host a Roadshow CTA Box */}

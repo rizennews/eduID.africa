@@ -4,7 +4,6 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowRightIcon, type ArrowRightIconHandle } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
-import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface FederationMapSectionProps {
   locale: Locale;
@@ -115,15 +114,6 @@ export function FederationMapSection({
 
           {/* Right Column: Architectural Status Ledger (Frankli Style) */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-5">
-            <VisualPlaceholder
-              type="map"
-              title="Interactive Continental Mesh Slot"
-              dimensions="54 Nations · Interactive SVG / Animation"
-              description="Slot for interactive mini continental map with live pulsing connection beacons for operational federations."
-              aspectRatio="aspect-[16/9]"
-              theme="light"
-            />
-
             <div className="border border-dashed border-slate-300 bg-white/70 backdrop-blur-xs p-6 sm:p-8 lg:p-9 transition-colors">
               {/* Card Header: Taxonomy Eyebrow + Continental Count */}
               <div className="flex items-center justify-between pb-4 border-b border-dashed border-slate-300">

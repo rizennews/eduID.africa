@@ -22,7 +22,7 @@ interface InstitutionsBenefitsSectionProps {
   };
 }
 
-export function InstitutionsBenefitsSection({ locale: _locale, dict }: InstitutionsBenefitsSectionProps) {
+export function InstitutionsBenefitsSection({ dict }: InstitutionsBenefitsSectionProps) {
   const { benefitsSection } = dict.institutionsPage;
 
   return (

@@ -3,7 +3,6 @@
 import * as React from "react";
 import Image from "next/image";
 import type { Locale } from "@/lib/i18n";
-import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface AboutNetworksSectionProps {
   locale: Locale;
@@ -67,26 +66,14 @@ export function AboutNetworksSection({ dict }: AboutNetworksSectionProps) {
   return (
     <section className="pt-12 sm:pt-16 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        {/* Section Header (Left-aligned & Full Width) */}
+        <div className="max-w-none mb-10 sm:mb-14">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal w-full max-w-none">
             {data.description}
           </p>
-        </div>
-
-        {/* Regional Network Map Illustration Slot */}
-        <div className="mb-10 max-w-5xl mx-auto">
-          <VisualPlaceholder
-            type="map"
-            title="Three Regional REN Operational Map Slot"
-            dimensions="1200 × 420 (Regional Network Topology)"
-            description="Slot for continental map illustration showing the operational footprint of UbuntuNet Alliance, WACREN, and ASREN."
-            aspectRatio="aspect-[21/9]"
-            theme="light"
-          />
         </div>
 
         {/* Monolithic 3-Column Architectural Grid */}

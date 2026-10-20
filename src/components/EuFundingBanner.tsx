@@ -2,12 +2,21 @@ import * as React from "react";
 import Image from "next/image";
 import type { Locale } from "@/lib/i18n";
 
-interface EuFundingBannerProps {
-  locale?: Locale;
-  dict?: any;
+export interface FundingBannerDict {
+  fundingBanner?: {
+    fundedBy?: string;
+    statement?: string;
+    disclaimer?: string;
+  };
+  [key: string]: unknown;
 }
 
-export function EuFundingBanner({ locale: _locale, dict }: EuFundingBannerProps) {
+interface EuFundingBannerProps {
+  locale?: Locale;
+  dict?: FundingBannerDict;
+}
+
+export function EuFundingBanner({ dict }: EuFundingBannerProps) {
   const fundedBy = dict?.fundingBanner?.fundedBy || "FUNDED BY";
   const statement =
     dict?.fundingBanner?.statement ||

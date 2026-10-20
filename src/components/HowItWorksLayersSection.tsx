@@ -10,7 +10,6 @@ import {
   type ShieldCheckIconHandle,
 } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
-import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface HowItWorksLayersSectionProps {
   locale?: Locale;
@@ -48,9 +47,7 @@ interface LayerColumnProps {
   solves: string;
   solvesLabel?: string;
   tagClass: string;
-  icon: React.ReactNode;
-  onHover?: () => void;
-  onLeave?: () => void;
+  iconType: "cloud" | "earth" | "shield";
 }
 
 function LayerColumn({
@@ -60,14 +57,28 @@ function LayerColumn({
   solves,
   solvesLabel,
   tagClass,
-  icon,
-  onHover,
-  onLeave,
+  iconType,
 }: LayerColumnProps) {
+  const cloudRef = React.useRef<CloudSyncIconHandle>(null);
+  const earthRef = React.useRef<EarthIconHandle>(null);
+  const shieldRef = React.useRef<ShieldCheckIconHandle>(null);
+
+  const handleMouseEnter = () => {
+    if (iconType === "cloud") cloudRef.current?.startAnimation();
+    if (iconType === "earth") earthRef.current?.startAnimation();
+    if (iconType === "shield") shieldRef.current?.startAnimation();
+  };
+
+  const handleMouseLeave = () => {
+    if (iconType === "cloud") cloudRef.current?.stopAnimation();
+    if (iconType === "earth") earthRef.current?.stopAnimation();
+    if (iconType === "shield") shieldRef.current?.stopAnimation();
+  };
+
   return (
     <div
-      onMouseEnter={onHover}
-      onMouseLeave={onLeave}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="group p-7 sm:p-8 lg:p-10 flex flex-col justify-between hover:bg-slate-50/50 transition-colors duration-200"
     >
       <div>
@@ -82,7 +93,15 @@ function LayerColumn({
             className="w-9 h-9 rounded-lg bg-white border border-dashed border-slate-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-2xs"
             aria-hidden="true"
           >
-            {icon}
+            {iconType === "cloud" && (
+              <CloudSyncIcon ref={cloudRef} size={20} className="text-[#DE4A1B]" />
+            )}
+            {iconType === "earth" && (
+              <EarthIcon ref={earthRef} size={20} className="text-[#0B357B]" />
+            )}
+            {iconType === "shield" && (
+              <ShieldCheckIcon ref={shieldRef} size={20} className="text-[#1A73C3]" />
+            )}
           </div>
         </div>
 
@@ -112,23 +131,24 @@ function LayerColumn({
   );
 }
 
-export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLayersSectionProps) {
-  const cloudRef = React.useRef<CloudSyncIconHandle>(null);
-  const earthRef = React.useRef<EarthIconHandle>(null);
-  const shieldRef = React.useRef<ShieldCheckIconHandle>(null);
-
+export function HowItWorksLayersSection({ dict }: HowItWorksLayersSectionProps) {
   const layers = dict.howItWorks.layers;
 
-  const cards = [
+  const cards: Array<{
+    layerTag: string;
+    title: string;
+    description: string;
+    solves: string;
+    tagClass: string;
+    iconType: "cloud" | "earth" | "shield";
+  }> = [
     {
       layerTag: layers.card1.layerTag || "LAYER 1: CAMPUS IAM",
       title: layers.card1.title,
       description: layers.card1.description,
       solves: layers.card1.solves,
       tagClass: "bg-orange-50 text-[#DE4A1B] border-orange-200",
-      icon: <CloudSyncIcon ref={cloudRef} size={20} className="text-[#DE4A1B]" />,
-      onHover: () => cloudRef.current?.startAnimation(),
-      onLeave: () => cloudRef.current?.stopAnimation(),
+      iconType: "cloud",
     },
     {
       layerTag: layers.card2.layerTag || "LAYER 2: CONTINENTAL FEDERATION",
@@ -136,9 +156,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
       description: layers.card2.description,
       solves: layers.card2.solves,
       tagClass: "bg-blue-50 text-[#0B357B] border-blue-200",
-      icon: <EarthIcon ref={earthRef} size={20} className="text-[#0B357B]" />,
-      onHover: () => earthRef.current?.startAnimation(),
-      onLeave: () => earthRef.current?.stopAnimation(),
+      iconType: "earth",
     },
     {
       layerTag: layers.card3.layerTag || "LAYER 3: WI-FI & SERVICES",
@@ -146,27 +164,13 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
       description: layers.card3.description,
       solves: layers.card3.solves,
       tagClass: "bg-sky-50 text-[#1A73C3] border-sky-200",
-      icon: <ShieldCheckIcon ref={shieldRef} size={20} className="text-[#1A73C3]" />,
-      onHover: () => shieldRef.current?.startAnimation(),
-      onLeave: () => shieldRef.current?.stopAnimation(),
+      iconType: "shield",
     },
   ];
 
   return (
     <section className="pt-2 sm:pt-4 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* End-to-End Authentication Flow Illustration Slot */}
-        <div className="mb-8">
-          <VisualPlaceholder
-            type="illustration"
-            title="End-to-End Authentication Flow Diagram Slot"
-            dimensions="Full Width (21:9 Flow Illustration)"
-            description="Slot for illustrated diagram showing student campus sign-on unlocking eduroam and global research resources across Africa."
-            aspectRatio="aspect-[21/9]"
-            theme="light"
-          />
-        </div>
-
         {/* Monolithic 3-Column Architectural Grid */}
         <div className="border-t border-b border-dashed border-slate-300">
           <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-300/80 border-x border-slate-300/80 bg-white">
@@ -179,9 +183,7 @@ export function HowItWorksLayersSection({ locale: _locale, dict }: HowItWorksLay
                 solves={card.solves}
                 solvesLabel={layers.solvesLabel}
                 tagClass={card.tagClass}
-                icon={card.icon}
-                onHover={card.onHover}
-                onLeave={card.onLeave}
+                iconType={card.iconType}
               />
             ))}
           </div>

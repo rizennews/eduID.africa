@@ -98,8 +98,8 @@ export function AboutTimelineSection({ dict }: AboutTimelineSectionProps) {
   return (
     <section className="pt-6 sm:pt-8 pb-12 sm:pb-16 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        {/* Section Header (Left-aligned & Full Width) */}
+        <div className="max-w-none mb-10 sm:mb-14">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {data.headline}
           </h2>

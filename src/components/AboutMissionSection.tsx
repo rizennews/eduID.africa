@@ -3,7 +3,6 @@
 import * as React from "react";
 import { EarthIcon, type EarthIconHandle, WorkflowIcon, type WorkflowIconHandle, CloudSyncIcon, type CloudSyncIconHandle } from "@/components/icons";
 import type { Locale } from "@/lib/i18n";
-import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface AboutMissionSectionProps {
   locale: Locale;
@@ -46,12 +45,12 @@ export function AboutMissionSection({ dict }: AboutMissionSectionProps) {
   return (
     <section className="pt-6 sm:pt-8 pb-6 sm:pb-8 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        {/* Section Header (Left-aligned & Full Width) */}
+        <div className="max-w-none mb-10 sm:mb-14">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {mission.headline}
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal w-full max-w-none">
             {mission.description}
           </p>
         </div>
@@ -105,15 +104,7 @@ export function AboutMissionSection({ dict }: AboutMissionSectionProps) {
             </div>
           </div>
 
-          {/* Architecture Schematic Illustration Slot */}
-          <VisualPlaceholder
-            type="illustration"
-            title="Continental Federation Architecture Diagram Slot"
-            dimensions="Full Width (21:9 Schematic Diagram)"
-            description="Slot for technical illustration mapping Global eduGAIN peering ↔ eduID.africa continental hub ↔ National NRENs ↔ Campus Identity Providers."
-            aspectRatio="aspect-[21/9]"
-            theme="light"
-          />
+
 
           {/* Bottom Dual Tracks: Level 2 & Level 2b Monolithic Grid */}
           <div className="border-y border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-300/80 bg-white">

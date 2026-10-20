@@ -40,11 +40,56 @@ export interface RoadshowEvent {
     pt: string;
     ar: string;
   };
-  statusType: "open" | "filling" | "planning";
+  statusType: "open" | "filling" | "planning" | "deactivated";
   indicoUrl: string;
+  isActive?: boolean;
 }
 
 export const roadshowEvents: RoadshowEvent[] = [
+  {
+    id: "niger-2026",
+    month: {
+      en: "Nov",
+      fr: "Nov",
+      pt: "Nov",
+      ar: "نوفمبر",
+    },
+    day: "2-3",
+    year: "2026",
+    title: {
+      en: "Trust and Identity Roadshow - Niger",
+      fr: "Roadshow Confiance et Identité - Niger",
+      pt: "Roadshow de Confiança e Identidade - Níger",
+      ar: "جولة الثقة والهوية - النيجر",
+    },
+    venue: {
+      en: "Niamey",
+      fr: "Niamey",
+      pt: "Niamei",
+      ar: "نيامي",
+    },
+    duration: {
+      en: "2 days",
+      fr: "2 jours",
+      pt: "2 dias",
+      ar: "يومان",
+    },
+    audience: {
+      en: "HEI IT administrators + NRENs",
+      fr: "Administrateurs informatiques d'ESR + RNRE",
+      pt: "Administradores de TI de IES + RNER",
+      ar: "مسؤولو تكنولوجيا المعلومات في مؤسسات التعليم العالي + شبكات NREN",
+    },
+    status: {
+      en: "Open",
+      fr: "Ouvert",
+      pt: "Aberto",
+      ar: "مفتوح",
+    },
+    statusType: "open",
+    indicoUrl: "https://indico.wacren.net/event/281/",
+    isActive: true,
+  },
   {
     id: "accra-2026",
     month: {
@@ -80,13 +125,14 @@ export const roadshowEvents: RoadshowEvent[] = [
       ar: "مسؤولو تكنولوجيا المعلومات في مؤسسات التعليم العالي",
     },
     status: {
-      en: "Open",
-      fr: "Ouvert",
-      pt: "Aberto",
-      ar: "مفتوح",
+      en: "Deactivated",
+      fr: "Désactivé",
+      pt: "Desativado",
+      ar: "معطل",
     },
-    statusType: "open",
+    statusType: "deactivated",
     indicoUrl: "https://indico.wacren.net/event/accra-ti-roadshow",
+    isActive: false,
   },
   {
     id: "nairobi-2026",
@@ -123,13 +169,14 @@ export const roadshowEvents: RoadshowEvent[] = [
       ar: "مسؤولو تكنولوجيا المعلومات في مؤسسات التعليم العالي ومشغلو NRO",
     },
     status: {
-      en: "Open",
-      fr: "Ouvert",
-      pt: "Aberto",
-      ar: "مفتوح",
+      en: "Deactivated",
+      fr: "Désactivé",
+      pt: "Desativado",
+      ar: "معطل",
     },
-    statusType: "open",
+    statusType: "deactivated",
     indicoUrl: "https://indico.wacren.net/event/nairobi-ti-roadshow",
+    isActive: false,
   },
   {
     id: "dakar-2026",
@@ -166,13 +213,14 @@ export const roadshowEvents: RoadshowEvent[] = [
       ar: "المجموعة الناطقة بالفرنسية",
     },
     status: {
-      en: "Filling",
-      fr: "Presque complet",
-      pt: "A esgotar",
-      ar: "شبه ممتلئ",
+      en: "Deactivated",
+      fr: "Désactivé",
+      pt: "Desativado",
+      ar: "معطل",
     },
-    statusType: "filling",
+    statusType: "deactivated",
     indicoUrl: "https://indico.wacren.net/event/dakar-ti-roadshow",
+    isActive: false,
   },
   {
     id: "lusaka-2026",
@@ -209,13 +257,14 @@ export const roadshowEvents: RoadshowEvent[] = [
       ar: "مسؤولو تكنولوجيا المعلومات في مؤسسات التعليم العالي",
     },
     status: {
-      en: "Planning",
-      fr: "Planification",
-      pt: "Em planeamento",
-      ar: "قيد التخطيط",
+      en: "Deactivated",
+      fr: "Désactivé",
+      pt: "Desativado",
+      ar: "معطل",
     },
-    statusType: "planning",
+    statusType: "deactivated",
     indicoUrl: "https://indico.wacren.net/event/lusaka-ti-roadshow",
+    isActive: false,
   },
 ];
 
@@ -232,5 +281,6 @@ export function getRoadshowEvents(locale: Locale) {
     status: event.status[locale] || event.status.en,
     statusType: event.statusType,
     indicoUrl: event.indicoUrl,
+    isActive: event.isActive ?? true,
   }));
 }

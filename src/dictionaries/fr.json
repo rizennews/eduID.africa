@@ -69,7 +69,7 @@
   "about": {
     "badge": "À propos d'eduID.africa",
     "headline1": "Le cadre continental africain",
-    "headline2": "de Confiance et d'Identité.",
+    "headline2": "de Confiance et d'Identité",
     "description": "eduID.africa est la fédération d'identité panafricaine reliant la communauté de recherche et d'éducation du continent entre elle et au monde. Conjointement gouvernée par les trois réseaux régionaux de recherche et d'éducation d'Afrique.",
     "networksLabel": "Conjointement gouverné par les réseaux régionaux",
     "network1": "UbuntuNet Alliance",
@@ -81,7 +81,7 @@
     "ctaGovernance": "Explorer la gouvernance",
     "ctaHowItWorks": "Comment ça fonctionne",
     "networksSection": {
-      "headline": "Trois réseaux. Un cadre unique.",
+      "headline": "Trois réseaux. Un cadre unique",
       "description": "eduID.africa est conjointement gouverné par les trois réseaux régionaux de recherche et d'éducation d'Afrique, couvrant chacun une région distincte du continent.",
       "network1": {
         "shortName": "UbuntuNet",
@@ -103,7 +103,7 @@
     },
     "mission": {
       "kicker": "Mission",
-      "headline": "Deux niveaux. Un cadre unifié.",
+      "headline": "Deux niveaux. Un cadre unifié",
       "description": "eduID.africa opère à deux niveaux interconnectés qui définissent ce qui le rend structurellement distinct d'une fédération nationale isolée.",
       "level1": {
         "tag": "NIVEAU 1: TOIT CONTINENTAL",
@@ -169,8 +169,8 @@
   },
   "howItWorks": {
     "heroTitle": "Comment ça marche",
-    "headline1": "Trois niveaux. Une identité.",
-    "headline2": "Un accès à l'échelle du continent.",
+    "headline1": "Trois niveaux. Une identité",
+    "headline2": "Un accès à l'échelle du continent",
     "description": "eduID.africa opère à travers trois couches interconnectées (la gouvernance de l'identité sur campus, la fédération nationale et l'agrégation continentale) connectant les chercheurs et étudiants africains aux ressources mondiales.",
     "layers": {
       "card1": {
@@ -298,14 +298,14 @@
   "hero": {
     "badge": "La couche d'identité pour la recherche et l'éducation en Afrique",
     "headline1": "Accompagner chaque NREN pour fédérer au niveau national.",
-    "headline2": "Connecter chaque institution qui ne peut pas attendre.",
+    "headline2": "Connecter chaque institution qui ne peut pas attendre",
     "description": "eduID.africa renforce l'infrastructure de Confiance et d'Identité à travers l'Afrique, en aidant les NRENs à bâtir des fédérations nationales souveraines, tout en offrant une passerelle continentale pour celles qui ne sont pas encore prêtes.",
     "ctaNren": "Pour les NRENs →",
     "ctaInstitution": "Vérifier votre institution"
   },
   "pathways": {
     "eyebrow": "Voies d'accès",
-    "heading": "Trois voies d'accès à la fédération continentale.",
+    "heading": "Trois voies d'accès à la fédération continentale",
     "subheading": "Que vous conceviez un réseau national souverain, déployiez une identité cloud sans serveurs, ou vérifiiez le roaming de votre campus.",
     "card1": {
       "tag": "POUR LES NREN: VOIE NATIONALE",
@@ -361,7 +361,7 @@
     "cta": "Ouvrir la carte complète →"
   },
   "governanceSection": {
-    "title": "Gouverné par les trois réseaux régionaux de recherche et d'éducation africains: avec l'appui de",
+    "title": "eduID.africa est mis en œuvre par les trois réseaux régionaux de recherche et d'éducation (RREN) et soutenu par des institutions mondiales",
     "partner1": "UbuntuNet Alliance",
     "partner2": "WACREN",
     "partner3": "ASREN",
@@ -402,8 +402,8 @@
       "subtitle": "Supervision continentale conforme aux normes et cadre opérationnel transparent."
     },
     "intro": {
-      "headline1": "Aligné sur les normes.",
-      "headline2": "Gouvernance transparente. Conçu pour durer.",
+      "headline1": "Aligné sur les normes",
+      "headline2": "Gouvernance transparente. Conçu pour durer",
       "description": "Le cadre de gouvernance d'eduID.africa garantit que la fédération continentale fonctionne selon les normes internationales, avec une responsabilité claire entre les trois RREN régionaux et dans le cadre du programme AfricaConnect4."
     },
     "leadershipSection": {
@@ -581,13 +581,13 @@
     "overview": {
       "eyebrow": "Voie de fédération nationale",
       "headline1": "Infrastructure d'identité souveraine",
-      "headline2": "pour votre pays.",
+      "headline2": "pour votre pays",
       "description": "Deux voies vers la fédération continentale. Que votre RNRE soit prêt à exploiter une fédération nationale d'identité ou qu'il soit encore en cours de construction, eduID.africa soutient les deux, avec des outils, des cadres de gouvernance et un soutien programmatique direct."
     },
     "sovereignSection": {
       "eyebrow": "Voie privilégiée",
-      "headline": "Votre RNRE possède l'infrastructure.",
-      "description": "La voie privilégiée. Votre pays exploite une fédération nationale d'identité souveraine, avec eduID.africa fournissant le toit continental au-dessus. Vos institutions s'enregistrent auprès de votre RNRE ; votre RNRE s'appaire avec eduID.africa.",
+      "headline": "Votre RNRE possède l'infrastructure",
+      "description": "La voie privilégiée. Votre pays exploite une fédération nationale d'identité souveraine, avec eduID.africa fournissant le toit continental au-dessus.  Pour la Voie A, vos institutions s'enregistrent auprès de votre RNRE ; votre RNRE s'appaire avec eduID.africa.",
       "featureA": {
         "letter": "A",
         "title": "Souveraineté de gouvernance",
@@ -668,7 +668,7 @@
     },
     "overview": {
       "headline1": "Offrez à vos étudiants et à votre personnel",
-      "headline2": "un identifiant qui fonctionne partout.",
+      "headline2": "un identifiant qui fonctionne partout",
       "description": "Administrateurs informatiques des établissements d'enseignement supérieur : découvrez comment déployer BonafID, enregistrer votre établissement auprès de la fédération et débloquer eduroam, les ressources eduGAIN et les services numériques des RNRE pour l'ensemble de votre campus.",
       "audience": "Administrateurs informatiques de l'ESR",
       "timeline": "Généralement 3 à 6 mois pour l'intégration"
@@ -776,7 +776,7 @@
     },
     "overview": {
       "headline1": "Gouvernance d'identité open-source,",
-      "headline2": "conçue en Afrique, pour l'Afrique.",
+      "headline2": "conçue en Afrique, pour l'Afrique",
       "description": "BonafID est une plateforme de gestion des identités et des accès fédérée, open-source et hébergée dans le cloud, co-créée par le WACREN et ses partenaires. Elle dote chaque établissement d'un fournisseur d'identité de niveau production, sans serveurs sur site, sans personnel spécialisé et sans attendre la création d'infrastructures nationales.",
       "badges": [
         "Open source",
@@ -873,8 +873,8 @@
   "trainingPage": {
     "overview": {
       "headline1": "Soutien pratique au déploiement",
-      "headline2": "à travers le continent.",
-      "description": "Les roadshows Trust & Identity de WACREN apportent des ateliers de déploiement BonafID aux administrateurs d'ESR à travers l'Afrique. Participez, découvrez la plateforme en pratique et repartez avec un plan de déploiement pour votre établissement.",
+      "headline2": "à travers le continent",
+      "description": "Les roadshows Trust & Identity de WACREN apportent des ateliers pratiques et des ressources aux administrateurs d'ESR à travers l'Afrique. Participez, découvrez la plateforme en pratique et repartez avec un plan de déploiement pour votre établissement.",
       "audience": "Administrateurs informatiques d'ESR & ingénieurs de campus",
       "format": "Ateliers en présentiel / Travaux pratiques"
     },
@@ -930,7 +930,7 @@
     },
     "overview": {
       "headline1": "Outils de fédération modulaires",
-      "headline2": "conçus pour l'échelle et la souveraineté.",
+      "headline2": "conçus pour l'échelle et la souveraineté",
       "description": "Une suite de bibliothèques open source, d'adaptateurs de protocoles, de connecteurs automatisés et de recettes de déploiement pour aider les ESR et RNRE africains à s'intégrer aisément à eduID.africa.",
       "specs": [
         "Open Source",
@@ -1010,7 +1010,7 @@
     "heroSubtitle": "Configuration rapide de geteduroam et accès fédéré sur les campus d'enseignement et de recherche en Afrique.",
     "overview": {
       "headline1": "Configurez geteduroam",
-      "headline2": "en moins de trois minutes.",
+      "headline2": "en moins de trois minutes",
       "description": "Vérifiez si votre établissement est connecté, téléchargez l'application geteduroam et bénéficiez d'un accès Wi-Fi transparent sur tous les campus connectés de la région. Aucune configuration manuelle. Aucune configuration par campus.",
       "specs": [
         "Configuration en moins de 3 minutes",

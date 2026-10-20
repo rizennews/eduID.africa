@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { Locale } from "@/lib/i18n";
 import { getNewsArticles } from "@/data/news";
 
@@ -30,11 +31,11 @@ export function NewsListingSection({ locale, dict }: NewsListingSectionProps) {
     <section className="py-12 sm:py-16 bg-[#F8FAFC] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-10 sm:mb-12">
+        <div className="w-full max-w-none mb-10 sm:mb-12">
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {dict.newsPage.title}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal w-full max-w-none">
             {dict.newsPage.subtitle}
           </p>
         </div>
@@ -91,11 +92,13 @@ export function NewsListingSection({ locale, dict }: NewsListingSectionProps) {
 
               {/* Lead Featured Image */}
               <div className="lg:col-span-5">
-                <Link href={`/${locale}/news/${leadArticle.slug}`} className="block overflow-hidden border border-dashed border-slate-300 bg-slate-100">
-                  <img
+                <Link href={`/${locale}/news/${leadArticle.slug}`} className="block relative aspect-16/10 overflow-hidden border border-dashed border-slate-300 bg-slate-100">
+                  <Image
                     src={leadArticle.image}
                     alt={leadArticle.title}
-                    className="w-full h-auto aspect-16/10 object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                    fill
+                    unoptimized
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   />
                 </Link>
               </div>
@@ -112,11 +115,13 @@ export function NewsListingSection({ locale, dict }: NewsListingSectionProps) {
             >
               <div>
                 {/* Card Thumbnail Image */}
-                <Link href={`/${locale}/news/${article.slug}`} className="block overflow-hidden border border-dashed border-slate-300 bg-slate-100 mb-5">
-                  <img
+                <Link href={`/${locale}/news/${article.slug}`} className="block relative aspect-16/9 overflow-hidden border border-dashed border-slate-300 bg-slate-100 mb-5">
+                  <Image
                     src={article.image}
                     alt={article.title}
-                    className="w-full h-auto aspect-16/9 object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                    fill
+                    unoptimized
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </Link>
 

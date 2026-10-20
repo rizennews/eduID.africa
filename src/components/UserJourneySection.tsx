@@ -55,7 +55,7 @@ function JourneyStepRow({ num, title, description }: JourneyStepRowProps) {
   );
 }
 
-export function UserJourneySection({ locale: _locale, dict }: UserJourneySectionProps) {
+export function UserJourneySection({ dict }: UserJourneySectionProps) {
   const journey = dict.howItWorks.userJourney;
 
   const steps = [
@@ -75,7 +75,7 @@ export function UserJourneySection({ locale: _locale, dict }: UserJourneySection
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-5xl text-[#0B357B] tracking-tight leading-[1.18]">
             {journey.headline}
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal whitespace-nowrap">
+          <p className="mt-3 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal w-full max-w-none">
             {journey.description}
           </p>
         </div>

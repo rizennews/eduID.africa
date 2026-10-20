@@ -33,8 +33,8 @@ export default async function Page({
         <GovernancePartnersSection locale={locale} dict={dict} />
       </main>
 
-      {/* Modern Massive Wordmark Footer */}
-      <Footer locale={locale} dict={dict} />
+      {/* Modern Massive Wordmark Footer with EU Funding Statement */}
+      <Footer locale={locale} dict={dict} showFundingBanner={true} />
     </div>
   );
 }

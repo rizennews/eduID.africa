@@ -22,7 +22,7 @@ interface InstitutionsConnectSectionProps {
   };
 }
 
-export function InstitutionsConnectSection({ locale: _locale, dict }: InstitutionsConnectSectionProps) {
+export function InstitutionsConnectSection({ dict }: InstitutionsConnectSectionProps) {
   const { connectSection } = dict.institutionsPage;
 
   return (

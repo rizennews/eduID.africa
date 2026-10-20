@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/icons";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
-import { VisualPlaceholder } from "@/components/ui/VisualPlaceholder";
 
 interface ProblemItem {
   icon: string;
@@ -136,7 +135,7 @@ function ProblemCard({ item, idx }: ProblemCardProps) {
   );
 }
 
-export function BonafIdProblemSection({ locale: _locale, dict }: BonafIdProblemSectionProps) {
+export function BonafIdProblemSection({ dict }: BonafIdProblemSectionProps) {
   const { problemSection } = dict.bonafidPage;
 
   return (
@@ -157,18 +156,6 @@ export function BonafIdProblemSection({ locale: _locale, dict }: BonafIdProblemS
           {problemSection.items.map((item, idx) => (
             <ProblemCard key={idx} item={item} idx={idx} />
           ))}
-        </div>
-
-        {/* Campus IAM Comparison / Mockup Illustration Slot */}
-        <div className="mt-10">
-          <VisualPlaceholder
-            type="illustration"
-            title="Campus IAM Architecture Contrast Slot"
-            dimensions="Full Width (21:9 Architectural Illustration)"
-            description="Slot for comparison illustration showing legacy unmanaged campus credentials vs federated BonafID single sign-on."
-            aspectRatio="aspect-[21/9]"
-            theme="light"
-          />
         </div>
       </div>
     </section>

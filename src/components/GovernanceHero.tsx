@@ -22,11 +22,6 @@ export function GovernanceHero({ dict }: GovernanceHeroProps) {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-normal text-[#0B357B] tracking-tight">
           {dict.governancePage.hero.title}
         </h1>
-        {dict.governancePage.hero.subtitle && (
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans max-w-2xl mx-auto leading-relaxed">
-            {dict.governancePage.hero.subtitle}
-          </p>
-        )}
       </div>
     </section>
   );

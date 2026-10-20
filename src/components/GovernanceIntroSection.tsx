@@ -77,9 +77,9 @@ export function GovernanceIntroSection({
 }: GovernanceIntroSectionProps) {
   return (
     <section className="border-y border-dashed border-slate-300 py-6 sm:py-8 lg:py-10 bg-white/40">
-      <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <div className="space-y-6">
-          <p className="text-lg sm:text-xl text-slate-600 font-sans leading-relaxed font-normal max-w-none mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 font-sans leading-relaxed font-normal w-full max-w-none">
             {dict.governancePage.intro.description}
           </p>
 
@@ -88,7 +88,7 @@ export function GovernanceIntroSection({
             <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 mb-5">
               {dict.governanceSection.title}
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
+            <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-10">
               {PARTNER_LOGOS.map((partner) => (
                 <div
                   key={partner.name}
