@@ -95,7 +95,7 @@ export function NotFoundView({ locale = "en", dict }: NotFoundViewProps) {
           </h1>
 
           {/* Lost in flight? */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-normal font-sans text-slate-400 tracking-tight leading-tight mt-1">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-normal font-sans text-slate-500 tracking-tight leading-tight mt-1">
             {pageDict.title}
           </h2>
 
@@ -103,7 +103,7 @@ export function NotFoundView({ locale = "en", dict }: NotFoundViewProps) {
           <div className="mt-8 sm:mt-10">
             <Link
               href={`/${locale}`}
-              className="text-xs sm:text-sm font-normal text-slate-400 hover:text-slate-900 transition-colors inline-block"
+              className="text-xs sm:text-sm font-normal text-slate-500 hover:text-slate-900 transition-colors inline-block"
             >
               {pageDict.homeButton}
             </Link>

@@ -53,7 +53,7 @@ function PathColumn({
       <div>
         {/* Header: Number & Tag (No dots) */}
         <div className="flex items-center justify-between gap-3 mb-6">
-          <span className="font-mono text-xs font-bold text-slate-400">
+          <span className="font-mono text-xs font-bold text-slate-500">
             {num}
           </span>
           <span
@@ -109,7 +109,7 @@ export function ArchitecturePathsSection({
       title: data.pathB.title,
       description: data.pathB.description,
       bestFor: data.pathB.bestFor,
-      tagClass: "bg-orange-50 text-[#DE4A1B] border-orange-200",
+      tagClass: "bg-orange-50 text-[#C2410C] border-orange-200",
     },
   ];
 

@@ -144,7 +144,7 @@ export function Footer({ locale, dict, showFundingBanner = false }: FooterProps)
 
           {/* Column 2: For NRENs */}
           <div className="col-span-1 lg:col-span-3 space-y-3">
-            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
+            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
               {dict.footer.colNrenTitle}
             </div>
             <ul className="space-y-2.5">
@@ -185,7 +185,7 @@ export function Footer({ locale, dict, showFundingBanner = false }: FooterProps)
 
           {/* Column 3: Resources */}
           <div className="col-span-1 lg:col-span-2 space-y-3">
-            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
+            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
               {dict.footer.colResourcesTitle}
             </div>
             <ul className="space-y-2.5">
@@ -226,7 +226,7 @@ export function Footer({ locale, dict, showFundingBanner = false }: FooterProps)
 
           {/* Column 4: Organisation */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-3 space-y-3">
-            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
+            <div className="font-mono text-xs font-medium uppercase tracking-wider text-slate-500">
               {dict.footer.colOrgTitle}
             </div>
             <ul className="space-y-2.5">

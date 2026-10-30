@@ -42,7 +42,7 @@ export function EuFundingBanner({ dict }: EuFundingBannerProps) {
               />
             </div>
             <div className="space-y-2 flex-1">
-              <span className="block font-mono text-xs font-bold tracking-wider text-slate-400 uppercase">
+              <span className="block font-mono text-xs font-bold tracking-wider text-slate-500 uppercase">
                 {fundedBy}
               </span>
               <p className="font-sans text-sm sm:text-[15px] text-slate-800 font-medium leading-relaxed">

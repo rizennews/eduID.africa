@@ -1,0 +1,33 @@
+# eduID.africa
+
+> eduID.africa is the pan-African trust and identity federation for research and higher education, providing sovereign federated single sign-on (SSO), verifiable digital credentials through BonafID, and cross-border research trust via eduGAIN and eduroam across 54 African nations.
+
+eduID.africa is jointly operated and governed by Africa's three regional research and education networks — WACREN (West and Central Africa), UbuntuNet Alliance (Eastern and Southern Africa), and ASREN (Arab States and North Africa) — and supported under the European Union AfricaConnect programme. The site is available in English, French, Portuguese, and Arabic.
+
+## Main Pages
+
+- [Home](https://eduid.africa/en): Overview of the continental trust federation, regional governance, and mission.
+- [About](https://eduid.africa/en/about): Vision, governance structure, regional leadership, and architectural pillars.
+- [How It Works](https://eduid.africa/en/how-it-works): Technical architecture of federated authentication, SAML/OIDC protocols, and identity providers.
+- [Get Started](https://eduid.africa/en/get-started): Step-by-step onboarding for institutions and NRENs joining the federation.
+- [For NRENs](https://eduid.africa/en/for-nren): Guidance for national research and education networks on joining and operating eduID.africa.
+- [For Institutions](https://eduid.africa/en/for-institutions): How universities, research centres, and libraries benefit from federated identity.
+- [BonafID](https://eduid.africa/en/bonafid): Verifiable digital academic credentials and digital diplomas built on W3C Verifiable Credentials.
+- [Federation Map](https://eduid.africa/en/federation-map): Interactive map of participating institutions and identity providers across Africa.
+- [Events](https://eduid.africa/en/events): Upcoming and past federation workshops, roadshows, and community events.
+- [Training](https://eduid.africa/en/training): Training programmes, resources, and capacity-building materials for federated identity.
+- [News](https://eduid.africa/en/news): News and announcements from the eduID.africa community.
+- [Governance](https://eduid.africa/en/governance): Governance framework, policies, and leadership of the federation.
+- [Policies](https://eduid.africa/en/policies): Federation policy documents, participation agreements, and technical specifications.
+- [Contact](https://eduid.africa/en/contact): Contact the eduID.africa team and regional NREN partners.
+
+## News
+
+- [Five New African Members Join eduGAIN](https://connect.geant.org/2025/04/15/five-new-african-members-join-edugain): Five new African national identity federations join the eduGAIN interfederation service, bringing the continental total to 14.
+- [Simplifying Access to Research4Life Resources](https://connect.geant.org/2025/02/21/simplifying-access-to-research4life-resources): Researchers and students sign in with institutional credentials to access scholarly resources.
+- [eduID.africa Advances Federated Identity Management in Africa](https://connect.geant.org/2023/03/06/eduid-africa-advances-federated-identity-management-in-the-education-ecosystem-in-africa): Milestone progress for federated identity in Africa's education ecosystem.
+- [eduID.africa Joins eduGAIN](https://connect.geant.org/2022/10/28/eduid-africa-joins-edugain): eduID.africa connects to the eduGAIN interfederation service.
+
+## Optional
+
+- [humans.txt](https://eduid.africa/humans.txt): Credits for the people and organisations behind eduID.africa.

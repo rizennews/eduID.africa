@@ -156,11 +156,11 @@ export function AboutMissionSection({ dict }: AboutMissionSectionProps) {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-mono text-xs uppercase tracking-wider text-[#DE4A1B]">
+                  <span className="font-mono text-xs uppercase tracking-wider text-[#C2410C]">
                     {mission.level2b.tag}
                   </span>
-                  <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#DE4A1B]">
-                    <CloudSyncIcon ref={cloudRef} size={18} className="text-[#DE4A1B]" />
+                  <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200/80 flex items-center justify-center text-[#C2410C]">
+                    <CloudSyncIcon ref={cloudRef} size={18} className="text-[#C2410C]" />
                   </div>
                 </div>
 

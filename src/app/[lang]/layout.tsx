@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
 import "@/app/globals.css";
 import { locales, isValidLocale, defaultLocale, type Locale } from "@/lib/i18n";
-import { createLocalizedMetadata, generateOrganizationSchema } from "@/lib/seo";
+import { createLocalizedMetadata, generateOrganizationSchema, siteConfig } from "@/lib/seo";
 import { Providers } from "@/components/providers";
 
 const inter = Inter({
@@ -68,6 +68,10 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <link
+          rel="ard"
+          href={`${siteConfig.baseUrl}/.well-known/ard.json`}
         />
       </head>
       <body

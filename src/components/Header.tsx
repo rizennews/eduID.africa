@@ -159,7 +159,7 @@ export function Header({ locale, dict }: HeaderProps) {
               <ChevronDown
                 size={14}
                 className={cn(
-                  "text-slate-400 transition-transform duration-200",
+                  "text-slate-500 transition-transform duration-200",
                   openDropdown === "eduid" && "rotate-180 text-[#0B357B]"
                 )}
               />
@@ -214,7 +214,7 @@ export function Header({ locale, dict }: HeaderProps) {
               <ChevronDown
                 size={14}
                 className={cn(
-                  "text-slate-400 transition-transform duration-200",
+                  "text-slate-500 transition-transform duration-200",
                   openDropdown === "communities" && "rotate-180 text-[#0B357B]"
                 )}
               />
@@ -264,7 +264,7 @@ export function Header({ locale, dict }: HeaderProps) {
           {/* Standalone Link 3: bonafID */}
           <Link
             href={`/${locale}/bonafid`}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium font-sans text-slate-700 hover:text-[#DE4A1B] hover:bg-slate-100/80 transition-colors select-none"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium font-sans text-slate-700 hover:text-[#C2410C] hover:bg-slate-100/80 transition-colors select-none"
           >
             <span>{dict.nav.bonafId.label}</span>
           </Link>
@@ -284,7 +284,7 @@ export function Header({ locale, dict }: HeaderProps) {
               <ChevronDown
                 size={14}
                 className={cn(
-                  "text-slate-400 transition-transform duration-200",
+                  "text-slate-500 transition-transform duration-200",
                   openDropdown === "resources" && "rotate-180 text-[#0B357B]"
                 )}
               />
@@ -314,7 +314,7 @@ export function Header({ locale, dict }: HeaderProps) {
                               {item.title}
                             </p>
                             {item.tag && (
-                              <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-orange-50 text-[#DE4A1B] border border-orange-200/60">
+                              <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-orange-50 text-[#C2410C] border border-orange-200/60">
                                 {item.tag}
                               </span>
                             )}
@@ -338,7 +338,7 @@ export function Header({ locale, dict }: HeaderProps) {
 
           <Link
             href={`/${locale}/get-started`}
-            className="inline-flex items-center justify-center gap-1.5 h-10 px-5 rounded-full text-xs sm:text-[13px] font-medium font-sans text-[#DE4A1B] bg-white border border-[#DE4A1B] hover:bg-[#DE4A1B] hover:text-white shadow-2xs transition-all active:scale-[0.98] select-none"
+            className="inline-flex items-center justify-center gap-1.5 h-10 px-5 rounded-full text-xs sm:text-[13px] font-medium font-sans text-[#C2410C] bg-white border border-[#C2410C] hover:bg-[#C2410C] hover:text-white shadow-2xs transition-all active:scale-[0.98] select-none"
           >
             <span>{dict.nav.actions.getStarted}</span>
             <ArrowUpRight size={14} className="stroke-[2]" />
@@ -351,7 +351,7 @@ export function Header({ locale, dict }: HeaderProps) {
 
           <Link
             href={`/${locale}/get-started`}
-            className="hidden sm:inline-flex items-center justify-center gap-1 h-9 px-3.5 rounded-full text-xs font-medium font-sans text-[#DE4A1B] bg-white border border-[#DE4A1B] hover:bg-[#DE4A1B] hover:text-white shadow-2xs transition-all active:scale-[0.98] select-none"
+            className="hidden sm:inline-flex items-center justify-center gap-1 h-9 px-3.5 rounded-full text-xs font-medium font-sans text-[#C2410C] bg-white border border-[#C2410C] hover:bg-[#C2410C] hover:text-white shadow-2xs transition-all active:scale-[0.98] select-none"
           >
             <span>{dict.nav.actions.getStarted}</span>
             <ArrowUpRight size={13} className="stroke-[2]" />
@@ -381,7 +381,7 @@ export function Header({ locale, dict }: HeaderProps) {
             <div className="space-y-6">
               {/* Mobile eduID.africa */}
               <div className="space-y-2">
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider font-heading px-2">
+                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider font-heading px-2">
                   {dict.nav.eduid.label}
                 </h3>
                 <div className="grid gap-1">
@@ -405,7 +405,7 @@ export function Header({ locale, dict }: HeaderProps) {
 
               {/* Mobile Communities */}
               <div className="space-y-1.5">
-                <h3 className="text-xs font-medium text-slate-400 uppercase tracking-wider font-mono px-2">
+                <h3 className="text-xs font-medium text-slate-500 uppercase tracking-wider font-mono px-2">
                   {dict.nav.communities.label}
                 </h3>
                 <div className="grid gap-0.5">
@@ -432,7 +432,7 @@ export function Header({ locale, dict }: HeaderProps) {
                 <Link
                   href={`/${locale}/bonafid`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-sm font-medium font-sans text-[#0B357B] hover:text-[#DE4A1B]"
+                  className="block py-2 text-sm font-medium font-sans text-[#0B357B] hover:text-[#C2410C]"
                 >
                   {dict.nav.bonafId.label}
                 </Link>
@@ -440,7 +440,7 @@ export function Header({ locale, dict }: HeaderProps) {
 
               {/* Mobile Resources */}
               <div className="space-y-1.5">
-                <h3 className="text-xs font-medium text-slate-400 uppercase tracking-wider font-mono px-2">
+                <h3 className="text-xs font-medium text-slate-500 uppercase tracking-wider font-mono px-2">
                   {dict.nav.resources.label}
                 </h3>
                 <div className="grid gap-0.5">
@@ -467,7 +467,7 @@ export function Header({ locale, dict }: HeaderProps) {
                 <Link
                   href={`/${locale}/get-started`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#DE4A1B] text-white text-sm font-bold font-outfit shadow-md hover:bg-[#c93b12] transition-colors"
+                  className="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-[#C2410C] text-white text-sm font-bold font-outfit shadow-md hover:bg-[#c93b12] transition-colors"
                 >
                   <span>{dict.nav.actions.getStarted}</span>
                   <ArrowUpRight size={16} />

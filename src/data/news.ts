@@ -3,6 +3,7 @@ import type { Locale } from "@/lib/i18n";
 export interface NewsArticle {
   slug: string;
   image: string;
+  externalUrl?: string;
   imageCaption: {
     en: string;
     fr: string;
@@ -54,191 +55,14 @@ export interface NewsArticle {
 
 export const newsArticles: NewsArticle[] = [
   {
-    slug: "bonafid-1-0-released",
-    image: "/news/bonafid-release.jpg",
+    slug: "five-new-african-members-join-edugain",
+    image: "/news/AC3-story-0425.jpg.webp",
+    externalUrl: "https://connect.geant.org/2025/04/15/five-new-african-members-join-edugain",
     imageCaption: {
-      en: "Engineering teams in West Africa deploying BonafID 1.0 production identity provider infrastructure.",
-      fr: "Équipes d'ingénierie en Afrique de l'Ouest déployant l'infrastructure de fournisseur d'identité BonafID 1.0.",
-      pt: "Equipas de engenharia na África Ocidental a implementar a infraestrutura do provedor de identidade BonafID 1.0.",
-      ar: "فرق هندسية في غرب أفريقيا تنشر البنية التحتية لمزود الهوية BonafID 1.0 الجاهز للإنتاج.",
-    },
-    category: {
-      en: "Platform Announcement",
-      fr: "Annonce de la plateforme",
-      pt: "Anúncio da Plataforma",
-      ar: "إعلان المنصة",
-    },
-    date: "12 May 2026",
-    readTime: {
-      en: "4 min read",
-      fr: "4 min de lecture",
-      pt: "4 min de leitura",
-      ar: "قراءة في 4 دقائق",
-    },
-    title: {
-      en: "BonafID 1.0 released: first production-ready deployment begins across six institutions",
-      fr: "Sortie de BonafID 1.0: premier déploiement en production auprès de six établissements",
-      pt: "Lançamento do BonafID 1.0: primeira implementação em produção começa em seis instituições",
-      ar: "إطلاق BonafID 1.0: بدء أول نشر جاهز للإنتاج عبر ست مؤسسات",
-    },
-    excerpt: {
-      en: "WACREN announces the AC4 production release of BonafID, marking the transition from pilot to operational platform. Six institutions across Ghana, Senegal, and Cameroon are the first to deploy the production version, with 14 additional onboardings scheduled before year-end.",
-      fr: "WACREN annonce la sortie en production AC4 de BonafID, marquant la transition du statut pilote à une plateforme opérationnelle. Six établissements au Ghana, au Sénégal et au Cameroun sont les premiers à déployer la version de production, avec 14 intégrations supplémentaires prévues avant la fin de l'année.",
-      pt: "A WACREN anuncia o lançamento em produção AC4 do BonafID, assinalando a transição de piloto para plataforma operacional. Seis instituições no Gana, Senegal e Camarões são as primeiras a implementar a versão de produção, com 14 integrações adicionais agendadas até ao final do ano.",
-      ar: "تعلن WACREN عن إطلاق الإصدار الإنتاجي AC4 من BonafID، مما يمثل الانتقال من المرحلة التجريبية إلى منصة تشغيلية. ست مؤسسات في غانا والسنغال والكاميرون هي الأولى في نشر إصدار الإنتاج، مع جدولة 14 مؤسسة إضافية قبل نهاية العام.",
-    },
-    keyTakeaways: {
-      en: [
-        "First production version (v1.0) officially deployed under the AfricaConnect4 programme.",
-        "Initial cohort includes six major higher education institutions across West and Central Africa.",
-        "Automated SIS and LDAP connector tools eliminate manual student credential ingestion.",
-        "Full federation compliance with eduID.africa, eduGAIN, and geteduroam out-of-the-box.",
-      ],
-      fr: [
-        "Première version de production (v1.0) officiellement déployée dans le cadre du programme AfricaConnect4.",
-        "La cohorte initiale comprend six grands établissements d'enseignement supérieur d'Afrique de l'Ouest et Centrale.",
-        "Les outils d'extraction automatisée SIS et LDAP éliminent la saisie manuelle des identifiants.",
-        "Conformité fédérale native avec eduID.africa, eduGAIN et geteduroam.",
-      ],
-      pt: [
-        "Primeira versão de produção (v1.0) oficialmente implementada no âmbito do programa AfricaConnect4.",
-        "A coorte inicial inclui seis grandes instituições de ensino superior na África Ocidental e Central.",
-        "Ferramentas automáticas de conexão SIS e LDAP eliminam a ingestão manual de credenciais.",
-        "Conformidade total com eduID.africa, eduGAIN e geteduroam pronta a usar.",
-      ],
-      ar: [
-        "النشر الرسمي للإصدار الإنتاجي الأول (v1.0) ضمن برنامج AfricaConnect4.",
-        "تشمل الدفعة الأولى ست مؤسسات تعليم عالي كبرى في غرب ووسط أفريقيا.",
-        "أدوات موصلات SIS و LDAP المؤتمتة تلغي الإدخال اليدوي لبيانات اعتماد الطلاب.",
-        "توافق كامل مع اتحادات eduID.africa و eduGAIN و geteduroam بشكل جاهز ومباشر.",
-      ],
-    },
-    content: {
-      en: [
-        "WACREN announces the AC4 production release of BonafID, marking the transition from pilot to operational platform. Six institutions across Ghana, Senegal, and Cameroon are the first to deploy the production version, with 14 additional onboardings scheduled before year-end.",
-        "BonafID is an open-source, cloud-hosted academic identity provider designed specifically to eliminate the infrastructural barriers that have historically prevented African universities from joining trust federations. By removing the need for on-premise servers, specialized cryptographers, and complex Shibboleth/SimpleSAMLphp server maintenance, BonafID enables campus IT teams to stand up sovereign identity services within weeks.",
-        "The first cohort of six institutions includes national research universities and technical colleges in Ghana (GARNET), Senegal (snRER), and Cameroon (RIC). Through BonafID's built-in connector modules, existing student information systems (SIS) and active directory databases were synchronized with eduID.africa federation metadata without disruptive database migrations.",
-        "With production deployment underway, students, faculty, and research fellows at these six campuses immediately gain access to global eduroam Wi-Fi authentication and cross-border digital research repositories in eduGAIN. A further 14 institutions are currently undergoing data validation and are slated for go-live during Q3 and Q4 2026.",
-      ],
-      fr: [
-        "WACREN annonce la sortie en production AC4 de BonafID, marquant la transition du statut pilote à une plateforme opérationnelle. Six établissements au Ghana, au Sénégal et au Cameroun sont les premiers à déployer la version de production, avec 14 intégrations supplémentaires prévues avant la fin de l'année.",
-        "BonafID est un fournisseur d'identité académique open source, hébergé dans le cloud, conçu spécifiquement pour éliminer les barrières d'infrastructure qui empêchaient jusqu'ici les universités africaines de rejoindre les fédérations d'identité. En supprimant le besoin de serveurs sur site, d'experts en cryptographie et de maintenance complexe de serveurs Shibboleth/SimpleSAMLphp, BonafID permet aux équipes informatiques de déployer des services d'identité souverains en quelques semaines.",
-        "La première cohorte de six établissements comprend des universités nationales de recherche et des instituts technologiques au Ghana (GARNET), au Sénégal (snRER) et au Cameroun (RIC). Grâce aux modules d'intégration de BonafID, les systèmes de gestion des dossiers étudiants (SIS) et les annuaires Active Directory existants ont été synchronisés avec les métadonnées eduID.africa sans migration perturbatrice.",
-        "Avec ce déploiement en production, les étudiants, enseignants et chercheurs de ces six campus bénéficient immédiatement de l'authentification Wi-Fi mondiale eduroam et d'un accès aux référentiels scientifiques internationaux via eduGAIN. Quatorze autres établissements finalisent actuellement la validation de leurs données pour une mise en service au cours des 3e et 4e trimestres 2026.",
-      ],
-      pt: [
-        "A WACREN anuncia o lançamento em produção AC4 do BonafID, assinalando a transição de piloto para plataforma operacional. Seis instituições no Gana, Senegal e Camarões são as primeiras a implementar a versão de produção, com 14 integrações adicionais agendadas até ao final do ano.",
-        "O BonafID é um provedor de identidade académica de código aberto, hospedado na nuvem, concebido especificamente para eliminar as barreiras de infraestrutura que historicamente impediram as universidades africanas de participar em federações de confiança. Ao dispensar servidores locais, especialistas em criptografia e manutenção complexa de servidores Shibboleth/SimpleSAMLphp, o BonafID permite que as equipas de TI dos campi implementem serviços de identidade soberanos em poucas semanas.",
-        "A coorte inaugural de seis instituições compreende universidades nacionais de investigação e faculdades técnicas no Gana (GARNET), Senegal (snRER) e Camarões (RIC). Através dos conectores integrados do BonafID, os sistemas de gestão académica (SIS) e diretórios LDAP existentes foram sincronizados com os metadados da federação eduID.africa sem migrações complexas de dados.",
-        "Com esta entrada em produção, estudantes, professores e investigadores destes seis campi ganham acesso imediato à autenticação Wi-Fi mundial eduroam e a milhares de repositórios digitais no eduGAIN. Mais 14 instituições encontram-se em fase de validação de dados com ativação prevista para os 3º e 4º trimestres de 2026.",
-      ],
-      ar: [
-        "تعلن WACREN عن إطلاق الإصدار الإنتاجي AC4 من BonafID، مما يمثل الانتقال من المرحلة التجريبية إلى منصة تشغيلية. ست مؤسسات في غانا والسنغال والكاميرون هي الأولى في نشر إصدار الإنتاج، مع جدولة 14 مؤسسة إضافية قبل نهاية العام.",
-        "يُعد BonafID مزود هوية أكاديمياً مفتوح المصدر ومستضافاً على السحابة، مصمماً خصيصاً للقضاء على الحواجز الهيكلية التي منعت تاريخياً الجامعات الأفريقية من الانضمام إلى اتحادات الثقة. من خلال إلغاء الحاجة إلى خوادم محلية، وخبراء تشفير متخصصين، والصيانة المعقدة لخوادم Shibboleth/SimpleSAMLphp، يُمكّن BonafID فرق تقنية المعلومات في الحرم الجامعي من إنشاء خدمات هوية سيادية في غضون أسابيع.",
-        "تشمل الدفعة الأولى المكونة من ست مؤسسات جامعات بحثية وطنية وكليات تقنية في غانا (GARNET) والسنغال (snRER) والكاميرون (RIC). من خلال وحدات الربط المدمجة في BonafID، تمت مزامنة أنظمة معلومات الطلاب الحالية (SIS) وقواعد بيانات الدليل النشط مع البيانات الوصفية لاتحاد eduID.africa دون الحاجة إلى ترحيل معقد للبيانات.",
-        "مع بدء النشر الإنتاجي، يحصل الطلاب وأعضاء هيئة التدريس والباحثون في هذه الحرم الجامعية الستة على الفور على مصادقة Wi-Fi العالمية عبر eduroam والوصول إلى مستودعات الأبحاث الرقمية العابرة للحدود في eduGAIN. وتخضع 14 مؤسسة أخرى حالياً للتحقق من البيانات ومن المقرر بدء تشغيلها خلال الربعين الثالث والرابع من عام 2026.",
-      ],
-    },
-    meta: {
-      programme: "AfricaConnect4 (Year 2)",
-      region: "West & Central Africa (WACREN)",
-    },
-  },
-  {
-    slug: "abidjan-ti-roadshow-12-institutions",
-    image: "/news/abidjan-roadshow.jpg",
-    imageCaption: {
-      en: "HEI IT administrators and campus engineers collaborating during hands-on BonafID assessment in Abidjan.",
-      fr: "Administrateurs informatiques et ingénieurs d'ESR collaborant lors de l'évaluation pratique BonafID à Abidjan.",
-      pt: "Administradores de TI e engenheiros de IES a colaborar durante a avaliação prática do BonafID em Abidjan.",
-      ar: "مسؤولو تكنولوجيا المعلومات في مؤسسات التعليم العالي ومهندسو الحرم الجامعي يتعاونون أثناء تقييم BonafID العملي في أبيدجان.",
-    },
-    category: {
-      en: "Capacity Building",
-      fr: "Renforcement des capacités",
-      pt: "Capacitação",
-      ar: "بناء القدرات",
-    },
-    date: "28 April 2026",
-    readTime: {
-      en: "3 min read",
-      fr: "3 min de lecture",
-      pt: "3 min de leitura",
-      ar: "قراءة في 3 دقائق",
-    },
-    title: {
-      en: "Abidjan T&I Roadshow: 12 institutions begin BonafID assessment",
-      fr: "Roadshow T&I d'Abidjan : 12 établissements entament l'évaluation BonafID",
-      pt: "Roadshow de T&I de Abidjan: 12 instituições iniciam avaliação BonafID",
-      ar: "جولة T&I في أبيدجان: 12 مؤسسة تبدأ تقييم BonafID",
-    },
-    excerpt: {
-      en: "The May West Africa roadshow hosted 34 HEI IT administrators from Côte d'Ivoire, Mali, and Burkina Faso. Twelve institutions completed the initial BonafID readiness assessment.",
-      fr: "Le roadshow d'Afrique de l'Ouest organisé à Abidjan a réuni 34 administrateurs informatiques d'ESR de Côte d'Ivoire, du Mali et du Burkina Faso. Douze établissements ont finalisé avec succès leur évaluation de maturité BonafID.",
-      pt: "O roadshow da África Ocidental em Abidjan reuniu 34 administradores de TI de IES da Costa do Marfim, Mali e Burkina Faso. Doze instituições concluíram a avaliação inicial de prontidão do BonafID.",
-      ar: "استضافت جولة غرب أفريقيا في مايو 34 مسؤولاً عن تكنولوجيا المعلومات في مؤسسات التعليم العالي من كوت ديفوار ومالي وبوركينا فاسو. وأكملت 12 مؤسسة التقييم الأولي للجاهزية لمنصة BonafID.",
-    },
-    keyTakeaways: {
-      en: [
-        "34 campus engineers and CIOs gathered in Abidjan for 4 days of hands-on technical labs.",
-        "12 institutions finalized their identity readiness assessment and SIS mapping.",
-        "Participants deployed working sandbox instances of BonafID and verified SAML/OIDC metadata.",
-      ],
-      fr: [
-        "34 ingénieurs de campus et directeurs informatiques réunis à Abidjan pour 4 jours d'ateliers pratiques.",
-        "12 établissements ont finalisé l'évaluation de leur infrastructure d'identité et le mappage de leurs annuaires.",
-        "Les participants ont configuré des instances de test BonafID et validé les métadonnées SAML/OIDC.",
-      ],
-      pt: [
-        "34 engenheiros e diretores de TI reuniram-se em Abidjan para 4 dias de laboratórios práticos.",
-        "12 instituições finalizaram o diagnóstico de prontidão e mapeamento de sistemas académicos.",
-        "Os participantes configuraram instâncias de teste do BonafID e validaram metadados SAML/OIDC.",
-      ],
-      ar: [
-        "اجتمع 34 مهندس حرم جامعي ومدير تقنية معلومات في أبيدجان لمدة 4 أيام من المعامل التقنية العملية.",
-        "أكملت 12 مؤسسة تقييم جاهزية الهوية ومواءمة أنظمة معلومات الطلاب (SIS).",
-        "قام المشاركون بنشر نسخ تجريبية عاملة من BonafID وتحققوا من البيانات الوصفية لـ SAML/OIDC.",
-      ],
-    },
-    content: {
-      en: [
-        "The May West Africa roadshow hosted 34 HEI IT administrators from Côte d'Ivoire, Mali, and Burkina Faso. Twelve institutions completed the initial BonafID readiness assessment.",
-        "Organized by WACREN in collaboration with RITER (Côte d'Ivoire), the four-day intensive workshop brought together university CIOs, systems architects, and campus network engineers to address the practicalities of campus identity federation.",
-        "Participants worked directly with the eduID.africa engineering team to audit their campus directory structures, evaluate data hygiene in student management systems, and test BonafID's automated schema mapping engine.",
-        "By the close of the roadshow, 12 universities had produced signed readiness assessments and technical deployment roadmaps, positioning them to complete federation onboarding within the next 90 days.",
-      ],
-      fr: [
-        "Le roadshow d'Afrique de l'Ouest organisé à Abidjan a réuni 34 administrateurs informatiques d'ESR de Côte d'Ivoire, du Mali et du Burkina Faso. Douze établissements ont finalisé avec succès leur évaluation de maturité BonafID.",
-        "Organisé par WACREN en partenariat avec le RITER (Côte d'Ivoire), cet atelier intensif de quatre jours a permis aux DSI d'universités, architectes systèmes et ingénieurs réseau de maîtriser les aspects concrets de la fédération d'identités.",
-        "Les participants ont collaboré directement avec l'équipe technique d'eduID.africa pour auditer la structure de leurs annuaires, évaluer la qualité des données de scolarité et tester le moteur de mappage automatisé de BonafID.",
-        "À l'issue de cet événement, 12 universités ont validé leurs audits de conformité technique et leurs feuilles de route de déploiement pour une intégration complète dans les 90 jours.",
-      ],
-      pt: [
-        "O roadshow da África Ocidental em Abidjan reuniu 34 administradores de TI de IES da Costa do Marfim, Mali e Burkina Faso. Doze instituições concluíram a avaliação inicial de prontidão do BonafID.",
-        "Organizado pela WACREN em parceria com a RITER (Costa do Marfim), o workshop intensivo de quatro dias reuniu diretores de TI universitários e engenheiros de redes para abordar os requisitos práticos de federação.",
-        "Os participantes trabalharam diretamente com os engenheiros do eduID.africa na auditoria de diretórios de campus, validação de integridade de dados e testes práticos com o motor de integração do BonafID.",
-        "No encerramento do evento, 12 universidades finalizaram avaliações formais de prontidão e roteiros técnicos para concluir o processo de adesão nos próximos 90 dias.",
-      ],
-      ar: [
-        "استضافت جولة غرب أفريقيا في مايو 34 مسؤولاً عن تكنولوجيا المعلومات في مؤسسات التعليم العالي من كوت ديفوار ومالي وبوركينا فاسو. وأكملت 12 مؤسسة التقييم الأولي للجاهزية لمنصة BonafID.",
-        "جمعت ورشة العمل المكثفة التي نظمتها WACREN بالتعاون مع RITER (كوت ديفوار) على مدار أربعة أيام مديري تكنولوجيا المعلومات بالجامعات ومهندسي الأنظمة ومهندسي شبكات الحرم الجامعي لمعالجة الجوانب العملية لاتحاد هويات الحرم الجامعي.",
-        "عمل المشاركون مباشرة مع الفريق الهندسي لـ eduID.africa لمراجعة هياكل أدلة الحرم الجامعي، وتقييم جودة البيانات في أنظمة إدارة الطلاب، واختبار محرك الربط التلقائي للمخططات في BonafID.",
-        "مع ختام الجولة، أصدرت 12 جامعة تقييمات جاهزية معتمدة وخرائط طريق للنشر التقني، مما يضعها في موقع متميز لإكمال الانضمام إلى الاتحاد خلال التسعين يوماً القادمة.",
-      ],
-    },
-    meta: {
-      programme: "WACREN T&I Roadshows",
-      region: "Francophone West Africa",
-    },
-  },
-  {
-    slug: "ethiopia-joins-continental-federation",
-    image: "/news/ethiopia-peering.jpg",
-    imageCaption: {
-      en: "Addis Ababa research and education network interconnected with eduID.africa continental federation.",
-      fr: "Réseau d'enseignement et de recherche d'Addis-Abeba interconnecté avec la fédération continentale eduID.africa.",
-      pt: "Rede de investigação e educação de Adis Abeba interligada com a federação continental eduID.africa.",
-      ar: "شبكة البحث والتعليم في أديس أبابا تترابط مع اتحاد eduID.africa القاري.",
+      en: "Five new African national identity federations join the eduGAIN interfederation service, bringing the continental total to 14.",
+      fr: "Cinq nouvelles fédérations d'identité africaines rejoignent le service d'interfédération eduGAIN, portant le total continental à 14.",
+      pt: "Cinco novas federações de identidade africanas aderem ao serviço de interfederação eduGAIN, elevando o total continental para 14.",
+      ar: "خمسة اتحادات هوية أفريقية جديدة تنضم إلى خدمة التداخل eduGAIN، ليبلغ الإجمالي القاري 14.",
     },
     category: {
       en: "Federation Expansion",
@@ -246,7 +70,91 @@ export const newsArticles: NewsArticle[] = [
       pt: "Expansão da Federação",
       ar: "توسع الاتحاد",
     },
-    date: "14 April 2026",
+    date: "15 April 2025",
+    readTime: {
+      en: "4 min read",
+      fr: "4 min de lecture",
+      pt: "4 min de leitura",
+      ar: "قراءة في 4 دقائق",
+    },
+    title: {
+      en: "Five new African members join eduGAIN!",
+      fr: "Cinq nouveaux membres africains rejoignent eduGAIN !",
+      pt: "Cinco novos membros africanos aderem ao eduGAIN!",
+      ar: "خمسة أعضاء أفارقة جدد ينضمون إلى eduGAIN!",
+    },
+    excerpt: {
+      en: "Today, online services are crucial for research and education. These can be for e-learning, teaching and conferencing, scientific collaboration, analysing and sharing data, accessing journals and libraries. Access to these resources is usually controlled with a user name and password. As the number and variety of services expand, often being delivered by service providers outside the institution or even the country, the effort needed to manage and maintain all of these different user credentials becomes complicated and expensive.",
+      fr: "Aujourd'hui, les services en ligne sont essentiels pour la recherche et l'enseignement : formation en ligne, cours et conférences, collaboration scientifique, analyse et partage de données, accès aux revues et aux bibliothèques. L'accès à ces ressources est généralement contrôlé par un nom d'utilisateur et un mot de passe. À mesure que le nombre et la variété des services augmentent, souvent fournis par des prestataires situés hors de l'institution voire hors du pays, l'effort nécessaire pour gérer et maintenir toutes ces identifiants différents devient complexe et coûteux.",
+      pt: "Hoje, os serviços online são cruciais para a investigação e o ensino. Podem ser para e-learning, ensino e conferência, colaboração científica, análise e partilha de dados, acesso a revistas e bibliotecas. O acesso a estes recursos é geralmente controlado com um nome de utilizador e uma palavra-passe. À medida que o número e a variedade de serviços aumentam, muitas vezes prestados por prestadores fora da instituição ou mesmo fora do país, o esforço necessário para gerir e manter todas estas credenciais diferentes torna-se complicado e dispendioso.",
+      ar: "اليوم، خدمات الأونلاين ضرورية للبحث والتعليم. يمكن أن تكون هذه الخدمات للتعلم الإلكتروني والتدريس والمؤتمرات، والتعاون العلمي، وتحليل البيانات ومشاركتها، والوصول إلى المجلات والمكتبات. عادةً ما يكون الوصول إلى هذه الموارد متحكماً فيه من خلال اسم المستخدم وكلمة المرور. ومع توسع عدد الخدمات وتنوّعها، التي يقدّمها غالبًا مزودون خارج المؤسسة أو حتى خارج البلد، يصبح الجهد اللازم لإدارة وصيانة جميع بيانات الاعتماد المختلفة هذا معقدًا ومكلفًا.",
+    },
+    keyTakeaways: {
+      en: [
+        "Five new federations join: eduID.tg (Togo), eduID.bf (Burkina Faso), MAREN IF (Malawi), GARNET IF (Ghana), and TERNET IF (Tanzania).",
+        "African eduGAIN membership grows to 14 countries, joining Ethiopia, Kenya, Somalia, South Africa, Uganda, Zambia, Nigeria, Algeria, and Morocco.",
+        "eduGAIN now serves 78 national federations worldwide, supporting nearly 6,000 institutions and an estimated 30 million users.",
+        "eduID.africa plays a central role in accelerating digital transformation across the continent's research and education communities.",
+      ],
+      fr: [
+        "Cinq nouvelles fédérations rejoignent : eduID.tg (Togo), eduID.bf (Burkina Faso), MAREN IF (Malawi), GARNET IF (Ghana) et TERNET IF (Tanzanie).",
+        "L'adhésion africaine à eduGAIN passe à 14 pays, rejoignant l'Éthiopie, le Kenya, la Somalie, l'Afrique du Sud, l'Ouganda, la Zambie, le Nigeria, l'Algérie et le Maroc.",
+        "eduGAIN compte désormais 78 fédérations nationales dans le monde, soutenant près de 6 000 établissements et environ 30 millions d'utilisateurs.",
+        "eduID.africa joue un rôle central dans l'accélération de la transformation numérique des communautés de recherche et d'enseignement du continent.",
+      ],
+      pt: [
+        "Cinco novas federações aderem: eduID.tg (Togo), eduID.bf (Burkina Faso), MAREN IF (Malawi), GARNET IF (Gana) e TERNET IF (Tanzânia).",
+        "A adesão africana ao eduGAIN cresce para 14 países, juntando-se à Etiópia, Quénia, Somália, África do Sul, Uganda, Zâmbia, Nigéria, Argélia e Marrocos.",
+        "O eduGAIN conta agora com 78 federações nacionais em todo o mundo, apoiando cerca de 6.000 instituições e um estimado de 30 milhões de utilizadores.",
+        "O eduID.africa desempenha um papel central na aceleração da transformação digital das comunidades de investigação e educação do continente.",
+      ],
+      ar: [
+        "خمسة اتحادات جديدة تنضم: eduID.tg (توغو)، وeduID.bf (بوركينا فاسو)، وMAREN IF (ملاوي)، وGARNET IF (غانا)، وTERNET IF (تنزانيا).",
+        "يرتفع عدد الدول الأفريقية الأعضاء في eduGAIN إلى 14 دولة، لتنضم إلى إثيوبيا وكينيا والصومال وجنوب أفريقيا وأوغندا وزامبيا ونيجيريا والجزائر والمغرب.",
+        "يخدم eduGAIN الآن 78 اتحاداً وطنياً حول العالم، يدعم ما يقرب من 6,000 مؤسسة وما يُقدَّر بـ 30 مليون مستخدم.",
+        "يضطلع eduID.africa بدور محوري في تسريع التحول الرقمي لمجتمعات البحث والتعليم في القارة.",
+      ],
+    },
+    content: {
+      en: [
+        "Five new countries — Togo, Burkina Faso, Malawi, Ghana, and Tanzania — have joined the African eduGAIN community, bringing the continental total to 14. By interfederating with eduGAIN, their institutions now gain access to thousands of international research platforms and digital services through a single trusted identity.",
+        "Today, online services are crucial for research and education: e-learning, teaching, conferencing, scientific collaboration, data analysis, and journal and library access. Managing and maintaining disparate credentials across service providers is complex and costly. Identity federations solve this by allowing participating institutions to authenticate users on behalf of participating service providers.",
+        "eduGAIN provides an efficient, flexible way for participating institutions, and their affiliated users and services, to interconnect with multiple authentication and authorisation infrastructures. This gives users one trusted identity from their own institution for hundreds of services worldwide. Today eduGAIN is used by 78 national federations worldwide and supports nearly 6,000 institutions and an estimated 30 million users.",
+        "In Africa, identity federations have grown steadily. At the heart of this progress is eduID.africa, an identity federation designed by UbuntuNet Alliance and WACREN under the EU co-funded AfricaConnect3 project. By accelerating national federation deployment, eduID.africa and eduGAIN jointly drive digital transformation across African research and education.",
+        "The new additions are eduID.tg (Togo), eduID.bf (Burkina Faso), MAREN IF (Malawi), GARNET IF (Ghana), and TERNET IF (Tanzania). They join a vibrant network including Ethiopia, Kenya, Somalia, South Africa, Uganda, Zambia, Nigeria, Algeria, and Morocco.",
+      ],
+      fr: [
+        "Cinq nouveaux pays ont rejoint la communauté africaine eduGAIN, portant le total continental à 14.",
+      ],
+      pt: [
+        "Cinco novos países aderiram à comunidade africana do eduGAIN, elevando o total continental para 14.",
+      ],
+      ar: [
+        "انضمت خمس دول جديدة إلى مجتمع eduGAIN الأفريقي، ليبلغ الإجمالي القاري 14.",
+      ],
+    },
+    meta: {
+      programme: "AfricaConnect3 / GÉANT / eduID.africa",
+      region: "Pan-African",
+    },
+  },
+  {
+    slug: "simplifying-access-to-research4life-resources",
+    image: "/news/iStock-2198392876.jpg.webp",
+    externalUrl: "https://connect.geant.org/2025/02/21/simplifying-access-to-research4life-resources",
+    imageCaption: {
+      en: "Researchers and students signing in with their institutional credentials to access scholarly resources online.",
+      fr: "Chercheurs et étudiants se connectant avec leurs identifiants institutionnels pour accéder aux ressources scientifiques en ligne.",
+      pt: "Investigadores e estudantes a iniciar sessão com as suas credenciais institucionais para aceder a recursos académicos online.",
+      ar: "الباحثون والطلاب يسجلون الدخول ببيانات اعتماد المؤسسة للوصول إلى الموارد الأكاديمية عبر الإنترنت.",
+    },
+    category: {
+      en: "Trust and identity",
+      fr: "Confiance et identité",
+      pt: "Confiança e Identidade",
+      ar: "الثقة والهوية",
+    },
+    date: "21 February 2025",
     readTime: {
       en: "3 min read",
       fr: "3 min de lecture",
@@ -254,155 +162,232 @@ export const newsArticles: NewsArticle[] = [
       ar: "قراءة في 3 دقائق",
     },
     title: {
-      en: "Ethiopia joins the continental federation: 18 institutions now connected via CERENET",
-      fr: "L'Éthiopie rejoint la fédération continentale: 18 établissements désormais connectés via CERENET",
-      pt: "Etiópia junta-se à federação continental: 18 instituições conectadas através da CERENET",
-      ar: "إثيوبيا تنضم إلى الاتحاد القاري: 18 مؤسسة متصلة الآن عبر CERENET",
+      en: "Simplifying access to Research4Life resources",
+      fr: "Simplifier l'accès aux ressources Research4Life",
+      pt: "Simplificar o acesso aos recursos Research4Life",
+      ar: "تبسيط الوصول إلى موارد Research4Life",
     },
     excerpt: {
-      en: "CERENET's national federation officially peers with eduID.africa, adding Ethiopia's 18 registered research institutions to the continental network and expanding eduGAIN access across the Horn of Africa.",
-      fr: "La fédération nationale de CERENET s'interconnecte officiellement avec eduID.africa, ajoutant 18 établissements de recherche éthiopiens au réseau continental et étendant l'accès eduGAIN dans la Corne de l'Afrique.",
-      pt: "A federação nacional da CERENET interliga-se oficialmente com o eduID.africa, somando 18 instituições de investigação da Etiópia à rede continental e expandindo o acesso eduGAIN no Corno de África.",
-      ar: "اتحاد CERENET الوطني ينشئ ربطاً رسمياً مع eduID.africa، مضيفاً 18 مؤسسة بحثية إثيوبية مسجلة إلى الشبكة القارية وموسعاً وصول eduGAIN عبر القرن الأفريقي.",
+      en: "Research4Life, in partnership with UbuntuNet Alliance and GÉANT – with support from the European Union and the AfricaConnect project – has successfully launched a Federated Single Sign-On (SSO) pilot for academic institutions. This initiative ensures secure academic resource access by allowing users to log in with their institutional credentials, eliminating the need for shared passwords.",
+      fr: "Research4Life, en partenariat avec l'UbuntuNet Alliance et GÉANT – avec le soutien de l'Union européenne et du projet AfricaConnect – a lancé avec succès un pilote d'authentification fédérée unique (SSO) pour les établissements académiques. Cette initiative garantit un accès sécurisé aux ressources académiques en permettant aux utilisateurs de se connecter avec leurs identifiants institutionnels, éliminant le besoin de mots de passe partagés.",
+      pt: "A Research4Life, em parceria com a UbuntuNet Alliance e a GÉANT – com o apoio da União Europeia e do projeto AfricaConnect – lançou com sucesso um piloto de Single Sign-On (SSO) federado para instituições de ensino superior. Esta iniciativa garante um acesso seguro a recursos académicos, permitindo que os utilizadores iniciem sessão com as suas credenciais institucionais, eliminando a necessidade de palavras-passe partilhadas.",
+      ar: "أطلقت Research4Life بالشراكة مع UbuntuNet Alliance وGÉANT – بدعم من الاتحاد الأوروبي ومشروع AfricaConnect – تجربة تسجيل دخول موحد فيدرالي (SSO) للمؤسسات الأكاديمية بنجاح. يضمن هذا المبادرة وصولاً آمناً إلى الموارد الأكاديمية من خلال السماح للمستخدمين بتسجيل الدخول باستخدام بيانات اعتماد مؤسستهم، مما يلغي الحاجة إلى كلمات مرور مشتركة.",
     },
     keyTakeaways: {
       en: [
-        "CERENET becomes the latest National Research and Education Network to peer directly with eduID.africa.",
-        "18 Ethiopian higher learning and scientific institutions gain bilateral access to continental resources.",
-        "Accelerates research collaboration between Eastern Africa and peer institutions across UbuntuNet, WACREN, and ASREN.",
+        "Research4Life launches a federated single sign-on (SSO) pilot for academic institutions.",
+        "UbuntuNet Alliance and GÉANT partner on the deployment, backed by the European Union's AfricaConnect project.",
+        "Users sign in with their institutional credentials instead of shared passwords.",
       ],
       fr: [
-        "CERENET devient le plus récent RNRE à s'interconnecter directement avec eduID.africa.",
-        "18 universités et centres de recherche éthiopiens bénéficient d'un accès bilatéral aux ressources continentales.",
-        "Accélération des partenariats scientifiques entre l'Afrique de l'Est et les établissements membres d'UbuntuNet, WACREN et ASREN.",
+        "Research4Life lance un pilote d'authentification fédérée unique (SSO) pour les établissements académiques.",
+        "UbuntuNet Alliance et GÉANT collaborent au déploiement, soutenus par le projet AfricaConnect de l'Union européenne.",
+        "Les utilisateurs se connectent avec leurs identifiants institutionnels au lieu de mots de passe partagés.",
       ],
       pt: [
-        "A CERENET torna-se a mais recente Rede Nacional de Investigação e Educação a interligar-se diretamente com o eduID.africa.",
-        "18 universidades e centros de investigação etíopes ganham acesso bilateral aos recursos continentais.",
-        "Acelera a colaboração científica entre a África Oriental e instituições parceiras na UbuntuNet, WACREN e ASREN.",
+        "A Research4Life lança um piloto de Single Sign-On (SSO) federado para instituições de ensino superior.",
+        "A UbuntuNet Alliance e a GÉANT colaboram na implementação, apoiadas pelo projeto AfricaConnect da União Europeia.",
+        "Os utilizadores iniciam sessão com as suas credenciais institucionais em vez de palavras-passe partilhadas.",
       ],
       ar: [
-        "أصبحت CERENET أحدث شبكة وطنية للبحث والتعليم تترابط مباشرة مع eduID.africa.",
-        "18 مؤسسة إثيوبية للتعليم العالي والبحث العلمي تحصل على وصول ثنائي للموارد القارية.",
-        "تسريع التعاون البحثي بين شرق أفريقيا والمؤسسات النظيرة عبر UbuntuNet و WACREN و ASREN.",
+        "تطلق Research4Life تجربة تسجيل دخول موحد فيدرالي (SSO) للمؤسسات الأكاديمية.",
+        "تتعاون UbuntuNet Alliance وGÉANT في النشر، بدعم من مشروع AfricaConnect التابع للاتحاد الأوروبي.",
+        "يسجل المستخدمون الدخول باستخدام بيانات اعتماد مؤسستهم بدلاً من كلمات المرور المشتركة.",
       ],
     },
     content: {
       en: [
-        "CERENET's national federation officially peers with eduID.africa, adding Ethiopia's 18 registered research institutions to the continental network and expanding eduGAIN access across the Horn of Africa.",
-        "Following comprehensive metadata exchange and security conformance testing with the UbuntuNet Alliance and WACREN operational teams, CERENET's central federation hub has completed bilateral peering with eduID.africa.",
-        "This milestone brings over 180,000 students, researchers, and scientific staff into the continental trust boundary. Ethiopian academic staff can now access digital libraries, computational clusters, and shared scientific datasets across Africa and internationally without separate authentication hurdles.",
-        "The peering also sets the stage for rapid nationwide rollout of eduroam Wi-Fi at all 18 member campuses, backed by the regional RadSec proxy infrastructure.",
+        "Research4Life, in partnership with UbuntuNet Alliance and GÉANT – with support from the European Union and the AfricaConnect project – has successfully launched a Federated Single Sign-On (SSO) pilot for academic institutions.",
+        "The pilot ensures secure academic resource access by allowing users to log in with their institutional credentials, eliminating the need for shared passwords. Institutions participating in an identity federation reuse the trust relationship they already maintain with their users.",
+        "Federated access connects researchers to the Research4Life programmes' scholarly resources without creating and managing additional accounts, simplifying onboarding for campuses across Africa.",
       ],
       fr: [
-        "La fédération nationale de CERENET s'interconnecte officiellement avec eduID.africa, ajoutant 18 établissements de recherche éthiopiens au réseau continental et étendant l'accès eduGAIN dans la Corne de l'Afrique.",
-        "Après des tests approfondis d'échange de métadonnées et de conformité de sécurité menés avec les équipes d'UbuntuNet Alliance et de WACREN, le hub central de fédération de CERENET est désormais pleinement opérationnel au niveau continental.",
-        "Cette étape majeure intègre plus de 180 000 étudiants, chercheurs et personnels académiques dans le périmètre de confiance continental. La communauté scientifique éthiopienne bénéficie dès aujourd'hui d'un accès fluide aux bibliothèques numériques, aux centres de calcul partagés et aux plateformes de collaboration sans barrières d'authentification.",
-        "Cette interconnexion prépare également le déploiement accéléré d'eduroam sur les 18 campus connectés via l'infrastructure proxy régionale RadSec.",
+        "Research4Life, en partenariat avec l'UbuntuNet Alliance et GÉANT – avec le soutien de l'Union européenne et du projet AfricaConnect – a lancé avec succès un pilote d'authentification fédérée unique (SSO) pour les établissements académiques.",
+        "Ce pilote garantit un accès sécurisé aux ressources académiques en permettant aux utilisateurs de se connecter avec leurs identifiants institutionnels, éliminant le besoin de mots de passe partagés.",
+        "L'accès fédéré connecte les chercheurs aux ressources scientifiques des programmes Research4Life sans créer ni gérer de comptes supplémentaires.",
       ],
       pt: [
-        "A federação nacional da CERENET interliga-se oficialmente com o eduID.africa, somando 18 instituições de investigação da Etiópia à rede continental e expandindo o acesso eduGAIN no Corno de África.",
-        "Após testes exaustivos de intercâmbio de metadados e conformidade de segurança com as equipas operacionais da UbuntuNet Alliance e da WACREN, o hub central da federação da CERENET concluiu com sucesso a interligação com o eduID.africa.",
-        "Este marco integra mais de 180.000 estudantes, docentes e investigadores no espaço de confiança continental. A comunidade académica etíope passa a usufruir de acesso simplificado a bibliotecas digitais e clusters computacionais em África e a nível global.",
-        "A interligação viabiliza igualmente a expansão rápida do eduroam nos 18 campi universitários com suporte da infraestrutura de proxy RadSec.",
+        "A Research4Life, em parceria com a UbuntuNet Alliance e a GÉANT – com o apoio da União Europeia e do projeto AfricaConnect – lançou com sucesso um piloto de Single Sign-On (SSO) federado para instituições de ensino superior.",
+        "O piloto garante um acesso seguro a recursos académicos, permitindo que os utilizadores iniciem sessão com as suas credenciais institucionais, eliminando a necessidade de palavras-passe partilhadas.",
+        "O acesso federado liga os investigadores aos recursos científicos dos programas Research4Life sem criar nem gerir contas adicionais.",
       ],
       ar: [
-        "اتحاد CERENET الوطني ينشئ ربطاً رسمياً مع eduID.africa، مضيفاً 18 مؤسسة بحثية إثيوبية مسجلة إلى الشبكة القارية وموسعاً وصول eduGAIN عبر القرن الأفريقي.",
-        "عقب تبادل شامل للبيانات الوصفية واختبارات التوافق الأمني مع الفرق التشغيلية لـ UbuntuNet Alliance و WACREN، أكمل مركز الاتحاد الرئيسي لشبكة CERENET الربط الثنائي مع eduID.africa.",
-        "يُدخل هذا الإنجاز أكثر من 180,000 طالب وباحث وموظف علمي ضمن نطاق الثقة القاري. ويمكن للأكاديميين الإثيوبيين الآن الوصول إلى المكتبات الرقمية، ومجموعات الحوسبة، ومجموعات البيانات العلمية المشتركة في جميع أنحاء أفريقيا ودولياً دون عوائق مصادقة منفصلة.",
-        "كما يُمهد هذا الربط الطريق لنشر سريع لشبكة eduroam اللاسلكية على مستوى البلاد في جميع الجامعات الأعضاء البالغ عددها 18، بدعم من بنية وكيل RadSec الإقليمية.",
+        "أطلقت Research4Life بالشراكة مع UbuntuNet Alliance وGÉANT – بدعم من الاتحاد الأوروبي ومشروع AfricaConnect – تجربة تسجيل دخول موحد فيدرالي (SSO) للمؤسسات الأكاديمية بنجاح.",
+        "تضمن التجربة وصولاً آمناً إلى الموارد الأكاديمية من خلال السماح للمستخدمين بتسجيل الدخول باستخدام بيانات اعتماد مؤسستهم، مما يلغي الحاجة إلى كلمات مرور مشتركة.",
+        "يربط الوصول الفيدرالي الباحثين بالموارد العلمية لبرامج Research4Life دون الحاجة إلى إنشاء أو إدارة حسابات إضافية.",
       ],
     },
     meta: {
-      programme: "UbuntuNet Alliance & AfricaConnect4",
-      region: "Eastern Africa (CERENET)",
+      programme: "AfricaConnect3 / GÉANT / Research4Life",
+      region: "Pan-African",
     },
   },
   {
-    slug: "geteduroam-regional-service-reaches-4200-certificates",
-    image: "/news/geteduroam-service.jpg",
+    slug: "eduid-africa-advances-federated-identity-management",
+    image: "/news/eduID.africa-1320x742.png.webp",
+    externalUrl: "https://connect.geant.org/2023/03/06/eduid-africa-advances-federated-identity-management-in-the-education-ecosystem-in-africa",
     imageCaption: {
-      en: "African university students and researchers securely connecting to global eduroam Wi-Fi across campus.",
-      fr: "Étudiants et chercheurs africains se connectant en toute sécurité au réseau Wi-Fi mondial eduroam sur les campus.",
-      pt: "Estudantes e investigadores universitários africanos a ligarem-se com segurança ao Wi-Fi mundial eduroam nos campi.",
-      ar: "طلاب وباحثون في جامعات أفريقية يتصلون بأمان بشبكة Wi-Fi العالمية eduroam في الحرم الجامعي.",
+      en: "eduID.africa — the continental trust and identity federation for Africa's research and education community.",
+      fr: "eduID.africa — la fédération continentale de confiance et d'identité pour les communautés de recherche et d'enseignement africaines.",
+      pt: "eduID.africa — a federação continental de confiança e identidade para as comunidades de investigação e educação africanas.",
+      ar: "eduID.africa — الاتحاد القاري للثقة والهوية لمجتمعات البحث والتعليم الأفريقية.",
     },
     category: {
-      en: "Service Milestones",
-      fr: "Jalons du service",
-      pt: "Marcos do Serviço",
-      ar: "إنجازات الخدمة",
+      en: "Community News",
+      fr: "Actualités de la communauté",
+      pt: "Notícias da Comunidade",
+      ar: "أخبار المجتمع",
     },
-    date: "2 April 2026",
+    date: "6 March 2023",
     readTime: {
-      en: "2 min read",
-      fr: "2 min de lecture",
-      pt: "2 min de leitura",
-      ar: "قراءة في دقيقتين",
+      en: "3 min read",
+      fr: "3 min de lecture",
+      pt: "3 min de leitura",
+      ar: "قراءة في 3 دقائق",
     },
     title: {
-      en: "geteduroam regional service reaches 4,200 active certificate installations",
-      fr: "Le service régional geteduroam franchit le cap des 4 200 certificats actifs installés",
-      pt: "Serviço regional geteduroam atinge 4.200 instalações ativas de certificados",
-      ar: "خدمة geteduroam الإقليمية تصل إلى 4,200 تثبيت نشط للشهادات",
+      en: "eduID.africa advances federated identity management in the education ecosystem in Africa",
+      fr: "eduID.africa fait progresser la gestion d'identité fédérée dans l'écosystème éducatif africain",
+      pt: "eduID.africa avança na gestão de identidade federada no ecossistema educativo africano",
+      ar: "eduID.africa يعزز إدارة الهوية الفيدرالية في منظومة التعليم في أفريقيا",
     },
     excerpt: {
-      en: "The AC4 geteduroam deployment passes 4,200 active certificates, reflecting growing student and staff adoption at connected campuses across the WACREN region.",
-      fr: "Le déploiement geteduroam AC4 franchit le cap des 4 200 certificats actifs, témoignant d'une adoption croissante parmi les étudiants et le personnel sur les campus connectés de la région WACREN.",
-      pt: "A implementação geteduroam AC4 ultrapassa 4.200 certificados ativos, refletindo a crescente adoção por estudantes e funcionários em campi conectados na região da WACREN.",
-      ar: "تجاوز نشر geteduroam ضمن برنامج AC4 حاجز 4,200 شهادة نشطة، مما يعكس تزايد اعتماد الطلاب والموظفين في الجامعات المتصلة عبر منطقة WACREN.",
+      en: "Our identity is our uniqueness. Online identity and its management are vital to global migration to digital infrastructure, and citizens can only achieve an effective modern society with efficient governance and administration of digital identities.",
+      fr: "Notre identité est notre singularité. L'identité en ligne et sa gestion sont vitales pour la migration mondiale vers les infrastructures numériques, et les citoyens ne peuvent atteindre une société moderne efficace sans une gouvernance et une administration efficientes des identités numériques.",
+      pt: "A nossa identidade é a nossa singularidade. A identidade online e a sua gestão são vitais para a migração global para infraestruturas digitais, e os cidadãos só podem alcançar uma sociedade moderna eficaz com uma governação e administração eficientes das identidades digitais.",
+      ar: "هويتنا هي تميزنا. تُعد الهوية الرقمية وإدارتها أمراً حيوياً للانتقال العالمي إلى البنية التحتية الرقمية، ولا يمكن للمواطنين تحقيق مجتمع حديث فعال دون حكامة وإدارة فعّالة للهويات الرقمية.",
     },
     keyTakeaways: {
       en: [
-        "4,200+ secure Wi-Fi certificates actively installed across Android, iOS, Windows, and macOS devices.",
-        "EAP-TLS certificate-based authentication replaces vulnerable password-based Wi-Fi onboarding.",
-        "Catchall programme provides institutions without national federation access with immediate geteduroam profiles.",
+        "eduID.africa federates digital identity across Africa's research and education community.",
+        "Online identity management underpins the shift to digital infrastructure and efficient public administration.",
+        "The federation is an AfricaConnect3 initiative led by UbuntuNet Alliance and WACREN.",
       ],
       fr: [
-        "Plus de 4 200 certificats Wi-Fi sécurisés installés sur appareils Android, iOS, Windows et macOS.",
-        "L'authentification par certificat EAP-TLS remplace l'enregistrement Wi-Fi par mot de passe vulnérable.",
-        "Le programme de rattrapage offre aux établissements sans fédération nationale des profils geteduroam immédiats.",
+        "eduID.africa fédère l'identité numérique au sein des communautés de recherche et d'enseignement africaines.",
+        "La gestion de l'identité en ligne sous-tend la transition vers les infrastructures numériques et une administration publique efficace.",
+        "La fédération est une initiative AfricaConnect3 portée par l'UbuntuNet Alliance et WACREN.",
       ],
       pt: [
-        "Mais de 4.200 certificados Wi-Fi seguros instalados em dispositivos Android, iOS, Windows e macOS.",
-        "A autenticação por certificado EAP-TLS substitui métodos vulneráveis baseados em palavras-passe.",
-        "O programa catchall disponibiliza perfis geteduroam imediatos para instituições sem federação nacional.",
+        "O eduID.africa federa a identidade digital das comunidades de investigação e educação africanas.",
+        "A gestão da identidade online sustenta a transição para infraestruturas digitais e uma administração pública eficiente.",
+        "A federação é uma iniciativa AfricaConnect3 liderada pela UbuntuNet Alliance e pela WACREN.",
       ],
       ar: [
-        "أكثر من 4,200 شهادة Wi-Fi آمنة مثبتة ونشطة عبر أجهزة Android و iOS و Windows و macOS.",
-        "المصادقة المستندة إلى شهادات EAP-TLS تحل محل التسجيل الضعيف القائم على كلمات المرور.",
-        "برنامج الاتحاد الشامل يوفر للمؤسسات غير المرتبطة باتحادات وطنية ملفات تعريف geteduroam فورية.",
+        "يدعم eduID.africa تجميع الهوية الرقمية في مجتمعات البحث والتعليم الأفريقية.",
+        "تُعد إدارة الهوية الرقمية أساساً للتحول إلى البنية التحتية الرقمية والإدارة العامة الفعّالة.",
+        "الاتحاد مبادرة ضمن برنامج AfricaConnect3 يقودها UbuntuNet Alliance وWACREN.",
       ],
     },
     content: {
       en: [
-        "The AC4 geteduroam deployment passes 4,200 active certificates, reflecting growing student and staff adoption at connected campuses across the WACREN region.",
-        "Using geteduroam, students and faculty download cryptographic client certificates directly to their laptops and smartphones with a single authentication step. This eliminates the widespread risks of credential theft associated with shared passwords on open campus networks.",
-        "The regional RADIUS / RadSec backbone maintained by WACREN and UbuntuNet Alliance ensures roaming users authenticate seamlessly whether working in their home laboratory or visiting research institutes across Africa.",
-        "With new onboarding tools launched in BonafID 1.0, participating institutions report a 70% reduction in IT support tickets related to wireless network setup.",
+        "Our identity is our uniqueness. Online identity and its management are vital to global migration to digital infrastructure, and citizens can only achieve an effective modern society with efficient governance and administration of digital identities.",
+        "eduID.africa addresses this by federating digital identity across the continent's research and education community, giving students, researchers, and staff one trusted identity for online services.",
+        "The federation is an AfricaConnect3 initiative led by UbuntuNet Alliance and WACREN, connecting national federations and institutions to eduGAIN and the global research and education network.",
       ],
       fr: [
-        "Le déploiement geteduroam AC4 franchit le cap des 4 200 certificats actifs, témoignant d'une adoption croissante parmi les étudiants et le personnel sur les campus connectés de la région WACREN.",
-        "Grâce à geteduroam, étudiants et enseignants téléchargent des certificats cryptographiques directement sur leurs ordinateurs et téléphones en une seule étape d'authentification. Cela élimine les risques d'usurpation d'identifiants liés aux mots de passe partagés sur les réseaux de campus.",
-        "La dorsale régionale RADIUS / RadSec opérée par WACREN et UbuntuNet Alliance assure une itinérance fluide des utilisateurs, qu'ils soient dans leur laboratoire ou en visite dans des centres de recherche partenaires.",
-        "Avec les nouveaux outils d'intégration simplifiés de BonafID 1.0, les universités participantes constatent une baisse de 70 % des tickets de support informatique liés à la configuration Wi-Fi.",
+        "Notre identité est notre singularité. L'identité en ligne et sa gestion sont vitales pour la migration mondiale vers les infrastructures numériques.",
+        "eduID.africa fédère l'identité numérique au sein des communautés de recherche et d'enseignement du continent.",
+        "La fédération est une initiative AfricaConnect3 portée par l'UbuntuNet Alliance et WACREN.",
       ],
       pt: [
-        "A implementação geteduroam AC4 ultrapassa 4.200 certificados ativos, refletindo a crescente adoção por estudantes e funcionários em campi conectados na região da WACREN.",
-        "Com o geteduroam, estudantes e professores transferem certificados criptográficos diretamente para portáteis e telemóveis numa única etapa de autenticação, eliminando os riscos de segurança de redes abertas de campus.",
-        "A infraestrutura regional de RADIUS / RadSec mantida pela WACREN e UbuntuNet Alliance garante que utilizadores em mobilidade acedem à rede instantaneamente em qualquer instituição participante.",
-        "Com as ferramentas simplificadas do BonafID 1.0, as universidades parceiras registam uma redução de 70% nos pedidos de suporte técnico relacionados com Wi-Fi.",
+        "A nossa identidade é a nossa singularidade. A identidade online e a sua gestão são vitais para a migração global para infraestruturas digitais.",
+        "O eduID.africa federa a identidade digital das comunidades de investigação e educação do continente.",
+        "A federação é uma iniciativa AfricaConnect3 liderada pela UbuntuNet Alliance e pela WACREN.",
       ],
       ar: [
-        "تجاوز نشر geteduroam ضمن برنامج AC4 حاجز 4,200 شهادة نشطة، مما يعكس تزايد اعتماد الطلاب والموظفين في الجامعات المتصلة عبر منطقة WACREN.",
-        "باستخدام geteduroam، يقوم الطلاب وأعضاء هيئة التدريس بتنزيل شهادات العميل المشفرة مباشرة إلى حواسيبهم وهواتفهم الذكية بخطوة مصادقة واحدة. ويقضي ذلك على المخاطر الشائعة لسرقة بيانات الاعتماد المرتبطة بكلمات المرور المشتركة على شبكات الحرم الجامعي المفتوحة.",
-        "تضمن شبكة RADIUS / RadSec الإقليمية التي تديرها WACREN و UbuntuNet Alliance مصادقة مستخدمي التجوال بسلاسة سواء كانوا يعملون في مختبراتهم الأصلية أو يزورون معاهد أبحاث في جميع أنحاء أفريقيا.",
-        "مع أدوات التهيئة الجديدة التي تم إطلاقها في BonafID 1.0، أبلغت المؤسسات المشاركة عن انخفاض بنسبة 70% في تذاكر الدعم الفني المتعلقة بإعداد الشبكات اللاسلكية.",
+        "هويتنا هي تميزنا. تُعد الهوية الرقمية وإدارتها أمراً حيوياً للانتقال العالمي إلى البنية التحتية الرقمية.",
+        "يقوم eduID.africa بتجميع الهوية الرقمية في مجتمعات البحث والتعليم في القارة.",
+        "الاتحاد مبادرة ضمن برنامج AfricaConnect3 يقودها UbuntuNet Alliance وWACREN.",
       ],
     },
     meta: {
-      programme: "AfricaConnect4 Roaming",
-      region: "WACREN & UbuntuNet Alliance",
+      programme: "AfricaConnect3 / UbuntuNet Alliance & WACREN",
+      region: "Pan-African",
+    },
+  },
+  {
+    slug: "eduid-africa-joins-edugain",
+    image: "/news/EDU-3-1320x743.jpg.webp",
+    externalUrl: "https://connect.geant.org/2022/10/28/eduid-africa-joins-edugain",
+    imageCaption: {
+      en: "eduID.africa connects to the eduGAIN interfederation service, extending global trust to African research and education.",
+      fr: "eduID.africa se connecte au service d'interfédération eduGAIN, étendant la confiance mondiale aux communautés de recherche et d'enseignement africaines.",
+      pt: "O eduID.africa liga-se ao serviço de interfederação eduGAIN, estendendo a confiança global às comunidades de investigação e educação africanas.",
+      ar: "يتصل eduID.africa بخدمة التداخل eduGAIN، ويوسع الثقة العالمية إلى مجتمعات البحث والتعليم الأفريقية.",
+    },
+    category: {
+      en: "Education",
+      fr: "Éducation",
+      pt: "Educação",
+      ar: "التعليم",
+    },
+    date: "28 October 2022",
+    readTime: {
+      en: "3 min read",
+      fr: "3 min de lecture",
+      pt: "3 min de leitura",
+      ar: "قراءة في 3 دقائق",
+    },
+    title: {
+      en: "eduID.africa joins eduGAIN",
+      fr: "eduID.africa rejoint eduGAIN",
+      pt: "eduID.africa junta-se ao eduGAIN",
+      ar: "eduID.africa ينضم إلى eduGAIN",
+    },
+    excerpt: {
+      en: "Students, researchers, scientists and educators across Africa's research and education landscape can now have secure and trusted access to global online resources as the eduID.africa Catch-All Federation joins the eduGAIN interfederation.",
+      fr: "Les étudiants, chercheurs, scientifiques et enseignants de tout le paysage de la recherche et de l'enseignement en Afrique peuvent désormais accéder de manière sûre et fiable aux ressources mondiales en ligne, la Fédération Catch-All d'eduID.africa rejoignant l'interfédération eduGAIN.",
+      pt: "Estudantes, investigadores, cientistas e educadores de todo o panorama de investigação e educação de África podem agora aceder de forma segura e fiável a recursos online globais, à medida que a Catch-All Federation do eduID.africa se junta à interfederação eduGAIN.",
+      ar: "يمكن الآن للطلاب والباحثين والعلماء والمعلمين في منظومة البحث والتعليم عبر أفريقيا الوصول الآمن والموثوق إلى الموارد العالمية عبر الإنترنت، مع انضمام اتحاد eduID.africa الشامل إلى خدمة التداخل eduGAIN.",
+    },
+    keyTakeaways: {
+      en: [
+        "eduID.africa's Catch-All Federation joins the eduGAIN interfederation service.",
+        "Students, researchers, and educators gain secure, trusted access to global online resources.",
+        "The milestone connects Africa's research and education community to the worldwide federation network.",
+      ],
+      fr: [
+        "La Fédération Catch-All d'eduID.africa rejoint le service d'interfédération eduGAIN.",
+        "Étudiants, chercheurs et enseignants accèdent à des ressources mondiales en ligne de manière sûre et fiable.",
+        "Cette étape relie les communautés de recherche et d'enseignement africaines au réseau mondial de fédérations.",
+      ],
+      pt: [
+        "A Catch-All Federation do eduID.africa junta-se ao serviço de interfederação eduGAIN.",
+        "Estudantes, investigadores e educadores obtêm acesso seguro e fiável a recursos online globais.",
+        "Marco que liga as comunidades de investigação e educação africanas à rede mundial de federações.",
+      ],
+      ar: [
+        "ينضم اتحاد eduID.africa الشامل إلى خدمة التداخل eduGAIN.",
+        "يحصل الطلاب والباحثون والمعلمون على وصول آمن وموثوق إلى الموارد العالمية عبر الإنترنت.",
+        "إنجاز يربط مجتمعات البحث والتعليم الأفريقية بالشبكة العالمية للاتحادات.",
+      ],
+    },
+    content: {
+      en: [
+        "Students, researchers, scientists and educators across Africa's research and education landscape can now have secure and trusted access to global online resources as the eduID.africa Catch-All Federation joins the eduGAIN interfederation.",
+        "The Catch-All Federation gives institutions that do not yet have a national federation a way to participate in the global trust framework, signing in with their institutional credentials.",
+        "Joining eduGAIN connects the continental federation to a worldwide community of national federations, research platforms, and scholarly services.",
+      ],
+      fr: [
+        "Les étudiants, chercheurs, scientifiques et enseignants en Afrique peuvent désormais accéder de manière sûre et fiable aux ressources mondiales en ligne, la Fédération Catch-All d'eduID.africa rejoignant l'interfédération eduGAIN.",
+        "La Fédération Catch-All permet aux institutions sans fédération nationale de participer au cadre de confiance mondial.",
+        "L'adhésion à eduGAIN relie la fédération continentale à une communauté mondiale de fédérations nationales et de plateformes de recherche.",
+      ],
+      pt: [
+        "Estudantes, investigadores, cientistas e educadores de África podem agora aceder de forma segura e fiável a recursos online globais, com a Catch-All Federation do eduID.africa a juntar-se à interfederação eduGAIN.",
+        "A Catch-All Federation permite que instituições sem federação nacional participem no quadro de confiança global.",
+        "A adesão ao eduGAIN liga a federação continental a uma comunidade mundial de federações nacionais e plataformas de investigação.",
+      ],
+      ar: [
+        "يمكن الآن للطلاب والباحثين والعلماء والمعلمين في أفريقيا الوصول الآمن والموثوق إلى الموارد العالمية عبر الإنترنت، مع انضمام اتحاد eduID.africa الشامل إلى خدمة التداخل eduGAIN.",
+        "يمنح الاتحاد الشامل المؤسسات التي لا تملك اتحاداً وطنياً بعد طريقة للمشاركة في إطار الثقة العالمي.",
+        "يربط الانضمام إلى eduGAIN الاتحاد القاري بمجتمع عالمي من الاتحادات الوطنية ومنصات البحث والخدمات الأكاديمية.",
+      ],
+    },
+    meta: {
+      programme: "AfricaConnect3 / GÉANT / eduGAIN",
+      region: "Pan-African",
     },
   },
 ];
@@ -410,6 +395,7 @@ export const newsArticles: NewsArticle[] = [
 export function getNewsArticles(locale: Locale): {
   slug: string;
   image: string;
+  externalUrl?: string;
   imageCaption: string;
   category: string;
   date: string;
@@ -427,6 +413,7 @@ export function getNewsArticles(locale: Locale): {
     readTime: article.readTime[locale] || article.readTime.en,
     title: article.title[locale] || article.title.en,
     excerpt: article.excerpt[locale] || article.excerpt.en,
+    externalUrl: article.externalUrl,
     meta: article.meta,
   }));
 }
@@ -434,6 +421,7 @@ export function getNewsArticles(locale: Locale): {
 export function getNewsArticleBySlug(slug: string, locale: Locale): {
   slug: string;
   image: string;
+  externalUrl?: string;
   imageCaption: string;
   category: string;
   date: string;
@@ -455,6 +443,7 @@ export function getNewsArticleBySlug(slug: string, locale: Locale): {
     readTime: article.readTime[locale] || article.readTime.en,
     title: article.title[locale] || article.title.en,
     excerpt: article.excerpt[locale] || article.excerpt.en,
+    externalUrl: article.externalUrl,
     content: article.content[locale] || article.content.en,
     keyTakeaways: article.keyTakeaways[locale] || article.keyTakeaways.en,
     meta: article.meta,

@@ -85,7 +85,7 @@ export function InteractiveAfricaMap({
           {dict.interactiveMapTitle || "Interactive Continental Trust Map"}
         </span>
 
-        <span className="text-[10px] sm:text-xs font-mono text-slate-400">
+        <span className="text-[10px] sm:text-xs font-mono text-slate-500">
           {dict.countriesMapped || "54 African Countries Mapped"}
         </span>
       </div>

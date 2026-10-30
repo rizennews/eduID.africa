@@ -50,6 +50,7 @@ export default async function EventsPage({
           subtitle={dict.eventsPage.subtitle}
           locale={locale}
           dict={dict}
+          showSubtitle
         />
         <EventsScheduleSection locale={locale} dict={dict as any} />
       </main>

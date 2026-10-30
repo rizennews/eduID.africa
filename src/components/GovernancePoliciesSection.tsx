@@ -93,7 +93,7 @@ function PolicyDocumentRow({
           <DownloadIcon
             ref={downloadRef}
             size={15}
-            className="p-0 hover:bg-transparent text-slate-400 group-hover/btn:text-[#1A73C3] transition-colors shrink-0"
+            className="p-0 hover:bg-transparent text-slate-500 group-hover/btn:text-[#1A73C3] transition-colors shrink-0"
           />
           <span>{downloadCta}</span>
         </a>

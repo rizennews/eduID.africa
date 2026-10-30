@@ -1,7 +1,24 @@
 import type { Locale } from "@/lib/i18n";
 
+export interface EventDescription {
+  intro: string;
+  audienceLabel: string;
+  audienceItems: string[];
+  outcomesLabel: string;
+  outcomesItems: string[];
+}
+
 export interface RoadshowEvent {
   id: string;
+  image?: string;
+  startDate?: string;
+  endDate?: string;
+  description?: {
+    en: EventDescription;
+    fr: EventDescription;
+    pt: EventDescription;
+    ar: EventDescription;
+  };
   month: {
     en: string;
     fr: string;
@@ -48,6 +65,63 @@ export interface RoadshowEvent {
 export const roadshowEvents: RoadshowEvent[] = [
   {
     id: "niger-2026",
+    image: "/event/niger-workshop.jpg",
+    startDate: "2026-11-02",
+    endDate: "2026-11-03",
+    description: {
+      en: {
+        intro: "This online workshop aims to equip participants with fundamental knowledge of identity management in a federated environment. It will present the key concepts and requirements needed to help institutions implement identity management and integrate it into a federation. The in-person hands-on workshops will build practical skills in implementing and managing federated identity solutions.",
+        audienceLabel: "Target audience",
+        audienceItems: [
+          "DevOps engineers and application developers from NRENs",
+          "Systems engineers and network administrators from National Research and Education Networks (NRENs)",
+        ],
+        outcomesLabel: "Expected outcomes",
+        outcomesItems: [
+          "Better understanding of the concepts and requirements related to federated identity management.",
+          "Institutions prepared for the next steps towards setting up a federation and implementing eduID/eduroam.",
+        ],
+      },
+      fr: {
+        intro: "Cet atelier en ligne vise à outiller les participants avec les connaissances fondamentales sur la gestion des identités dans un environnement fédéré. Il permettra de présenter les concepts clés et les exigences nécessaires pour aider les institutions à mettre en œuvre la gestion des identités et leur intégration dans une fédération. Les ateliers pratiques en présentiel développeront les pratiques dans la mise en œuvre et la gestion de solutions d'identité fédérée.",
+        audienceLabel: "Public cible",
+        audienceItems: [
+          "Ingénieurs DevOps et développeurs d'applications des NREN",
+          "Ingénieurs systèmes et administrateurs réseaux des Réseaux Nationaux de Recherche et d'Éducation (NREN)",
+        ],
+        outcomesLabel: "Principaux résultats attendus",
+        outcomesItems: [
+          "Meilleure compréhension des concepts et des exigences liés à la gestion des identités fédérées.",
+          "Institutions préparées pour les prochaines étapes vers la mise en place d'une fédération et l'implémentation d'eduID/eduroam.",
+        ],
+      },
+      pt: {
+        intro: "Este workshop online visa equipar os participantes com conhecimentos fundamentais sobre a gestão de identidades num ambiente federado. Serão apresentados os conceitos e requisitos essenciais para ajudar as instituições a implementar a gestão de identidades e a sua integração numa federação. Os workshops práticos presenciais desenvolverão as práticas de implementação e gestão de soluções de identidade federada.",
+        audienceLabel: "Público-alvo",
+        audienceItems: [
+          "Engenheiros DevOps e desenvolvedores de aplicações das NREN",
+          "Engenheiros de sistemas e administradores de redes das Redes Nacionais de Ensino e Pesquisa (NREN)",
+        ],
+        outcomesLabel: "Resultados esperados",
+        outcomesItems: [
+          "Melhor compreensão dos conceitos e requisitos relacionados com a gestão de identidades federadas.",
+          "Instituições preparadas para os próximos passos rumo à criação de uma federação e à implementação do eduID/eduroam.",
+        ],
+      },
+      ar: {
+        intro: "يهدف هذا الورشة عبر الإنترنت إلى تزويد المشاركين بالمعرفة الأساسية حول إدارة الهوية في بيئة فيدرالية. ستعرض المفاهيم والمتطلبات الرئيسية اللازمة لمساعدة المؤسسات على تنفيذ إدارة الهوية ودمجها في اتحاد. وستطوّر ورش العمل العملية الحضورية الممارسات في تنفيذ وإدارة حلول الهوية الفيدرالية.",
+        audienceLabel: "الجمهور المستهدف",
+        audienceItems: [
+          "مهندسو DevOps ومطوّرو التطبيقات في شبكات NREN",
+          "مهندسو الأنظمة ومديرو الشبكات في شبكات البحث والتعليم الوطنية (NREN)",
+        ],
+        outcomesLabel: "النتائج المتوقعة",
+        outcomesItems: [
+          "فهم أفضل للمفاهيم والمتطلبات المتعلقة بإدارة الهوية الفيدرالية.",
+          "مؤسسات مستعدة للخطوات التالية نحو إنشاء اتحاد وتنفيذ eduID/eduroam.",
+        ],
+      },
+    },
     month: {
       en: "Nov",
       fr: "Nov",
@@ -271,6 +345,10 @@ export const roadshowEvents: RoadshowEvent[] = [
 export function getRoadshowEvents(locale: Locale) {
   return roadshowEvents.map((event) => ({
     id: event.id,
+    image: event.image,
+    startDate: event.startDate,
+    endDate: event.endDate,
+    description: event.description?.[locale] || event.description?.en,
     month: event.month[locale] || event.month.en,
     day: event.day,
     year: event.year,
@@ -284,3 +362,5 @@ export function getRoadshowEvents(locale: Locale) {
     isActive: event.isActive ?? true,
   }));
 }
+
+export type LocalizedRoadshowEvent = ReturnType<typeof getRoadshowEvents>[number];

@@ -115,7 +115,7 @@ export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
       description: dict.pathways.card3.description,
       cta: dict.pathways.card3.cta,
       href: dict.pathways.card3.href,
-      buttonBgClass: "bg-[#DE4A1B] hover:bg-[#c23b12]", // eduID Orange
+      buttonBgClass: "bg-[#C2410C] hover:bg-[#c23b12]", // eduID Orange
     },
   ];
 
@@ -124,7 +124,7 @@ export function PathwaysCards({ locale, dict }: PathwaysCardsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-8 sm:mb-10">
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#0B357B] tracking-tight leading-[1.16] max-w-3xl">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#0B357B] tracking-tight leading-[1.16] max-w-none lg:whitespace-nowrap">
             {heading}
           </h2>
         </div>

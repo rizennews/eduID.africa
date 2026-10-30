@@ -219,7 +219,7 @@ export function InstitutionSearchSection({
             {searchConfig.subtitle}
           </p>
           {/* Live stats */}
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono text-slate-400">
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono text-slate-500">
             <span>{directoryMeta.stats.total} {searchConfig.institutionsIndexed || "institutions indexed"}</span>
             <span className="text-slate-300">·</span>
             <span className="text-emerald-600">
@@ -235,7 +235,7 @@ export function InstitutionSearchSection({
           <div className="flex flex-col lg:flex-row gap-3">
             {/* Search Input */}
             <div className="relative flex-1">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500">
                 <Search size={18} strokeWidth={2} />
               </div>
               <input
@@ -253,7 +253,7 @@ export function InstitutionSearchSection({
               {query && (
                 <button
                   onClick={() => setQuery("")}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-700 transition-colors"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-slate-500 hover:text-slate-700 transition-colors"
                   aria-label="Clear search"
                 >
                   <X size={14} strokeWidth={2.5} />
@@ -263,7 +263,7 @@ export function InstitutionSearchSection({
 
             {/* Country Selector Dropdown (Option 2) */}
             <div className="relative shrink-0 sm:w-64">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-500">
                 {selectedCountry !== "all" ? (
                   <CountryFlag
                     code={
@@ -293,7 +293,7 @@ export function InstitutionSearchSection({
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-500">
                 <ChevronDown size={14} strokeWidth={2.5} />
               </div>
             </div>
@@ -343,7 +343,7 @@ export function InstitutionSearchSection({
                     setStatusFilter("all");
                     setShowAllDefault(false);
                   }}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-500 hover:text-[#DE4A1B] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-500 hover:text-[#C2410C] transition-colors"
                 >
                   <RotateCcw size={12} strokeWidth={2} />
                   <span>{searchConfig.resetFilters || "Reset filters"}</span>
@@ -517,7 +517,7 @@ export function InstitutionSearchSection({
               </span>
             )}
           </div>
-          <div className="hidden sm:block text-slate-400">
+          <div className="hidden sm:block text-slate-500">
             {isShowingRepresentative
               ? (searchConfig.searchTip || "Type a university, country, or @email to search")
               : (searchConfig.sourcesLabel || "Sources: geteduroam + Hipo Registry")}
@@ -551,7 +551,7 @@ export function InstitutionSearchSection({
                         {inst.name}
                       </h3>
                       {inst.domains.length > 0 && (
-                        <span className="text-xs font-mono text-slate-400">
+                        <span className="text-xs font-mono text-slate-500">
                           @{inst.domains[0]}
                         </span>
                       )}
@@ -615,7 +615,7 @@ export function InstitutionSearchSection({
           ) : (
             /* Empty State */
             <div className="py-14 px-6 text-center space-y-4">
-              <div className="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
+              <div className="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
                 <Search size={20} strokeWidth={2} />
               </div>
               <div className="max-w-md mx-auto space-y-1.5">
@@ -647,7 +647,7 @@ export function InstitutionSearchSection({
                     setSelectedCountry("all");
                     setStatusFilter("all");
                   }}
-                  className="inline-flex items-center gap-1 text-xs font-mono text-slate-400 hover:text-slate-700 px-2 py-1"
+                  className="inline-flex items-center gap-1 text-xs font-mono text-slate-500 hover:text-slate-700 px-2 py-1"
                 >
                   <RotateCcw size={12} strokeWidth={2} />
                   {searchConfig.clearSearch || "Clear search"}
@@ -662,7 +662,7 @@ export function InstitutionSearchSection({
             hasCountryFilter ||
             statusFilter !== "all") &&
             filteredInstitutions.length > 50 && (
-              <div className="py-4 text-center text-xs font-mono text-slate-400 border-t border-dashed border-slate-200">
+              <div className="py-4 text-center text-xs font-mono text-slate-500 border-t border-dashed border-slate-200">
                 {searchConfig.paginationNotice || `Showing 50 of ${filteredInstitutions.length} results. Refine your search to narrow results.`}
               </div>
             )}

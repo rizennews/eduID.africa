@@ -120,7 +120,7 @@ export function FederationMapSection({
                 <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-slate-500">
                   {taxonomyLabel}
                 </span>
-                <span className="text-[11px] font-mono text-slate-400">
+                <span className="text-[11px] font-mono text-slate-500">
                   {nationsLabel}
                 </span>
               </div>
@@ -140,7 +140,7 @@ export function FederationMapSection({
                     </div>
 
                     <div className="flex items-center gap-2.5 shrink-0">
-                      <span className="font-mono text-xs text-slate-400 font-medium">
+                      <span className="font-mono text-xs text-slate-500 font-medium">
                         {item.count}
                       </span>
                       <span className="text-slate-300 group-hover/item:text-slate-700 group-hover/item:translate-x-0.5 transition-all text-xs">

@@ -54,7 +54,7 @@ export function BonafIdStackSection({ dict }: BonafIdStackSectionProps) {
                     <div className="flex items-center gap-2 mb-1.5">
                       <span
                         className={`font-mono text-xs uppercase tracking-wider ${
-                          layer.isHighlighted ? "text-[#1A73C3] font-semibold" : "text-slate-400"
+                          layer.isHighlighted ? "text-[#1A73C3] font-semibold" : "text-slate-500"
                         }`}
                       >
                         {layer.level}
@@ -94,7 +94,7 @@ export function BonafIdStackSection({ dict }: BonafIdStackSectionProps) {
                 <div className="flex justify-center py-1 select-none" aria-hidden="true">
                   <div className="flex items-center gap-2">
                     <span className="h-4 w-px border-r border-dashed border-slate-300" />
-                    <span className="font-mono text-xs text-slate-400">
+                    <span className="font-mono text-xs text-slate-500">
                       {layer.connector || "↕"}
                     </span>
                     <span className="h-4 w-px border-r border-dashed border-slate-300" />

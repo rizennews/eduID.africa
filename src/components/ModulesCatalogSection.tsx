@@ -95,7 +95,7 @@ function ModuleCard({ item, idx, locale }: ModuleCardProps) {
           <WrenchIcon
             ref={wrenchRef}
             size={20}
-            className="text-[#DE4A1B]"
+            className="text-[#C2410C]"
           />
         );
       default:

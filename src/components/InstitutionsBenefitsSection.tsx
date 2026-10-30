@@ -33,9 +33,11 @@ export function InstitutionsBenefitsSection({ dict }: InstitutionsBenefitsSectio
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {benefitsSection.title}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
-            {benefitsSection.description}
-          </p>
+          {benefitsSection.description && (
+            <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+              {benefitsSection.description}
+            </p>
+          )}
         </div>
 
         {/* 6-Card Monolithic Architectural Ledger (3x2) */}

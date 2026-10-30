@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import type { Locale } from "@/lib/i18n";
 
@@ -56,7 +54,7 @@ export function AboutHero({
               </h1>
 
               {displaySubtitle && (
-                <p className="text-base sm:text-lg text-blue-50/95 font-sans font-normal leading-relaxed w-full max-w-none">
+                <p className="text-base sm:text-lg text-white/95 font-sans font-normal leading-relaxed w-full max-w-none">
                   {displaySubtitle}
                 </p>
               )}
@@ -74,7 +72,7 @@ export function AboutHero({
             </h1>
 
             {showSubtitle && displaySubtitle && (
-              <p className="mt-4 text-base sm:text-lg text-blue-50/95 font-sans font-normal leading-relaxed max-w-3xl mx-auto">
+              <p className="mt-4 text-base sm:text-lg text-white/95 font-sans font-normal leading-relaxed max-w-3xl mx-auto">
                 {displaySubtitle}
               </p>
             )}

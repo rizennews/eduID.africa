@@ -105,7 +105,7 @@ export default async function ContactPage({
 
                 {/* Social media links */}
                 <div className="space-y-3 pt-4 border-t border-dashed border-slate-200/80">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 block">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 block">
                     {dict.contactPage.inquiries.socialsLabel}
                   </span>
                   <div className="flex flex-wrap items-center gap-2.5">
@@ -202,7 +202,7 @@ export default async function ContactPage({
                           <span className="font-mono font-bold text-xs uppercase text-[#0B357B] group-hover:text-[#1A73C3] transition-colors">
                             {net.name}
                           </span>
-                          <span className="font-mono text-xs text-slate-400 group-hover:text-[#0B357B] transition-colors">
+                          <span className="font-mono text-xs text-slate-500 group-hover:text-[#0B357B] transition-colors">
                             ↗
                           </span>
                         </div>

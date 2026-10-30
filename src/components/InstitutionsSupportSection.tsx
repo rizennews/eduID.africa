@@ -62,7 +62,7 @@ export function InstitutionsSupportSection({ locale, dict }: InstitutionsSupport
                   <Link
                     href={`/${locale}${item.href}`}
                     className={`group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-opacity hover:opacity-90 ${
-                      ["bg-[#0B357B]", "bg-[#1A73C3]", "bg-[#DE4A1B]"][idx % 3]
+                      ["bg-[#0B357B]", "bg-[#1A73C3]", "bg-[#C2410C]"][idx % 3]
                     }`}
                   >
                     <span>{item.linkText}</span>

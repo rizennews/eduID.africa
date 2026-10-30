@@ -89,7 +89,7 @@ function ProblemCard({ item, idx }: ProblemCardProps) {
           <ShieldCheckIcon
             ref={shieldRef}
             size={20}
-            className="text-[#DE4A1B]"
+            className="text-[#C2410C]"
           />
         );
       default:
@@ -146,9 +146,11 @@ export function BonafIdProblemSection({ dict }: BonafIdProblemSectionProps) {
           <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
             {problemSection.title}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
-            {problemSection.description}
-          </p>
+          {problemSection.description && (
+            <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
+              {problemSection.description}
+            </p>
+          )}
         </div>
 
         {/* 4-Card Monolithic Architectural Ledger with Genuine Lucide Animated Icons */}

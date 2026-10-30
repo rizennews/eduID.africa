@@ -106,7 +106,7 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
           {activeTab !== "downloads" && (
             <div className="flex items-center gap-3">
               <div className="relative flex-1 sm:w-64">
-                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5 pointer-events-none" />
+                <Search className="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" />
                 <input
                   type="text"
                   value={searchQuery}
@@ -118,7 +118,7 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
                   <button
                     onClick={() => setSearchQuery("")}
                     aria-label="Clear search query"
-                    className="absolute right-2 top-2 text-slate-400 hover:text-slate-600 p-0.5 rounded cursor-pointer"
+                    className="absolute right-2 top-2 text-slate-500 hover:text-slate-600 p-0.5 rounded cursor-pointer"
                   >
                     <X className="w-3.5 h-3.5" />
                   </button>
@@ -248,7 +248,7 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block lg:col-span-4 sticky top-24 space-y-6">
               <div className="bg-white border border-dashed border-slate-300 p-5 rounded-lg">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 block mb-3">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 block mb-3">
                   Table of Contents
                 </span>
                 <nav className="space-y-1.5 text-xs font-sans">
@@ -268,7 +268,7 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
                   <div><strong>Version:</strong> {activeDoc.version}</div>
                   <div><strong>Date:</strong> {activeDoc.lastModified}</div>
                   <div><strong>Authors:</strong> {activeDoc.authors.join(", ")}</div>
-                  <div className="text-[10px] text-slate-400 pt-1 leading-normal">
+                  <div className="text-[10px] text-slate-500 pt-1 leading-normal">
                     {activeDoc.attribution[locale]}
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export function PoliciesDocumentViewer({ locale, dict }: PoliciesDocumentViewerP
                       <button
                         onClick={() => handleCopyLink(section.id)}
                         title="Copy section link"
-                        className="text-xs font-mono text-slate-400 hover:text-[#0B357B] transition-colors flex items-center gap-1.5 cursor-pointer py-1 px-2 rounded hover:bg-slate-50"
+                        className="text-xs font-mono text-slate-500 hover:text-[#0B357B] transition-colors flex items-center gap-1.5 cursor-pointer py-1 px-2 rounded hover:bg-slate-50"
                       >
                         {copiedId === section.id ? (
                           <>

@@ -150,7 +150,7 @@ export function FederationMapExplorer({
         };
       case "catchall_bonafid":
         return {
-          bg: "bg-orange-50 border-orange-200 text-[#DE4A1B]",
+          bg: "bg-orange-50 border-orange-200 text-[#C2410C]",
           label: dict.categories.catchall_bonafid,
         };
       case "in_development":
@@ -175,7 +175,7 @@ export function FederationMapExplorer({
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
             {/* Minimal Search Input with Animated Search Icon & Dropdown */}
             <div className="relative w-full sm:max-w-md">
-              <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+              <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">
                 <SearchIcon size={16} />
               </div>
               <input
@@ -187,7 +187,7 @@ export function FederationMapExplorer({
                   setIsSearchOpen(true);
                 }}
                 placeholder={dict.search.placeholder}
-                className="w-full h-11 pl-10 pr-10 rounded-lg bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-hidden focus:border-[#0B357B] focus:ring-1 focus:ring-[#0B357B]/20 transition-all text-ellipsis"
+                className="w-full h-11 pl-10 pr-10 rounded-lg bg-white border border-slate-300 text-sm text-slate-900 placeholder:text-slate-500 focus:outline-hidden focus:border-[#0B357B] focus:ring-1 focus:ring-[#0B357B]/20 transition-all text-ellipsis"
               />
               {searchQuery && (
                 <button
@@ -195,7 +195,7 @@ export function FederationMapExplorer({
                     setSearchQuery("");
                     setIsSearchOpen(false);
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1 rounded-md cursor-pointer"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-600 p-1 rounded-md cursor-pointer"
                   aria-label="Clear search"
                 >
                   <X size={15} />
@@ -210,7 +210,7 @@ export function FederationMapExplorer({
                     <button
                       type="button"
                       onClick={() => setIsSearchOpen(false)}
-                      className="text-slate-400 hover:text-slate-600 text-xs cursor-pointer"
+                      className="text-slate-500 hover:text-slate-600 text-xs cursor-pointer"
                     >
                       Close ✕
                     </button>
@@ -339,7 +339,7 @@ export function FederationMapExplorer({
                   <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
                     <CountryFlag iso2={selectedCountry.iso2} name={selectedCountry.name} className="w-8 h-5.5 rounded-xs shadow-2xs shrink-0" />
                     <div className="min-w-0">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 block mb-0.5">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-500 block mb-0.5">
                         {dict.selectedCountry || "Selected Country"}
                       </span>
                       <h3 className="font-serif font-normal text-xl sm:text-2xl text-[#0B357B] tracking-tight truncate">
@@ -355,7 +355,7 @@ export function FederationMapExplorer({
 
                 {/* Status Badge (No dot) */}
                 <div>
-                  <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                  <span className="text-[10px] sm:text-[11px] font-mono text-slate-500 uppercase tracking-wider block mb-1">
                     {dict.trustStatus || "Trust Status"}
                   </span>
                   {(() => {
@@ -397,7 +397,7 @@ export function FederationMapExplorer({
                   {/* Item 3: Regional R&E Network (EarthIcon) */}
                   <div className="group/item bg-slate-50/60 hover:bg-slate-50 transition-colors border border-dashed border-slate-200 p-3 sm:p-3.5">
                     <div className="flex items-center gap-2 text-slate-500 text-[10px] font-mono uppercase tracking-wider mb-1">
-                      <EarthIcon size={14} className="text-[#DE4A1B] shrink-0" />
+                      <EarthIcon size={14} className="text-[#C2410C] shrink-0" />
                       <span>{dict.regionalRenLabel || "Regional R&E Network"}</span>
                     </div>
                     <p className="text-sm font-medium text-slate-800 font-sans">
@@ -465,10 +465,10 @@ export function FederationMapExplorer({
                   </div>
 
                   <div className="flex items-center justify-between p-3 sm:p-3.5 bg-orange-50/40 border border-dashed border-orange-200">
-                    <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#DE4A1B]">
+                    <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#C2410C]">
                       {dict.catchallLabel || "Catchall / BonafID On-Ramp"}
                     </span>
-                    <span className="font-mono text-xs font-bold text-[#DE4A1B]">
+                    <span className="font-mono text-xs font-bold text-[#C2410C]">
                       {counts.catchall_bonafid} {dict.countriesCount || "countries"}
                     </span>
                   </div>
@@ -510,7 +510,7 @@ export function FederationMapExplorer({
                 </Link>
                 <Link
                   href={`/${locale}/how-it-works`}
-                  className="flex-1 flex items-center justify-center py-2.5 px-2 rounded-lg bg-[#DE4A1B] text-white hover:bg-[#c23e14] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors leading-tight"
+                  className="flex-1 flex items-center justify-center py-2.5 px-2 rounded-lg bg-[#C2410C] text-white hover:bg-[#c23e14] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-center transition-colors leading-tight"
                 >
                   {dict.cta.learnMore || dict.learnHowItWorks || "Learn how it works"}
                 </Link>

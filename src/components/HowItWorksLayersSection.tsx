@@ -94,7 +94,7 @@ function LayerColumn({
             aria-hidden="true"
           >
             {iconType === "cloud" && (
-              <CloudSyncIcon ref={cloudRef} size={20} className="text-[#DE4A1B]" />
+              <CloudSyncIcon ref={cloudRef} size={20} className="text-[#C2410C]" />
             )}
             {iconType === "earth" && (
               <EarthIcon ref={earthRef} size={20} className="text-[#0B357B]" />
@@ -147,7 +147,7 @@ export function HowItWorksLayersSection({ dict }: HowItWorksLayersSectionProps) 
       title: layers.card1.title,
       description: layers.card1.description,
       solves: layers.card1.solves,
-      tagClass: "bg-orange-50 text-[#DE4A1B] border-orange-200",
+      tagClass: "bg-orange-50 text-[#C2410C] border-orange-200",
       iconType: "cloud",
     },
     {

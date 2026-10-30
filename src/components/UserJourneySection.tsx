@@ -33,7 +33,7 @@ function JourneyStepRow({ num, title, description }: JourneyStepRowProps) {
     <div className="group py-6 sm:py-8 border-b border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-8 items-baseline transition-colors hover:bg-slate-50/50 px-2 sm:px-4">
       {/* Column 1: Monospaced Step Number */}
       <div className="md:col-span-1">
-        <span className="font-mono text-xs sm:text-sm font-semibold text-slate-400">
+        <span className="font-mono text-xs sm:text-sm font-semibold text-slate-500">
           {num}
         </span>
       </div>

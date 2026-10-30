@@ -9,9 +9,6 @@ interface NrenSovereignSectionProps {
   dict: {
     nrenPage: {
       sovereignSection: {
-        eyebrow: string;
-        headline: string;
-        description: string;
         featureA: {
           letter: string;
           title: string;
@@ -39,16 +36,6 @@ export function NrenSovereignSection({ locale, dict }: NrenSovereignSectionProps
   return (
     <section className="py-12 sm:py-16 bg-[#F8FAFC] border-b border-dashed border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-none">
-          <h2 className="font-serif font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#0B357B] tracking-tight leading-tight">
-            {sovereignSection.headline}
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 font-sans leading-relaxed font-normal">
-            {sovereignSection.description}
-          </p>
-        </div>
-
         {/* 3-Column Monolithic Architectural Ledger (A, B, C) */}
         <div className="mt-10 sm:mt-12 border-y border-dashed border-slate-300 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-300/80 bg-white/40">
           {/* Card A: Governance sovereignty */}
@@ -84,7 +71,7 @@ export function NrenSovereignSection({ locale, dict }: NrenSovereignSectionProps
           {/* Card C: T&I Roadshow programme */}
           <div className="flex flex-col justify-between p-6 sm:p-8 lg:p-8 transition-colors duration-200 hover:bg-slate-100/40">
             <div>
-              <div className="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#DE4A1B] shadow-2xs mb-6">
+              <div className="w-8 h-8 rounded-full border border-slate-300 bg-white flex items-center justify-center font-mono text-sm font-semibold text-[#C2410C] shadow-2xs mb-6">
                 {sovereignSection.featureC.letter}
               </div>
               <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#0B357B] tracking-tight leading-snug">

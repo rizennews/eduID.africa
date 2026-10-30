@@ -21,9 +21,6 @@ interface GovernanceLeadershipSectionProps {
         subtitle: string;
         responsibilitiesLabel?: string;
         roles: {
-          programmeLead: LeadershipRoleData;
-          technicalLead: LeadershipRoleData;
-          communications: LeadershipRoleData;
           regionalPartnerEastSouth: LeadershipRoleData;
           regionalPartnerNorth: LeadershipRoleData;
           technicalPartner: LeadershipRoleData;
@@ -42,27 +39,6 @@ interface RoleCardConfig {
 }
 
 const ROLE_CONFIGS: RoleCardConfig[] = [
-  {
-    key: "programmeLead",
-    logoSrc: "/networks-logo/wacren.png",
-    logoAlt: "WACREN Logo",
-    logoWidth: 100,
-    logoHeight: 32,
-  },
-  {
-    key: "technicalLead",
-    logoSrc: "/networks-logo/wacren.png",
-    logoAlt: "WACREN Logo",
-    logoWidth: 100,
-    logoHeight: 32,
-  },
-  {
-    key: "communications",
-    logoSrc: "/networks-logo/wacren.png",
-    logoAlt: "WACREN Logo",
-    logoWidth: 100,
-    logoHeight: 32,
-  },
   {
     key: "regionalPartnerEastSouth",
     logoSrc: "/networks-logo/ubuntunet-alliance.png",
@@ -143,7 +119,7 @@ function LeadershipRoleCard({
 
       {/* Scope of Responsibility List */}
       <div className="pt-4 border-t border-dashed border-slate-200 mt-5">
-        <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-400 block mb-3">
+        <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-slate-500 block mb-3">
           {responsibilitiesLabel || "Responsibilities"}
         </span>
         <ul className="space-y-2.5">

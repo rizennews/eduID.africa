@@ -129,7 +129,7 @@ function MilestoneTile({
       <div>
         {/* Milestone Phase & Timeline Pill (No beacon dots) */}
         <div className="flex items-center justify-between gap-2 mb-4">
-          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400">
+          <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500">
             {phaseLabel || "Phase"} 0{index + 1}
           </span>
           {isCompleted ? (

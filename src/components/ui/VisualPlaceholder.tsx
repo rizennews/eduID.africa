@@ -79,7 +79,7 @@ export function VisualPlaceholder({
           <div
             className={cn(
               "pt-1 text-[11px] font-mono tracking-widest uppercase",
-              isDark ? "text-white/40" : "text-slate-400"
+              isDark ? "text-white/40" : "text-slate-500"
             )}
           >
             {dimensions}

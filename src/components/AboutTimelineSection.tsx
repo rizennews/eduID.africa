@@ -122,7 +122,7 @@ export function AboutTimelineSection({ dict }: AboutTimelineSectionProps) {
                     className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs border transition-all bg-white ${m.isCurrent
                         ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                         : m.isFuture
-                          ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
+                          ? "border-[#DE4A1B] text-[#C2410C] ring-4 ring-orange-50"
                           : "border-slate-300 text-slate-600 hover:border-[#0B357B]"
                       }`}
                   >
@@ -137,7 +137,7 @@ export function AboutTimelineSection({ dict }: AboutTimelineSectionProps) {
                     className={`mt-2 font-mono text-xs tracking-tight ${m.isCurrent
                         ? "text-[#1A73C3] font-medium"
                         : m.isFuture
-                          ? "text-[#DE4A1B] font-medium"
+                          ? "text-[#C2410C] font-medium"
                           : "text-slate-500"
                       }`}
                   >
@@ -180,7 +180,7 @@ export function AboutTimelineSection({ dict }: AboutTimelineSectionProps) {
                 className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-mono bg-white border ${m.isCurrent
                     ? "border-[#1A73C3] text-[#1A73C3] ring-4 ring-blue-50"
                     : m.isFuture
-                      ? "border-[#DE4A1B] text-[#DE4A1B] ring-4 ring-orange-50"
+                      ? "border-[#DE4A1B] text-[#C2410C] ring-4 ring-orange-50"
                       : "border-slate-300 text-[#0B357B]"
                   }`}
               >

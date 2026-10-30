@@ -40,7 +40,7 @@ export function Hero({ locale, dict }: HeroProps) {
             </div>
 
             {/* Description Paragraph */}
-            <p className="font-sans text-base sm:text-lg text-blue-50/95 leading-relaxed max-w-xl font-normal">
+            <p className="font-sans text-base sm:text-lg text-white/95 leading-relaxed max-w-xl font-normal">
               {dict.hero.description}
             </p>
 
@@ -81,6 +81,7 @@ export function Hero({ locale, dict }: HeroProps) {
                 src="/young-adults-walking-and-talking-on-college-campus-2026-09-21-11-39-22-utc .jpg"
                 alt="Students walking and talking on a college campus"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 priority
               />

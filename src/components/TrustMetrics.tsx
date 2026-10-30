@@ -115,7 +115,7 @@ export function TrustMetrics({ dict }: TrustMetricsProps) {
       value: dict.metrics.stat2.value,
       label: dict.metrics.stat2.label,
       icon: ActivityIcon,
-      iconColor: "text-[#DE4A1B]",
+      iconColor: "text-[#C2410C]",
       badgeBg: "bg-orange-50/90 border border-orange-200/70",
     },
     {

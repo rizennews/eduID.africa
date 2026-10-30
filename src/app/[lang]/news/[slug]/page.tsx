@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import Image from "next/image";
+import { notFound, redirect } from "next/navigation";
 import { isValidLocale, defaultLocale, getDictionary, locales, type Locale } from "@/lib/i18n";
 import { createLocalizedMetadata, generateArticleSchema, generateBreadcrumbSchema } from "@/lib/seo";
 import { Header } from "@/components/Header";
@@ -66,6 +67,10 @@ export default async function NewsDetailPage({
     notFound();
   }
 
+  if ((article as any).externalUrl) {
+    redirect((article as any).externalUrl);
+  }
+
   const relatedArticles = newsArticles
     .filter((a) => a.slug !== article.slug)
     .slice(0, 2)
@@ -126,7 +131,7 @@ export default async function NewsDetailPage({
             <span className="text-slate-300" aria-hidden="true">/</span>
             <span className="text-slate-500 font-sans">{article.date}</span>
             <span className="text-slate-300" aria-hidden="true">/</span>
-            <span className="text-slate-400 font-sans">{article.readTime}</span>
+            <span className="text-slate-500 font-sans">{article.readTime}</span>
           </div>
 
           {/* Article Title */}
@@ -143,9 +148,12 @@ export default async function NewsDetailPage({
           {article.image && (
             <div className="mb-12">
               <div className="overflow-hidden border border-dashed border-slate-300 bg-slate-100">
-                <img
+                <Image
                   src={article.image}
                   alt={article.title}
+                  width={1320}
+                  height={742}
+                  sizes="(min-width: 1024px) 768px, 100vw"
                   className="w-full h-auto aspect-16/9 object-cover"
                 />
               </div>
@@ -220,9 +228,12 @@ export default async function NewsDetailPage({
                   <div>
                     {rel.image && (
                       <Link href={`/${locale}/news/${rel.slug}`} className="block overflow-hidden border border-dashed border-slate-300 bg-slate-100 mb-4">
-                        <img
+                        <Image
                           src={rel.image}
                           alt={rel.title}
+                          width={1320}
+                          height={742}
+                          sizes="(min-width: 768px) 384px, 100vw"
                           className="w-full h-auto aspect-16/9 object-cover group-hover:scale-[1.03] transition-transform duration-500"
                         />
                       </Link>

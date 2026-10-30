@@ -102,7 +102,7 @@ export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
-                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
+                  <span className="block text-[10px] font-mono uppercase text-slate-500 font-semibold tracking-wider leading-none truncate">
                     Android
                   </span>
                   <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
@@ -125,7 +125,7 @@ export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
-                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
+                  <span className="block text-[10px] font-mono uppercase text-slate-500 font-semibold tracking-wider leading-none truncate">
                     iOS &amp; Apple
                   </span>
                   <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
@@ -148,7 +148,7 @@ export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
-                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
+                  <span className="block text-[10px] font-mono uppercase text-slate-500 font-semibold tracking-wider leading-none truncate">
                     Windows
                   </span>
                   <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
@@ -171,7 +171,7 @@ export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <div className="text-left min-w-0">
-                  <span className="block text-[10px] font-mono uppercase text-slate-400 font-semibold tracking-wider leading-none truncate">
+                  <span className="block text-[10px] font-mono uppercase text-slate-500 font-semibold tracking-wider leading-none truncate">
                     Linux
                   </span>
                   <span className="block text-xs font-medium font-sans text-slate-800 group-hover:text-[#0B357B] truncate">
@@ -203,7 +203,7 @@ export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
             <div className="lg:col-span-5 flex justify-start lg:justify-end">
               <div className="w-full max-w-sm border border-dashed border-slate-300 bg-slate-50/70 p-6 rounded-2xl shadow-2xs">
                 <div className="flex items-center justify-between pb-3 border-b border-dashed border-slate-200">
-                  <span className="font-mono text-[11px] font-medium text-slate-400 uppercase tracking-wider">
+                  <span className="font-mono text-[11px] font-medium text-slate-500 uppercase tracking-wider">
                     {step2.mockupLabel}
                   </span>
                 </div>
@@ -218,7 +218,7 @@ export function GetStartedStepsSection({ dict }: GetStartedStepsSectionProps) {
                       </span>
                       <span className="text-slate-300 text-[10px] font-mono">IDP</span>
                     </div>
-                    <div className="p-2.5 rounded-lg border border-slate-200 bg-white text-slate-400 tracking-widest text-xs">
+                    <div className="p-2.5 rounded-lg border border-slate-200 bg-white text-slate-500 tracking-widest text-xs">
                       ••••••••
                     </div>
                   </div>

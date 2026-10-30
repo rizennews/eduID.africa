@@ -106,7 +106,7 @@ export function SearchableLanguageSelector({
                 </div>
 
                 {isSelected && (
-                  <Check size={16} className="text-[#DE4A1B] stroke-[2.5]" />
+                  <Check size={16} className="text-[#C2410C] stroke-[2.5]" />
                 )}
               </DropdownMenu.Item>
             );

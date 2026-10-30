@@ -1,0 +1,28 @@
+{
+  "name": "eduID.africa — Pan-African Trust & Identity Federation",
+  "short_name": "eduID",
+  "description": "Pan-African trust federation providing sovereign federated single sign-on, verifiable digital credentials, and cross-border research access across 54 African nations.",
+  "start_url": "/en",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F8FAFC",
+  "theme_color": "#060D1A",
+  "categories": ["education", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "106x106",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "1500x415",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr"
+}

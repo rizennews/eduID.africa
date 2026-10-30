@@ -74,7 +74,7 @@ function ResourceCard({ item, idx }: ResourceCardProps) {
           <PlayIcon
             ref={playRef}
             size={20}
-            className="text-[#DE4A1B]"
+            className="text-[#C2410C]"
           />
         );
       case "clipboard":
